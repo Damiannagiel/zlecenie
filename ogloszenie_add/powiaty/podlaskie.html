@@ -1,0 +1,55 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+	
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="podlaskie" onclick='zaznacz("podlaskie");' id="podlaskie" type="checkbox" name="powiat[]" value="podlaskie_podlaskie"/></label></div>
+		
+		<div><label>Białystok<input class="pow" data-content="Białystok" id="Białystok" type="checkbox" name="powiat[]" value="podlaskie_Białystok"/></label></div>
+		<div><label>Suwałki<input class="pow" data-content="Suwałki" id="Suwałki" type="checkbox" name="powiat[]" value="podlaskie_Suwałki"/></label></div>
+		<div><label>Łomża<input class="pow" data-content="Łomża" id="Łomża" type="checkbox" name="powiat[]" value="podlaskie_Łomża"/></label></div>
+		
+		<div><label><span class="po">powiat </span>augustowski<input class="pow" data-content="augustowski" id="augustowski" type="checkbox" name="powiat[]" value="podlaskie_augustowski"/></label></div>
+		<div><label><span class="po">powiat </span>białostocki<input class="pow" data-content="białostocki" id="białostocki" type="checkbox" name="powiat[]" value="podlaskie_białostocki"/></label></div>
+		<div><label><span class="po">powiat </span>bielski<input class="pow" data-content="bielski" id="bielski" type="checkbox" name="powiat[]" value="podlaskie_bielski"/></label></div>
+		<div><label><span class="po">powiat </span>grajewski<input class="pow" data-content="grajewski" id="grajewski" type="checkbox" name="powiat[]" value="podlaskie_grajewski"/></label></div>
+		<div><label><span class="po">powiat </span>hajnowski<input class="pow" data-content="hajnowski" id="hajnowski" type="checkbox" name="powiat[]" value="podlaskie_hajnowski"/></label></div>
+		<div><label><span class="po">powiat </span>kolneński<input class="pow" data-content="kolneński" id="kolneński" type="checkbox" name="powiat[]" value="podlaskie_kolneński"/></label></div>
+		<div><label><span class="po">powiat </span>łomżyński<input class="pow" data-content="łomżyński" id="łomżyński" type="checkbox" name="powiat[]" value="podlaskie_łomżyński"/></label></div>
+		<div><label><span class="po">powiat </span>moniecki<input class="pow" data-content="moniecki" id="moniecki" type="checkbox" name="powiat[]" value="podlaskie_moniecki"/></label></div>
+		<div><label><span class="po">powiat </span>sejneński<input class="pow" data-content="sejneński" id="sejneński" type="checkbox" name="powiat[]" value="podlaskie_sejneński"/></label></div>
+		<div><label><span class="po">powiat </span>siemiatycki<input class="pow" data-content="siemiatycki" id="siemiatycki" type="checkbox" name="powiat[]" value="podlaskie_siemiatycki"/></label></div>
+		<div><label><span class="po">powiat </span>sokólski<input class="pow" data-content="sokólski" id="sokólski" type="checkbox" name="powiat[]" value="podlaskie_sokólski"/></label></div>
+		<div><label><span class="po">powiat </span>suwalski<input class="pow" data-content="suwalski" id="suwalski" type="checkbox" name="powiat[]" value="podlaskie_suwalski"/></label></div>
+		<div><label><span class="po">powiat </span>wysokomazowiecki<input class="pow" data-content="wysokomazowiecki" id="wysokomazowiecki" type="checkbox" name="powiat[]" value="podlaskie_wysokomazowiecki"/></label></div>
+		<div><label><span class="po">powiat </span>zambrowski<input class="pow" data-content="zambrowski" id="zambrowski" type="checkbox" name="powiat[]" value="podlaskie_zambrowski"/></label></div>
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Białystok","Suwałki","Łomża"]; //lista miast na prawach powiatu
+			var el = '10'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'podlaskie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

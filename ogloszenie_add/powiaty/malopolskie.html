@@ -1,0 +1,60 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+	
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="małopolskie" onclick='zaznacz("małopolskie");' id="małopolskie" type="checkbox" name="powiat[]" value="małopolskie_małopolskie"/></label></div>
+		
+		<div><label>Kraków<input class="pow" data-content="Kraków" id="Kraków" type="checkbox" name="powiat[]" value="małopolskie_Kraków"/></label></div>
+		<div><label>Tarnów<input class="pow" data-content="Tarnów" id="Tarnów" type="checkbox" name="powiat[]" value="małopolskie_Tarnów"/></label></div>
+		<div><label>Nowy Sącz<input class="pow" data-content="Nowy Sącz" id="Nowy Sącz" type="checkbox" name="powiat[]" value="małopolskie_Nowy Sącz"/></label></div>
+		
+		<div><label><span class="po">powiat </span>bocheński<input class="pow" data-content="bocheński" id="bocheński" type="checkbox" name="powiat[]" value="małopolskie_bocheński"/></label></div>
+		<div><label><span class="po">powiat </span>brzeski<input class="pow" data-content="brzeski" id="brzeski" type="checkbox" name="powiat[]" value="małopolskie_brzeski"/></label></div>
+		<div><label><span class="po">powiat </span>chrzanowski<input class="pow" data-content="chrzanowski" id="chrzanowski" type="checkbox" name="powiat[]" value="małopolskie_chrzanowski"/></label></div>
+		<div><label><span class="po">powiat </span>dąbrowski<input class="pow" data-content="dąbrowski" id="dąbrowski" type="checkbox" name="powiat[]" value="małopolskie_dąbrowski"/></label></div>
+		<div><label><span class="po">powiat </span>gorlicki<input class="pow" data-content="gorlicki" id="gorlicki" type="checkbox" name="powiat[]" value="małopolskie_gorlicki"/></label></div>
+		<div><label><span class="po">powiat </span>krakowski<input class="pow" data-content="krakowski" id="krakowski" type="checkbox" name="powiat[]" value="małopolskie_krakowski"/></label></div>
+		<div><label><span class="po">powiat </span>limanowski<input class="pow" data-content="limanowski" id="limanowski" type="checkbox" name="powiat[]" value="małopolskie_limanowski"/></label></div>
+		<div><label><span class="po">powiat </span>miechowski<input class="pow" data-content="miechowski" id="miechowski" type="checkbox" name="powiat[]" value="małopolskie_miechowski"/></label></div>
+		<div><label><span class="po">powiat </span>myślenicki<input class="pow" data-content="myślenicki" id="myślenicki" type="checkbox" name="powiat[]" value="małopolskie_myślenicki"/></label></div>
+		<div><label><span class="po">powiat </span>nowosądecki<input class="pow" data-content="nowosądecki" id="nowosądecki" type="checkbox" name="powiat[]" value="małopolskie_nowosądecki"/></label></div>
+		<div><label><span class="po">powiat </span>nowotarski<input class="pow" data-content="nowotarski" id="nowotarski" type="checkbox" name="powiat[]" value="małopolskie_nowotarski"/></label></div>
+		<div><label><span class="po">powiat </span>olkuski<input class="pow" data-content="olkuski" id="olkuski" type="checkbox" name="powiat[]" value="małopolskie_olkuski"/></label></div>
+		<div><label><span class="po">powiat </span>oświęcimski<input class="pow" data-content="oświęcimski" id="oświęcimski" type="checkbox" name="powiat[]" value="małopolskie_oświęcimski"/></label></div>
+		<div><label><span class="po">powiat </span>proszowicki<input class="pow" data-content="proszowicki" id="proszowicki" type="checkbox" name="powiat[]" value="małopolskie_proszowicki"/></label></div>
+		<div><label><span class="po">powiat </span>suski<input class="pow" data-content="suski" id="suski" type="checkbox" name="powiat[]" value="małopolskie_suski"/></label></div>
+		<div><label><span class="po">powiat </span>tarnowski<input class="pow" data-content="tarnowski" id="tarnowski" type="checkbox" name="powiat[]" value="małopolskie_tarnowski"/></label></div>
+		<div><label><span class="po">powiat </span>tatrzański<input class="pow" data-content="tatrzański" id="tatrzański" type="checkbox" name="powiat[]" value="małopolskie_tatrzański"/></label></div>
+		<div><label><span class="po">powiat </span>wadowicki<input class="pow" data-content="wadowicki" id="wadowicki" type="checkbox" name="powiat[]" value="małopolskie_wadowicki"/></label></div>
+		<div><label><span class="po">powiat </span>wielicki<input class="pow" data-content="wielicki" id="wielicki" type="checkbox" name="powiat[]" value="małopolskie_wielicki"/></label></div>
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Kraków","Tarnów","Nowy Targ"]; //lista miast na prawach powiatu
+			var el = '6'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'małopolskie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

@@ -1,0 +1,32 @@
+<select class="inp pow_inp" name="pow" onChange='load_city(this.value);search_location("pow",this.value,kat_js)'>
+	<option value="dolnośląskie">Całe województwo</option>
+	<option value="Wrocław">Wrocław</option>
+	<option value="Wałbrzych">Wałbrzych</option>
+	<option value="Legnica">Legnica</option>
+	<option value="bolesławiecki">pow. bolesławiecki</option>
+	<option value="dzierżoniowski">pow. dzierżoniowski</option>
+	<option value=" głogowski">pow. głogowski</option>
+	<option value="górowski">pow. górowski</option>
+	<option value="jaworski">pow. jaworski</option>
+	<option value="jeleniogórski">pow. jeleniogórski</option>
+	<option value="kamiennogórski">pow. kamiennogórski</option>
+	<option value="kłodzki">pow. kłodzki</option>
+	<option value="legnicki">pow. legnicki</option>
+	<option value="lubański">pow. lubański</option>
+	<option value="lubiński">pow. lubiński</option>
+	<option value="lwówecki">pow. lwówecki</option>
+	<option value="milicki">pow. milicki</option>
+	<option value="oleśnicki">pow. oleśnicki</option>
+	<option value="oławski">pow. oławski</option>
+	<option value="polkowicki">pow. polkowicki</option>
+	<option value="strzeliński">pow. strzeliński</option>
+	<option value="średzki">pow. średzki</option>
+	<option value="świdnicki">pow. świdnicki</option>
+	<option value="trzebnicki">pow. trzebnicki</option>
+	<option value="wałbrzyski">pow. wałbrzyski</option>
+	<option value="wołowski">pow. wołowski</option>
+	<option value="wrocławski">pow. wrocławski</option>
+	<option value="ząbkowicki">pow. ząbkowicki</option>
+	<option value="zgorzelecki">pow. zgorzelecki</option>
+	<option value="złotoryjski">pow. złotoryjski</option>
+</select>

@@ -1,0 +1,56 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div id="powiaty">
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="lubelskie" onclick='zaznacz("lubelskie");' id="lubelskie" type="checkbox" name="powiat[]" value="lubelskie_lubelskie"/></label></div>
+		<div><label>Biała Podlaska<input class="pow" data-content="Biała Podlaska" id="Biała Podlaska" type="checkbox" name="powiat[]" value="lubelskie_Biała Podlaska"/></label></div>
+		<div><label>Chełm<input class="pow" data-content="Chełm" id="Chełm" type="checkbox" name="powiat[]" value="lubelskie_Chełm"/></label></div>
+		<div><label>Lublin<input class="pow" data-content="Lublin" id="Lublin" type="checkbox" name="powiat[]" value="lubelskie_Lublin"/></label></div>
+		<div><label>Zamość<input class="pow" data-content="Zamość" id="Zamość" type="checkbox" name="powiat[]" value="lubelskie_Zamość"/></label></div>
+		<div><label><span class="po">powiat</span> bialski<input class="pow" data-content="bialski" id="bialski" type="checkbox" name="powiat[]" value="lubelskie_bialski"/></label></div>
+		<div><label><span class="po">powiat</span> biłgorajski<input class="pow" data-content="biłgorajski" id="biłgorajski" type="checkbox" name="powiat[]" value="lubelskie_biłgorajski"/></label></div>
+		<div><label><span class="po">powiat</span> chełmski<input class="pow" data-content="chełmski" id="chełmski" type="checkbox" name="powiat[]" value="lubelskie_chełmski"/></label></div>
+		<div><label><span class="po">powiat</span> hrubieszowski<input class="pow" data-content="hrubieszowski" id="hrubieszowski" type="checkbox" name="powiat[]" value="lubelskie_hrubieszowski"/></label></div>
+		<div><label><span class="po">powiat</span> janowski<input class="pow" data-content="janowski" id="janowski" type="checkbox" name="powiat[]" value="lubelskie_janowski"/></label></div>
+		<div><label><span class="po">powiat</span> krasnostawski<input class="pow" data-content="krasnostawski" id="krasnostawski" type="checkbox" name="powiat[]" value="lubelskie_krasnostawski"/></label></div>
+		<div><label><span class="po">powiat</span> kraśnicki<input class="pow" data-content="kraśnicki" id="kraśnicki" type="checkbox" name="powiat[]" value="lubelskie_kraśnicki"/></label></div>
+		<div><label><span class="po">powiat</span> lubartowski<input class="pow" data-content="lubartowski" id="lubartowski" type="checkbox" name="powiat[]" value="lubelskie_lubartowski"/></label></div>
+		<div><label><span class="po">powiat</span> lubelski<input class="pow" data-content="lubelski" id="lubelski" type="checkbox" name="powiat[]" value="lubelskie_lubelski"/></label></div>
+		<div><label><span class="po">powiat</span> łęczyński<input class="pow" data-content="łęczyński" id="łęczyński" type="checkbox" name="powiat[]" value="lubelskie_łęczyński"/></label></div>
+		<div><label><span class="po">powiat</span> łukowski<input class="pow" data-content="łukowski" id="łukowski" type="checkbox" name="powiat[]" value="lubelskie_łukowski"/></label></div>
+		<div><label><span class="po">powiat</span> opolski<input class="pow" data-content="opolski" id="opolski" type="checkbox" name="powiat[]" value="lubelskie_opolski"/></label></div>
+		<div><label><span class="po">powiat</span> parczewski<input class="pow" data-content="parczewski" id="parczewski" type="checkbox" name="powiat[]" value="lubelskie_parczewski"/></label></div>
+		<div><label><span class="po">powiat</span> puławski<input class="pow" data-content="puławski" id="puławski" type="checkbox" name="powiat[]" value="lubelskie_puławski"/></label></div>
+		<div><label><span class="po">powiat</span> radzyński<input class="pow" data-content="radzyński" id="radzyński" type="checkbox" name="powiat[]" value="lubelskie_radzyński"/></label></div>
+		<div><label><span class="po">powiat</span> rycki<input class="pow" data-content="rycki" id="rycki" type="checkbox" name="powiat[]" value="lubelskie_rycki"/></label></div>
+		<div><label><span class="po">powiat</span> świdnicki<input class="pow" data-content="świdnicki" id="świdnicki" type="checkbox" name="powiat[]" value="lubelskie_świdnicki"/></label></div>
+		<div><label><span class="po">powiat</span> tomaszowski<input class="pow" data-content="tomaszowski" id="tomaszowski" type="checkbox" name="powiat[]" value="lubelskie_tomaszowski"/></label></div>
+		<div><label><span class="po">powiat</span> włodawski<input class="pow" data-content="włodawski" id="włodawski" type="checkbox" name="powiat[]" value="lubelskie_włodawski"/></label></div>
+		<div><label><span class="po">powiat</span> zamojski<input class="pow" data-content="zamojski" id="zamojski" type="checkbox" name="powiat[]" value="lubelskie_zamojski"/></label></div>
+		
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ['Biała Podlaska','Chełm','Lublin','Zamość'];
+			var el = '3';
+			var woj = 'lubelskie';
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

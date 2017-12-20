@@ -1,0 +1,180 @@
+/*zerowanie*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+ p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*standardowe style włsne*/
+html { font-size:62.5%; }
+
+h1 { font-size:300%; }
+h2 { font-size:225%; }
+h3 { font-size:169%; }
+h4 { font-size:150%; }
+h5 { font-size:122%; }
+h6 { font-size:94%; }
+
+
+*{box-sizing:border-box;}
+
+a {
+	color:#015965;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover{
+	color:#03899c;
+	text-decoration: underline;
+}
+
+input[type=text]:focus, textarea:focus, select:focus
+{
+	-webkit-box-shadow: 0px 0px 30px 2px rgba(102,153,102,1);
+	-moz-box-shadow: 0px 0px 30px 2px rgba(102,153,102,1);
+	box-shadow: 0px 0px 30px 2px rgba(102,153,102,1);
+	outline: none;
+	border: 2px solid #a5cda5;
+}
+
+input:hover, textarea:hover, select:hover
+{
+	border: 2px solid #a5cda5;
+}
+
+select:hover{
+	cursor:pointer;
+}
+
+input, select{
+	padding:10px;
+	border-radius:5px;
+	font-size:1.6rem;
+}
+
+div.button-div{height:40px;}
+
+.button-green {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#29a300 0%,
+		#37c702 50%,
+		#1a5903);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#29a300),
+		color-stop(0.50, #37c702),
+		to(#1a5903));
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #34ba04;
+	-moz-box-shadow:
+		0px 1px 3px rgba(034,128,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(034,128,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	box-shadow:
+		0px 1px 3px rgba(034,128,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	text-shadow:
+		0px -1px 0px rgba(204,204,204,1),
+		0px 1px 0px rgba(255,255,255,0.2);
+}
+
+.button-red {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#a10000 0%,
+		#ff0000 50%,
+		#a10000);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#a10000),
+		color-stop(0.50, #ff0000),
+		to(#a10000));
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #000000;
+	-moz-box-shadow:
+		0px 1px 3px rgba(255,255,255,0.5),
+		inset 0px 0px 2px rgba(255,255,255,0.6);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(255,255,255,0.5),
+		inset 0px 0px 2px rgba(255,255,255,0.6);
+	box-shadow:
+		0px 1px 3px rgba(255,255,255,0.5),
+		inset 0px 0px 2px rgba(255,255,255,0.6);
+	text-shadow:
+		0px -1px 0px rgba(204,204,204,1),
+		0px 1px 0px rgba(255,255,255,0.2);
+}
+
+textarea, select{
+	border-color:rgb(238, 238, 238);
+	border-radius:5px;
+	border-style:inset;
+	border-width:2px;
+}
+
+.button-red:hover,.button-green:hover{cursor:pointer;}
+
+.button-red:hover{border: 2px solid #ff0000;}
+
+.button-green:hover{border: 2px solid #a5cda5;}
+
+.blad_div{
+	background-color:#ff3232;
+	padding:5px;
+	border-radius:5px;
+}

@@ -1,0 +1,59 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+	
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="zachodniopomorskie" onclick='zaznacz("zachodniopomorskie");' id="zachodniopomorskie" type="checkbox" name="powiat[]" value="zachodniopomorskie_zachodniopomorskie"/></label></div>
+		
+		<div><label>Szczecin<input class="pow" data-content="Szczecin" id="Szczecin" type="checkbox" name="powiat[]" value="zachodniopomorskie_Szczecin"/></label></div>
+		<div><label>Koszalin<input class="pow" data-content="Koszalin" id="Koszalin" type="checkbox" name="powiat[]" value="zachodniopomorskie_Koszalin"/></label></div>
+		<div><label>Świnoujście<input class="pow" data-content="Świnoujście" id="Świnoujście" type="checkbox" name="powiat[]" value="zachodniopomorskie_Świnoujście"/></label></div>
+		
+		<div><label><span class="po">powiat </span>białogardzki<input class="pow" data-content="białogardzki" id="białogardzki" type="checkbox" name="powiat[]" value="zachodniopomorskie_białogardzki"/></label></div>
+		<div><label><span class="po">powiat </span>choszczeński<input class="pow" data-content="choszczeński" id="choszczeński" type="checkbox" name="powiat[]" value="zachodniopomorskie_choszczeński"/></label></div>
+		<div><label><span class="po">powiat </span>drawski<input class="pow" data-content="drawski" id="drawski" type="checkbox" name="powiat[]" value="zachodniopomorskie_drawski"/></label></div>
+		<div><label><span class="po">powiat </span>goleniowski<input class="pow" data-content="goleniowski" id="goleniowski" type="checkbox" name="powiat[]" value="zachodniopomorskie_goleniowski"/></label></div>
+		<div><label><span class="po">powiat </span>gryficki<input class="pow" data-content="gryficki" id="gryficki" type="checkbox" name="powiat[]" value="zachodniopomorskie_gryficki"/></label></div>
+		<div><label><span class="po">powiat </span>gryfiński<input class="pow" data-content="gryfiński" id="gryfiński" type="checkbox" name="powiat[]" value="zachodniopomorskie_gryfiński"/></label></div>
+		<div><label><span class="po">powiat </span>kamieński<input class="pow" data-content="kamieński" id="kamieński" type="checkbox" name="powiat[]" value="zachodniopomorskie_kamieński"/></label></div>
+		<div><label><span class="po">powiat </span>kołobrzeski<input class="pow" data-content="kołobrzeski" id="kołobrzeski" type="checkbox" name="powiat[]" value="zachodniopomorskie_kołobrzeski"/></label></div>
+		<div><label><span class="po">powiat </span>koszaliński<input class="pow" data-content="koszaliński" id="koszaliński" type="checkbox" name="powiat[]" value="zachodniopomorskie_koszaliński"/></label></div>
+		<div><label><span class="po">powiat </span>łobeski<input class="pow" data-content="łobeski" id="łobeski" type="checkbox" name="powiat[]" value="zachodniopomorskie_łobeski"/></label></div>
+		<div><label><span class="po">powiat </span>myśliborski<input class="pow" data-content="myśliborski" id="myśliborski" type="checkbox" name="powiat[]" value="zachodniopomorskie_myśliborski"/></label></div>
+		<div><label><span class="po">powiat </span>policki<input class="pow" data-content="policki" id="policki" type="checkbox" name="powiat[]" value="zachodniopomorskie_policki"/></label></div>
+		<div><label><span class="po">powiat </span>pyrzycki<input class="pow" data-content="pyrzycki" id="pyrzycki" type="checkbox" name="powiat[]" value="zachodniopomorskie_pyrzycki"/></label></div>
+		<div><label><span class="po">powiat </span>sławieński<input class="pow" data-content="sławieński" id="sławieński" type="checkbox" name="powiat[]" value="zachodniopomorskie_sławieński"/></label></div>
+		<div><label><span class="po">powiat </span>stargardzki<input class="pow" data-content="stargardzki" id="stargardzki" type="checkbox" name="powiat[]" value="zachodniopomorskie_stargardzki"/></label></div>
+		<div><label><span class="po">powiat </span>szczecinecki<input class="pow" data-content="szczecinecki" id="szczecinecki" type="checkbox" name="powiat[]" value="zachodniopomorskie_szczecinecki"/></label></div>
+		<div><label><span class="po">powiat </span>świdwiński<input class="pow" data-content="świdwiński" id="świdwiński" type="checkbox" name="powiat[]" value="zachodniopomorskie_świdwiński"/></label></div>
+		<div><label><span class="po">powiat </span>wałecki<input class="pow" data-content="wałecki" id="wałecki" type="checkbox" name="powiat[]" value="zachodniopomorskie_wałecki"/></label></div>
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Szczecin","Koszalin","Świnoujście"]; //lista miast na prawach powiatu
+			var el = '16'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'zachodniopomorskie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

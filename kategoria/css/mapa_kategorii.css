@@ -1,0 +1,65 @@
+article header{margin:0 10px;}
+
+.kat_div ul li.depth1
+{
+	width:90%;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.category_viev ul
+{
+	margin-top:5px;
+	-webkit-padding-start: 20px;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+}
+
+.category_viev li
+{
+	list-style-type: none;
+}
+
+.depth1 li{padding:2px 0;}
+
+.depth2 li{padding:2px 0;}
+
+li.depth1
+{
+	background-color:#cfd4cf;
+	border-radius:5px;
+	padding:10px;
+	margin:7px 5px;
+}
+
+li.depth2
+{
+	background-color:#e7e9e7;
+	border-radius:5px;
+	padding:5px;
+	margin:5px 0px;
+}
+
+@media screen and (min-width: 640px){
+	.kat_div ul li.depth1{width:100%;}
+	
+	.category_viev ul li.depth1{
+		float:left;
+		width:48%;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.category_viev ul li.depth1{
+		float:left;
+		width:30%;
+	}
+	
+	.depth1.motoryzacja{
+		position:relative;
+
+	}
+}

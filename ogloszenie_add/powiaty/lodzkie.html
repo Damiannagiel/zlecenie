@@ -1,0 +1,61 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="łódzkie" onclick='zaznacz("łódzkie");' id="łódzkie" type="checkbox" name="powiat[]" value="łódzkie_łódzkie"/></label></div>
+		
+		<div><label>Łódź<input class="pow" data-content="Łódź" id="Łódź" type="checkbox" name="powiat[]" value="łódzkie_Łódź"/></label></div>
+		<div><label>Piotrków Trybunalski<input class="pow" data-content="Piotrków Trybunalski" id="Piotrków Trybunalski" type="checkbox" name="powiat[]" value="łódzkie_Piotrków Trybunalski"/></label></div>
+		<div><label>Skierniewice<input class="pow" data-content="Skierniewice" id="Skierniewice" type="checkbox" name="powiat[]" value="łódzkie_Skierniewice"/></label></div>
+		
+		<div><label><span class="po">powiat</span> bełchatowski<input class="pow" data-content="bełchatowski" id="bełchatowski" type="checkbox" name="powiat[]" value="łódzkie_bełchatowski"/></label></div>
+		<div><label><span class="po">powiat</span>brzeziński<input class="pow" data-content="brzeziński" id="brzeziński" type="checkbox" name="powiat[]" value="łódzkie_brzeziński"/></label></div>
+		<div><label><span class="po">powiat</span> kutnowski<input class="pow" data-content="kutnowski" id="kutnowski" type="checkbox" name="powiat[]" value="łódzkie_kutnowski"/></label></div>
+		<div><label><span class="po">powiat</span> łaski<input class="pow" data-content="łaski" id="łaski" type="checkbox" name="powiat[]" value="łódzkie_łaski"/></label></div>
+		<div><label><span class="po">powiat</span> łęczycki<input class="pow" data-content="łęczycki" id="łęczycki" type="checkbox" name="powiat[]" value="łódzkie_łęczycki"/></label></div>
+		<div><label><span class="po">powiat</span> łowicki<input class="pow" data-content="łowicki" id="łowicki" type="checkbox" name="powiat[]" value="łódzkie_łowicki"/></label></div>
+		<div><label><span class="po">powiat</span> łódzki wschodni<input class="pow" data-content="łódzki wschodni" id="łódzki wschodni" type="checkbox" name="powiat[]" value="łódzkie_łódzki wschodni"/></label></div>
+		<div><label><span class="po">powiat</span> opoczyński<input class="pow" data-content="opoczyński" id="opoczyński" type="checkbox" name="powiat[]" value="łódzkie_opoczyński"/></label></div>
+		<div><label><span class="po">powiat</span> pabianicki<input class="pow" data-content="pabianicki" id="pabianicki" type="checkbox" name="powiat[]" value="łódzkie_pabianicki"/></label></div>
+		<div><label><span class="po">powiat</span> pajęczański<input class="pow" data-content="pajęczański" id="pajęczański" type="checkbox" name="powiat[]" value="łódzkie_pajęczański"/></label></div>
+		<div><label><span class="po">powiat</span> piotrkowski<input class="pow" data-content="piotrkowski" id="piotrkowski" type="checkbox" name="powiat[]" value="łódzkie_piotrkowski"/></label></div>
+		<div><label><span class="po">powiat</span> poddębicki<input class="pow" data-content="poddębicki" id="poddębicki" type="checkbox" name="powiat[]" value="łódzkie_poddębicki"/></label></div>
+		<div><label><span class="po">powiat</span> radomszczański<input class="pow" data-content="radomszczański" id="radomszczański" type="checkbox" name="powiat[]" value="łódzkie_radomszczański"/></label></div>
+		<div><label><span class="po">powiat</span> rawski<input class="pow" data-content="rawski" id="rawski" type="checkbox" name="powiat[]" value="łódzkie_rawski"/></label></div>
+		<div><label><span class="po">powiat</span> sieradzki<input class="pow" data-content="sieradzki" id="sieradzki" type="checkbox" name="powiat[]" value="łódzkie_sieradzki"/></label></div>
+		<div><label><span class="po">powiat</span> skierniewicki<input class="pow" data-content="skierniewicki" id="skierniewicki" type="checkbox" name="powiat[]" value="łódzkie_skierniewicki"/></label></div>
+		<div><label><span class="po">powiat</span> tomaszowski<input class="pow" data-content="tomaszowski" id="tomaszowski" type="checkbox" name="powiat[]" value="łódzkie_tomaszowski"/></label></div>
+		<div><label><span class="po">powiat</span> wieluński<input class="pow" data-content="wieluński" id="wieluński" type="checkbox" name="powiat[]" value="łódzkie_wieluński"/></label></div>
+		<div><label><span class="po">powiat</span> wieruszowski<input class="pow" data-content="wieruszowski" id="wieruszowski" type="checkbox" name="powiat[]" value="łódzkie_wieruszowski"/></label></div>
+		<div><label><span class="po">powiat</span> zduńskowolski<input class="pow" data-content="zduńskowolski" id="zduńskowolski" type="checkbox" name="powiat[]" value="łódzkie_zduńskowolski"/></label></div>
+		<div><label><span class="po">powiat</span> zgierski<input class="pow" data-content="zgierski" id="zgierski" type="checkbox" name="powiat[]" value="łódzkie_zgierski"/></label></div>
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Łódź","Piotrków Trybunalski","Skierniewice"]; //lista miast na prawach powiatu
+			var el = '5'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'łódzkie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

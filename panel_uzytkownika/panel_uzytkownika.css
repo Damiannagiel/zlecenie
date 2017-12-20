@@ -1,0 +1,493 @@
+/* Nawigacja ------------------------------------------------------------------------------------------------------------------- */
+#pu_nav
+{
+	width:100%;
+	padding:10px;
+}
+
+.pu_img_user,.text_user,#message{display:inline-block;}
+
+.pu_img_user{
+	font-size:6rem;
+}
+
+#message{
+	font-size:4rem;
+	color:red;
+}
+
+.text_user{
+	text-align:left;
+}
+
+p.pu_user{
+	font-size:2.5rem;
+	font-weight:bold;
+}
+
+.pu_nav_container{margin-top:15px;}
+
+.pu_nav_container ol li{
+	padding:10px;
+	margin:5px 0px;
+	background-color:#99CC99;
+	border-radius:5px;
+}
+
+.pu_nav_container ol li:hover{cursor:pointer;}
+
+.active
+{
+	background-color:#bae6ba !important;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.inactive
+{
+	background-color:#99CC99;
+}
+
+.pu_content{padding:10px;}
+/* Nawigacja ------------------------------------------------------------------------------------------------------------------- */
+
+/* Informacje ------------------------------------------------------------------------------------------------------------------ */
+.user_user{
+	width:100%;
+	padding:5px;
+	background-color:#105610;
+	border-radius:5px;
+	margin-bottom:5px;
+}
+.user_user h3{margin:15px 0px 2px 0px;}
+
+.user_user p{
+	font-size:1.3rem;
+	margin-bottom:10px;
+	}
+	
+.blad_div form{margin-top:10px;}
+
+.blad_div input{padding:5px;}
+
+.box{
+	margin:5px 0px;
+	padding:5px;
+	background-color:#bae6ba;
+	border-radius:5px;
+}
+
+.box h4{
+	margin:5px 5px 15px 5px;
+	padding:5px;
+	border-radius:5px;
+	background-color:#276627;
+}
+
+.box div{
+	display:flex;
+	margin:5px 0px;
+	}
+
+span.info{
+	flex:0.4;
+	text-align:right;
+}
+
+span.value{
+	margin-left:5px;
+	flex:0.6;
+	text-align:left;
+}
+/* Informacje ------------------------------------------------------------------------------------------------------------------ */
+
+/* Kontakty ------------------------------------------------------------------------------------------------------------------ */
+.kontakt_div{
+	width:100%;
+	margin:5px;
+	padding:10px;
+	border: 2px solid #99CC99;
+	border-radius:25px;
+	display:flex;
+}
+
+.kontakt_div span.tytul p{
+	color:#424242;;
+}
+
+a:hover{text-decoration: none;}
+
+.kontakt_div span.tytul{
+	flex:0.7;
+	font-weight:bold;
+	margin-left:10px;
+	text-align:left;
+	font-size:2rem;
+}
+
+
+.kontakt_div span.data{
+	flex:0.3;
+	padding-top:4px;
+	color:#000000;
+	text-align:right;
+	padding-right:5px;
+	}
+	
+@media screen and (max-width: 505px){.kontakt_div span.tytul{padding-top:8px;}}
+
+.kontakt_div:hover{background-color:#99CC99;}
+
+.pobral_div{
+	width:100%;
+	margin:5px;
+	padding:10px;
+	border: 2px solid #99CC99;
+	border-radius:25px;
+}
+
+.nazwa_ogloszenia{
+	font-weight:bold;
+	font-size:2rem;
+	padding-bottom:10px;
+}
+
+.kontakt_szczegol{
+	display:flex;
+	padding:5px;
+	text-align:left;
+	}
+
+.kontakt_szczegol span.user_name{
+	flex:0.7;
+	color: #000000;
+}
+/* Kontakty ------------------------------------------------------------------------------------------------------------------ */
+
+/* Usuń ogłoszenie ------------------------------------------------------------------------------------------------------------------ */
+.usun_ogl .button-div{
+	margin:10px;
+}
+
+.usun_ogl .button-div .button-red, .usun_ogl .button-div .button-green{
+	margin:2px 15px;
+}
+
+.usun_ogl .button-div .button-red:hover, .usun_ogl .button-div .button-green:hover{
+	margin:0px 14px;
+}
+
+/* Usuń ogłoszenie ------------------------------------------------------------------------------------------------------------------ */
+
+
+@media screen and (max-width: 402px){.kontakt_szczegol span.user_name{padding-top:8px;}}
+
+/* Kontakty ------------------------------------------------------------------------------------------------------------------ */
+.kontakt_szczegol span.user_time{
+	flex:0.3;
+	text-align:right;
+	color: #000000;
+}
+
+.kontakt_szczegol:hover{
+	background-color:#99CC99;
+	border-radius:5px;
+	}
+/* Kontakty ------------------------------------------------------------------------------------------------------------------ */
+
+/* Ogłoszenia---------------------------------------------------------------------------------------------------------------- */
+.wyswietl_ogloszenie{
+	width:100%;
+	padding:10px;
+	margin:5px 0px;
+	border: 2px solid #99CC99;
+	border-radius:25px;
+}
+
+.tytul_ogloszenie{
+	font-weight:bold;
+	font-size:2rem;
+	text-align:center;
+	margin-bottom:5px;
+}
+
+.koniec_ogloszenie,.kategoria_ogloszenie,.zasieg_ogloszenie{
+	color:#000000;
+}
+
+.info_ogloszenie .kategoria_ogloszenie,.info_ogloszenie .zasieg_ogloszenie{
+	display:none;
+}
+
+.wyswietl_ogloszenie .button-green,.wyswietl_ogloszenie .button-red{
+	width:22.5%;
+	max-width:100px;
+	margin:10px 10px 0px 10px;
+	padding:5px 10px;
+}
+
+.wyswietl_ogloszenie .button-red:hover{margin:8px 10px 0px 10px;}
+
+.wyswietl_ogloszenie .button-green:hover{margin:8px 10px 0px 10px;}
+
+.wyswietl_ogloszenie .button-red:hover, .wyswietl_ogloszenie .button-green:hover{margin:4px 10px 4px 10px;}
+
+/* Ogłoszenia---------------------------------------------------------------------------------------------------------------- */
+
+/* Edycja --------------------------------------------------------------------------------------------------------------------- */
+
+.edit_container,.edit_container2{margin-bottom:20px;}
+
+fieldset
+{
+	border: 1px solid #dcdcdc;
+	border-radius:10px;
+	padding:20px;
+	background-color: #bae6ba;
+	border-radius:10px;
+}
+
+legend
+{
+	background-color:#99CC99;
+	border: 1px solid #dcdcdc;
+	border-radius: 10px;
+	padding:10px 20px;
+	text-align:left;
+	text-transform:uppercase;
+}
+
+.blad p{
+	width:70%;
+	padding:10px;
+	background-color: red;
+	border-radius:10px;
+	margin:10px auto 10px auto;
+}
+
+.edit_label{
+	display:flex;
+	flex-direction:column;
+}
+
+.edit_label .type{
+	width:70%;
+	margin:10px auto 10px auto;
+	padding:10px;
+	font-size:2.4rem;
+}
+
+.type.activetype
+{
+	border: 3px solid #669966;
+	border-radius: 25px;
+	box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.75);
+}
+.type
+{
+	border: 1px dotted #669966;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	border-radius: 25px;
+}
+
+.edit_container .button-div{margin-top:10px;}
+
+.edit_container2 .button-div{margin-top:20px;}
+
+.next.button-green,.next.button-red {
+	margin:0px 10px;
+	max-width:100px;
+	width:40%;
+	padding:10px 15px;
+	text-align:center;
+}
+
+.edit_label input {display:none;}
+
+.edit_input{
+	display:flex;
+	flex-direction:column;
+}
+
+.edit_input label{
+	font-size:2rem;
+	margin-top:5px;
+}
+
+.edit_input input{text-align:center;}
+
+#opis{
+	width:100%;
+	min-height:200px;
+}
+
+.edit_blad
+{
+	border: 1px solid #dcdcdc;
+	padding:20px;
+	background-color: #bae6ba;
+	border-radius:10px;
+}
+
+.edit_blad>em
+{
+	background-color: #FFd5d5;
+	font-style: normal;
+}
+
+.znaki_dop
+{
+	margin-top:20px;
+	font-size:1.3rem;
+}
+
+.zapisano p{
+	padding:15px 0px;
+	background-color:#AAAAAA;
+	border-radius:5px;
+	margin-bottom:5px;
+}
+/* Edycja --------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 640px){
+	/* Nawigacja ------------------------------------------------------------------------------------------------------------------- */
+	ol.pu_nav_ol{
+		display:flex;
+		flex-direction:row;
+		}
+	
+	.pu_nav_container ol li{
+		flex:1;
+		margin:2.5px;
+	}
+	
+	.pu_nav_container ol li a{display:block;}
+	
+	/* Nawigacja ------------------------------------------------------------------------------------------------------------------- */
+	
+	/* Informacje ------------------------------------------------------------------------------------------------------------------ */
+	.user_info{
+		float:left;
+		width:59%;
+	}
+	
+	.user_contact{
+		float:right;
+		width:39%;
+	}
+	
+	.user_opis p {margin:5px;}
+	/* Informacje ------------------------------------------------------------------------------------------------------------------ */
+	
+	/* Ogłoszenia---------------------------------------------------------------------------------------------------------------- */
+	.info_ogloszenie{
+		width:75%;
+		float:left;
+	}
+	
+	.wyswietl_ogloszenie .button-div{
+		width:25%;
+		float:right;
+		display:flex;
+		flex-direction:column;
+	}
+	
+	.wyswietl_ogloszenie .button-green,.wyswietl_ogloszenie .button-red{
+	width:100%;
+	max-width:100px;
+	margin:5px;
+	padding:5px 10px;
+	}
+	
+	.info_ogloszenie .kategoria_ogloszenie, .info_ogloszenie .zasieg_ogloszenie{
+		display:flex;
+	}
+	
+	.box  .info_ogloszenie{margin:0px;}
+	
+	 .wyswietl_ogloszenie .button-div{height:80px;}
+	/* Ogłoszenia---------------------------------------------------------------------------------------------------------------- */
+	
+	/* Edycja --------------------------------------------------------------------------------------------------------------------- */
+	.edit_container{
+		width:80%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.edit_container2{
+		width:90%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.edit_label{flex-direction:row;}
+
+	.edit_label .type{width:30%;}
+	
+	#osoba_lb{margin-left:15%;}
+	
+	#firma_lb{margin-right:15%;}
+	
+	.edit_container .button-div{margin-top:20px;}
+	
+	.next.button-green,.next.button-red{max-width:150px;}
+	
+	.edit_input{
+		flex-direction:row;
+		width:90%;
+		margin:10px auto;
+		}
+	
+	.edit_input label{
+		flex:0.3;
+		margin:10px 10px 0px 0px;
+		text-align:right;
+	}
+	
+	.edit_input input, .edit_input select{
+		flex:0.7;
+		text-align:left;
+	}
+	/* Edycja --------------------------------------------------------------------------------------------------------------------- */
+	
+	/* Usuń ogłoszenie ------------------------------------------------------------------------------------------------------------------ */
+	.usun_ogl{margin:25px 0;}
+	/* Usuń ogłoszenie ------------------------------------------------------------------------------------------------------------------ */
+	
+}
+
+@media screen and (min-width: 1024px){
+	/* Nawigacja ------------------------------------------------------------------------------------------------------------------- */
+	#pu_nav{
+		width:20%;
+		height:100%;
+		float:right;
+	}
+	
+	.pu_img_user{
+		display:block;
+	}
+	
+	.pu_content{
+		width:80%;
+		float:left;
+		border-right:1px solid #999999;
+		min-height:205px;
+	}
+	
+	ol.pu_nav_ol{
+		flex-direction:column;
+	}
+	/* Nawigacja ------------------------------------------------------------------------------------------------------------------- */
+	/* Usuń ogłoszenie ------------------------------------------------------------------------------------------------------------------ */
+	.usun_ogl{
+		margin:125px 0;
+		font-size:2rem;
+	}
+	/* Usuń ogłoszenie ------------------------------------------------------------------------------------------------------------------ */
+}
+
+
+

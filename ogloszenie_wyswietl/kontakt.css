@@ -1,0 +1,85 @@
+.kontakt{
+	margin:10px 4% 25px 4%;
+}
+.img_div{
+	position:relative;
+	top:3px;
+}
+
+img.kontakt_img{
+	width:100%;
+	border:2px solid #99cc99;
+	border-radius: 25px 25px 0 0;
+}
+
+.top .tytul_div{
+	width:100%;
+	padding:10px;
+	background-color:#99cc99;
+}
+
+.top .user_div{
+	border-right:2px solid #99cc99;
+	border-left:2px solid #99cc99;
+}
+
+.user_div{
+	padding:10px;
+}
+
+.bottom{
+	border:2px solid #99cc99;
+	border-top:none;
+	border-radius: 0 0 25px 25px;
+	padding:15px 10px;
+}
+.bottom p{
+	padding:5px 0;
+}
+
+@media screen and (min-width: 640px){
+	.kontakt{
+		max-width:700px;
+		margin:5% auto 12.5% auto;
+		font-size:1.8rem;
+	}
+	
+	img.kontakt_img{
+		border-radius: 25px 0 25px 0;
+	}
+	
+	.img_div{
+		position:static;
+		flex:0.5;
+	}
+	
+	.top{
+		display:flex;
+	}
+	
+	.tytul_div{
+		border-radius: 0 20px 0 0;
+	}
+	
+	.div_info{
+		border:2px solid #99cc99;
+		border-left:none;
+		border-bottom:none;
+		flex:0.5;
+		border-radius: 0 25px 0 0;
+	}
+	
+	.top .user_div{
+		border:none;
+	}
+	
+	.user_div p.user{
+		margin-top:10px;
+	}
+	
+	.bottom{
+		position:relative;
+		top:-3px;
+	}
+	
+}

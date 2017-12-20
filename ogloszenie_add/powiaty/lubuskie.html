@@ -1,0 +1,51 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="lubuskie" onclick='zaznacz("lubuskie");' id="lubuskie" type="checkbox" name="powiat[]" value="lubuskie_lubuskie"/></label></div>
+		
+		<div><label>Zielona Góra<input class="pow" data-content="Zielona Góra" id="Zielona Góra" type="checkbox" name="powiat[]" value="lubuskie_Zielona Góra"/></label></div>
+		<div><label>Gorzów Wielkopolski<input class="pow" data-content="Gorzów Wielkopolski" id="Gorzów Wielkopolski" type="checkbox" name="powiat[]" value="lubuskie_Gorzów Wielkopolski"/></label></div>
+		<div><label><span class="po">powiat</span> gorzowski<input class="pow" data-content="gorzowski" id="gorzowski" type="checkbox" name="powiat[]" value="lubuskie_gorzowski"/></label></div>
+		<div><label><span class="po">powiat</span> krośnieński<input class="pow" data-content="krośnieński" id="krośnieński" type="checkbox" name="powiat[]" value="lubuskie_krośnieński"/></label></div>
+		<div><label><span class="po">powiat</span> międzyrzecki<input class="pow" data-content="międzyrzecki" id="międzyrzecki" type="checkbox" name="powiat[]" value="lubuskie_międzyrzecki"/></label></div>
+		<div><label><span class="po">powiat</span> nowosolski<input class="pow" data-content="nowosolski" id="nowosolski" type="checkbox" name="powiat[]" value="lubuskie_nowosolski"/></label></div>
+		<div><label><span class="po">powiat</span> słubicki<input class="pow" data-content="słubicki" id="słubicki" type="checkbox" name="powiat[]" value="lubuskie_słubicki"/></label></div>
+		<div><label><span class="po">powiat</span> strzelecko-drezdenecki<input class="pow" data-content="strzelecko-drezdenecki" id="strzelecko-drezdenecki" type="checkbox" name="powiat[]" value="lubuskie_strzelecko-drezdenecki"/></label></div>
+		<div><label><span class="po">powiat</span> sulęciński<input class="pow" data-content="sulęciński" id="sulęciński" type="checkbox" name="powiat[]" value="lubuskie_sulęciński"/></label></div>
+		<div><label><span class="po">powiat</span> świebodziński<input class="pow" data-content="świebodziński" id="świebodziński" type="checkbox" name="powiat[]" value="lubuskie_świebodziński"/></label></div>
+		<div><label><span class="po">powiat</span> wschowski<input class="pow" data-content="wschowski" id="wschowski" type="checkbox" name="powiat[]" value="lubuskie_wschowski"/></label></div>
+		<div><label><span class="po">powiat</span> zielonogórski<input class="pow" data-content="zielonogórski" id="zielonogórski" type="checkbox" name="powiat[]" value="lubuskie_zielonogórski"/></label></div>
+		<div><label><span class="po">powiat</span> żagański<input class="pow" data-content="żagański" id="żagański" type="checkbox" name="powiat[]" value="lubuskie_żagański"/></label></div>
+		<div><label><span class="po">powiat</span> żarski<input class="pow" data-content="żarski" id="żarski" type="checkbox" name="powiat[]" value="lubuskie_żarski"/></label></div>
+		
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Zielona Góra","Gorzów Wielkopolski"]; //lista miast na prawach powiatu
+			var el = '4'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'lubuskie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

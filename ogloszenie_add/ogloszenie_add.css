@@ -1,0 +1,451 @@
+p.blad{
+	color:#FF0000;
+}
+
+.ogl_add_input,#miasto_div input{
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:20px;
+}
+
+.ogl_add_input .inp, .wojewodztwo_min .inp{
+	width:100%;
+}
+
+.ogl_add_input label.description,.ogl_add_zasieg label.description{
+	font-family:Verdana;
+	display:block;
+	margin-left:2px;
+	margin-bottom:2px;
+	text-align:left;
+	font-size:1.8rem;
+	float:none;
+}
+
+#miasto_div p{
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:Verdana;
+	margin-bottom:2px;
+	text-align:left;
+	font-size:1.8rem;
+}
+
+.lab_p{
+	height:48px;
+}
+
+.ogl_add_input p.nawias,.ogl_add_zasieg p.nawias{
+	font-size: 1.4rem;
+    color: #7f7f7f;
+}
+
+.ogl_add_zasieg p.nawias{
+	text-align:left;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+.ogl_add_input.typ .prawa input,.ogl_add_input.typ .prawa span{display:none;}
+
+.ogl_add_input.typ .prawa div{
+	display:flex;
+	flex-direction:column;
+}
+
+.ogl_add_input.typ .prawa .typ_box{height:46px;}
+
+.ogl_add_input.typ .prawa label{
+	width: 70%;
+	background-color: #dcf2dc;
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 25px;
+    border: 1px dotted rgb(102, 153, 102);
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 10px 0px;
+	text-shadow: 1px -1px 2px rgba(150, 150, 150, 1);
+}
+
+.ogl_add_input.typ .prawa label:hover{
+	border: 2px solid rgb(102, 153, 102);
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 15px 0.5px;
+	cursor:pointer;
+	 margin: 9px auto 9px auto;
+}
+
+.ogl_add_input.typ .prawa label.active_type{
+	font-weight:bold;
+	border: 3px solid rgb(102, 153, 102);
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 20px 1px;
+	background-color: #bae6ba;
+	margin: 10px auto 10px auto;
+}
+
+.ogl_add_input select.inp,.ogl_add_input input.inp2,.ogl_add_input input.inp3,.ogl_add_input input.inp1{margin-bottom:5px;}
+
+.ogl_add_input textarea.area1{
+	height:84px;
+	padding:10px;
+}
+
+.ogl_add_input input.inp2{
+	width:90%;
+	float:left;
+}
+
+p#zl{
+	font-size:1.8rem;
+	padding-top:12px;
+}
+
+.ogl_add_input.zdjecia{
+	text-align:left;
+}
+
+.ogl_add_input input[type="file"]{
+	padding:7.5px;
+}
+
+.button-div{margin:25px 0;}
+
+.button-green{
+	width:90%;
+	max-width:300px;
+}
+
+.ogl_add_zasieg label.description{
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+	padding:0;
+}
+
+.wojewodztwo{margin:10px 0;}
+
+.wojewodztwo>p{
+	margin:5px;
+	font-size:1rem;
+}
+
+svg#svg2{
+	max-width:640px;
+	width:100%;
+	height:100%;
+}
+
+.woj:hover{
+	cursor:pointer;
+	fill:#fbe0c0;
+}
+
+.woj{fill:#f6d3aa;}
+
+.zaznaczony{fill:#FF7373;}
+
+.active{fill:red;}
+
+.powiat2{margin-bottom:20px;}
+
+.powiat2 span.po{display:none;}
+
+.powiat2 label.all{
+	width:100%;
+	text-align:center;
+}
+
+.powiat2 label.all span.input-styled{
+	float:none;
+	margin-left:5px;
+	position:relative;
+	top:5px;
+}
+
+.powiat2 label{
+	text-align:left;
+	display:block;
+	width:50%;
+	padding:5px;
+	float:left;
+	font-size:1.8rem;
+}
+
+#miejscowosc img,#miejscowosc p{display:none;}
+
+#miejscowosc p.blad_woj{
+	color:#ff1919;
+	width:90%;
+	display:block;
+	margin:0 auto 20px auto;
+	}
+
+/* checkbox */
+
+.input-styled  {
+	margin-right:5px;
+	float:right;
+    width:20px; 
+    height:20px; 
+    overflow: hidden; 
+    position: relative; 
+    border:1px solid #333; 
+    box-shadow:inset 0 2px 2px rgba(0,0,0,0.3); 
+    display:inline-block; 
+    background:#eee;
+}
+.input-styled  input {
+    width:20px; 
+    height:20px; 
+    opacity:0; 
+    position: absolute; 
+	left:0; 
+    z-index: 2;
+}
+.input-styled  input + span {
+    display:block; 
+	position: relative; 
+	z-index: 1; 
+    width:18px; 
+    height:18px; 
+    color:#328532;
+    left:-25px; 
+    top:1px; 
+    transition:0.2s; -webkit-transition:0.2s; -moz-transition:0.2s; 
+    border-radius:2px;
+}
+.input-styled  input:checked + span {
+    left:1px;
+}
+
+text.woj_desc{
+	fill:#000000; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: normal; 
+	font-stretch: normal; 
+	font-size: 19000%;
+	line-height: normal; 
+	font-family: Arial; 
+	text-anchor: middle;
+}
+
+.ogl_add_input.zdjecia input:hover{
+	border:0;
+	cursor:pointer;
+}
+
+.img_edit figure{
+	width:66%;
+	margin:10px auto;
+	text-align:center;
+	color:#ff0000;
+	font-weight:bold;
+}
+
+.img_edit figcaption{
+	padding:5px;
+}
+
+.img_edit figcaption:hover{
+	cursor:pointer;
+}
+
+.img_edit img{
+	width:100%;
+	height:140px;
+	max-width:320px;
+}
+
+i.icon-cancel:hover{cursor:pointer;}
+
+.zaznaczony:hover{
+	cursor:pointer;
+	fill:#FF7373;
+}
+
+.zaznaczony.active:hover{
+	fill:red;
+}
+
+@media screen and (min-width: 400px){
+	.img_edit img{height:160px;}
+}
+
+@media screen and (min-width: 480px){
+	.img_edit img{height:180px;}
+}
+
+@media screen and (min-width: 560px){
+	.img_edit img{height:200px;}
+}
+
+@media screen and (min-width: 640px){
+	
+	.img_edit figure{
+		text-align:left;
+		margin:10px auto 10px 10px;
+		display:flex;
+	}
+	
+	.img_edit figcaption{
+		margin-top:85px;
+		max-height:30px;
+	}
+	
+	.ogl_add_input.typ .prawa div{flex-direction:row;}
+
+	.ogl_add_input.typ .prawa .typ_box{height:46px;}
+
+	.ogl_add_input.typ .prawa label{flex:0.35;}
+	
+	.ogl_add_input.kat .prawa div {display:flex;}
+	
+	.ogl_add_input.kat .prawa .prawa {flex:1;}
+	
+	
+	.powiat2 label{width:33%;}
+	
+	svg#svg2{
+		width:90%;
+		margin:0 5%;
+	}
+	
+	.ogl_add_input.kontakt .prawa div,.ogl_add_input.cena .prawa{display:flex;}
+	
+	.ogl_add_input.kontakt .prawa input{
+		flex:1;
+		margin:0 5px 5px 5px;
+	}
+	
+	p#zl{margin:0 10px;}
+}
+
+@media screen and (min-width: 800px){
+	
+	.ogl_add_zasieg .wojewodztwo label.description, .ogl_add_zasieg .wojewodztwo p.nawias{margin-left:8%;}
+	
+	.wojewodztwo{
+		margin:0;
+		float:left;
+		width:62.5%;
+	}
+	
+	svg#svg2{
+		margin:10px 2.5%;
+		width:95%;
+	}
+	
+	.powiat{
+		float:left;
+		width:37.5%;
+	}
+	
+	#powiaty{
+		margin:10px 2.5%;
+		padding:10px;
+		background-color:#c6e6c6;
+		border-radius:10px;
+	}
+	
+	.powiat2 label{
+		float:none;
+		width:100%;
+	}
+	
+	.powiat2 #powiaty label:hover{
+		background-color:#99cc99;
+		border-radius:15px;
+		cursor:pointer;
+	}
+	
+	.powiat2 span.po{display:initial;}
+	
+}
+
+@media screen and (min-width: 1024px){
+	
+	.ogl_add_input,.ogl_add_zasieg{
+		margin-bottom:25px;
+	}
+	
+	#miejscowosc img,#miejscowosc p{display:initial;}
+	
+	.wojewodztwo{
+		width:45%;
+	}
+	
+	svg#svg2{
+		margin:10px 2.5%;
+		width:95%;
+	}
+	
+	.powiat{
+		width:55%;
+	}
+
+	.powiat{
+		display:flex;
+	}
+	
+	.powiat2{
+		flex:0.5;
+	}
+	
+	#miejscowosc{
+		flex:0.5;
+		margin:2.5%;
+		margin-top:58px;
+	}
+	
+	#miejscowosc p{
+		font-size:1.8rem;
+		margin:5px 0;
+	}
+	
+	.duze{width:100%;}
+
+	.srednie{width:50%;}
+
+	.male{width:33%;}
+	
+	.ogl_add_input label.description, #miasto_div label.description{
+		display:block;
+		width:15%;
+		float:left;
+		text-align:right;
+		padding:0px 15px 0px 0px;
+	}
+
+	.ogl_add_input .prawa, #miasto_div .prawa{
+		width:84.5%;
+		float:left;
+	}
+	
+	#miasto_div{
+		width: 90%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	#miasto_div input{
+		width:100%;
+		margin:0;
+	}
+	
+	.prawa p.nawias{text-align:left;}
+
+}
+
+@media screen and (min-width: 1200px){
+	
+	.wojewodztwo{
+		width:50%;
+	}
+	
+	.powiat{
+		width:50%;
+	}
+}

@@ -1,0 +1,60 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+	
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="warmińsko-mazurskie" onclick='zaznacz("warmińsko-mazurskie");' id="warmińsko-mazurskie" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_warmińsko-mazurskie"/></label></div>
+		
+		<div><label>Olsztyn<input class="pow" data-content="Olsztyn" id="Olsztyn" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_Olsztyn"/></label></div>
+		<div><label>Elbląg<input class="pow" data-content="Elbląg" id="Elbląg" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_Elbląg"/></label></div>
+		
+		<div><label><span class="po">powiat </span>bartoszycki<input class="pow" data-content="bartoszycki" id="bartoszycki" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_bartoszycki"/></label></div>
+		<div><label><span class="po">powiat </span>braniewski<input class="pow" data-content="braniewski" id="braniewski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_braniewski"/></label></div>
+		<div><label><span class="po">powiat </span>działdowski<input class="pow" data-content="działdowski" id="działdowski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_działdowski"/></label></div>
+		<div><label><span class="po">powiat </span>elbląski<input class="pow" data-content="elbląski" id="elbląski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_elbląski"/></label></div>
+		<div><label><span class="po">powiat </span>ełcki<input class="pow" data-content="ełcki" id="ełcki" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_ełcki"/></label></div>
+		<div><label><span class="po">powiat </span>giżycki<input class="pow" data-content="giżycki" id="giżycki" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_giżycki"/></label></div>
+		<div><label><span class="po">powiat </span>gołdapski<input class="pow" data-content="gołdapski" id="gołdapski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_gołdapski"/></label></div>
+		<div><label><span class="po">powiat </span>iławski<input class="pow" data-content="iławski" id="iławski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_iławski"/></label></div>
+		<div><label><span class="po">powiat </span>kętrzyński<input class="pow" data-content="kętrzyński" id="kętrzyński" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_kętrzyński"/></label></div>
+		<div><label><span class="po">powiat </span>lidzbarski<input class="pow" data-content="lidzbarski" id="lidzbarski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_lidzbarski"/></label></div>
+		<div><label><span class="po">powiat </span>mrągowski<input class="pow" data-content="mrągowski" id="mrągowski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_mrągowski"/></label></div>
+		<div><label><span class="po">powiat </span>nidzicki<input class="pow" data-content="nidzicki" id="nidzicki" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_nidzicki"/></label></div>
+		<div><label><span class="po">powiat </span>nowomiejski<input class="pow" data-content="nowomiejski" id="nowomiejski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_nowomiejski"/></label></div>
+		<div><label><span class="po">powiat </span>olecki<input class="pow" data-content="olecki" id="olecki" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_olecki"/></label></div>
+		<div><label><span class="po">powiat </span>olsztyński<input class="pow" data-content="olsztyński" id="olsztyński" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_olsztyński"/></label></div>
+		<div><label><span class="po">powiat </span>ostródzki<input class="pow" data-content="ostródzki" id="ostródzki" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_ostródzki"/></label></div>
+		<div><label><span class="po">powiat </span>piski<input class="pow" data-content="piski" id="piski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_piski"/></label></div>
+		<div><label><span class="po">powiat </span>szczycieński<input class="pow" data-content="szczycieński" id="szczycieński" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_szczycieński"/></label></div>
+		<div><label><span class="po">powiat </span>węgorzewski<input class="pow" data-content="węgorzewski" id="węgorzewski" type="checkbox" name="powiat[]" value="warmińsko-mazurskie_węgorzewski"/></label></div>
+		
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Olsztyn","Elbląg"]; //lista miast na prawach powiatu
+			var el = '14'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'warmińsko-mazurskie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

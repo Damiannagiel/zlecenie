@@ -1,0 +1,68 @@
+#regulations{
+	font-size:1.5rem;
+	line-height:1.7rem;
+	font-family: Verdana,serif;
+	padding:5%;
+	color:#222222;
+}
+
+#regulations h2{
+	line-height:initial;
+	font-size:169%;
+}
+
+#regulations h6{
+	background-color:#b7dbb7;
+	margin:32px 0 16px 0;
+	line-height:2.4rem;
+}
+
+#regulations ol li{
+	margin:5px 0;
+}
+
+#regulations ol li.def{
+	display:flex;
+}
+
+#regulations ol li.def span{
+	text-align:right;
+	max-width:135px;
+	min-width:95px;
+	font-weight:bold;
+	width:25%;
+}
+
+#regulations ol li.def p{
+	padding-left:10px;
+	flex:1;
+	text-align:left;
+}
+
+#regulations ol li.def span::after{
+	content: '-';
+	position:relative;
+	left:5px;
+}
+
+#regulations li.nr{
+	display:flex;
+}
+
+#regulations li.nr span{
+	margin-right:10px;
+}
+#regulations li.nr p{
+	text-align:left;
+}
+
+@media screen and (min-width: 640px){
+	#regulations{
+		padding:5% 10%;
+		line-height:2.4rem;
+	}
+	
+	#regulations h2{
+		font-size:225%;
+	}
+}

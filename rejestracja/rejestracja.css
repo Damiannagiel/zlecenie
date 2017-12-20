@@ -1,0 +1,128 @@
+body{min-width:360px;}
+
+	aside img.low{margin-top:15px;}
+	aside img.medium{display:none;}
+	aside img.large{display:none;}
+
+form.register{
+	margin:25px auto 10px auto;
+	width:90%;
+	padding:10px 10px 25px 10px;
+	background-color:#DDDDDD;
+	border-radius:25px;
+	margin-bottom:50px;
+	-webkit-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.75);
+ }
+ 
+ div.account{display:none;}
+ 
+ .rejdiv_inp{
+	 margin:15px 0px 15px 0px;
+ }
+ 
+ .rejdiv_inp input, .rejdiv_inp select{
+	 width:90%;
+ }
+ 
+.g-recaptcha div{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.error{
+	font-weight:bold;
+	color:red;
+}
+
+.rejdiv_inp label.title {
+	display:initial;
+	font-size:1.9rem;
+	vertical-align:40%;
+	}
+
+.rejdiv_inp input[type="checkbox"] {
+	margin-left:15px;
+	width:28px;
+	height:28px;
+}
+
+.button-div .button-green{
+	width:90%;
+    max-width: 300px;
+}
+
+.rejdiv_inp label{display:none;}
+
+
+
+@media screen and (min-width: 640px){
+	aside img.low{display:none;}
+	aside img.medium{
+		margin-left:auto;
+		margin-right:auto;
+		max-width:100%;
+		display:block;
+		margin-top:15px;
+	}
+	
+	form.register{width:80%;}
+	
+	.rejdiv_inp label{display:initial;}
+	
+	.rejdiv_inp{display:flex;}
+	
+	.g-recaptcha, .regulations{flex:1;}
+	
+	.rejdiv_inp label{
+		flex:0.3;
+		text-align:right;
+		font-weight:bold;
+		padding-top:12px;
+	}
+	
+	
+	.imput-text {flex:0.7;}
+}
+
+@media screen and (min-width: 1024px){
+	aside div{
+		float:right;
+		width:32%;
+		margin: 2%;
+	}
+	aside img.low{display:none;}
+	aside img.medium{display:none;}
+	aside img.large{
+		display:block;
+		margin:2% auto 2% auto;
+		}
+	
+	form.register{
+		float:left;
+		width:60%;
+		margin:2%;
+		}
+	
+	div.account{
+		display:block;
+		float:right;
+		width:32%;
+		padding:10px;
+		margin: 2%;
+		border:1px solid #999999;
+		border-radius:10px;
+		background-color: #EEEEEE;
+		-webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+		-moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+		box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+	}
+	
+	.account button.button-red{
+		margin:15px;
+		width:135px;
+	}
+	
+	.button-div{margin:15px;}
+}

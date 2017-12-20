@@ -1,0 +1,63 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+	
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="podkarpackie" onclick='zaznacz("podkarpackie");' id="podkarpackie" type="checkbox" name="powiat[]" value="podkarpackie_podkarpackie"/></label></div>
+		
+		<div><label>Rzeszów<input class="pow" data-content="Rzeszów" id="Rzeszów" type="checkbox" name="powiat[]" value="podkarpackie_Rzeszów"/></label></div>
+		<div><label>Przemyśl<input class="pow" data-content="Przemyśl" id="Przemyśl" type="checkbox" name="powiat[]" value="podkarpackie_Przemyśl"/></label></div>
+		<div><label>Tarnobrzeg<input class="pow" data-content="Tarnobrzeg" id="Tarnobrzeg" type="checkbox" name="powiat[]" value="podkarpackie_Tarnobrzeg"/></label></div>
+		<div><label>Krosno<input class="pow" data-content="Krosno" id="Krosno" type="checkbox" name="powiat[]" value="podkarpackie_Krosno"/></label></div>
+		
+		<div><label><span class="po">powiat </span>bieszczadzki<input class="pow" data-content="bieszczadzki" id="bieszczadzki" type="checkbox" name="powiat[]" value="podkarpackie_bieszczadzki"/></label></div>
+		<div><label><span class="po">powiat </span>brzozowski<input class="pow" data-content="brzozowski" id="brzozowski" type="checkbox" name="powiat[]" value="podkarpackie_brzozowski"/></label></div>
+		<div><label><span class="po">powiat </span>dębicki<input class="pow" data-content="dębicki" id="dębicki" type="checkbox" name="powiat[]" value="podkarpackie_dębicki"/></label></div>
+		<div><label><span class="po">powiat </span>jarosławski<input class="pow" data-content="jarosławski" id="jarosławski" type="checkbox" name="powiat[]" value="podkarpackie_jarosławski"/></label></div>
+		<div><label><span class="po">powiat </span>jasielski<input class="pow" data-content="jasielski" id="jasielski" type="checkbox" name="powiat[]" value="podkarpackie_jasielski"/></label></div>
+		<div><label><span class="po">powiat </span>kolbuszowski<input class="pow" data-content="kolbuszowski" id="kolbuszowski" type="checkbox" name="powiat[]" value="podkarpackie_kolbuszowski"/></label></div>
+		<div><label><span class="po">powiat </span>krośnieński<input class="pow" data-content="krośnieński" id="krośnieński" type="checkbox" name="powiat[]" value="podkarpackie_krośnieński"/></label></div>
+		<div><label><span class="po">powiat </span>leski<input class="pow" data-content="leski" id="leski" type="checkbox" name="powiat[]" value="podkarpackie_leski"/></label></div>
+		<div><label><span class="po">powiat </span>leżajski<input class="pow" data-content="leżajski" id="leżajski" type="checkbox" name="powiat[]" value="podkarpackie_leżajski"/></label></div>
+		<div><label><span class="po">powiat </span>lubaczowski<input class="pow" data-content="lubaczowski" id="lubaczowski" type="checkbox" name="powiat[]" value="podkarpackie_lubaczowski"/></label></div>
+		<div><label><span class="po">powiat </span>łańcucki<input class="pow" data-content="łańcucki" id="łańcucki" type="checkbox" name="powiat[]" value="podkarpackie_łańcucki"/></label></div>
+		<div><label><span class="po">powiat </span>mielecki<input class="pow" data-content="mielecki" id="mielecki" type="checkbox" name="powiat[]" value="podkarpackie_mielecki"/></label></div>
+		<div><label><span class="po">powiat </span>niżański<input class="pow" data-content="niżański" id="niżański" type="checkbox" name="powiat[]" value="podkarpackie_niżański"/></label></div>
+		<div><label><span class="po">powiat </span>przemyski<input class="pow" data-content="przemyski" id="przemyski" type="checkbox" name="powiat[]" value="podkarpackie_przemyski"/></label></div>
+		<div><label><span class="po">powiat </span>przeworski<input class="pow" data-content="przeworski" id="przeworski" type="checkbox" name="powiat[]" value="podkarpackie_przeworski"/></label></div>
+		<div><label><span class="po">powiat </span>ropczycko-sędziszowski<input class="pow" data-content="ropczycko-sędziszowski" id="ropczycko-sędziszowski" type="checkbox" name="powiat[]" value="podkarpackie_ropczycko-sędziszowski"/></label></div>
+		<div><label><span class="po">powiat </span>rzeszowski<input class="pow" data-content="rzeszowski" id="rzeszowski" type="checkbox" name="powiat[]" value="podkarpackie_rzeszowski"/></label></div>
+		<div><label><span class="po">powiat </span>sanocki<input class="pow" data-content="sanocki" id="sanocki" type="checkbox" name="powiat[]" value="podkarpackie_sanocki"/></label></div>
+		<div><label><span class="po">powiat </span>stalowowolski<input class="pow" data-content="stalowowolski" id="stalowowolski" type="checkbox" name="powiat[]" value="podkarpackie_stalowowolski"/></label></div>
+		<div><label><span class="po">powiat </span>strzyżowski<input class="pow" data-content="strzyżowski" id="strzyżowski" type="checkbox" name="powiat[]" value="podkarpackie_strzyżowski"/></label></div>
+		<div><label><span class="po">powiat </span>tarnobrzeski<input class="pow" data-content="tarnobrzeski" id="tarnobrzeski" type="checkbox" name="powiat[]" value="podkarpackie_tarnobrzeski"/></label></div>
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Rzeszów","Przemyśl","Tarnobrzeg","Krosno"]; //lista miast na prawach powiatu
+			var el = '9'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'podkarpackie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

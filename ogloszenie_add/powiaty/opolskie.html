@@ -1,0 +1,50 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+	
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="opolskie" onclick='zaznacz("opolskie");' id="opolskie" type="checkbox" name="powiat[]" value="opolskie_opolskie"/></label></div>
+		
+		<div><label>Opole<input class="pow" data-content="Opole" id="Opole" type="checkbox" name="powiat[]" value="opolskie_Opole"/></label></div>
+		
+		<div><label><span class="po">powiat </span>brzeski<input class="pow" data-content="brzeski" id="brzeski" type="checkbox" name="powiat[]" value="opolskie_brzeski"/></label></div>
+		<div><label><span class="po">powiat </span>głubczycki<input class="pow" data-content="głubczycki" id="głubczycki" type="checkbox" name="powiat[]" value="opolskie_głubczycki"/></label></div>
+		<div><label><span class="po">powiat </span>kędzierzyńsko-kozielski<input class="pow" data-content="kędzierzyńsko-kozielski" id="kędzierzyńsko-kozielski" type="checkbox" name="powiat[]" value="opolskie_kędzierzyńsko-kozielski"/></label></div>
+		<div><label><span class="po">powiat </span>kluczborski<input class="pow" data-content="kluczborski" id="kluczborski" type="checkbox" name="powiat[]" value="opolskie_kluczborski"/></label></div>
+		<div><label><span class="po">powiat </span>krapkowicki<input class="pow" data-content="krapkowicki" id="krapkowicki" type="checkbox" name="powiat[]" value="opolskie_krapkowicki"/></label></div>
+		<div><label><span class="po">powiat </span>namysłowski<input class="pow" data-content="namysłowski" id="namysłowski" type="checkbox" name="powiat[]" value="opolskie_namysłowski"/></label></div>
+		<div><label><span class="po">powiat </span>nyski<input class="pow" data-content="nyski" id="nyski" type="checkbox" name="powiat[]" value="opolskie_nyski"/></label></div>
+		<div><label><span class="po">powiat </span>oleski<input class="pow" data-content="oleski" id="oleski" type="checkbox" name="powiat[]" value="opolskie_oleski"/></label></div>
+		<div><label><span class="po">powiat </span>opolski<input class="pow" data-content="opolski" id="opolski" type="checkbox" name="powiat[]" value="opolskie_opolski"/></label></div>
+		<div><label><span class="po">powiat </span>prudnicki<input class="pow" data-content="prudnicki" id="prudnicki" type="checkbox" name="powiat[]" value="opolskie_prudnicki"/></label></div>
+		<div><label><span class="po">powiat </span>strzelecki<input class="pow" data-content="strzelecki" id="strzelecki" type="checkbox" name="powiat[]" value="opolskie_strzelecki"/></label></div>
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Opole"]; //lista miast na prawach powiatu
+			var el = '8'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'opolskie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

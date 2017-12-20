@@ -1,0 +1,40 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+	
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="<!-- woj -->" onclick='zaznacz("<!-- woj -->");' id="<!-- woj -->" type="checkbox" name="powiat[]" value="<!-- woj -->_<!-- woj -->"/></label></div>
+		
+		<div><label><!-- mnpp --><input class="pow" data-content="<!-- pow -->" id="<!-- pow -->" type="checkbox" name="powiat[]" value="<!-- woj -->_<!-- pow -->"/></label></div>
+		
+		<div><label><span class="po">powiat </span><!-- pow --><input class="pow" data-content="<!-- pow -->" id="<!-- pow -->" type="checkbox" name="powiat[]" value="<!-- woj -->_<!-- pow -->"/></label></div>
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = []; //lista miast na prawach powiatu
+			var el = ''; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = '';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

@@ -1,0 +1,58 @@
+<!-- Województwo kujawsko-pomorskie -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input id="kujawsko-pomorskie" class="pow" data-content="kujawsko-pomorskie" onclick='zaznacz("kujawsko-pomorskie");' type="checkbox" name="powiat[]" value="kujawsko-pomorskie_kujawsko-pomorskie"/></label></div>
+		
+		<div><label>Bydgoszcz<input id="Bydgoszcz" class="pow" data-content="Bydgoszcz" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_Bydgoszcz"/></label></div>
+		
+		<div><label>Toruń<input id="Toruń" class="pow" data-content="Toruń" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_Toruń"/></label></div>
+		<div><label>Włocławek<input id="Włocławek" class="pow" data-content="Włocławek" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_Włocławek"/></label></div>
+		<div><label>Grudziądz<input id="Grudziądz" class="pow" data-content="Grudziądz" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_Grudziądz"/></label></div>
+		<div><label><span class="po">powiat</span> aleksandrowski<input id="aleksandrowski" class="pow" data-content="aleksandrowski" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_aleksandrowski"/></label></div>
+		<div><label><span class="po">powiat</span> brodnicki<input id="brodnicki" class="pow" data-content="brodnicki" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_brodnicki"/></label></div>
+		<div><label><span class="po">powiat</span> bydgoski<input id="bydgoski" class="pow" data-content="bydgoski" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_bydgoski"/></label></div>
+		<div><label><span class="po">powiat</span> chełmiński<input id="chełmiński" class="pow" data-content="chełmiński" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_chełmiński"/></label></div>
+		<div><label><span class="po">powiat</span> golubsko-dobrzyński<input id="golubsko-dobrzyński" class="pow" data-content="golubsko-dobrzyński" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_golubsko-dobrzyński"/></label></div>
+		<div><label><span class="po">powiat</span> grudziądzki<input id="grudziądzki" class="pow" data-content="grudziądzki" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_grudziądzki"/></label></div>
+		<div><label><span class="po">powiat</span> inowrocławski<input id="inowrocławski" class="pow" data-content="inowrocławski" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_inowrocławski"/></label></div>
+		<div><label><span class="po">powiat</span> lipnowski<input id="lipnowski" class="pow" data-content="lipnowski" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_lipnowski"/></label></div>
+		<div><label><span class="po">powiat</span> mogileński<input id="mogileński" class="pow" data-content="mogileński" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_mogileński"/></label></div>
+		<div><label><span class="po">powiat</span> nakielski<input id="nakielski" class="pow" data-content="nakielski" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_nakielski"/></label></div>
+		<div><label><span class="po">powiat</span> radziejowski<input id="radziejowski" class="pow" data-content="radziejowski" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_radziejowski"/></label></div>
+		<div><label><span class="po">powiat</span> rypiński<input id="rypiński" class="pow" data-content="rypiński" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_rypiński"/></label></div>
+		<div><label><span class="po">powiat</span> sępoleński<input id="sępoleński" class="pow" data-content="sępoleński" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_sępoleński"/></label></div>
+		<div><label><span class="po">powiat</span> świecki<input id="świecki" class="pow" data-content="świecki" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_świecki"/></label></div>
+		<div><label><span class="po">powiat</span> toruński<input id="toruński" class="pow" data-content="toruński" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_toruński"/></label></div>
+		<div><label><span class="po">powiat</span> tucholski<input id="tucholski"  class="pow" data-content="tucholski" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_tucholski"/></label></div>
+		<div><label><span class="po">powiat</span> wąbrzeski<input id="wąbrzeski" class="pow" data-content="wąbrzeski" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_wąbrzeski"/></label></div>
+		<div><label><span class="po">powiat</span> włocławski<input id="włocławski" class="pow" data-content="włocławski" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_włocławski"/></label></div>
+		<div><label><span class="po">powiat</span> żniński<input id="żniński" class="pow" data-content="żniński" type="checkbox" name="powiat[]" value="kujawsko-pomorskie_żniński"/></label></div>
+	</div>
+
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ['Bydgoszcz','Toruń','Włocławek','Grudziądz'];
+			var el = '2';
+			var woj = 'kujawsko-pomorskie';
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+	</script>
+	

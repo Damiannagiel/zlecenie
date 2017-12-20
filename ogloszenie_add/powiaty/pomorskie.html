@@ -1,0 +1,58 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+	
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="pomorskie" onclick='zaznacz("pomorskie");' id="pomorskie" type="checkbox" name="powiat[]" value="pomorskie_pomorskie"/></label></div>
+		
+		<div><label>Gdańsk<input class="pow" data-content="Gdańsk" id="Gdańsk" type="checkbox" name="powiat[]" value="pomorskie_Gdańsk"/></label></div>
+		<div><label>Gdynia<input class="pow" data-content="Gdynia" id="Gdynia" type="checkbox" name="powiat[]" value="pomorskie_Gdynia"/></label></div>
+		<div><label>Słupsk<input class="pow" data-content="Słupsk" id="Słupsk" type="checkbox" name="powiat[]" value="pomorskie_Słupsk"/></label></div>
+		<div><label>Sopot<input class="pow" data-content="Sopot" id="Sopot" type="checkbox" name="powiat[]" value="pomorskie_Sopot"/></label></div>
+		
+		<div><label><span class="po">powiat </span>bytowski<input class="pow" data-content="bytowski" id="bytowski" type="checkbox" name="powiat[]" value="pomorskie_bytowski"/></label></div>
+		<div><label><span class="po">powiat </span>chojnicki<input class="pow" data-content="chojnicki" id="chojnicki" type="checkbox" name="powiat[]" value="pomorskie_chojnicki"/></label></div>
+		<div><label><span class="po">powiat </span>człuchowski<input class="pow" data-content="człuchowski" id="człuchowski" type="checkbox" name="powiat[]" value="pomorskie_człuchowski"/></label></div>
+		<div><label><span class="po">powiat </span>kartuski<input class="pow" data-content="kartuski" id="kartuski" type="checkbox" name="powiat[]" value="pomorskie_kartuski"/></label></div>
+		<div><label><span class="po">powiat </span>kościerski<input class="pow" data-content="kościerski" id="kościerski" type="checkbox" name="powiat[]" value="pomorskie_kościerski"/></label></div>
+		<div><label><span class="po">powiat </span>kwidzyński<input class="pow" data-content="kwidzyński" id="kwidzyński" type="checkbox" name="powiat[]" value="pomorskie_kwidzyński"/></label></div>
+		<div><label><span class="po">powiat </span>lęborski<input class="pow" data-content="lęborski" id="lęborski" type="checkbox" name="powiat[]" value="pomorskie_lęborski"/></label></div>
+		<div><label><span class="po">powiat </span>malborski<input class="pow" data-content="malborski" id="malborski" type="checkbox" name="powiat[]" value="pomorskie_malborski"/></label></div>
+		<div><label><span class="po">powiat </span>nowodworski<input class="pow" data-content="nowodworski" id="nowodworski" type="checkbox" name="powiat[]" value="pomorskie_nowodworski"/></label></div>
+		<div><label><span class="po">powiat </span>gdański<input class="pow" data-content="gdański" id="gdański" type="checkbox" name="powiat[]" value="pomorskie_gdański"/></label></div>
+		<div><label><span class="po">powiat </span>pucki<input class="pow" data-content="pucki" id="pucki" type="checkbox" name="powiat[]" value="pomorskie_pucki"/></label></div>
+		<div><label><span class="po">powiat </span>słupski<input class="pow" data-content="słupski" id="słupski" type="checkbox" name="powiat[]" value="pomorskie_słupski"/></label></div>
+		<div><label><span class="po">powiat </span>starogardzki<input class="pow" data-content="starogardzki" id="starogardzki" type="checkbox" name="powiat[]" value="pomorskie_starogardzki"/></label></div>
+		<div><label><span class="po">powiat </span>sztumski<input class="pow" data-content="sztumski" id="sztumski" type="checkbox" name="powiat[]" value="pomorskie_sztumski"/></label></div>
+		<div><label><span class="po">powiat </span>tczewski<input class="pow" data-content="tczewski" id="tczewski" type="checkbox" name="powiat[]" value="pomorskie_tczewski"/></label></div>
+		<div><label><span class="po">powiat </span>wejherowski<input class="pow" data-content="wejherowski" id="wejherowski" type="checkbox" name="powiat[]" value="pomorskie_wejherowski"/></label></div>
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Gdańsk","Gdynia","Słupsk","Sopot"]; //lista miast na prawach powiatu
+			var el = '11'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'pomorskie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

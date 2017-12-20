@@ -1,0 +1,52 @@
+<!-- Województwo -->
+<div id="ile"></div>
+	<div class="lab_p">
+		<label class="zasieg description" for="powiat[]">Wybierz powiaty</label>
+		<p class="nawias">(W zależności od potrzeb, możesz wybać jeden lub więcej powiatów)</p>
+	</div>
+	<div id="powiaty">
+	
+		<div><label class="all">CAŁE WOJEWÓDZTWO<input class="pow" data-content="świętokrzyskie" onclick='zaznacz("świętokrzyskie");' id="świętokrzyskie" type="checkbox" name="powiat[]" value="świętokrzyskie_świętokrzyskie"/></label></div>
+		
+		<div><label>Kielce<input class="pow" data-content="Kielce" id="Kielce" type="checkbox" name="powiat[]" value="świętokrzyskie_Kielce"/></label></div>
+		
+		<div><label><span class="po">powiat </span>buski<input class="pow" data-content="buski" id="buski" type="checkbox" name="powiat[]" value="świętokrzyskie_buski"/></label></div>
+		<div><label><span class="po">powiat </span>jędrzejowski<input class="pow" data-content="jędrzejowski" id="jędrzejowski" type="checkbox" name="powiat[]" value="świętokrzyskie_jędrzejowski"/></label></div>
+		<div><label><span class="po">powiat </span>kazimierski<input class="pow" data-content="kazimierski" id="kazimierski" type="checkbox" name="powiat[]" value="świętokrzyskie_kazimierski"/></label></div>
+		<div><label><span class="po">powiat </span>kielecki<input class="pow" data-content="kielecki" id="kielecki" type="checkbox" name="powiat[]" value="świętokrzyskie_kielecki"/></label></div>
+		<div><label><span class="po">powiat </span>konecki<input class="pow" data-content="konecki" id="konecki" type="checkbox" name="powiat[]" value="świętokrzyskie_konecki"/></label></div>
+		<div><label><span class="po">powiat </span>opatowski<input class="pow" data-content="opatowski" id="opatowski" type="checkbox" name="powiat[]" value="świętokrzyskie_opatowski"/></label></div>
+		<div><label><span class="po">powiat </span>ostrowiecki<input class="pow" data-content="ostrowiecki" id="ostrowiecki" type="checkbox" name="powiat[]" value="świętokrzyskie_ostrowiecki"/></label></div>
+		<div><label><span class="po">powiat </span>pińczowski<input class="pow" data-content="pińczowski" id="pińczowski" type="checkbox" name="powiat[]" value="świętokrzyskie_pińczowski"/></label></div>
+		<div><label><span class="po">powiat </span>sandomierski<input class="pow" data-content="sandomierski" id="sandomierski" type="checkbox" name="powiat[]" value="świętokrzyskie_sandomierski"/></label></div>
+		<div><label><span class="po">powiat </span>skarżyski<input class="pow" data-content="skarżyski" id="skarżyski" type="checkbox" name="powiat[]" value="świętokrzyskie_skarżyski"/></label></div>
+		<div><label><span class="po">powiat </span>starachowicki<input class="pow" data-content="starachowicki" id="starachowicki" type="checkbox" name="powiat[]" value="świętokrzyskie_starachowicki"/></label></div>
+		<div><label><span class="po">powiat </span>staszowski<input class="pow" data-content="staszowski" id="staszowski" type="checkbox" name="powiat[]" value="świętokrzyskie_staszowski"/></label></div>
+		<div><label><span class="po">powiat </span>włoszczowski<input class="pow" data-content="włoszczowski" id="włoszczowski" type="checkbox" name="powiat[]" value="świętokrzyskie_włoszczowski"/></label></div>
+	</div>
+		
+<script type="text/javascript">
+		//instrukcja co ma się stać po kliknięciu w powiat
+		$(".ogl_add_zasieg .powiat .powiat2 .pow").click(function(e)
+		{
+			var powiat = $(this).data("content");
+			var wyjatki = ["Kielce"]; //lista miast na prawach powiatu
+			var el = '13'; //nr województwa wedłóg kolejności alfabetycznej począwszy od 1
+			var woj = 'świętokrzyskie';//nazwa województwa
+				powiat_klik(powiat,woj,wyjatki,el);
+				za_duzo();
+				//ile(ile_powiatow,el);
+		});
+		
+	//funkcja zmieniająca wygląd checkboxów
+	$(function() {
+    $(':checkbox, :radio').each(function() {
+        $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
+        $(this).after('<span><i class="icon-ok"></i></span>');
+    })
+});
+
+
+	</script>
+
+	

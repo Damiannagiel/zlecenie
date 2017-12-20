@@ -1,0 +1,185 @@
+article#content{
+	display:flex;
+	height:-webkit-calc(100% - 56px);
+    height:-moz-calc(100% - 56px);
+    height:calc(100% - 56px);
+}
+
+#userbox{
+	flex:0.3;
+	min-height:100%;
+	border-right:2px solid #99cc99;
+	max-width:65px;
+	overflow:scroll;
+}
+
+#userbox::-webkit-scrollbar {
+    width: 5px;
+	height: 0px;
+}
+ 
+#userbox::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+#userbox::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+   border-radius: 20px 20px;
+}
+
+#message::-webkit-scrollbar {
+    width: 5px;
+	height: 0px;
+}
+ 
+#message::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+#message::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+   border-radius: 20px 20px;
+}
+
+#inbox{
+	flex:1;
+	min-height:100%;
+	display:flex;
+	flex-direction:column;
+}
+
+#message{
+	position: relative;
+	bottom:0;
+	flex:1;
+	overflow:scroll;
+}
+#send{
+	padding:7px;
+	height:56px;
+}
+
+#send input{
+	width:100px;
+}
+
+#send form{
+	display:flex;
+}
+
+.user{padding-left:5px;}
+
+.user img{
+	width:50px;
+	height:50px;
+	border-radius:10px;
+	margin:5px 5px 5px 0;
+}
+
+.text{display:none;}
+
+.right{
+	margin:5px 5px 5px 10%;
+	text-align:right;
+}
+
+.right p{
+	padding:10px;
+	background-color:#7aa37a;
+	border-radius:5px;
+}
+
+.right p.unread{background-color:#079426;}
+
+.left{
+	margin:5px 10% 5px 5px;
+	text-align:left;
+}
+
+.left p{
+	padding:10px;
+	background-color:#add6ad;
+	border-radius:5px;
+}
+
+.left img{
+	width:14px;
+	height:14px;
+	margin:2px;
+	border-radius:50%;
+}
+
+.right span, .left span{
+	font-size:1.2rem;
+	color:#b2b2b2;
+	clear:both;
+}
+
+.left span{
+	position:relative;
+	bottom:4px;
+}
+
+.send{
+	flex:1;
+	margin:0 10px;
+}
+
+@media screen and (min-width: 640px){
+	article#content{
+		height:-webkit-calc(100% - 58px);
+		height:-moz-calc(100% - 58px);
+		height:calc(100% - 58px);
+	}
+}
+
+@media screen and (min-width: 800px){
+	#userbox{
+		max-width:325px;
+		overflow:hidden;
+	}
+	
+	.user{
+		display:flex;
+		padding:0 5px;
+	}
+	
+	.text{
+		display:initial;
+		margin:5px 0;
+		width:100%;
+	}
+	
+	.text span.add_name{
+		display:block;
+		font-weight:bold;
+		text-align:left;
+	}
+	
+	.text span.user_name{
+		display:block;
+		font-size:1.4rem;
+		text-align:left;
+	}
+
+}
+
+@media screen and (min-width: 1024px){
+	article#content{
+		height:-webkit-calc(100% - 170px);
+		height:-moz-calc(100% - 170px);
+		height:calc(100% - 170px);
+	}
+	
+	#send{padding:7px 5%;}
+}
+
+@media screen and (min-width: 1310px){
+	article#content{
+		height:-webkit-calc(100% - 154px);
+		height:-moz-calc(100% - 154px);
+		height:calc(100% - 154px);
+	}
+}

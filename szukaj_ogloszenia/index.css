@@ -1,0 +1,297 @@
+.description.first{margin:0;}
+
+.inp.last{margin-bottom:10px;}
+
+.filter{background-color:#ffffff;}
+
+.background-container{
+	padding:1px 0;
+}
+
+.background-container h2{
+	text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+
+.background-container::after
+{
+	content: "";
+	background: url(../img/serch.jpeg) no-repeat;
+	background-position:center -110px;
+	background-size:auto;
+	opacity: 0.7;
+	top: 76px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;   
+}
+
+.inp.key{
+	margin:20px 5px;
+}
+
+.inp.key input{
+	width:63%;
+	max-width:300px;
+}
+
+.inp.key input.button-green{
+	width:33%;
+	max-width:150px;
+}
+
+.img_box{margin-top:5px;}
+
+.img_box input[name=img]{width:auto;}
+
+.img_box label{
+	display:block;
+	width:160px;
+	margin-left:auto;
+	margin-right:auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 5px 10px;
+	background: -moz-linear-gradient(
+		top,
+		#fff3db 0%,
+		#ffc821 25%,
+		#ff3c00);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#fff3db),
+		color-stop(0.25, #ffc821),
+		to(#ff3c00));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #b85f00;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5);
+	text-shadow:
+		0px -1px 1px rgba(000,000,000,0.2),
+		0px 0px 0px rgba(255,255,255,0.3);
+}
+
+.img_box label.active{
+	background: -moz-linear-gradient(
+		top,
+		#ffd073 0%,
+		#ff8c00 34%,
+		#fc0000);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#ffd073),
+		color-stop(0.34, #ff8c00),
+		to(#fc0000));
+	-moz-box-shadow:
+		0px 1px 15px rgba(255,000,000,0.5),
+		inset 0px 0px 5px rgba(0,0,0,1);
+	-webkit-box-shadow:
+		0px 1px 15px rgba(255,000,000,0.5),
+		inset 0px 0px 5px rgba(0,0,0,1);
+	box-shadow:
+		0px 1px 15px rgba(255,000,000,0.5),
+		inset 0px 0px 5px rgba(0,0,0,1);
+}
+
+.img_box label:hover{
+	cursor:pointer;
+}
+
+.description{
+	display:flex;
+	margin-top:10px;
+	padding:10px;
+	background-color:#BBBBBB;
+	opacity:0.8;
+	border-bottom:2px solid #CCCCCC;
+	border-top:2px solid #CCCCCC;
+}
+
+.description i{
+	font-size:2rem;
+}
+
+.description h5{
+	margin:0;
+}
+
+.content{
+	display:none;
+}
+
+.content.active{
+	display:initial;
+}
+
+.cat{
+	margin:5px 10px;
+}
+
+.cat select{
+	width:90%;
+	max-width:300px;
+}
+
+#type input,#personality input, .contact input{display:none;}
+
+#type .label,#personality .label{
+	width:90%;
+	max-width:300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+label.label_no_active, label.person_no_active, label.contact
+{
+	display: block;
+	padding:10px;
+	margin:10px;
+	background-color: #eaf4ea;
+	font-weight:bold;
+	border-radius:27px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+label.label_no_active:hover, label.person_no_active:hover, label.contact:hover
+{
+	cursor:pointer;
+	background-color:#d6ead6;
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+}
+
+label.label_active, label.person_active, label.contact.contact_active
+{
+	display: block;
+	padding:10px;
+	margin:10px;
+	background-color: #99CC99;
+	font-weight:bold;
+	border-radius:27px;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+
+#zasieg input,#zasieg select{
+	width:90%;
+	max-width:300px;
+	margin:10px auto 10px auto;
+}
+
+#cena input,#cena select{
+	width:90%;
+	max-width:250px;
+	margin:10px auto 10px auto;
+}
+
+#cena select{
+	position:relative;
+	right:6px;
+}
+
+p.brak_wyboru{
+	width:90%;
+	max-width:450px;
+	margin:5px auto 5px auto;
+	padding:5px;
+	background-color:red;
+	border-radius:10px;
+	color:#ffffff;
+	font-weight:bold;
+	font-size:1.3rem;
+}
+
+.blad_wal{
+	color:red;
+}
+
+.blad_user p{
+	width:90%;
+	margin:5px auto 5px auto;
+	padding:5px;
+	background-color:red;
+	border-radius:10px;
+	color:#ffffff;
+	font-weight:bold;
+	font-size:1.3rem;
+}
+
+p.mark{
+	color:red;
+	font-weight:bold;
+	font-size:130%;
+}
+
+p.blad_content{
+	margin:5px;
+	color:red;
+	font-size:1.4rem;
+}
+
+@media screen and (min-width: 487px){
+	.img_box label{
+		position:relative;
+		right:8px;
+	}
+}
+
+@media screen and (min-width: 640px){
+	
+	.flex_box{
+		display:flex;
+		width:100%;
+	}
+	
+	.content p.brak_wyboru{
+		max-width:80%;
+	}
+	
+	.active#category,.active#type,.active#personality,.active#contact{display:flex;}
+	
+	.cat{
+		width:33.33%;
+		margin:0;
+	}
+	
+	.cat select{
+		width:90%;
+		margin:10px auto 10px auto;
+		max-width:250px;
+	}
+	
+	#type .label,#personality .person,#contact .contact{
+		width:30%;
+		max-width:300px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.range{width:33.33%;}
+	
+	#zasieg input,#zasieg select{max-width:250px;}
+	
+	#cena .flex_box div{
+		width:33.33%;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.background-container::after{top: 190px;}
+	.content p.brak_wyboru{
+		max-width:60%;
+	}
+	}
+
+@media screen and (min-width: 1310px){.background-container::after{top: 174px;}}
