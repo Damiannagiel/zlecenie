@@ -114,7 +114,6 @@
 		return div;
 	}
 	
-	//??
 	//usuń polskie ogonki i zastąp spacje _
 	function ogloszenie_link(adres,id){
 		adres = adres.replace(/ą/ig,'a');
