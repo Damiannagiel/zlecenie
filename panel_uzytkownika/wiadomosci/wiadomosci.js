@@ -12,7 +12,7 @@
 		var message=document.querySelector("#message");
 		document.querySelector(".message_info").appendChild(naglowek);
 		for(i=0;i<wiadomosci.length;i++){
-			var wyswietl=wyswietl_wiadomosc(wiadomosci[i],user);
+			var wyswietl=wyswietl_wiadomosc(wiadomosci[i],user,avatar);
 			message.appendChild(wyswietl);
 		}
 		wyswietl_wyslij(user,adresat,wiadomosci[0]['id_ogloszenia'],naglowek);
@@ -38,14 +38,19 @@
 		send.appendChild(button);
 	}
 	
-	function wyswietl_wiadomosc(wiadomosc,user){
+	function wyswietl_wiadomosc(wiadomosc,user,avatar_exist){
 		if(wiadomosc['id_nadawcy']==user){
 			var clas="right";
 			var avatar='';
 		}
 		else{
-			var clas="left";
-			var avatar='../../public_profile/avatar/'+wiadomosc['id_nadawcy']+'.jpg';
+                    var clas="left";
+                    if(avatar_exist==1){
+                        var avatar='../../public_profile/avatar/'+wiadomosc['id_nadawcy']+'.jpg';
+                    }
+                    else{
+                        var avatar='../../public_profile/avatar/avatar.png';
+                    }
 		}
 		
 		var element = document.createElement('div');
@@ -65,7 +70,7 @@
 
 		if(wiadomosc['id_nadawcy']!=user){
 			var img = document.createElement('img');
-			img.src='../../public_profile/avatar/'+wiadomosc['id_nadawcy']+'.jpg';
+			img.src=avatar;
 			element.appendChild(img);
 		}
 		element.appendChild(span_p);

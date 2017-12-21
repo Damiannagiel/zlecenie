@@ -13,6 +13,8 @@
 			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
 			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
 			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
+                        
+                        $avatar=sprawdz_avatar($adresat);
 					
 			if(isset($polaczenie)){
 				
@@ -42,8 +44,9 @@
 		var adresat_name=<?php echo '"'.$adresat_name.'"'; ?>;
 		
 		var json='<?php echo json_encode($wyswietl);?>';
+                var avatar='<?php echo $avatar; ?>';
 		var wiadomosci=eval(json);
 		if(ok==true){
-			wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul);
+			wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar);
 		}
 </script>
