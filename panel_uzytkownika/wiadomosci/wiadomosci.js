@@ -1,6 +1,6 @@
 	function wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul){
 		//sprawdź kto jest adresatem wiadomości
-		if(wiadomosci[0]['id_nadawcy']===user){
+		if(wiadomosci[0]['id_nadawcy']==user){
 			var adresat = wiadomosci[0]['id_adresata'];
 		}
 		else{
@@ -10,7 +10,7 @@
 		//wyświetl nagłówek
 		var naglowek=wyswietl_naglowek(ogl_tytul,adresat_name,wiadomosci[0]['id_ogloszenia'],adresat);
 		var message=document.querySelector("#message");
-		document.querySelector("#inbox").insertBefore(naglowek,message);
+		document.querySelector("#inbox").appendChild(naglowek);
 		for(i=0;i<wiadomosci.length;i++){
 			var wyswietl=wyswietl_wiadomosc(wiadomosci[i],user);
 			message.appendChild(wyswietl);
@@ -39,7 +39,7 @@
 	}
 	
 	function wyswietl_wiadomosc(wiadomosc,user){
-		if(wiadomosc['id_nadawcy']===user){
+		if(wiadomosc['id_nadawcy']==user){
 			var clas="right";
 			var avatar='';
 		}
@@ -57,12 +57,12 @@
 		p.appendChild(document.createTextNode(wiadomosc['tresc']));
 		span.appendChild(document.createTextNode(wiadomosc['data']));
 		
-		if((wiadomosc['odczytana']===0)&&(clas==="right")){
+		if((wiadomosc['odczytana']==0)&&(clas=="right")){
 			p.setAttribute("class", "unread");
 		}
 
 		element.appendChild(p);
-		if(wiadomosc['id_nadawcy']!==user){
+		if(wiadomosc['id_nadawcy']!=user){
 			var img = document.createElement('img');
 			img.src='../../public_profile/avatar/'+wiadomosc['id_nadawcy']+'.jpg';
 			element.appendChild(img);
@@ -114,10 +114,8 @@
 		return div;
 	}
 	
-<<<<<<< HEAD
-=======
+	//??
 	//usuń polskie ogonki i zastąp spacje _
->>>>>>> parent of 91a98c8... 0.1.2
 	function ogloszenie_link(adres,id){
 		adres = adres.replace(/ą/ig,'a');
 		adres = adres.replace(/ć/ig,'c');
@@ -130,9 +128,9 @@
 		adres = adres.replace(/ż/ig,'z');
 		adres = adres.replace(/Ą/ig,'A');
 		adres = adres.replace(/Ć/ig,'C');
-		adres = adres.replace(/�?/ig,'E');
-		adres = adres.replace(/�?/ig,'L');
-		adres = adres.replace(/�?/ig,'N');
+		adres = adres.replace(/Ę/ig,'E');
+		adres = adres.replace(/Ł/ig,'L');
+		adres = adres.replace(/Ń/ig,'N');
 		adres = adres.replace(/Ó/ig,'O');
 		adres = adres.replace(/Ś/ig,'S');
 		adres = adres.replace(/Ź/ig,'Z');
