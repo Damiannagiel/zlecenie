@@ -52,6 +52,14 @@
 	
 	<?php include_once '../../szablon/nav_body2.php';
 				include_once '../../szablon/nav_category2.php';?>
+        <header id="message_header">
+                <div id="ms">
+                    <h4>Wiadomości</h4>
+                </div>
+                <div class="message_info">
+                    
+                </div>
+        </header>
 	<article id="content">
 		<div id="userbox">
 		<?php

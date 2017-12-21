@@ -195,7 +195,6 @@ footer {
 
 @media screen and (min-width: 640px){
 	/* Nawigacja ------------------------------------------------------------------------------------------- */
-	.site-header{ border-bottom: 2px solid #7ba47b;}
 	
 	.spacer{ display:block; }
 	
@@ -300,6 +299,8 @@ footer {
 
 @media screen and (min-width: 1024px){
 	/* Nawigacja ------------------------------------------------------------------------------------------- */
+        .site-header{ border-bottom: 2px solid #7ba47b;}
+        
 	.category-nav ul{
 		background-color:#C5C5C5;
 		opacity:0.8;

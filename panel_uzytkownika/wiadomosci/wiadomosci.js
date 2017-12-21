@@ -10,7 +10,7 @@
 		//wyświetl nagłówek
 		var naglowek=wyswietl_naglowek(ogl_tytul,adresat_name,wiadomosci[0]['id_ogloszenia'],adresat);
 		var message=document.querySelector("#message");
-		document.querySelector("#inbox").appendChild(naglowek);
+		document.querySelector(".message_info").appendChild(naglowek);
 		for(i=0;i<wiadomosci.length;i++){
 			var wyswietl=wyswietl_wiadomosc(wiadomosci[i],user);
 			message.appendChild(wyswietl);
@@ -51,22 +51,24 @@
 		var element = document.createElement('div');
 		element.setAttribute("class", clas);
 		
-		var p = document.createElement('p');
+		var span_p = document.createElement('span');
+                span_p.setAttribute("class","text_ms");
 		var span = document.createElement('span');
+                span.setAttribute("class","date");
 		
-		p.appendChild(document.createTextNode(wiadomosc['tresc']));
+		span_p.appendChild(document.createTextNode(wiadomosc['tresc']));
 		span.appendChild(document.createTextNode(wiadomosc['data']));
 		
 		if((wiadomosc['odczytana']==0)&&(clas=="right")){
-			p.setAttribute("class", "unread");
+			span_p.classList.add("unread");
 		}
 
-		element.appendChild(p);
 		if(wiadomosc['id_nadawcy']!=user){
 			var img = document.createElement('img');
 			img.src='../../public_profile/avatar/'+wiadomosc['id_nadawcy']+'.jpg';
 			element.appendChild(img);
 		}
+		element.appendChild(span_p);
 		element.appendChild(span);
 		
 		return element;
@@ -87,10 +89,12 @@
 	}
 	
 	function wyswietl_naglowek(ogloszenie,adresat,id_ogloszenia,id_adresata){
+                var ms_info=document.querySelector('.message_info');
+		ms_info.innerHTML='';
+                
 		var href=ogloszenie_link(ogloszenie,id_ogloszenia);
 		
 		var div=document.createElement('div');
-		div.setAttribute("class","header_message");
 		
 		var h5=document.createElement('h5');
 		h5.appendChild(document.createTextNode('Korespondencja z '));
