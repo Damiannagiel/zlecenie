@@ -1,4 +1,4 @@
-	function wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul){
+	function wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar,ile){
 		//sprawdź kto jest adresatem wiadomości
 		if(wiadomosci[0]['id_nadawcy']==user){
 			var adresat = wiadomosci[0]['id_adresata'];
@@ -6,19 +6,18 @@
 		else{
 			var adresat = wiadomosci[0]['id_nadawcy'];
 		}
-		//zaznacz wybraną konwersację
 		//wyświetl nagłówek
 		var naglowek=wyswietl_naglowek(ogl_tytul,adresat_name,wiadomosci[0]['id_ogloszenia'],adresat);
 		var message=document.querySelector("#message");
 		document.querySelector(".message_info").appendChild(naglowek);
-		for(i=0;i<wiadomosci.length;i++){
+		for(i=0;i<ile;i++){
 			var wyswietl=wyswietl_wiadomosc(wiadomosci[i],user,avatar);
 			message.appendChild(wyswietl);
 		}
-		wyswietl_wyslij(user,adresat,wiadomosci[0]['id_ogloszenia'],naglowek);
+		wyswietl_wyslij(user,adresat,wiadomosci[0]['id_ogloszenia']);
 	}
 	
-	function wyswietl_wyslij(user,adresat,ogloszenie,naglowek){
+	function wyswietl_wyslij(user,adresat,ogloszenie){
 		//dostań sie do formularza
 		var send=document.getElementById('send_message');
 		send.innerHTML='';
@@ -149,6 +148,13 @@
 		var zwroc='../../ogloszenie/'+adres+'_'+id+'.php';
 		return zwroc;
 	}
+
+function wyswietl_bez_wiadomosci(ogl_tytul,adresat_name,ogloszenie,adresat,user){
+    var naglowek=wyswietl_naglowek(ogl_tytul,adresat_name,ogloszenie,adresat);
+    var message=document.querySelector("#message");
+    document.querySelector(".message_info").appendChild(naglowek);
+    wyswietl_wyslij(user,adresat,ogloszenie);
+}
 	
 	
 /*

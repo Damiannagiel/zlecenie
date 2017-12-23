@@ -10,6 +10,8 @@
 		include_once '../../szablon/nav_head2.php';
 				
 		$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+                
+                //utwórz zmienne z linków z innych części serwisu
                 if((isset($_GET['ogl_id']))&&(isset($_GET['user_id']))&&(isset($_GET['tytul']))&&(isset($_GET['user_name']))){
                     $ogl_id=$_GET['ogl_id'];
                     $user_id=$_GET['user_id'];
@@ -25,7 +27,9 @@
 		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
 				
 		if(isset($polaczenie)){
+                        //pobierz id wszystkich użytkowników z którymi korespondował user
 			$ile_wiadomosci=adresaci($polaczenie,$_SESSION['id']);
+                        //wyświetl listę użytkowników wraz onclickami do wyświetlnia wiadomości
 			$uzytkownicy=wyswiet_uzytkownikow($polaczenie,$ile_wiadomosci,$_SESSION['id'],$href);
 
 			$polaczenie->close();

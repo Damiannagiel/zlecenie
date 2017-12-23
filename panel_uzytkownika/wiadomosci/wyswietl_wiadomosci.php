@@ -20,6 +20,12 @@
                                 zanzacz_jako_przeczytane($polaczenie,$ogloszenie,$adresat,$user);
                             
 				$wyswietl=pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user);
+                                if($wyswietl){
+                                    $ile_wiadomosci=sizeof($wyswietl);
+                                }
+                                else{
+                                    $ile_wiadomosci=0;
+                                }
 
 				$polaczenie->close();
 			}
@@ -36,6 +42,7 @@
 	}
 ?>
 <script>
+                var ile=<?php echo $ile_wiadomosci;?>;
 		var ok=<?php echo $ok; ?>;
 		var user=<?php echo $user; ?>;
 		var adresat=<?php echo $adresat; ?>;
@@ -43,12 +50,18 @@
 		
 		var ogl_tytul=<?php echo '"'.$ogl_tytul.'"'; ?>;
 		var adresat_name=<?php echo '"'.$adresat_name.'"'; ?>;
-		
-		var json='<?php echo json_encode($wyswietl);?>';
-                var avatar='<?php echo $avatar; ?>';
-		var wiadomosci=eval(json);
+		var avatar='<?php echo $avatar; ?>';
+                if(ile>0){
+                    var json='<?php echo json_encode($wyswietl);?>';
+                    var wiadomosci=eval(json);
+                }
 		if(ok==true){
-			wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar);
+                    if(ile>0){
+			wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar,ile);
+                    }
+                    else{
+                        wyswietl_bez_wiadomosci(ogl_tytul,adresat_name,ogloszenie,adresat,user);
+                    }
                         setTimeout("document.getElementById('message').scrollTop=1e6",100);
 		}
 </script>
