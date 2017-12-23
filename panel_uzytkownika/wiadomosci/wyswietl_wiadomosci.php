@@ -49,5 +49,6 @@
 		var wiadomosci=eval(json);
 		if(ok==true){
 			wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar);
+                        setTimeout("document.getElementById('message').scrollTop=1e6",100);
 		}
 </script>
