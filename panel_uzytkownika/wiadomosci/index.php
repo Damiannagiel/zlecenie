@@ -9,7 +9,15 @@
 		}
 		include_once '../../szablon/nav_head2.php';
 				
-		$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];	
+		$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+                if((isset($_GET['ogl_id']))&&(isset($_GET['user_id']))&&(isset($_GET['tytul']))&&(isset($_GET['user_name']))){
+                    $ogl_id=$_GET['ogl_id'];
+                    $user_id=$_GET['user_id'];
+                    $tytul=$_GET['tytul'];
+                    $user_name=$_GET['user_name'];
+                    $href=array($ogl_id,$user_id,$tytul,$user_name); 
+                }
+                else $href=false;
 		
 	try{
 		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
@@ -17,9 +25,8 @@
 		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
 				
 		if(isset($polaczenie)){
-			
 			$ile_wiadomosci=adresaci($polaczenie,$_SESSION['id']);
-			$uzytkownicy=wyswiet_uzytkownikow($polaczenie,$ile_wiadomosci,$_SESSION['id']);
+			$uzytkownicy=wyswiet_uzytkownikow($polaczenie,$ile_wiadomosci,$_SESSION['id'],$href);
 
 			$polaczenie->close();
 		}
