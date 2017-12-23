@@ -17,7 +17,8 @@
                         $avatar=sprawdz_avatar($adresat);
 					
 			if(isset($polaczenie)){
-				
+                                zanzacz_jako_przeczytane($polaczenie,$ogloszenie,$adresat,$user);
+                            
 				$wyswietl=pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user);
 
 				$polaczenie->close();
