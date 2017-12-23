@@ -151,6 +151,10 @@ article#content{
     display:flex;
     border-bottom: 2px solid #89B789;
 }
+
+.user.activ{
+    background-color:#89B789;
+}
 @media screen and (min-width: 640px){
 	article#content{
 		height:-webkit-calc(100% - 116px);
@@ -160,10 +164,7 @@ article#content{
 }
 
 @media screen and (min-width: 800px){
-	#userbox{
-		max-width:325px;
-		overflow:hidden;
-	}
+	#userbox{max-width:325px;}
 	
 	.user{
 		display:flex;

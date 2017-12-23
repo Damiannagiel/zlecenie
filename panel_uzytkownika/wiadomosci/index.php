@@ -44,6 +44,11 @@
 								success: function(response)
 								{
 									$("#message").html(response);
+                                                                        var active=document.querySelector('.user.activ');
+                                                                        if(active!=null){
+                                                                            active.classList.remove('activ');
+                                                                        }
+                                                                        document.getElementById(ogloszenie+'/'+adresat).classList.add('activ');
 								}
 						});
 				}
