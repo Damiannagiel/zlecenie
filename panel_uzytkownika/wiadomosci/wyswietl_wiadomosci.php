@@ -19,12 +19,19 @@
 			if(isset($polaczenie)){
                                 zanzacz_jako_przeczytane($polaczenie,$ogloszenie,$adresat,$user);
                             
-				$wyswietl=pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user);
+				$wyswietl=pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user,5);
                                 if($wyswietl){
                                     $ile_wiadomosci=sizeof($wyswietl);
+                                    if($ile_wiadomosci==5){
+                                        $wiecej=1;
+                                    }
+                                    else{
+                                        $wiecej=0;
+                                    }
                                 }
                                 else{
                                     $ile_wiadomosci=0;
+                                    $wiecej=0;
                                 }
 
 				$polaczenie->close();
@@ -44,6 +51,7 @@
 <script>
                 var ile=<?php echo $ile_wiadomosci;?>;
 		var ok=<?php echo $ok; ?>;
+                var wiecej=<?php echo $wiecej; ?>;
 		var user=<?php echo $user; ?>;
 		var adresat=<?php echo $adresat; ?>;
 		var ogloszenie=<?php echo $ogloszenie ?>;
