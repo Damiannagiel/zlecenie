@@ -30,6 +30,9 @@
 					<div class="user_div">
 						<p class="tytul">Kontakt z ogłoszenia użytkownika:<p/>
 						<p class="user"><a href="../public_profile/user.php?id=<?php echo $user_id['id'] ?>"><b><?php echo $user ?></b></a></p>
+                                                <div class="button-div">
+                                                 <?php echo $wiadomosc; ?>
+                                                </div>
 					</div>
 				</div>
 			</div>
