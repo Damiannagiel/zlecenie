@@ -11,9 +11,13 @@
 	font-size:6rem;
 }
 
-#message{
+#message a{
 	font-size:4rem;
-	color:red;
+	color:#000000;
+}
+
+#message.new a{
+    color:#FF0000;
 }
 
 .text_user{

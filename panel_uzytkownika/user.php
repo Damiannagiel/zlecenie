@@ -16,7 +16,7 @@
 	</head>
 	
 			<?php include_once '../szablon/nav_body.php';
-						include_once '../szablon/nav_category.php'; ?>
+                            include_once '../szablon/nav_category.php'; ?>
 			
 			<div id="pu_nav">
 				<div class="pu_img_user">
@@ -29,7 +29,7 @@
 				</div>
 				
 				<div id="message">
-					<a href="wiadomosci/" style="color:red;"><i class="icon-mail"></i></a>
+					<a href="wiadomosci/"><i class="icon-mail"></i></a>
 				</div>
 				
 				<nav>
@@ -60,12 +60,15 @@
 	{
 		content: "profil",
 	}
+        var user=<?php echo $_SESSION['id'];?>;
+        sprawdz_wiadomosci(user);
 	
 	loadContent("profil"); //ładuję zakładkę profil po wczytaniu strony
 	
 	//
 	$(".pu_nav_container .pu_nav_ol .nav").click(function(e)
 	{
+                sprawdz_wiadomosci(user);
 		var content = $(this).data("content");
 		if(info.content != content)
 		{
@@ -87,6 +90,19 @@
 							$(".pu_content").html(response);
 							info.content = content;
 						}
+				});
+	}
+        
+        function sprawdz_wiadomosci(user)
+	{
+		$.ajax
+				({
+					url: 'wiadomosci/sprawdz.php',
+					type: 'post',
+					data: {user:user},
+						success: function(response){
+                                                   $("#message i").html(response);
+                                                }
 				});
 	}
 
