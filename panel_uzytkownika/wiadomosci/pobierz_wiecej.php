@@ -7,6 +7,7 @@
 		$adresat=$_POST['adresat'];
 		$ogloszenie=$_POST['ogloszenie'];
                 $limit=$_POST['limit'];
+                $petla=$_POST['petla'];
 			
 		try{
 			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
@@ -14,7 +15,23 @@
 			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
 					
 			if(isset($polaczenie)){
-                            echo"gitara";
+                            $wiadomosci= pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user,$limit);
+                            
+                            if($wiadomosci){
+                                    $ile_wiadomosci=sizeof($wiadomosci);
+                                    if($ile_wiadomosci==25){
+                                        $wiecej=1;
+                                    }
+                                    else{
+                                        $wiecej=0;
+                                    }
+                                }
+                                else{
+                                    $ile_wiadomosci=0;
+                                    $wiecej=0;
+                                }
+
+				$polaczenie->close();
 			}
 			else exit;
 		}
@@ -24,7 +41,24 @@
 	}
 	else{
 		$ok=false;
-		$wyswietl="drogi użytkowniku coś tu kręcisz";
-		echo $wyswietl;
+		$wiadomosci="drogi użytkowniku coś tu kręcisz";
+		echo $wiadomosci;
 	}
 ?>
+<script>
+  var ile=<?php echo $ile_wiadomosci;?>;
+  var ok=<?php echo $ok; ?>;
+  var wiecej=<?php echo $wiecej; ?>;
+  var user=<?php echo $user; ?>;
+  var adresat=<?php echo $adresat; ?>;
+  var ogloszenie=<?php echo $ogloszenie ?>;
+  var petla=<?php echo $petla ?>;
+		
+  if(ile>0){
+    var json='<?php echo json_encode($wiadomosci);?>';
+    var wiadomosci=eval(json);
+  }
+  if(ok==true){
+      wyswietl_wiecej_wiadomosci(wiadomosci,user,adresat,avatar,ile,wiecej,petla);
+  }
+</script>

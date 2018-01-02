@@ -1,4 +1,4 @@
-	function wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar,ile){
+	function wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar,ile,wiecej){
 		//sprawdź kto jest adresatem wiadomości
 		if(wiadomosci[0]['id_nadawcy']==user){
 			var adresat = wiadomosci[0]['id_adresata'];
@@ -9,6 +9,7 @@
 		//wyświetl nagłówek
 		var naglowek=wyswietl_naglowek(ogl_tytul,adresat_name,wiadomosci[0]['id_ogloszenia'],adresat);
 		var message=document.querySelector("#message");
+                //sprawdź czy jest więcej wiadomości niż pobrano
                 if(wiecej==true){
                     var wyswietl_wiecej=add_wiecej(user,adresat,wiadomosci[0]['id_ogloszenia'],1);
                     message.appendChild(wyswietl_wiecej);
@@ -20,7 +21,7 @@
 		}
 		wyswietl_wyslij(user,adresat,wiadomosci[0]['id_ogloszenia']);
 	}
-	
+        	
 	function wyswietl_wyslij(user,adresat,ogloszenie){
 		//dostań sie do formularza
 		var send=document.getElementById('send_message');
@@ -163,6 +164,7 @@ function wyswietl_bez_wiadomosci(ogl_tytul,adresat_name,ogloszenie,adresat,user)
 function add_wiecej(user,adresat,ogloszenie,petla){
     var div=document.createElement('div');
     div.setAttribute("id","more"+petla);
+    div.setAttribute("class","more");
     
     var icon=document.createElement('i');
     icon.setAttribute("class","icon-plus-squared-alt");
@@ -172,20 +174,33 @@ function add_wiecej(user,adresat,ogloszenie,petla){
 }
 
 function wyswietl_starsze(user,adresat,ogloszenie,petla){
-  var limit1=5*petla;
-  var limit2=limit1+5;
+  var limit_calc=25*petla;
   
-  var limit=limit1+','+limit2;
+  var limit=limit_calc+','+limit_calc;
   
   $.ajax({
     url: 'pobierz_wiecej.php',
     type: 'post',
-    data: {ogloszenie:ogloszenie , adresat:adresat , user:user , limit:limit},
+    data: {ogloszenie:ogloszenie , adresat:adresat , user:user , limit:limit , petla:petla},
     success: function(response){
       $("#more"+petla).html(response);
     }
   });
-}	
+}
+
+function wyswietl_wiecej_wiadomosci(wiadomosci,user,adresat,avatar,ile,wiecej,petla){
+    var selector ="#more"+petla;
+    var message=document.querySelector(selector);
+    //sprawdź czy jest więcej wiadomości niż pobrano
+    if(wiecej==true){
+        var wyswietl_wiecej=add_wiecej(user,adresat,wiadomosci[0]['id_ogloszenia'],petla+1);
+        message.appendChild(wyswietl_wiecej);
+    }
+    for(i=ile-1;i>=0;i--){
+        var wyswietl=wyswietl_wiadomosc(wiadomosci[i],user,avatar);
+        message.appendChild(wyswietl);
+    }
+}
 /*
 	function odejmij_dni(ile){
 		var cd = new Date();

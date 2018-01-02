@@ -19,10 +19,10 @@
 			if(isset($polaczenie)){
                                 zanzacz_jako_przeczytane($polaczenie,$ogloszenie,$adresat,$user);
                             
-				$wyswietl=pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user,5);
+				$wyswietl=pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user,10);
                                 if($wyswietl){
                                     $ile_wiadomosci=sizeof($wyswietl);
-                                    if($ile_wiadomosci==5){
+                                    if($ile_wiadomosci==25){
                                         $wiecej=1;
                                     }
                                     else{
@@ -65,7 +65,7 @@
                 }
 		if(ok==true){
                     if(ile>0){
-			wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar,ile);
+			wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar,ile,wiecej);
                     }
                     else{
                         wyswietl_bez_wiadomosci(ogl_tytul,adresat_name,ogloszenie,adresat,user);
