@@ -105,6 +105,27 @@
                                                 }
 				});
 	}
+        
+        function wyswietl_opcje(user){
+            //sprawdź czy jest aktywny alement
+            var active=document.querySelector(".kontakt_opcje.active");
+            if(active){
+                //zwiń pasek aktywnego elementu
+                $("#"+active.id).slideToggle("high");
+                //jeśli tak to go usuń
+                active.classList.remove("active");
+                //sprawdź czy kliknięty element nie był aktywny, jeżeli nie to ustaw active
+                if("user_"+user!=active.id){ 
+                    document.getElementById("user_"+user).classList.add("active");
+                    $("#user_"+user).slideToggle("high");
+                }
+            }
+            //jeśli nie, ustaw kliknięty element jako aktywny
+            else {
+                document.getElementById("user_"+user).classList.add("active");
+                $("#user_"+user).slideToggle("high");
+            }
+        }
 
 	</script>
 				
