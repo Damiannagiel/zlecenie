@@ -19,7 +19,7 @@
 	background-position:center -110px;
 	background-size:auto;
 	opacity: 0.7;
-	top: 76px;
+	top: 56px;
 	left: 0;
 	bottom: 0;
 	right: 0;
@@ -288,10 +288,10 @@ p.blad_content{
 }
 
 @media screen and (min-width: 1024px){
-	.background-container::after{top: 190px;}
+	.background-container::after{top: 170px;}
 	.content p.brak_wyboru{
 		max-width:60%;
 	}
 	}
 
-@media screen and (min-width: 1310px){.background-container::after{top: 174px;}}
+@media screen and (min-width: 1310px){.background-container::after{top: 154px;}}

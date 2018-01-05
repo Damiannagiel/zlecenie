@@ -16,7 +16,7 @@
 	</head>
 	
 			<?php include_once '../szablon/nav_body.php';
-						include_once '../szablon/nav_category.php'; ?>
+                            include_once '../szablon/nav_category.php'; ?>
 			
 			<div id="pu_nav">
 				<div class="pu_img_user">
@@ -29,7 +29,7 @@
 				</div>
 				
 				<div id="message">
-					<a href="wiadomosci/" style="color:red;"><i class="icon-mail"></i></a>
+					<a href="wiadomosci/"><i class="icon-mail"></i></a>
 				</div>
 				
 				<nav>
@@ -60,12 +60,15 @@
 	{
 		content: "profil",
 	}
+        var user=<?php echo $_SESSION['id'];?>;
+        sprawdz_wiadomosci(user);
 	
 	loadContent("profil"); //ładuję zakładkę profil po wczytaniu strony
 	
 	//
 	$(".pu_nav_container .pu_nav_ol .nav").click(function(e)
 	{
+                sprawdz_wiadomosci(user);
 		var content = $(this).data("content");
 		if(info.content != content)
 		{
@@ -89,6 +92,40 @@
 						}
 				});
 	}
+        
+        function sprawdz_wiadomosci(user)
+	{
+		$.ajax
+				({
+					url: 'wiadomosci/sprawdz.php',
+					type: 'post',
+					data: {user:user},
+						success: function(response){
+                                                   $("#message i").html(response);
+                                                }
+				});
+	}
+        
+        function wyswietl_opcje(user){
+            //sprawdź czy jest aktywny alement
+            var active=document.querySelector(".kontakt_opcje.active");
+            if(active){
+                //zwiń pasek aktywnego elementu
+                $("#"+active.id).slideToggle("high");
+                //jeśli tak to go usuń
+                active.classList.remove("active");
+                //sprawdź czy kliknięty element nie był aktywny, jeżeli nie to ustaw active
+                if("user_"+user!=active.id){ 
+                    document.getElementById("user_"+user).classList.add("active");
+                    $("#user_"+user).slideToggle("high");
+                }
+            }
+            //jeśli nie, ustaw kliknięty element jako aktywny
+            else {
+                document.getElementById("user_"+user).classList.add("active");
+                $("#user_"+user).slideToggle("high");
+            }
+        }
 
 	</script>
 				
