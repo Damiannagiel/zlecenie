@@ -1,6 +1,6 @@
 article#content{
-	display:flex;
-	height:-webkit-calc(100% - 114px);
+    display:flex;
+    height:-webkit-calc(100% - 114px);
     height:-moz-calc(100% - 114px);
     height:calc(100% - 114px);
 }
