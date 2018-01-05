@@ -3,13 +3,26 @@
 	$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 	$user=$_POST['user'];
 	if($_SESSION['id']==$user){
-		$ok=true;
-		$adresat=$_POST['adresat'];
-		$ogloszenie=$_POST['ogloszenie'];
-		$ogl_tytul=$_POST['ogl_tytul'];
-		$adresat_name=$_POST['adresat_name'];
-			
-		try{
+                //wykonuję walidację danych zebranych przez ajax
+                require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_walidacja.php');
+                $ok=true;
+                if(is_numeric($_POST['adresat'])&&$_POST['adresat']>0){
+                    $adresat=$_POST['adresat'];
+                }
+                else $ok=false;
+                if(is_numeric($_POST['ogloszenie'])&&$_POST['ogloszenie']>0){
+                   $ogloszenie=$_POST['ogloszenie'];
+                }
+                else $ok=false;
+                if(sprawdz_znaki($_POST['ogl_tytul'])){
+                    $ogl_tytul=$_POST['ogl_tytul'];
+                }
+                else $ok=false;
+                if(sprawdz_login($_POST['adresat_name'])){
+                    $adresat_name=$_POST['adresat_name'];
+                }
+                else $ok=false;
+		if($ok){try{
 			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
 			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
 			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
@@ -41,7 +54,7 @@
 		catch(Exception $e){
 			echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>';
 		}
-	}
+        }}
 	else{
 		$ok=false;
 		$wyswietl="drogi użytkowniku coś tu kręcisz";
