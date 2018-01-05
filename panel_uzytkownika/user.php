@@ -20,7 +20,14 @@
 			
 			<div id="pu_nav">
 				<div class="pu_img_user">
-					<i class="icon-user"></i>
+                                        <img src="<?php if(file_exists("../public_profile/avatar/".$_SESSION['id'].".jpg")){
+                                            echo "../public_profile/avatar/".$_SESSION['id'].".jpg";
+                                        }
+                                        else if(file_exists("../public_profile/avatar/".$_SESSION['id'].".png")){
+                                            echo "../public_profile/avatar/".$_SESSION['id'].".png";
+                                        }
+                                        else echo "../public_profile/avatar/avatar.png";
+                                        ?>"/>
 				</div>
 				
 				<div class="text_user">

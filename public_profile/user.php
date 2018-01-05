@@ -20,7 +20,14 @@
 			
 			<div class="user">
 				<div class="user_img">
-					<i class="icon-user"></i>
+                                    <img src="<?php if(file_exists("avatar/".$user_id.".jpg")){
+                                            echo "avatar/".$user_id.".jpg";
+                                        }
+                                        else if(file_exists("../public_profile/avatar/".$user_id.".png")){
+                                            echo "avatar/".$user_id.".png";
+                                        }
+                                        else echo "../public_profile/avatar/avatar.png";
+                                        ?>"/>
 				</div>
 				<div class="user_name">
 					<h2><?php echo $user ?></h2>
