@@ -121,7 +121,7 @@
 					<!--Regulamin-->	
 						<div class="rejdiv_inp">
 							<div class="regulations">
-								<label for="regulamin" class="title">Zaakceptuj <a href="../regulamin/regulamin.php" class="reg">regulamin</a> </label>
+								<label for="regulamin" class="title">Zaakceptuj <a href="../regulamin/" class="reg">regulamin</a> </label>
 									<input type="checkbox" class="inp rej_cbx" name="regulamin" <?php
 											if(isset($_SESSION['fr_regulamin']))
 											{

@@ -1,3 +1,5 @@
+body{height:100%;}
+
 article#content{
     display:flex;
     height:-webkit-calc(100% - 114px);

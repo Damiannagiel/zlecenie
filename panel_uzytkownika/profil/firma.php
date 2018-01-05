@@ -4,7 +4,7 @@
 		
 			<div class="user_user">
 				<h3><?php echo $_SESSION['user']?></h3>
-				<p>Jest z nami od: <?php echo $_SESSION['dolaczyl'] ?></p>
+				<p>Jesteście z nami od: <?php echo $_SESSION['dolaczyl'] ?></p>
 			</div>
 			
 			<?php

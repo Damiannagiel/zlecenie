@@ -47,8 +47,11 @@
 		if(isset($polaczenie)){
                         //pobierz id wszystkich użytkowników z którymi korespondował user
 			$ile_wiadomosci=adresaci($polaczenie,$_SESSION['id']);
-                        //wyświetl listę użytkowników wraz onclickami do wyświetlnia wiadomości
-			$uzytkownicy=wyswiet_uzytkownikow($polaczenie,$ile_wiadomosci,$_SESSION['id'],$href);
+                        if($ile_wiadomosci){
+                            //wyświetl listę użytkowników wraz onclickami do wyświetlnia wiadomości
+                            $uzytkownicy=wyswiet_uzytkownikow($polaczenie,$ile_wiadomosci,$_SESSION['id'],$href);
+                        }
+                        else $brak_wiadomosci="<h3>Nie posiadasz wiadomości do wyświetlenia.</h3>";
 
 			$polaczenie->close();
 		}
@@ -97,12 +100,13 @@
 	<article id="content">
 		<div id="userbox">
 		<?php
-			echo $uzytkownicy;
+			if(isset($uzytkownicy))echo $uzytkownicy;
 		?>
 		</div>
 		
 		<div id="inbox">
 			<div id="message">
+                            <?php if(isset($brak_wiadomosci))echo $brak_wiadomosci;?>
 			</div>
 			<div id="send">
 				<form id="send_message" method="post">
