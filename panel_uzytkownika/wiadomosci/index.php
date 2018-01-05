@@ -13,11 +13,29 @@
                 
                 //utwórz zmienne z linków z innych części serwisu
                 if((isset($_GET['ogl_id']))&&(isset($_GET['user_id']))&&(isset($_GET['tytul']))&&(isset($_GET['user_name']))){
-                    $ogl_id=$_GET['ogl_id'];
-                    $user_id=$_GET['user_id'];
-                    $tytul=$_GET['tytul'];
-                    $user_name=$_GET['user_name'];
-                    $href=array($ogl_id,$user_id,$tytul,$user_name); 
+                    require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_walidacja.php');
+                    //wykonaj walizację zmiennych i zapisz je do prostszej postaci
+                    $href=true;
+                    if((is_numeric($_GET['ogl_id']))&&($_GET['ogl_id']>0)){
+                        $ogl_id=$_GET['ogl_id'];
+                    }
+                    else $href=false;
+                    if((is_numeric($_GET['user_id']))&&($_GET['user_id']>0)){
+                        $user_id=$_GET['user_id'];
+                    }
+                    else $href=false;
+                    if(sprawdz_znaki_podstawowe($_GET['tytul'])){
+                        $tytul=$_GET['tytul'];
+                    }
+                    else $href=false;
+                    if(sprawdz_znaki_podstawowe($_GET['user_name'])){
+                        $user_name=$_GET['user_name'];
+                    }
+                    else $href=false;
+                    
+                   if($href==true){
+                        $href=array($ogl_id,$user_id,$tytul,$user_name);
+                    }
                 }
                 else $href=false;
 		
