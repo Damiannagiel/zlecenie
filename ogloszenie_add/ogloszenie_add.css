@@ -37,11 +37,6 @@ p.blad{
 	height:48px;
 }
 
-.ogl_add_input p.nawias,.ogl_add_zasieg p.nawias{
-	font-size: 1.4rem;
-    color: #7f7f7f;
-}
-
 .ogl_add_zasieg p.nawias{
 	text-align:left;
 	width:90%;

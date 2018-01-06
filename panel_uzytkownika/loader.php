@@ -3,7 +3,6 @@ session_start();
 
 $CONTENT = $_POST['Content'];
 @$_SESSION['usun']= $_POST['Usun'];
-
 if($CONTENT == "kontakty")
 {
 	include_once ('kontakty/'.$CONTENT.'.php');
@@ -71,6 +70,11 @@ else if($CONTENT == "usun_ogloszenie")
 {
 	include_once ('../ogloszenie_add/'.$CONTENT.'.php');
 	exit;
+}
+else if($CONTENT == "avatar_edit")
+{
+    include_once ('edycja/'.$CONTENT.'.php');
+    exit;
 }
 else echo"Przykro nam, coś poszło nie tak.";
 ?>

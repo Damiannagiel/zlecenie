@@ -167,7 +167,10 @@ textarea, select{
 	border-width:2px;
 }
 
-.button-red:hover,.button-green:hover{cursor:pointer;}
+.button-red:hover,.button-green:hover{
+    cursor:pointer;
+    padding: 10px 20px;
+}
 
 .button-red:hover{border: 2px solid #ff0000;}
 
@@ -177,4 +180,9 @@ textarea, select{
 	background-color:#ff3232;
 	padding:5px;
 	border-radius:5px;
+}
+
+p.nawias{
+    font-size: 1.4rem;
+    color: #7f7f7f;
 }
