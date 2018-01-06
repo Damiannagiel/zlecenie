@@ -30,6 +30,10 @@
     position: absolute;
 }
 
+.pu_img_user img:hover{
+    cursor:pointer;
+}
+
 #message a{
 	font-size:4rem;
 	color:#000000;
