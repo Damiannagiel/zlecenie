@@ -76,18 +76,21 @@
 	//
 	$(".pu_nav_container .pu_nav_ol .nav").click(function(e)
 	{
-                sprawdz_wiadomosci(user);
-		var content = $(this).data("content");
-		if(info.content != content)
-		{
-			$(".active").removeClass("active").addClass("inactive");
-			$(this).removeClass("inactive").addClass("active");
-			loadContent(content);
-		}
+            sprawdz_wiadomosci(user);
+            var content = $(this).data("content");
+            if(info.content != content)
+            {
+                $(".active").removeClass("active").addClass("inactive");
+                $(this).removeClass("inactive").addClass("active");    
+                loadContent(content);
+            }
 	});
 		
 	function loadContent(content,id)
 	{
+                if(content=="avatar_edit"){
+                    $(".active").removeClass("active");
+                }
 		$.ajax
 				({
 					url: 'loader.php',
