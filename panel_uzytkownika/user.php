@@ -63,15 +63,15 @@
 			<div style="clear:both"></div>
 			
 			<script type="text/javascript">
-	
+        var first_page="<?php if((isset($_SESSION['avatar_size']))||(isset($_SESSION['avatar_wysylanie']))||(isset($_SESSION['avatar_mime']))){echo "avatar_edit";} else {echo "profil";}?>";
 	var info = 
 	{
-		content: "profil",
+		content: first_page,
 	}
         var user=<?php echo $_SESSION['id'];?>;
         sprawdz_wiadomosci(user);
 	
-	loadContent("profil"); //ładuję zakładkę profil po wczytaniu strony
+	loadContent(first_page); //ładuję zakładkę profil po wczytaniu strony
 	
 	//
 	$(".pu_nav_container .pu_nav_ol .nav").click(function(e)

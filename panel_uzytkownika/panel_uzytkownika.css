@@ -249,6 +249,12 @@ a:hover{text-decoration: none;}
 }
 .button-div{margin-top:10px;}
 
+.avatar_edit .button-green,.avatar_edit .button-red{
+    width:28%;
+    max-width: 100px;
+    display:inline-block;
+}
+
 .avatar_file:hover{
     padding: 8px;
 }

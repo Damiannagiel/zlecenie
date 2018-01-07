@@ -1,6 +1,6 @@
 var ile_powiatow = 0; // zmienna przechowująca liczbę ogólną zaznaczonych powiatów
 var ile_pow = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]; //zmienna przechowująca liczbę zaznaczonych powiatów w danym województwie, ostatnia liczba to dodatkowa jedynka na potrzeby skryptu odswiez_powiaty
-var wojewodztwa = ["dolnośląskie","kujawsko-pomorskie","lubelskie","lubuskie","łódzkie","małopolskie","mazowieckie","opolskie","podkarpackie","podlaskie","pomorskie","warmińsko-mazurskie","wielkopolskie","zachodniopomorskie"]; //tablica z nazwami województw
+var wojewodztwa = ["dolnośląskie","kujawsko-pomorskie","lubelskie","lubuskie","łódzkie","małopolskie","mazowieckie","opolskie","podkarpackie","podlaskie","pomorskie","śląskie","świętokrzyskie","warmińsko-mazurskie","wielkopolskie","zachodniopomorskie"]; //tablica z nazwami województw
 var img = 0; //zmienna przecowująca ilość dodanych zdjęć
 var inp_img = 1; //zmienna przechowująca ilość widocznych formulaży na zdjęcia
 var fig=0; //zmienna przechowująca ilość wcześniej wybranych zdjęć, wykorzystywana podczas edycji ogłoszenia
@@ -280,7 +280,7 @@ function ostatni()
 	{
 		if(ile_powiatow==1)
 		{
-			var wyjatki_ogol=['dolnośląskie_Wrocław','dolnośląskie_Jelenia Góra','dolnośląskie_Legnica','kujawsko-pomorskie_Bydgoszcz','kujawsko-pomorskie_Toruń','kujawsko-pomorskie_Włocławek','kujawsko-pomorskie_Grudziądz','lubuskie_Zielona Góra','lubuskie_Gorzów Wielkopolski','łódzkie_łódź','łódzkie_Piotrków Trybunalski','łódzkie_Skierniewice','małopolskie_Kraków','małopolskie_Tarnów','małopolskie_Nowy Targ',"mazowieckie_Warszawa","mazowieckie_Radom","mazowieckie_Płock","mazowieckie_Siedlce","mazowieckie_Ostrołęka","opolskie_Opole","podkarpackie_Rzeszów","podkarpackie_Przemyśl","podkarpackie_Tarnobrzeg","podkarpackie_Krosno","podlaskie_Białystok","podlaskie_Suwałki","podlaskie_Łomża","pomorskie_Gdańsk","pomorskie_Gdynia","pomorskie_Słupsk","pomorskie_Sopot","śląskie_Katowice","śląskie_Częstochowa","śląskie_Sosnowiec","śląskie_Gliwice","śląskie_Zabrze","śląskie_Bielsko-Biała","śląskie_Bytom","śląskie_Ruda Śląska","śląskie_Rybnik","śląskie_Tychy","śląskie_Dąbrowa Górnicza","śląskie_Chorzów","śląskie_Jaworzno","śląskie_Jastrzębie-Zdrój","śląskie_Mysłowice","śląskie_Siemianowice Śląskie","śląskie_Żory","śląskie_Piekary Śląskie","śląskie_Świętochłowice","swietokrzyskie_Kielce","warmińsko-mazurskie_Olsztyn","warmińsko-mazurskie_Elbląg","wielkopolskie_Poznań","wielkopolskie_Kalisz","wielkopolskie_konin","wielkopolskie_Leszno","zachodniopomorskie_Szczecin","zachodniopomorskie_Koszalin","zachodniopomorskie_Świnoujście"];
+			var wyjatki_ogol=['dolnośląskie_Wrocław','dolnośląskie_Jelenia Góra','dolnośląskie_Legnica','kujawsko-pomorskie_Bydgoszcz','kujawsko-pomorskie_Toruń','kujawsko-pomorskie_Włocławek','kujawsko-pomorskie_Grudziądz','lubuskie_Zielona Góra','lubuskie_Gorzów Wielkopolski','łódzkie_łódź','łódzkie_Piotrków Trybunalski','łódzkie_Skierniewice','małopolskie_Kraków','małopolskie_Tarnów','małopolskie_Nowy Targ',"mazowieckie_Warszawa","mazowieckie_Radom","mazowieckie_Płock","mazowieckie_Siedlce","mazowieckie_Ostrołęka","opolskie_Opole","podkarpackie_Rzeszów","podkarpackie_Przemyśl","podkarpackie_Tarnobrzeg","podkarpackie_Krosno","podlaskie_Białystok","podlaskie_Suwałki","podlaskie_Łomża","pomorskie_Gdańsk","pomorskie_Gdynia","pomorskie_Słupsk","pomorskie_Sopot","śląskie_Katowice","śląskie_Częstochowa","śląskie_Sosnowiec","śląskie_Gliwice","śląskie_Zabrze","śląskie_Bielsko-Biała","śląskie_Bytom","śląskie_Ruda Śląska","śląskie_Rybnik","śląskie_Tychy","śląskie_Dąbrowa Górnicza","śląskie_Chorzów","śląskie_Jaworzno","śląskie_Jastrzębie-Zdrój","śląskie_Mysłowice","śląskie_Siemianowice Śląskie","śląskie_Żory","śląskie_Piekary Śląskie","śląskie_Świętochłowice","świętokrzyskie_Kielce","warmińsko-mazurskie_Olsztyn","warmińsko-mazurskie_Elbląg","wielkopolskie_Poznań","wielkopolskie_Kalisz","wielkopolskie_konin","wielkopolskie_Leszno","zachodniopomorskie_Szczecin","zachodniopomorskie_Koszalin","zachodniopomorskie_Świnoujście"];
 			var ktory = document.getElementsByName('powiaty[]')[0].value;
 			var tablica = ktory.split('_');
 			var woj = tablica[0];
@@ -481,7 +481,7 @@ function powiat_klik(powiat,woj,wyjatki,el)
 //pobiera nazwę województwa, zwraca jego numer
 function ktore_woj(woj)
 {
-	var woj_tab=['dolnośląskie','kujawsko-pomorskie','lubelskie'];
+	var woj_tab=["dolnośląskie","kujawsko-pomorskie","lubelskie","lubuskie","łódzkie","małopolskie","mazowieckie","opolskie","podkarpackie","podlaskie","pomorskie","śląskie","świętokrzyskie","warmińsko-mazurskie","wielkopolskie","zachodniopomorskie"];
 	for(i=0;i<woj_tab.length;i++)
 	{
 		if(woj==woj_tab[i])
@@ -498,7 +498,7 @@ function odswiez_powiaty(powiaty_ciag,miasto,ile_img)
 	if(powiaty_ciag !="") 
 	{
 		var pojedyncze = powiaty_ciag.split('&');
-		var ile_powiatow = pojedyncze.length;
+		var ile_powiatow = pojedyncze.length;//"ile piwiatow2" ponieważ "ile_powiatow" to zmienna globalna
 		var i=0;
 		while(i<ile_powiatow)
 		{
@@ -509,10 +509,13 @@ function odswiez_powiaty(powiaty_ciag,miasto,ile_img)
 			var el=ktore_woj(woj);
 			ile_pow[el] = ile_pow[el] +1;
 			policz_ile();
-			dodaj_div_hidden(woj,4);
+			dodaj_div_hidden(woj,el);
 			dodaj_input(woj+'_inp',value,'powiaty[]','hidden',value);
 			dodaj_div(woj);
-			zmien_opis(woj,pow);
+                        if((i==0)&&(ile_powiatow>1)){
+                            zmien_opis(woj,"województwo "+woj,"");
+                        }
+                        else zmien_opis(woj,pow);
 			dodaj_obrazek(woj,value);
 			i++;
 		}
