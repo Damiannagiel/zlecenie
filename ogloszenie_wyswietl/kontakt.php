@@ -7,8 +7,6 @@
 		session_start();
 		include_once '../szablon/nav_head.php';
 
-		$ogloszenie=$_GET['ogloszenie'];
-
 		$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];	
 		require_once ($DOCUMENT_ROOT.'/../ini/skryptyPHP/kontakt_skrypt.php');
 		
@@ -21,7 +19,7 @@
 		<div class="kontakt">
 			<div class="top">
 				<div class="img_div">
-					<img class="kontakt_img" src="../ogloszenie/img/<?php echo $ogloszenie ?>/1.jpg"/>
+					<img class="kontakt_img" src="<?php echo $img_src; ?>"/>
 				</div>
 				<div class="div_info">
 					<div class="tytul_div">

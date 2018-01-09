@@ -53,8 +53,8 @@
 		
 		<div class="filter">
 		<div class="inp">
-			<div class="description  first">
-				<i id="icon_category" class="icon-plus-squared-alt" onClick='expand("category");'></i><h5>Kategoria</h5>
+			<div class="description  first" onClick='expand("category");'>
+				<i id="icon_category" class="icon-plus-squared-alt"></i><h5>Kategoria</h5>
 				<div class="blad">
 					<?php if(isset($_SESSION['blad_kat'])){echo $_SESSION['blad_kat']; unset($_SESSION['blad_kat']);}?>
 				</div>
@@ -79,8 +79,8 @@
 		</div>
 			
 		<div class="inp">
-			<div class="description">
-				<i id="icon_type" class="icon-plus-squared-alt" onClick='expand("type");'></i><h5>Typ ogłoszenia</h5>
+			<div class="description" onClick='expand("type");'>
+				<i id="icon_type" class="icon-plus-squared-alt"></i><h5>Typ ogłoszenia</h5>
 			</div>
 			<div class="content" id="type">
 				<label class="label type_0 label_active">Wszystko<input id="type_0" type="radio" name="type" value="0" checked="checked"/></label>
@@ -90,8 +90,8 @@
 		</div>
 			
 		<div class="inp">
-			<div class="description">
-				<i id="icon_zasieg" class="icon-plus-squared-alt" onClick='expand("zasieg");'></i><h5>Lokalizacja</h5> <?php if((isset($_SESSION['blad_miejscowosc_znaki']))||(isset($_SESSION['blad_miejscowosc_dlugosc'])))echo'<p class="mark"> ! </p>';?>
+			<div class="description" onClick='expand("zasieg");'>
+				<i id="icon_zasieg" class="icon-plus-squared-alt"></i><h5>Lokalizacja</h5> <?php if((isset($_SESSION['blad_miejscowosc_znaki']))||(isset($_SESSION['blad_miejscowosc_dlugosc'])))echo'<p class="mark"> ! </p>';?>
 			</div>
 			<div class="content" id="zasieg">
 				<div class="flex_box">
@@ -127,8 +127,8 @@
 		</div>
 			
 		<div class="inp">
-			<div class="description">
-				<i id="icon_cena" class="icon-plus-squared-alt" onClick='expand("cena");'></i><h5>Cena</h5> <?php if(isset($_SESSION['blad_cena']))echo'<p class="mark"> ! </p>';?>
+			<div class="description" onClick='expand("cena");'>
+				<i id="icon_cena" class="icon-plus-squared-alt"></i><h5>Cena</h5> <?php if(isset($_SESSION['blad_cena']))echo'<p class="mark"> ! </p>';?>
 			</div>
 			<div class="content" id="cena">
 				<div class="flex_box">
@@ -155,8 +155,8 @@
 		</div>
 			
 		<div class="inp">
-			<div class="description">
-				<i id="icon_personality" class="icon-plus-squared-alt" onClick='expand("personality");'></i><h5>Rodzaj działalności</h5>
+			<div class="description" onClick='expand("personality");'>
+				<i id="icon_personality" class="icon-plus-squared-alt"></i><h5>Rodzaj działalności</h5>
 			</div>
 			<div class="content" id="personality">
 				<label class="person person_0 person_active">Wszystko<input id="pers_0" type="radio" name="person" value="0" checked="checked"/></label>
@@ -166,8 +166,8 @@
 		</div>
 		
 		<div class="inp last">
-			<div class="description">
-				<i id="icon_contact" class="icon-plus-squared-alt" onClick='expand("contact");'></i><h5>Forma kontaktu</h5>
+			<div class="description" onClick='expand("contact");'>
+				<i id="icon_contact" class="icon-plus-squared-alt"></i><h5>Forma kontaktu</h5>
 			</div>
 			<div class="content" id="contact">
 				<label id="telefon" class="contact" onChange='contact("telefon");'>Telefon<input type="checkbox" name="phone" value="1"/></label>

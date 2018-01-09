@@ -3,7 +3,7 @@
 
 <?php 
 	@session_start();
-	@$usun_id=$_SESSION['usun'];
+	$usun_id=$_SESSION['usun'];
 
 	$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 	include ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');//nawiązywanie polaczenia z bazą danych
@@ -13,7 +13,7 @@
 	{
 		$dane=pobierz_dane($polaczenie,"tytul,uzytkownik_id", "ogloszenia","id",$usun_id);
 
-		if((!isset($_SESSION['id']))||($dane['uzytkownik_id']!=$_SESSION['id'])) header ("Location:../index.php");
+		if((!isset($_SESSION['id']))||($dane['uzytkownik_id']!=$_SESSION['id'])) echo 'id='.$_SESSION['id'].' user_id='.$dane['uzytkownik_id'];
 		$polaczenie->close();
 	}
 	else exit;

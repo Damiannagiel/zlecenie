@@ -51,21 +51,6 @@
 				loadContent(content);
 			}
 		});
-		
-	function loadContent(content)
-	{
-		$.ajax
-				({
-					url: 'loader.php',
-					type: 'post',
-					data: {Content : content},
-						success: function(response)
-						{
-							$(".pu_content").html(response);
-							info.content = content;
-						}
-				});
-	}
 </script>
 </html>
 

@@ -153,7 +153,7 @@
 						{	echo @$_SESSION['blad_opis_dlugosc'];
 							echo @$_SESSION['blad_opis_znaki'];
 							unset($_SESSION['blad_opis_dlugosc'],$_SESSION['blad_opis_znaki']);}?>
-					<p class="nawias">(Wprowadź krótki opis, który będzie wyświetlany w miniaturach na stronie głównej a także podczas przeglądania ogłoszeń)</p>
+					<p class="nawias">(Wprowadź krótki opis, który będzie wyświetlany podczas przeglądania ogłoszeń, a także w wynikach wyszukiwania np. Google)</p>
 				</div>
 				<div style="clear:both"></div>
 			</div>
@@ -215,7 +215,7 @@
 									echo @$_SESSION['blad_email'];
 									echo @$_SESSION['blad_www'];
 									unset($_SESSION['blad_telefon'],$_SESSION['blad_email'],$_SESSION['blad_www']);}?>
-					<p class="nawias">(Wprowadone tutaj dane kontaktowe będą wyświetlane będą tylko w tym ogłoszeniu. Dane w twoim profilu i pozostałych ogłoszeniach nie ulegną zmianie.)</p>
+					<p class="nawias">(Wprowadone tutaj dane kontaktowe będą wyświetlane tylko w tym ogłoszeniu. Dane w twoim profilu i pozostałych ogłoszeniach nie ulegną zmianie.)</p>
 				</div>
 				<div style="clear:both"></div>
 			</div>

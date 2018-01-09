@@ -61,22 +61,6 @@
 			}
 		});
 		//po kliknięciu submit wyślij dane do walidacji i przejdź do następnego kroku
-		
-	function loadContent(content)
-	{
-		$.ajax
-				({
-					url: 'loader.php',
-					type: 'post',
-					data: {Content : content},
-						success: function(response)
-						{
-							$(".pu_content").html(response);
-							info.content = content;
-						}
-				});
-	}
-	//ładowanie kolejnego kroku
 	
 	function przetowrz()
 		{
