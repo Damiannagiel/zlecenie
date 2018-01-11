@@ -237,7 +237,7 @@ a:hover{text-decoration: none;}
 /* Usu� og�oszenie ------------------------------------------------------------------------------------------------------------------ */
 
 /*Settings -----------------------------------------------------------------------------------------------------------------------*/
-/*.obecny{
+.obecny{
     margin-bottom: 20px;
 }
 
@@ -267,7 +267,7 @@ a:hover{text-decoration: none;}
 
 .avatar_file:hover{
     padding: 8px;
-}*/
+}
 
 .settings h5{
     margin-top:16px;
@@ -277,9 +277,17 @@ a:hover{text-decoration: none;}
     text-align: left;
 }
 
+.settings h3{margin-bottom:5px;}
+
+.settings>p{
+    font-size:1.4rem;
+    color:#7f7f7f;
+}
+
 .settings .edit{
     border:1px solid #BBBBBB;
     padding:5px;
+    display:none;
 }
 /*Settings -----------------------------------------------------------------------------------------------------------------------*/
 

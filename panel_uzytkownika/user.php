@@ -20,7 +20,7 @@
 			
 			<div id="pu_nav">
 				<div class="pu_img_user">
-                                        <img onclick='loadContent("avatar_edit");' src="<?php 
+                                        <img onclick='loadContent("ustawienia");' src="<?php 
                                         if(file_exists("../public_profile/avatar/".$_SESSION['id'].".jpg")){
                                             echo "../public_profile/avatar/".$_SESSION['id'].".jpg";
                                         }
@@ -28,10 +28,10 @@
                                             echo "../public_profile/avatar/".$_SESSION['id'].".png";
                                         }
                                         else echo "../public_profile/avatar/avatar.png";
-                                        ?>"/><span>Zmień</span>
+                                        ?>"/><span>Ustawienia</span>
 				</div>
 				
-				<div class="text_user" onclick='loadContent("ustawienia");'>
+				<div class="text_user">
 					<p class="pu_user"><?php echo$_SESSION['user'] ?></p>
 					<p class="pu_kp">użytkownik basic</p>
 				</div>
@@ -63,7 +63,7 @@
 			<div style="clear:both"></div>
 			
 			<script type="text/javascript">
-        var first_page="<?php if((isset($_SESSION['avatar_size']))||(isset($_SESSION['avatar_wysylanie']))||(isset($_SESSION['avatar_mime']))){echo "avatar_edit";} else {echo "profil";}?>";
+        var first_page="<?php if((isset($_SESSION['avatar_size']))||(isset($_SESSION['avatar_wysylanie']))||(isset($_SESSION['avatar_mime']))){echo "ustawienia";} else {echo "profil";}?>";
 	var info = 
 	{
 		content: first_page,
@@ -136,6 +136,13 @@
                 document.getElementById("user_"+user).classList.add("active");
                 $("#user_"+user).slideToggle("high");
             }
+        }
+        
+        function rozwin(content){
+            var id="#"+content;
+            var icon_id="#icon_"+content;
+            $(id).slideToggle().addClass("active");
+            $(icon_id).removeClass("icon-plus-squared-alt").addClass("icon-minus-squared-alt");
         }
 
 	</script>
