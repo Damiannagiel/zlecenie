@@ -20,7 +20,7 @@
 			
 			<div id="pu_nav">
 				<div class="pu_img_user">
-                                        <img onclick='loadContent("avatar_edit",<?php echo $_SESSION['id']?>);' src="<?php 
+                                        <img onclick='loadContent("avatar_edit");' src="<?php 
                                         if(file_exists("../public_profile/avatar/".$_SESSION['id'].".jpg")){
                                             echo "../public_profile/avatar/".$_SESSION['id'].".jpg";
                                         }
@@ -31,7 +31,7 @@
                                         ?>"/><span>Zmień</span>
 				</div>
 				
-				<div class="text_user">
+				<div class="text_user" onclick='loadContent("ustawienia");'>
 					<p class="pu_user"><?php echo$_SESSION['user'] ?></p>
 					<p class="pu_kp">użytkownik basic</p>
 				</div>

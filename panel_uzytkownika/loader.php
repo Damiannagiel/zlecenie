@@ -76,5 +76,10 @@ else if($CONTENT == "avatar_edit")
     include_once ('edycja/'.$CONTENT.'.php');
     exit;
 }
+else if($CONTENT == "ustawienia")
+{
+    include_once ('edycja/'.$CONTENT.'.php');
+    exit;
+}
 else echo"Przykro nam, coś poszło nie tak.";
 ?>
