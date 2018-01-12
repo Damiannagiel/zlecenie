@@ -54,11 +54,9 @@
 				</nav>
 			</div>
 			
-			<article>
 				<div class="pu_content">
-
+                                    <!--tutaj wyświetla się zawartość ładowana przez ajax-->
 				</div>
-			</article>
 			
 			<div style="clear:both"></div>
 			

@@ -55,7 +55,12 @@
     
     <h5 data-content="pass_edit"><i id="icon_pass_edit" class="icon-plus-squared-alt"></i>Zmień hasło</h5>
     <div class="edit" id="pass_edit">
-        pass
+        <form action="edycja/pass_edit_skrypt.php" method="post">
+            <div class="edit_input"><label class="edit_tytul" for="current_password">Aktualne hasło:</label><input type="password" name="current_password"/></div>
+            <div class="edit_input"><label class="edit_tytul" for="new_password">Nowe hasło:</label><input type="password" name="new_password"/></div>
+            <div class="edit_input"><label class="edit_tytul" for="new_password_2">Powtórz hasło:</label><input type="password" name="new_password_2"/></div>
+            <div class="edit_input button-div"><label class="edit_tytul" for="new_password2"></label><input type="submit" value="Zapisz" class="button-green"/></div>
+        </form>
     </div>
     
     <h5 data-content="mail_edit"><i id="icon_mail_edit" class="icon-plus-squared-alt"></i>Zmień e-mail</h5>
