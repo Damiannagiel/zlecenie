@@ -63,50 +63,85 @@
         <form action="edycja/pass_edit_skrypt.php" method="post">
             <div class="edit_input"><label class="edit_tytul" for="current_password">Aktualne hasło:</label><input type="password" name="current_password"/></div>
             <div class="blad_user"><?php
-                    if(isset($_SESSION['current_characters_error'])){
-                        echo $_SESSION['current_characters_error'];
-                        unset($_SESSION['current_characters_error']);
-                    }
-                    if(isset($_SESSION['current_length_error'])){
-                        echo $_SESSION['current_length_error'];
-                        unset($_SESSION['current_length_error']);
-                    }
-                    if(isset($_SESSION['current_password_error'])){
-                        echo $_SESSION['current_password_error'];
-                        unset($_SESSION['current_password_error']);
-                    }
+                if(isset($_SESSION['current_characters_error'])){
+                    echo $_SESSION['current_characters_error'];
+                    unset($_SESSION['current_characters_error']);
+                }
+                if(isset($_SESSION['current_length_error'])){
+                    echo $_SESSION['current_length_error'];
+                    unset($_SESSION['current_length_error']);
+                }
+                if(isset($_SESSION['current_password_error'])){
+                    echo $_SESSION['current_password_error'];
+                    unset($_SESSION['current_password_error']);
+                }
           ?></div>
             <div class="edit_input"><label class="edit_tytul" for="new_password">Nowe hasło:</label><input type="password" name="new_password"/></div>
             <div class="blad_user"><?php
-                    if(isset($_SESSION['new_characters_error'])){
-                        echo $_SESSION['new_characters_error'];
-                        unset($_SESSION['new_characters_error']);
-                    }
-                    if(isset($_SESSION['new_length_error'])){
-                        echo $_SESSION['new_length_error'];
-                        unset($_SESSION['new_length_error']);
-                    }
+                if(isset($_SESSION['new_characters_error'])){
+                    echo $_SESSION['new_characters_error'];
+                    unset($_SESSION['new_characters_error']);
+                }
+                if(isset($_SESSION['new_length_error'])){
+                    echo $_SESSION['new_length_error'];
+                    unset($_SESSION['new_length_error']);
+                }
           ?></div>
-            <div class="edit_input"><label class="edit_tytul" for="new_password_2">Powtórz hasło:</label><input type="password" name="new_password_2"/></div>
+            <div class="edit_input"><label class="edit_tytul" for="new_password_2">Potwierdź nowe hasło:</label><input type="password" name="new_password_2"/></div>
             <div class="blad_user"><?php
-                    if(isset($_SESSION['space_error'])){
-                        echo $_SESSION['space_error'];
-                        unset($_SESSION['space_error']);
-                    }
-                    if(isset($_SESSION['identical_error'])){
-                        echo $_SESSION['identical_error'];
-                        unset($_SESSION['identical_error']);
-                    }
+                if(isset($_SESSION['space_error'])){
+                    echo $_SESSION['space_error'];
+                    unset($_SESSION['space_error']);
+                }
+                if(isset($_SESSION['identical_error'])){
+                    echo $_SESSION['identical_error'];
+                    unset($_SESSION['identical_error']);
+                }
           ?></div>
             <div class="edit_input button-div"><label class="edit_tytul" for="new_password2"></label><input type="submit" value="Zapisz" class="button-green"/></div>
         </form>
     </div>
 <!--Koniec zmiany hasła   -->
 
+<!--Zmiana e-mail-->
+    <?php if(isset($_SESSION['mail_space_error'])||isset($_SESSION['password_characters_error'])||isset($_SESSION['password_length_error'])||isset($_SESSION['password_error'])||isset($_SESSION['new_email_error'])||isset($_SESSION['email_repeats_error'])) echo'<script>rozwin("mail_edit");</script>'; ?>
     <h5 data-content="mail_edit"><i id="icon_mail_edit" class="icon-plus-squared-alt"></i>Zmień e-mail</h5>
     <div class="edit" id="mail_edit">
-        mail
+        <form action="edycja/mail_edit_skrypt.php" method="post">
+            <div class="edit_input"><label class="edit_tytul" for="password">Twoje hasło:</label><input type="password" name="password"/></div>
+            <div class="blad_user"><?php
+                if(isset($_SESSION['password_characters_error'])){
+                    echo $_SESSION['password_characters_error'];
+                    unset($_SESSION['password_characters_error']);
+                }
+                if(isset($_SESSION['password_length_error'])){
+                    echo $_SESSION['password_length_error'];
+                    unset($_SESSION['password_length_error']);
+                }
+                if(isset($_SESSION['password_error'])){
+                    echo $_SESSION['password_error'];
+                    unset($_SESSION['password_error']);
+                }
+          ?></div>
+            <div class="edit_input"><label class="edit_tytul" for="new_email">Nowy adres e-mail:</label><input type="email" name="new_email"/></div>
+            <div class="blad_user"><?php
+                if(isset($_SESSION['mail_space_error'])){
+                    echo $_SESSION['mail_space_error'];
+                    unset($_SESSION['mail_space_error']);
+                }
+                if(isset($_SESSION['new_email_error'])){
+                    echo $_SESSION['new_email_error'];
+                    unset($_SESSION['new_email_error']);
+                }
+                if(isset($_SESSION['email_repeats_error'])){
+                    echo $_SESSION['email_repeats_error'];
+                    unset($_SESSION['email_repeats_error']);
+                }
+          ?></div>
+            <div class="edit_input button-div"><label class="edit_tytul" for="new_password2"></label><input type="submit" value="Zapisz" class="button-green"/></div>
+        </form>
     </div>
+<!--Koniec zmiany e-mail-->
     
     <h5 data-content="delete_account"><i id="icon_delete_account" class="icon-plus-squared-alt"></i>Usuń konto</h5>
     <div class="edit" id="delete_account">
