@@ -145,7 +145,13 @@
     
     <h5 data-content="delete_account"><i id="icon_delete_account" class="icon-plus-squared-alt"></i>Usuń konto</h5>
     <div class="edit" id="delete_account">
-        delete
+        <form action="edycja/delete_all_skrypt.php" method="post">
+            <h3>Czy jesteś pewny że chcesz usunąć swoje konto z serwisu Internetowa Giełda Usług ?</h3>
+            <p class="nawias">Usunięcie konta spowoduje przeniesienie do archiwum wszystkich twoich ogłoszeń, usunięcie nawiązanych kontaktów i wiadomośi w skrzynce, a także utratę ocen, komentarzy i renomy jaką udało ci się zbudować w serwisie. Zmiany te są nieodwracalne!</p>
+            <div class="cbx"><label>Jestem właścicielem konta i świadomie je usuwam.<input class="big_checkbox"type="checkbox" name="delete_checkbox" value="1"/></label></div>
+            <input type="password" name="delete_pas" placeholder="Hasło"/>
+            <div class="button-div"><button class="button-red">Usuń konto</button></div>
+        </form>
     </div>
 </div>
 

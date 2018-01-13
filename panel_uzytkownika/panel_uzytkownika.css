@@ -299,6 +299,16 @@ a:hover{text-decoration: none;}
     padding:10px;
 }
 
+.settings .big_checkbox{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 4px;
+}
+
+.settings .cbx{
+    margin:16px 0 8px 0;
+}
 @media screen and (max-width: 639px){
     .settings .edit_input.button-div label {display:none;}
     
