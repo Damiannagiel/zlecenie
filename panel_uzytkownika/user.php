@@ -61,7 +61,7 @@
 			<div style="clear:both"></div>
 			
 			<script type="text/javascript">
-        var first_page="<?php if((isset($_SESSION['avatar_size']))||(isset($_SESSION['avatar_wysylanie']))||(isset($_SESSION['avatar_mime']))){echo "ustawienia";} else {echo "profil";}?>";
+        var first_page="<?php if(isset($_SESSION['settings_error'])){echo "ustawienia";unset($_SESSION['settings_error']);}else echo "profil";?>";
 	var info = 
 	{
 		content: first_page,

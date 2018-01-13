@@ -17,7 +17,7 @@ if($polaczenie){
     if((!sprawdz_spacje($current_password))||(!sprawdz_spacje($new_password))||(!sprawdz_spacje($new_password_2))){
         $ok=false;
         $_SESSION['space_error']="<p>Wszytkie pola formularza muszą być wypełnione!";
-        echo $_SESSION['space_error'];
+        $_SESSION['settings_error']=true;
     }
     else{
         //sprawdź czy nowe hasła są jednakowe
@@ -27,13 +27,13 @@ if($polaczenie){
                 $ok=false;
                 $pass_db=false;
                 $_SESSION['current_characters_error']="<p>Hasło zawiera niedozwolone znaki!</p>";
-                echo $_SESSION['current_characters_error'];
+                $_SESSION['settings_error']=true;
             }
             if(!sprawdz_dlugosc($current_password,8,20)){
                 $ok=false;
                 $pass_db=false;
                 $_SESSION['current_length_error']="<p>Hasło musi składać się od 8 do 20 znaków!</p>";
-                echo $_SESSION['current_length_error'];
+                $_SESSION['settings_error']=true;
             }
             //sprawdź czy użytkownik podał poprawne aktualne hasło
             if($pass_db){
@@ -41,39 +41,40 @@ if($polaczenie){
                 if(!password_verify($current_password, $pass_db['pass'])){
                     $ok=false;
                     $_SESSION['current_password_error']="<p>Aktuale hasło jest błędne!</p>";
-                    echo $_SESSION['current_password_error'];
+                    $_SESSION['settings_error']=true;
                 }
             }
             //waliduj nowe hasło
             if(!sprawdz_login($new_password)){
                 $ok=false;
                 $_SESSION['new_characters_error']="<p>Nowe hasło zawiera niedozwolone znaki!</p>";
-                echo $_SESSION['new_characters_error'];
+                $_SESSION['settings_error']=true;
             }
             if(!sprawdz_dlugosc($new_password,8,20)){
                 $ok=false;
                 $_SESSION['new_length_error']="<p>Nowe hasło składać się od 8 do 20 znaków!</p>";
-                echo $_SESSION['new_length_error'];
+                $_SESSION['settings_error']=true;
             }
         }
         //nowe hasła nie są jednakowe
         else{
             $ok=false;
             $_SESSION['identical_error']="<p>Podene hasła nie są jednakowe!</p>";
-            echo $_SESSION['identical_error'];
+            $_SESSION['settings_error']=true;
         }
     }
     //sprawdź czy walidacja przebiegła ok i zmień hasło użytkownika
     if($ok){
-        $zmien=edytuj_dane($polaczenie,"uzytkownicy","pass",$new_password,"id",$user_id);
-        if($zmien){
+        //zahaszuj hasło
+	$password_hash = password_hash($new_password, PASSWORD_DEFAULT);
+        $edit=edytuj_dane($polaczenie,"uzytkownicy","pass",$password_hash,"id",$user_id);
+        if($edit){
             $_SESSION['zapisano']=true;
             header('Location:../user.php');
         }
-        else{
-           $_SESSION['save_error']="<p>Zmian nie udało się wprowadzić.</p>";
-        }
+        else header('Location:../user.php');
     }
+    else header('Location:../user.php');
 }
 else{
     echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>';
