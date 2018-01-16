@@ -15,15 +15,14 @@
 			<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
 			<link href="../ogloszenie_wyswietl/ogloszenie.css" type="text/css" rel="stylesheet"/>
 	</head>
-	
 		<?php include_once '../szablon/nav_body.php'; include_once '../szablon/nav_category.php';?>
-		<article class="ogloszenie_all">
-			<aside>
-				<picture>
-				  <source media="(min-width: 748px)" srcset="../img/728x90.jpg">
-				  <img src="../img/320x100.jpeg" alt="aside">
-				</picture>
-			</aside>
+                <aside>
+                    <picture>
+                      <source media="(min-width: 748px)" srcset="../img/728x90.jpg">
+                      <img src="../img/320x100.jpeg" alt="aside">
+                    </picture>
+		</aside>
+		<article class="ogloszenie_all <?php if(isset($archives)&&$archives==true)echo "archives";//dodaj klasę archives jeżeli ogłoszenie jest archiwalne ?>">
 			<div class="ogl_tytul">
 				<header>
 					<h4><?php echo $tytul ?></h4>
@@ -62,9 +61,15 @@
 						<i class="icon-star-empty"></i>
 						<p>(brak ocen)</p>
 					</div>
-					<div class="box kontakt">
-						<?php if(($kontakt!=false)||((isset($_SESSION['id']))&&($_SESSION['id']==$uzytkownik_id))){echo $jest_kontakt;}else{echo $brak_kontaktu;}?>
-					</div>
+					<div class="box kontakt"><?php
+                                            if(isset($archives)&&$archives==true){
+                                                echo $archives_text;
+                                            }
+                                            else if(($kontakt!=false)||((isset($_SESSION['id']))&&($_SESSION['id']==$uzytkownik_id))){
+                                                echo $jest_kontakt;  
+                                            }
+                                            else echo $brak_kontaktu;
+					?></div>
 				</section>
 			</div>
 			
