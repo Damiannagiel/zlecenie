@@ -368,10 +368,6 @@ a:hover{text-decoration: none;}
 
 .wyswietl_ogloszenie .button-red:hover, .wyswietl_ogloszenie .button-green:hover{margin:4px 10px 4px 10px;}
 
-.wyswietl_ogloszenie.archives .button-div{
-    display:initial;
-}
-
 /* Og�oszenia---------------------------------------------------------------------------------------------------------------- */
 
 /* Edycja --------------------------------------------------------------------------------------------------------------------- */
