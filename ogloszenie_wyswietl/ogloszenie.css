@@ -171,6 +171,10 @@ p.nawias{
 	margin:0 3%30px 3%;
 }
 
+.ogloszenie_all.archives{
+    opacity: 0.5;
+}
+
 @media screen and (min-width: 400px){img.img_med{height:280px;}}
 
 @media screen and (min-width: 480px){img.img_med{height:320px;}}
