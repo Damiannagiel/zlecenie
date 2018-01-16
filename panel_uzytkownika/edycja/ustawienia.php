@@ -158,16 +158,17 @@
 <script>
     //wykonaj po kliknięciu w jedną z opcji ustawień w ustawieniach użytkownika
     $(".settings h5").click(function(e){
-        var content=$(this).data("content");
-        var id="#"+content;
-        var active=$(".settings .active");
-        var icon_id="#icon_"+content;
-        var activ_icon=$(".icon-minus-squared-alt");
-        active.slideToggle().removeClass("active");
-        activ_icon.removeClass("icon-minus-squared-alt").addClass("icon-plus-squared-alt");
+        var content=$(this).data("content");//kliknięty element
+        var id="#"+content;//id okna do otwarcia
+        var active=$(".settings .active");//aktualnie otawrte okno
+        var icon_id="#icon_"+content;//ikona do zmiany
+        var activ_icon=$(".icon-minus-squared-alt");//aktualna ikona
+        active.slideToggle().removeClass("active");//zwiń otwarte okno
+        activ_icon.removeClass("icon-minus-squared-alt").addClass("icon-plus-squared-alt");//zmień ikonę zamykanego okna
+        //jeżeli kliknięto inne okno niż do tej pory otwarte
         if(active.attr('id')!=content){
-            $(id).slideToggle().addClass("active");
-            $(icon_id).removeClass("icon-plus-squared-alt").addClass("icon-minus-squared-alt");
+            $(id).slideToggle().addClass("active");//rozwiń nowe okno i dodaj klase active
+            $(icon_id).removeClass("icon-plus-squared-alt").addClass("icon-minus-squared-alt");// zmień ikonę z plus na minus
         }
     });
 </script>
