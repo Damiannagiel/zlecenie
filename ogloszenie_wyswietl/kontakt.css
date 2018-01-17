@@ -1,6 +1,7 @@
-.kontakt{
-	margin:10px 4% 25px 4%;
-}
+.kontakt{margin:10px 4% 25px 4%;}
+
+.kontakt.archives{opacity: 0.5;}
+
 .img_div{
 	position:relative;
 	top:3px;

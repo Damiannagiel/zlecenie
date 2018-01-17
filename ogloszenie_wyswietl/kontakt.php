@@ -16,7 +16,7 @@
 
 	<?php include_once '../szablon/nav_body.php'; ?>
 
-		<div class="kontakt">
+		<div class="kontakt <?php if($archives==true)echo"archives";?>">
 			<div class="top">
 				<div class="img_div">
 					<img class="kontakt_img" src="<?php echo $img_src; ?>"/>
