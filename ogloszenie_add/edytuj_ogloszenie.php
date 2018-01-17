@@ -243,7 +243,7 @@
 		{
 			var content = $(this).data("content");
 				ustal_kolor();
-				$(".active").removeClass("active");
+				$(".active").removeClass("active").addClass("woj");;
 				$(this).removeClass("woj").addClass("active");
 				load_woj(content);
 			

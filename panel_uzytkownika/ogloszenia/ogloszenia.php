@@ -3,7 +3,7 @@
     require_once ($DOCUMENT_ROOT.'/../ini/skryptyPHP/ogloszenia_skrypt.php');
 ?>
 
-<h3>Moje aktywne ogłoszenia</h3>
+<h3>Aktywne ogłoszenia</h3>
 <?php
     if($ogloszenia)
     {
@@ -17,8 +17,8 @@
     }
     else echo "<p>-brak aktwnych ogłoszeń</p>";
 ?>
-<h3 class="no_margin_bottom">Moje nieaktywne ogłoszenia</h3>
-<p class="nawias">(Nieaktywne ogłoszenia pozostają w archiwum przez 3 miesiące następnie są usuwane)</p>
+<h3 class="no_margin_bottom">Zarchiwizowane ogłoszenia</h3>
+<p class="nawias">(Nieaktywne ogłoszenia pozostają w archiwum przez 3 miesiące, następnie są usuwane)</p>
 <?php
     if($archives)
     {

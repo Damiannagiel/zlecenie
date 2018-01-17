@@ -368,8 +368,16 @@ a:hover{text-decoration: none;}
 
 .wyswietl_ogloszenie .button-red:hover, .wyswietl_ogloszenie .button-green:hover{margin:4px 10px 4px 10px;}
 
-.wyswietl_ogloszenie.archives .button-div{
-    display:initial;
+.wyswietl_ogloszenie.archives .button-div{display:block;}
+
+.wyswietl_ogloszenie.archives .button-green:hover{
+    margin:9px 9px 0px 9px;
+}
+
+.no_margin_bottom{margin-bottom: 3px;}
+
+.no_margin_bottom ~p{
+    margin-bottom: 24px;
 }
 
 /* Og�oszenia---------------------------------------------------------------------------------------------------------------- */
@@ -551,7 +559,11 @@ legend
 	
 	.box  .info_ogloszenie{margin:0px;}
 	
-	 .wyswietl_ogloszenie .button-div{height:80px;}
+	.wyswietl_ogloszenie .button-div{height:80px;}
+         
+        .wyswietl_ogloszenie.archives .button-green:hover{
+            margin:4px 10px 4px 10px;
+        }
 	/* Og�oszenia---------------------------------------------------------------------------------------------------------------- */
 	
 	/* Edycja --------------------------------------------------------------------------------------------------------------------- */
