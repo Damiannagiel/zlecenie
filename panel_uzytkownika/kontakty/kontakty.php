@@ -5,7 +5,7 @@
 
 <h3>Kontakty które pozyskałem:</h3>
 <?php 
-if($kontakty)
+if($kontakty&&$ile>0)
 {
 	for($i=0;$i<$ile;$i++)
 	{
