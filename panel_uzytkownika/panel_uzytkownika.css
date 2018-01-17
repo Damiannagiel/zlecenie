@@ -140,7 +140,7 @@ span.value{
 }
 
 .kontakt_div span.tytul p{
-	color:#424242;;
+	color:#333333;
 }
 
 a:hover{text-decoration: none;}
@@ -328,7 +328,12 @@ a:hover{text-decoration: none;}
 .kontakt_szczegol:hover{
 	background-color:#99CC99;
 	border-radius:5px;
-	}
+}
+
+.pobral_div .nazwa_ogloszenia span.archives, .kontakt_div .tytul .archives{
+    font-size: 1.4rem;
+    color: #7f7f7f;
+}
 /* Kontakty ------------------------------------------------------------------------------------------------------------------ */
 
 /* Og�oszenia---------------------------------------------------------------------------------------------------------------- */

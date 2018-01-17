@@ -28,7 +28,7 @@ if($moje_ogloszenia){
    require('wyswietl_pobrali.php');
   }
   else{
-   echo '<p>-dotychczas żaden z zalogowanych użytkowników nie pobrał kontaktu do ogłoszenia <a href="../ogloszenie/'.$link_pobral[$i].'.php"><b>'.$tytuł_ogloszenia[$i]['tytul'].'</b></a></p>';
+   echo '<p>-dotychczas żaden z zalogowanych użytkowników nie pobrał kontaktu do ogłoszenia <a href="../ogloszenie/'.$link_pobral[$i].'.php"><b>'.$moje_ogloszenia[$i]['tytul'].'</b></a></p>';
   }
  }
 }
