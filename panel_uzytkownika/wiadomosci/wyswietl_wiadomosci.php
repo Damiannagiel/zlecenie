@@ -33,6 +33,7 @@
                                 zanzacz_jako_przeczytane($polaczenie,$ogloszenie,$adresat,$user);
                             
 				$wyswietl=pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user,25);
+                                echo check_the_archive($polaczenie,$ogloszenie);
                                 if($wyswietl){
                                     $ile_wiadomosci=sizeof($wyswietl);
                                     if($ile_wiadomosci==25){

@@ -38,6 +38,7 @@
                     }
                 }//koniec zmiennych z linków z innych części serwisu
                 else $href=false;
+                echo $href;
 		
 	try{
 		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
