@@ -200,6 +200,15 @@ function wyswietl_wiecej_wiadomosci(wiadomosci,user,adresat,avatar,ile,wiecej,pe
         message.appendChild(wyswietl);
     }
 }
+
+function add_archives(){
+    var message_info=document.querySelector(".message_info");
+    var p=message_info.querySelector("p");
+    var span=document.createElement("span");
+    span.setAttribute("class","nawias");
+    span.appendChild(document.createTextNode(' (zakończone)'));
+    p.appendChild(span);
+}
 /*
 	function odejmij_dni(ile){
 		var cd = new Date();
