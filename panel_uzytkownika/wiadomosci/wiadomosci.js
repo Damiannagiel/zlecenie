@@ -209,6 +209,18 @@ function add_archives(){
     span.appendChild(document.createTextNode(' (zakończone)'));
     p.appendChild(span);
 }
+
+function window_height(){
+    var height=$("#message_header .message_info").height();
+    if(height>36){
+        $("#content").addClass("max-height");
+        alert(height);
+    }
+    else{
+        $("#content").removeClass("max-height");
+        alert(height);
+    }
+}
 /*
 	function odejmij_dni(ile){
 		var cd = new Date();

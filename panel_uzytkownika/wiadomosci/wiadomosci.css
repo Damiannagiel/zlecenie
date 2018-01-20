@@ -7,6 +7,12 @@ article#content{
     height:calc(100% - 114px);
 }
 
+article#content.max-height{
+    height:-webkit-calc(100% - 128px);
+    height:-moz-calc(100% - 128px);
+    height:calc(100% - 128px);
+}
+
 #userbox{
 	flex:0.3;
 	min-height:100%;

@@ -85,5 +85,6 @@
                         wyswietl_bez_wiadomosci(ogl_tytul,adresat_name,ogloszenie,adresat,user);
                     }
                         setTimeout("document.getElementById('message').scrollTop=1e6",100);
+                    window_height();
 		}
 </script>
