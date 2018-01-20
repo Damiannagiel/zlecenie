@@ -38,7 +38,7 @@
                     }
                 }
                 else $href=false;
-		
+                		
 	try{
 		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
 		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
