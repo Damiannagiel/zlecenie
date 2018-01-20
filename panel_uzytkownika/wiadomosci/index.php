@@ -36,7 +36,7 @@
                    if($href==true){
                         $href=array($ogl_id,$user_id,$tytul,$user_name);
                     }
-                }//koniec zmiennych z linków z innych części serwisu
+                }
                 else $href=false;
                 echo $href;
 		
@@ -44,7 +44,6 @@
 		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
 		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
 		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
-                require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_data_time.php');
 				
 		if(isset($polaczenie)){
                         //pobierz id wszystkich użytkowników z którymi korespondował user
