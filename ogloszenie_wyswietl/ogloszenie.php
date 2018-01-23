@@ -9,7 +9,7 @@
 			require_once ($DOCUMENT_ROOT.'/../ini/skryptyPHP/ogloszenie_skrypt.php');
 			
 			?>
-			<title><?php echo $tytul ?></title>
+			<title><?php if(isset($no_add)&&$no_add==true) echo "Internetowa giełda usług"; else echo $tytul ?></title>
 	
 			<meta name="description" content="<?php echo $opis ?>" />
 			<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
@@ -22,6 +22,13 @@
                       <img src="../img/320x100.jpeg" alt="aside">
                     </picture>
 		</aside>
+                <?php 
+                    if(isset($no_add)&&$no_add==true){
+                        echo '<div class="max-height"><p class="no_announcement">Nie ma takiego ogłoszenia!</p></div>';
+                        include_once '../szablon/stopka.php';
+                        exit;
+                    }
+                ?>
 		<article class="ogloszenie_all <?php if(isset($archives)&&$archives==true)echo "archives";//dodaj klasę archives jeżeli ogłoszenie jest archiwalne ?>">
 			<div class="ogl_tytul">
 				<header>

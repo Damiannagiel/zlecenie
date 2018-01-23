@@ -214,11 +214,9 @@ function window_height(){
     var height=$("#message_header .message_info").height();
     if(height>36){
         $("#content").addClass("max-height");
-        alert(height);
     }
     else{
         $("#content").removeClass("max-height");
-        alert(height);
     }
 }
 /*

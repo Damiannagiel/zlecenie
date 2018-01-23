@@ -1,5 +1,10 @@
 .ogl_uzytkownik{display:none;}
 
+.max-height p.no_announcement{
+    font-size: 2.4rem;
+    margin:140px 0;
+}
+
 .ogloszenie_all h5{
 	text-align:left;
 	margin-left:5px;

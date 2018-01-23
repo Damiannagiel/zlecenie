@@ -21,7 +21,10 @@
                     }
                     else $href=false;
                     if((is_numeric($_GET['user_id']))&&($_GET['user_id']>0)){
-                        $user_id=$_GET['user_id'];
+                        if($_GET['user_id']!=$_SESSION['id']){
+                            $user_id=$_GET['user_id'];
+                        }
+                        else $href=false;
                     }
                     else $href=false;
                     if(sprawdz_znaki_podstawowe($_GET['tytul'])){
