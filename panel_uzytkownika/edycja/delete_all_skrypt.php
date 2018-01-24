@@ -60,6 +60,10 @@ if(isset($polaczenie)){
             @$del_ok = unlink('../../public_profile/avatar/' . $delete_id . '.png');
         }
         
+        //oznacz konto użytkownika jako usunięte
+        $delete_id=edytuj_dane($polaczenie,"uzytkownicy","deleted",1,"id",$delete_id);
+        if(!$delete_id) $del_ok=false;
+        
         if($del_ok==true){
             echo "usuwanie konta przebiegło prawidłowo";
         }
