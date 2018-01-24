@@ -40,10 +40,22 @@ else{
     }
 }
 
+//jest połączenie z bazą danych
 if(isset($polaczenie)){
     //autoryzacja użytkownika przebiegła prawidłowo
     if($ok==true){
-        echo "pomyślna autoryzacja";
+        
+        $del_ok=true;//zmienna zakładająca poprawność wykonania sktyptu
+                
+        //zmień daty wszystkich ogłoszeń użytkownika na aktualną
+        $current_date=date('Y-m-d H:i:s');
+        $delete_announcement=edytuj_dane($polaczenie,"ogloszenia","koniec",$current_date,"uzytkownik_id",$delete_id);
+        if(!$delete_announcement)$del_ok=false;
+        
+        if($del_ok==true){
+            echo "usuwanie konta przebiegło prawidłowo";
+        }
+        else echo "usuwanie konta nie powiodło się!";
     }
     //autoryzacja nie przebiegła prawidłowo
     else{
@@ -51,6 +63,7 @@ if(isset($polaczenie)){
         header('Location:../user.php');
     }
 }
+//brak połączenia z bazą danych
 else{
     echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>';
     exit;

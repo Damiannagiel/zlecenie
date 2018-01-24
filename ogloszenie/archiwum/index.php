@@ -22,7 +22,7 @@
                     $ile_pasuje='('.$how_much.' zarchiwizowanych ogłoszeń łącznie)';
                         
                     //pobierz ogłoszenia zarchiwizowane w ciągu ostatnich 2 dni
-                    $zapytanie='SELECT * FROM ogloszenia WHERE (koniec < "'.$current_date.'") AND (koniec > "'.$subtract_2_day.'")';
+                    $zapytanie='SELECT * FROM ogloszenia WHERE (koniec < "'.$current_date.'") AND (koniec > "'.$subtract_2_day.'") ORDER BY koniec DESC';
                     $pobierz=pobierz_zapytanie($polaczenie,$zapytanie);
                     if($pobierz){
                         $ile=sizeof($pobierz);
