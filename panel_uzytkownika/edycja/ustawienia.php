@@ -150,6 +150,25 @@
             <p class="nawias">Usunięcie konta spowoduje przeniesienie do archiwum wszystkich twoich ogłoszeń, usunięcie nawiązanych kontaktów i wiadomośi w skrzynce, a także utratę ocen, komentarzy i renomy jaką udało ci się zbudować w serwisie. Zmiany te są nieodwracalne!</p>
             <div class="cbx"><label>Jestem właścicielem konta i świadomie je usuwam.<input class="big_checkbox"type="checkbox" name="delete_checkbox" value="1"/></label></div>
             <input type="password" name="delete_pas" placeholder="Hasło"/>
+            <div class="blad_user">
+                <?php
+                    if(isset($_SESSION['error_delete_checkbox'])||isset($_SESSION['error_pass_space'])||isset($_SESSION['error_pass'])){
+                        echo '<script>rozwin("delete_account");</script>';
+                    }
+                    if(isset($_SESSION['error_delete_checkbox'])){
+                        echo $_SESSION['error_delete_checkbox'];
+                        unset($_SESSION['error_delete_checkbox']);
+                    }
+                    if(isset($_SESSION['error_pass_space'])){
+                        echo $_SESSION['error_pass_space'];
+                        unset($_SESSION['error_pass_space']);
+                    }
+                    if(isset($_SESSION['error_pass'])){
+                        echo $_SESSION['error_pass'];
+                        unset($_SESSION['error_pass']);
+                    }
+                ?>
+            </div>
             <div class="button-div"><button class="button-red">Usuń konto</button></div>
         </form>
     </div>
