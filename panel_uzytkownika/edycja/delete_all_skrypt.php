@@ -48,9 +48,17 @@ if(isset($polaczenie)){
         $del_ok=true;//zmienna zakładająca poprawność wykonania sktyptu
                 
         //zmień daty wszystkich ogłoszeń użytkownika na aktualną
-        $current_date=date('Y-m-d H:i:s');
-        $delete_announcement=edytuj_dane($polaczenie,"ogloszenia","koniec",$current_date,"uzytkownik_id",$delete_id);
-        if(!$delete_announcement)$del_ok=false;
+//        $current_date=date('Y-m-d H:i:s');
+//        $delete_announcement=edytuj_dane($polaczenie,"ogloszenia","koniec",$current_date,"uzytkownik_id",$delete_id);
+//        if(!$delete_announcement)$del_ok=false;
+        
+        //usuń avatar uzytkownika
+        if (file_exists('../../public_profile/avatar/' . $delete_id . '.jpg')) {
+            @$del_ok = unlink('../../public_profile/avatar/' . $delete_id . '.jpg');
+        }
+        if (file_exists('../../public_profile/avatar/' . $delete_id . '.png')) {
+            @$del_ok = unlink('../../public_profile/avatar/' . $delete_id . '.png');
+        }
         
         if($del_ok==true){
             echo "usuwanie konta przebiegło prawidłowo";
