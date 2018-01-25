@@ -2,6 +2,20 @@
 	margin:5px;
 }
 
+.user.deleted img{
+    opacity: 0.55;
+}
+
+.user.deleted h2{
+    color:#BBBBBB;
+}
+
+.user_deleted{
+    
+    text-align: center;
+    margin:10% auto 10% auto;
+}
+
 .page_content{display:flex;}
 
 .user_nav{
