@@ -33,9 +33,11 @@
                                 zanzacz_jako_przeczytane($polaczenie,$ogloszenie,$adresat,$user);
                             
 				$wyswietl=pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user,25);
-                                echo check_the_archive($polaczenie,$ogloszenie);
+                                echo check_the_archive($polaczenie,$ogloszenie);//sprawdź czy ogłoszenie zostało przeniesione do archiwum
+                                echo if_deleted_account($polaczenie,$adresat);//sprawdź czy użytkownik usunął konto
                                 if($wyswietl){
                                     $ile_wiadomosci=sizeof($wyswietl);
+                                    //sprawdź czy są wiadomości do doczytywania
                                     if($ile_wiadomosci==25){
                                         $wiecej=1;
                                     }
@@ -58,7 +60,7 @@
         }}
 	else{
 		$ok=false;
-		$wyswietl="drogi użytkowniku coś tu kręcisz";
+		$wyswietl='<div class="blad_user"><p>Jedno z twoich poleceń narusza zasady użytkowania serwisu.<br/> Prowadzenie działań niezgodnych z regulaminem, bądź działających na niekożyść serwisu lub jego użytkowników może skutkować konsekwencjami prawnymi!</p></div>';
 		echo $wyswietl;
 	}
 ?>

@@ -210,6 +210,11 @@ function add_archives(){
     p.appendChild(span);
 }
 
+function deleted_account(){
+    $("#message").append('<div class="blad_user"><p>Konto tego użytkownika zostało usunięte</p></div>');
+//    $("#send").html('');
+}
+
 function window_height(){
     var height=$("#message_header .message_info").height();
     if(height>36){
