@@ -48,9 +48,9 @@ if(isset($polaczenie)){
         $del_ok=true;//zmienna zakładająca poprawność wykonania sktyptu
                 
         //zmień daty wszystkich ogłoszeń użytkownika na aktualną
-//        $current_date=date('Y-m-d H:i:s');
-//        $delete_announcement=edytuj_dane($polaczenie,"ogloszenia","koniec",$current_date,"uzytkownik_id",$delete_id);
-//        if(!$delete_announcement)$del_ok=false;
+        $current_date=date('Y-m-d H:i:s');
+        $delete_announcement=edytuj_dane($polaczenie,"ogloszenia","koniec",$current_date,"uzytkownik_id",$delete_id);
+        if(!$delete_announcement)$del_ok=false;
         
         //usuń avatar uzytkownika
         if (file_exists('../../public_profile/avatar/' . $delete_id . '.jpg')) {
@@ -65,13 +65,13 @@ if(isset($polaczenie)){
         if(!$delete_id) $del_ok=false;
         
         if($del_ok==true){
-            echo "usuwanie konta przebiegło prawidłowo";
+            session_destroy();
+            header('Location:../../index.php');
         }
-        else echo "usuwanie konta nie powiodło się!";
+        else echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę. Jeżeli problem się powtarza prosimy o kontakt z supportem.</span>';
     }
     //autoryzacja nie przebiegła prawidłowo
     else{
-        echo "nieudana autoryzacja";
         header('Location:../user.php');
     }
 }

@@ -36,7 +36,7 @@
 			
 			<div class="page_content">
                             <?php if(isset($_SESSION['user_deleted'])&&$_SESSION['user_deleted']==1){
-                                echo '<div class="user_deleted"><h3>Ten użytkownik już nie istnieje!</h3></div>';
+                                echo '<div class="user_deleted"><h3>Konto tego użytkownika zostało usunięte</h3></div>';
                                 echo '<script>$(".user").addClass("deleted");</script>';
                                 unset($_SESSION['user_deleted']);
                             }
