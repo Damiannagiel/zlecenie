@@ -1,4 +1,4 @@
-	function wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar,ile,wiecej){
+        function wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar,ile,wiecej){
 		//sprawdź kto jest adresatem wiadomości
 		if(wiadomosci[0]['id_nadawcy']==user){
 			var adresat = wiadomosci[0]['id_adresata'];
@@ -62,10 +62,17 @@
 		
 		var span_p = document.createElement('span');
                 span_p.setAttribute("class","text_ms");
+                var span_dots = document.createElement('button');
+                span_dots.setAttribute("class","options");
+                var  span_del = document.createElement('span');
+                span_del.setAttribute("class","delete");
+                span_del.setAttribute("data-content",wiadomosc['id']);
 		var span = document.createElement('span');
                 span.setAttribute("class","date");
 		
 		span_p.appendChild(document.createTextNode(wiadomosc['tresc']));
+                span_dots.appendChild(document.createTextNode("..."));
+                span_del.appendChild(document.createTextNode("Usuń"));
 		span.appendChild(document.createTextNode(wiadomosc['data']));
 		
 		if((wiadomosc['odczytana']==0)&&(clas=="right")){
@@ -77,8 +84,18 @@
 			img.src=avatar;
 			element.appendChild(img);
 		}
-		element.appendChild(span_p);
-		element.appendChild(span);
+                if(clas=="right"){
+                    element.appendChild(span_dots);
+                    element.appendChild(span_del);
+                    element.appendChild(span_p);
+                    element.appendChild(span);
+                }
+                else{
+                    element.appendChild(span_p);
+                    element.appendChild(span_dots);
+                    element.appendChild(span_del);
+                    element.appendChild(span);
+                }
 		
 		return element;
 	}

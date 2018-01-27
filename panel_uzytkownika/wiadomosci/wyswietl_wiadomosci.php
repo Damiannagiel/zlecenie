@@ -89,4 +89,20 @@
                         setTimeout("document.getElementById('message').scrollTop=1e6",100);
                     window_height();
 		}
+                
+                $("#message .delete").hide();
+                $("#message .options").click(function(){
+                    $(this).next(".delete").toggle();
+                });
+                
+                function show_next(){
+                    $(this).next(".delete").show();
+                }
+                
+                function hide_next(){
+                    $(this).next(".delete").hide();
+                }
+                $("document:not(.options)").click(function(){
+                    $(".delete").hide();
+                });
 </script>
