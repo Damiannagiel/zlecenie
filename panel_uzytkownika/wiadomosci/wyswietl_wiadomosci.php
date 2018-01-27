@@ -89,20 +89,27 @@
                         setTimeout("document.getElementById('message').scrollTop=1e6",100);
                     window_height();
 		}
-                
-                $("#message .delete").hide();
-                $("#message .options").click(function(){
-                    $(this).next(".delete").toggle();
+                $(document).ready(function(){
+                    $(".options").hide();//ukryj opcje
+                    $(".delete").hide();//ukryj przycisk usuń
+                    $("#message .right").hover(
+                      function(){//funkcja do wykonania po najechaniu myszą na element
+                          
+                      },
+                      function(){//funkcja do wykonania po opuszczeniu myszą elementu
+                          
+                      }
+                    );
                 });
                 
-                function show_next(){
-                    $(this).next(".delete").show();
-                }
-                
-                function hide_next(){
-                    $(this).next(".delete").hide();
-                }
-                $("document:not(.options)").click(function(){
-                    $(".delete").hide();
-                });
+//                function show_next(){
+//                    $(this).next(".delete").show();
+//                }
+//                
+//                function hide_next(){
+//                    $(this).next(".delete").hide();
+//                }
+//                $("document:not(.options)").click(function(){
+//                    $(".delete").hide();
+//                });
 </script>

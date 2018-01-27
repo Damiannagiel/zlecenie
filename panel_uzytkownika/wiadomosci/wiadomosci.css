@@ -176,7 +176,6 @@ article#content.max-height{
 }
 
 button.options{
-    display:none;
     font-size:3rem;
     position:relative;
     top:-3px;
@@ -203,20 +202,6 @@ button.options:hover{
 
 .left .delete:hover,.right .delete:hover{
     cursor:pointer;
-}
-
-.right:hover .options{
-    position:relative;
-    right:-38px; 
-}
-
-.right .options + .delete{
-    position:relative;
-    left:-37px;
-}
-
-.right:hover button.options,.left:hover button.options{
-    display:initial;
 }
 
 @media screen and (min-width: 640px){

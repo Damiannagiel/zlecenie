@@ -72,7 +72,11 @@
 		
 		span_p.appendChild(document.createTextNode(wiadomosc['tresc']));
                 span_dots.appendChild(document.createTextNode("..."));
-                span_del.appendChild(document.createTextNode("Usuń"));
+//                span_del.appendChild(document.createTextNode("Usuń"));
+                var link=document.createElement('a');
+                link.setAttribute("href","../../index.php");
+                link.appendChild(document.createTextNode("Usuń"));
+                span_del.appendChild(link);
 		span.appendChild(document.createTextNode(wiadomosc['data']));
 		
 		if((wiadomosc['odczytana']==0)&&(clas=="right")){
