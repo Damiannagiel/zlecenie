@@ -72,11 +72,7 @@
 		
 		span_p.appendChild(document.createTextNode(wiadomosc['tresc']));
                 span_dots.appendChild(document.createTextNode("..."));
-//                span_del.appendChild(document.createTextNode("Usuń"));
-                var link=document.createElement('a');
-                link.setAttribute("href","../../index.php");
-                link.appendChild(document.createTextNode("Usuń"));
-                span_del.appendChild(link);
+                span_del.appendChild(document.createTextNode("Usuń"));
 		span.appendChild(document.createTextNode(wiadomosc['data']));
 		
 		if((wiadomosc['odczytana']==0)&&(clas=="right")){
@@ -89,8 +85,8 @@
 			element.appendChild(img);
 		}
                 if(clas=="right"){
-                    element.appendChild(span_dots);
                     element.appendChild(span_del);
+                    element.appendChild(span_dots);
                     element.appendChild(span_p);
                     element.appendChild(span);
                 }

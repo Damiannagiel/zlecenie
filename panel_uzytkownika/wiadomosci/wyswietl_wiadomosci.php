@@ -92,14 +92,24 @@
                 $(document).ready(function(){
                     $(".options").hide();//ukryj opcje
                     $(".delete").hide();//ukryj przycisk usuń
+                    
                     $("#message .right").hover(
-                      function(){//funkcja do wykonania po najechaniu myszą na element
-                          
-                      },
-                      function(){//funkcja do wykonania po opuszczeniu myszą elementu
-                          
-                      }
-                    );
+                        function(){//funkcja do wykonania po najechaniu myszą na element
+                            $(this).children(".options").show();//pokaż element opcje
+                            $(this).children(".options").click(function(){//jeżeli zostanie kliknięty element options
+                                $(this).siblings(".delete").show();//pokż element delete
+                            });
+                        },
+                        function(){//funkcja do wykonania po opuszczeniu myszą elementu
+                            $(this).children(".options").hide();//ukryj element options
+                            $(this).children(".delete").hide();//ukryj element delete
+                        }
+                    );//koniec funkcji hover
+            
+                    $(".delete").click(function(){
+                        var id=$(this).attr("data-content");
+                        //UPDATE wiadomosci SET deleted_odbiorca=1 WHERE id=90 AND id_adresata=1
+                    });
                 });
                 
 //                function show_next(){
