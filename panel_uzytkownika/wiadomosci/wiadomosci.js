@@ -58,7 +58,8 @@
 		}
 		
 		var element = document.createElement('div');
-		element.setAttribute("class", clas);
+                element.classList.add("message");
+                element.classList.add(clas);
 		
 		var span_p = document.createElement('span');
                 span_p.setAttribute("class","text_ms");

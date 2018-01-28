@@ -89,11 +89,13 @@
                         setTimeout("document.getElementById('message').scrollTop=1e6",100);
                     window_height();
 		}
+                
+                
                 $(document).ready(function(){
                     $(".options").hide();//ukryj opcje
                     $(".delete").hide();//ukryj przycisk usuń
                     
-                    $("#message .right").hover(
+                    $("#message .message").hover(
                         function(){//funkcja do wykonania po najechaniu myszą na element
                             $(this).children(".options").show();//pokaż element opcje
                             $(this).children(".options").click(function(){//jeżeli zostanie kliknięty element options
@@ -107,10 +109,45 @@
                     );//koniec funkcji hover
             
                     $(".delete").click(function(){
-                        var id=$(this).attr("data-content");
-                        //UPDATE wiadomosci SET deleted_odbiorca=1 WHERE id=90 AND id_adresata=1
+                        var obiect=$(this);//pobierz obiekt wywołujący zdarzenie
+                        var id = obiect.attr("data-content");//pobieramy id ogłoszenia
+                        var _class = obiect.parent().attr("class");//pobieramy klasę ogłoszenia
+                        var reversal = _class.split(" ");//rozdziel klasę
+                        reversal = reversal_valid(reversal[1]);//ustal czy użytkownik jest nadawcą czy odbiorcą
+                        if(reversal!==false){
+                            deleted_valid(id, reversal, obiect);
+                        }
                     });
                 });
+                
+                function reversal_valid(reversal){
+                    if(reversal=="right"){
+                        return "nadawca";
+                    }
+                    else if(reversal=="left"){
+                        return "odbiorca";
+                    }
+                    else return false;
+                }
+                
+                function deleted_valid(id,removing,obiect){
+                    
+                    $.ajax({
+                        url: 'usun_wiadomosc.php',
+                        type: 'post',
+                        data: {id_wiadomosci:id , removing:removing},
+                        success: function(response){
+                            if(response==true){
+                                obiect.parent(".message").fadeOut(800);
+                            }
+                            else{
+                                obiect.parent(".message").append('<div class="blad_user"><p>Jedno z twoich poleceń narusza zasady użytkowania serwisu.<br/> Prowadzenie działań niezgodnych z regulaminem, bądź działających na niekożyść serwisu lub jego użytkowników może skutkować konsekwencjami prawnymi!</p></div>');
+                                $("#message").scrollTop="1e6";
+                                
+                            }
+                        }
+                        });
+                }
                 
 //                function show_next(){
 //                    $(this).next(".delete").show();
