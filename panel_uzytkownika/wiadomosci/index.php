@@ -98,7 +98,7 @@
                     <h4>Wiadomości</h4>
                 </div>
                 <div class="message_info">
-                    
+
                 </div>
         </header>
 	<article id="content">

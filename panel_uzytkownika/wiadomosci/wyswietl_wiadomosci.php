@@ -94,6 +94,7 @@
                 $(document).ready(function(){
                     $(".options").hide();//ukryj opcje
                     $(".delete").hide();//ukryj przycisk usuń
+                    $(".options__ul").hide();//ukryj listę opcji
                     
                     $("#message .message").hover(
                         function(){//funkcja do wykonania po najechaniu myszą na element
@@ -117,6 +118,15 @@
                         if(reversal!==false){
                             deleted_valid(id, reversal, obiect);
                         }
+                    });
+                    
+                    $(".message_info .icon-cog").click(function(){
+                        $(".message_info .options__ul").slideDown();
+                            $(document).on("click", function(e) {
+                            if (!$(e.target).is(".icon-cog")) {
+                                 $(".message_info .options__ul").slideUp();
+                            }
+                          });
                     });
                 });
                 

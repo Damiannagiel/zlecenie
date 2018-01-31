@@ -137,7 +137,24 @@
 		a_ogl.setAttribute("href",href);
 		a_ogl.appendChild(document.createTextNode(ogloszenie));
 		p.appendChild(a_ogl);
+                
+                var i=document.createElement('i');
+                i.setAttribute("class","icon-cog");
+                
+                var options=document.createElement('ul');
+                options.setAttribute("class","options__ul");
+                options.setAttribute("data-content",id_ogloszenia+'/'+id_adresata);
+                var li1=document.createElement('li');
+                li1.appendChild(document.createTextNode("usuń wątek"));
+                var li2=document.createElement('li');
+                li2.appendChild(document.createTextNode("opcja2"));
+                options.appendChild(li1);
+                options.appendChild(li2);
+                
+                
 		
+                ms_info.appendChild(i);
+                ms_info.appendChild(options);
 		div.appendChild(h5);
 		div.appendChild(p);
 		

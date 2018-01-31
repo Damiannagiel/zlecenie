@@ -14,7 +14,7 @@ article#content.max-height{
 }
 
 #userbox{
-	flex:0.3;
+	flex:0.4;
 	min-height:100%;
 	border-right:2px solid #99cc99;
 	max-width:65px;
@@ -148,8 +148,47 @@ article#content.max-height{
 
 .message_info{
     flex:1;
+    display:flex;
     padding: 10px 0;
     font-size: 1.4rem;
+}
+
+.message_info div{flex:1;}
+
+.message_info i{
+    font-size: 2.4rem;
+    margin:6px 18px;
+    color:#b2b2b2;
+}
+
+.message_info i:hover{
+    color:#6b6b6b;
+    cursor:pointer;
+}
+
+.options__ul{
+    width: 100px;
+    position:relative;
+    z-index: 1000;
+    height:0px;
+}
+
+.options__ul li:first-child{
+    border-radius: 5px 5px 0 0;
+}
+
+.options__ul li:last-child{
+    border-radius: 0 0 5px 5px;
+}
+
+.options__ul li{
+    padding: 5px;
+    background-color: #b2b2b2;
+/*    border-radius: 5px;usunąć po dodaniu więcej niż jednego elementu do listy*/
+}
+
+.message_info i::before{
+    margin:0;
 }
 
 .message_info h5{
@@ -224,6 +263,7 @@ button.options:hover{
 		display:initial;
 		margin:5px 0;
 		width:100%;
+                overflow: hidden;
 	}
 	
 	.text span.add_name{
@@ -241,7 +281,7 @@ button.options:hover{
         #ms{
             max-width: 325px;
             display:initial;
-            flex:0.3;
+            flex:0.4;
             border-right: 2px solid #89B789;
         }
         
