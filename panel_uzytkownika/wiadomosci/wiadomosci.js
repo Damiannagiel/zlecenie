@@ -15,6 +15,7 @@
                     message.appendChild(wyswietl_wiecej);
                 }
 		document.querySelector(".message_info").appendChild(naglowek);
+                $(".options__ul").hide();//ukryj listę opcji
 		for(i=ile-1;i>=0;i--){
 			var wyswietl=wyswietl_wiadomosc(wiadomosci[i],user,avatar);
 			message.appendChild(wyswietl);
@@ -146,10 +147,11 @@
                 options.setAttribute("data-content",id_ogloszenia+'/'+id_adresata);
                 var li1=document.createElement('li');
                 li1.appendChild(document.createTextNode("usuń wątek"));
-                var li2=document.createElement('li');
-                li2.appendChild(document.createTextNode("opcja2"));
+                li1.setAttribute("class","deleted__ul");
+//                var li2=document.createElement('li');
+//                li2.appendChild(document.createTextNode("opcja2"));
                 options.appendChild(li1);
-                options.appendChild(li2);
+//                options.appendChild(li2);
                 
                 
 		
