@@ -116,7 +116,7 @@
 		</article>
 		
 		<h5>Czy jesteś usatysfakcjonowany?</h5>
-		<div class="button-div"><a href="<?php if((isset($_SESSION['edit_add']))&&($_SESSION['edit_add']==true))echo "edytuj_ogloszenie.php";
+		<div class="button-div"><a href="<?php if((isset($_SESSION['edit_add']))&&($_SESSION['edit_add']==true))echo "edytuj_ogloszenie.php?ogloszenie=".$_SESSION['fr_id'];
 				else echo "ogloszenie_add.php";?>"><button class="button-green">Wróć do edycji</button></a><a href="<?php if((isset($_SESSION['edit_add']))&&($_SESSION['edit_add']==true))echo "zapisz_edytowane_ogloszenie.php";
 				else echo "zapisz_ogloszenie.php";?>"><button class="button-red"><?php if((isset($_SESSION['edit_add']))&&($_SESSION['edit_add']==true))echo "Zapisz zmiany";
 				else echo "Dodaj ogłoszenie";?> </button></a></div>

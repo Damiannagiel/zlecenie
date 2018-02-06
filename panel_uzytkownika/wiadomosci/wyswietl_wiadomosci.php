@@ -182,10 +182,14 @@
                 if(response==true){
                     location.href="index.php";
                 }
+                else if(response==2){
+                    //zwrócona 2 ozncza brak połączenia z bazą danych
+                    $("#message").append('<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>');
+                    $("#message").scrollTop="1e6";//przewiń okno do dołu
+                }
                 else{
                     $("#message").append('<div class="blad_user"><p>Jedno z twoich poleceń narusza zasady użytkowania serwisu.<br/> Prowadzenie działań niezgodnych z regulaminem, bądź działających na niekożyść serwisu lub jego użytkowników może skutkować konsekwencjami prawnymi!</p></div>');
                     $("#message").scrollTop="1e6";//przewiń okno do dołu
-
                 }
             }
         });

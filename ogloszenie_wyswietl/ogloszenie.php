@@ -97,21 +97,24 @@
 		</article>
 		
 		<script type="text/javascript">
-			
+			$(document).ready(function(){
 				$(".ogl_zdjecia .zdj_nav .img_nav").click(function(e)//funkcja określająca co ma się po kliknięciu w województwo na mapie
 				{
 					var content = $(this).data("content");
-						$(".img_nav_active").removeClass("img_nav_active");
-						$(this).addClass("img_nav_active");
+						$(".img_nav_active").removeClass("img_nav_active").addClass("img_nav");
+						$(this).removeClass("img_nav").addClass("img_nav_active");
 						 zmien_zdj(content);
 					
 				});
 				
+                                $(".ogl_zdjecia .zdj_nav .img_nav_active").removeClass("img_nav");
+                                
 				function zmien_zdj(content)
 					{			
 						var plik = '<img class="img_med" src="../ogloszenie/img/'+<?php echo $ogloszenie ?> +'/'+content+'.jpg"/>';
 						document.getElementById("img_med").innerHTML = plik;
 					}
+                        });
 		</script>
 					
 				<?php 
