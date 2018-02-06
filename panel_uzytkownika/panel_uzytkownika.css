@@ -195,7 +195,6 @@ a:hover{text-decoration: none;}
 }
 
 .icon-cancel{
-    margin-top:8px;
     color:#FF0000;
     font-size:2rem;
 }
@@ -224,8 +223,6 @@ a:hover{text-decoration: none;}
     background-color: #6b6b6b;
     border-radius: 5px;
 }
-	
-@media screen and (max-width: 505px){.kontakt_div span.tytul{padding-top:8px;}}
 
 .kontakt_div:hover{background-color:#99CC99;}
 

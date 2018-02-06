@@ -42,35 +42,51 @@
 <script>
     $(document).ready(function(){
         var cl=0;
-        $("#contact .delete__ul--contact").hide();
-        $("#contact .icon-cancel").hide();
+        $("#contact .delete__ul--contact").hide();//ukryj listę opcji
+        $("#contact .icon-cancel").hide(); //ukryj pryciski usuwania wiadomoś i
         $("#contact .icon-cog").click(function(){
-           $("#contact .delete__ul--contact").slideDown();
+           $("#contact .delete__ul--contact").slideDown();//po kliknięciu w ikonę opcji pokaż listę opcji
            $("#contact .delete__ul--contact").css({//ustal pyzycję rozwijanej listy opcji
                 position:"absolute",
                 left:"32px",
                 top:"1px"
             });
             $(document).on("click", function(e) {
-                if (!$(e.target).is("#contact .icon-cog")&&!$(e.target).is("#contact .delete__ul--contact li")) {
+                if (!$(e.target).is("#contact .icon-cog")&&!$(e.target).is("#contact .delete__ul--contact li")&&!$(e.target).is("#contact .delete_contact")) {
+                    //jeżeli nie kliknięto w przycisk opcji bądź jedną z opcji zwiń listę opcji
                     $("#contact .delete__ul--contact").slideUp();
                 }
             });
         });
+        
+        //po wybraniu z listy opcji "usuń kontakt" wyświetl przyciski do ukrywania kontaktów jeżeli kliknięcie jest parzyste, jeżeli nie ukryj je
         $(".delete_contact").click(function(){
-            if(cl==0){
-                cl+=1;
-                $("#contact .icon-cancel").fadeIn();
-            }
-            else{
-                cl=0;
-                $("#contact .icon-cancel").fadeOut();
-            }
+            $("#contact .icon-cancel").fadeToggle();
         });
+        
         $("#contact .icon-cancel").click(function(e){
-            var content=$(this).attr("data-content");
+            var obiect=$(this);
+            var announcement=obiect.attr("data-content");
             e.preventDefault();
             //wykonaj funkcję kasującą kontakt
+            deleted_contact(announcement,obiect);
         });
+        
+    function deleted_contact(announcement,obiect){
+        $.ajax({
+            url: 'kontakty/usun_kontakt.php',
+            type: 'post',
+            data: {announcement:announcement},
+            success: function(response){
+                //jeżeli skrypt wykonał się popraawnie usuń wybrany kontakt
+                if(response==true){
+                    obiect.parent(".kontakt_div").fadeOut(800);
+                }
+                else{
+                    obiect.parent(".kontakt_div").append('<div class="blad_user"><p>Jedno z twoich poleceń narusza zasady użytkowania serwisu.<br/> Prowadzenie działań niezgodnych z regulaminem, bądź działających na niekożyść serwisu lub jego użytkowników może skutkować konsekwencjami prawnymi!</p></div>');
+                }
+            }
+        });
+    }
     });
 </script>
