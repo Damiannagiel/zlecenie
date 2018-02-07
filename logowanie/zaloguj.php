@@ -47,7 +47,7 @@
 				<div class="imput-text">
 					<input type="password" name="haslo" placeholder="Hasło"/>
 					<div>
-						<a href="#"><p>Zapomniałem hasła</p></a>
+						<a href="reset_pass.php"><p>Zapomniałem hasła</p></a>
 					</div>
 				</div>
 			</div>

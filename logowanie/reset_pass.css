@@ -1,0 +1,105 @@
+.reset-pass{
+    padding:10px;
+    min-height: 390px;
+}
+
+.reset-padding{
+    margin:10px 0;
+}
+
+.reset-pass__recaptcha, .reset-pass__div-input, .reset-pass__input{
+    width:304px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.reset-pass__span, .reset-pass__label{
+    display:none;
+}
+
+.btn{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 10px 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.btn--green{
+    background: -moz-linear-gradient(
+        top,
+        #29a300 0%,
+        #37c702 50%,
+        #1a5903);
+    background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#29a300),
+            color-stop(0.50, #37c702),
+            to(#1a5903));
+    border: 1px solid #34ba04;
+    -moz-box-shadow:
+            0px 1px 3px rgba(034,128,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.6);
+    -webkit-box-shadow:
+            0px 1px 3px rgba(034,128,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.6);
+    box-shadow:
+            0px 1px 3px rgba(034,128,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.6);
+    text-shadow:
+            0px -1px 0px rgba(204,204,204,1),
+            0px 1px 0px rgba(255,255,255,0.2); 
+}
+
+.btn--green:hover{
+    cursor:pointer;
+    padding: 9px 19px;
+    border: 2px solid #a5cda5;
+}
+
+
+
+
+
+@media screen and (min-width: 640px){
+    .reset-pass{
+        min-height: 457px;
+    }
+    
+    .reset-pass__div{
+        display:flex;
+    }
+    
+    .reset-pass__recaptcha, .reset-pass__div-input{
+        flex:0.6;
+        max-width: 304px;
+        margin-left:0;
+        margin-right: auto;
+    }
+    
+    .reset-pass__span, .reset-pass__label{
+        display:initial;
+        flex:0.4;
+        text-align: right;
+        margin-right:10px;
+        font-size: 1.8rem;
+    }
+    
+    .reset-pass__label{
+        margin-top: 12px;
+    }
+    
+    .reset-pass__span{
+        margin-top: 30px;
+    }
+
+}
+
+ 
+@media screen and (min-width: 1024px){
+    .reset-pass{
+        min-height: 455px;
+    }
+}
