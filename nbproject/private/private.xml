@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/zlecenie/ogloszenie_wyswietl/ogloszenie.css</file>
-            <file>file:/C:/xampp/htdocs/zlecenie/ogloszenie_wyswietl/ogloszenie.php</file>
+            <file>file:/C:/xampp/htdocs/zlecenie/rejestracja/zarejestruj.php</file>
+            <file>file:/C:/xampp/htdocs/zlecenie/logowanie/reset_pass.css</file>
+            <file>file:/C:/xampp/htdocs/zlecenie/zero.css</file>
+            <file>file:/C:/xampp/htdocs/zlecenie/logowanie/reset_pass.php</file>
+            <file>file:/C:/xampp/htdocs/zlecenie/logowanie/zaloguj.php</file>
+            <file>file:/C:/xampp/htdocs/zlecenie/logowanie/reset_pass_script.php</file>
         </group>
     </open-files>
 </project-private>

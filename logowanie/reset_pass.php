@@ -29,7 +29,6 @@
             </div>
             <input type="submit" class="btn btn--green reset-padding" value="Dalej"/>
         </form>
-
     </div>
 </article>
 <!--Załaduj stopkę -->
