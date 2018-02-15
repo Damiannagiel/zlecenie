@@ -18,7 +18,7 @@ class ResetPassText
         $this->value = $value;
         }
         else{
-            //procedura błędu
+            throw new Exception('Pole formulaża nie może być puste', 5);
         }
     }// end __construct()
 
@@ -39,10 +39,9 @@ class ResetPassText
     }// end NewType()
     
     
-    public function view2(
-        string $type
-    ){
-        print $type." ".$this->value;
+    public function view()
+    {
+        print $this->type." ".$this->value;
     }//end viev()
 
 }//end class ResetPassText
@@ -55,8 +54,7 @@ class ResetPassText
 //powinna być tworzona wyłącznie motodą NewType() klasy ResetPassText
 class EmailResetPass extends ResetPassText
 {
-    private $value;
-    private $view = "adres e-mail:";
+    protected $type = "adres e-mail:";
     
 
     
@@ -70,10 +68,6 @@ class EmailResetPass extends ResetPassText
         }  
     }// end __construct()
     
-    
-    public function view(){
-        parent::view2($this->view);
-    }
 }//end class EmailResetPass
 
 
@@ -84,9 +78,7 @@ class EmailResetPass extends ResetPassText
 //powinna być tworzona wyłącznie motodą NewType() klasy ResetPassText
 class LoginResetPass extends ResetPassText
 {
-    private $value;
-    private $view = "login:";
-    
+    protected $type = "login:";  
     
     
     //konstruktor klasy LoginResetPass
@@ -99,16 +91,15 @@ class LoginResetPass extends ResetPassText
         }
     }
     
-    
-    public function view(){
-        parent::view2($this->view);
-    }
 }//end class EmailResetPass
 
+try{
 $usun= new ResetPassText($_POST['user']);
 $new=$usun->NewType();
 $new->view();
-//    $falsz = new LoginResetPass($usun);
-//    $falsz->wyswietl();
+}
+catch(Exception $e){
+    echo $e;
+}
 
  ?>
