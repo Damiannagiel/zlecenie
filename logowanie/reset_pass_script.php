@@ -1,105 +1,19 @@
 <?php
-class ResetPassText
-{
-    private $value;//string odebrany z formularza
-
-
-    
-    //konstruktor obiektu klasy ResetPass
-    //przyjmuje zmienną string z formulaża login/email, string zwrócony przez recaptcha
-    //sprawda czy formularz login/email nie jest pusty
-    //definiuje składowe value i recaptcha
-    public function __construct(
-        string $value
-    ) {
-
-        if(!preg_match('/^[ ]+$/D',$value)&&$value!=""){
-        $value = trim($value);
-        $this->value = $value;
-        }
-        else{
-            throw new Exception('Pole formulaża nie może być puste', 5);
-        }
-    }// end __construct()
-
-    
-    //funkcja tworząca obiekt klasy EmailResetPass lub LoginResetPass
-    //decyduje na podstawie obecności znaku "@" w składowej value
-    //zwraca nowy obiekt
-    public function NewType()
-    {
-        if(strstr($this->value,"@")){
-            $ret = new EmailResetPass($this->value);
-            return $ret;
-        }
-        else{
-            $ret = new LoginResetPass($this->value);
-            return $ret;
-        }
-    }// end NewType()
-    
-    
-    public function view()
-    {
-        print $this->type." ".$this->value;
-    }//end viev()
-
-}//end class ResetPassText
-
-
-
-
-    
-//klasa obsługująca dres e-mali
-//powinna być tworzona wyłącznie motodą NewType() klasy ResetPassText
-class EmailResetPass extends ResetPassText
-{
-    protected $type = "adres e-mail:";
-    
-
-    
-    //konstruktor klasy EmailResetPass
-    //jeżeli walidcja przebiegnie po myślnie zapisuje wartość w value
-    public function __construct(string $value) 
-     {
-        $pattern='/^[a-zA-Z0-9\.\-_]+\@[a-zA-Z0-9\.\-_]+\.[a-z]{2,4}$/D';
-        if(preg_match($pattern, $value)){
-            parent::__construct($value);
-        }  
-    }// end __construct()
-    
-}//end class EmailResetPass
-
-
-
-
-
-//klasa obsługująca dres login
-//powinna być tworzona wyłącznie motodą NewType() klasy ResetPassText
-class LoginResetPass extends ResetPassText
-{
-    protected $type = "login:";  
-    
-    
-    //konstruktor klasy LoginResetPass
-    //jeżeli walidcja przebiegnie po myślnie zapisuje wartość w value
-    public function __construct(string $value) 
-    {
-        $pattern='/^[a-zA-Z0-9\_\-]+$/D';
-        if(preg_match($pattern,$value)){
-            parent::__construct($value);
-        }
-    }
-    
-}//end class EmailResetPass
+$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classResetPass.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classResetPassException.php');
 
 try{
-$usun= new ResetPassText($_POST['user']);
-$new=$usun->NewType();
-$new->view();
+    $usun= new ResetPassText($_POST['user']);
+    if($usun){
+        echo "ok";
+        $new=$usun->NewType();
+    }
+//    $new->View();
+    ResetPassException::CheckErrors();
 }
 catch(Exception $e){
-    echo $e;
+    echo $e->getMessage();
 }
 
  ?>
