@@ -14,11 +14,21 @@ try{
             require ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
             $ResetPass->CheckDatabase($polaczenie);
             if($ResetPass->error->CheckErrors()){
-                
+                $SetResetCode = $ResetPass->SetResetCode($polaczenie);
+                if($SetResetCode){
+                    $ResetPass->SetResetEmail();
+                    $ResetPass->SendResetEmail();
+                    //wyślij e-mail
+                    //wyświetl informacje zwrotną
+                }
+                else{
+                    //nie udało się zapisać kodu w bazie danych
+                }
             }
             else{
                 header("Location:reset_pass.php");
             }
+            $polaczenie->close();
         }
         else{
             header("Location:reset_pass.php");
