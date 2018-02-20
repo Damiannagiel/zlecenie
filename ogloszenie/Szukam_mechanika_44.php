@@ -1,0 +1,1 @@
+<?php $kk=44; include_once "../ogloszenie_wyswietl/ogloszenie.php";?>

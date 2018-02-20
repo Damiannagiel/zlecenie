@@ -1,8 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-	<?php session_start();
-				include_once '../szablon/nav_head.php'; ?>
+	<?php 
+            $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+            include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classResetPassException.php');
+            session_start();
+            include_once '../szablon/nav_head.php';
+         ?>
 	
 	<title>Logowanie do igu.com.pl</title>
 	
@@ -27,6 +31,14 @@
                 <span class="reset-pass__span">Udowodnij że nie jesteś robotem:</span>
                 <div class="reset-pass__recaptcha g-recaptcha" data-sitekey="6LdGKCIUAAAAAPkJ9mZG5OBWabq_OVfuyWzYIiWN"></div>
             </div>
+            <div class="blad_user"><?php
+                if(isset($_SESSION['error'])){
+                    if(!$_SESSION['error']->CheckErrors()){
+                       $_SESSION['error']->ViewErrors();
+                    }
+                    unset($_SESSION['error']);
+                }
+            ?></div>
             <input type="submit" class="btn btn--green reset-padding" value="Dalej"/>
         </form>
     </div>
