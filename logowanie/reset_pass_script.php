@@ -6,6 +6,9 @@ $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classInput.php');
 include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classValidInput.php');
 include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classMyError.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classResetPass.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classLogin.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classEmail.php');
 session_start();
 
 //try{
