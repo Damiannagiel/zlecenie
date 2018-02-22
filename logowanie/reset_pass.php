@@ -3,7 +3,7 @@
 <head>
 	<?php 
             $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
-            include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classResetPassException.php');
+            include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classMyError.php');
             session_start();
             include_once '../szablon/nav_head.php';
          ?>
@@ -32,12 +32,13 @@
                 <div class="reset-pass__recaptcha g-recaptcha" data-sitekey="6LdGKCIUAAAAAPkJ9mZG5OBWabq_OVfuyWzYIiWN"></div>
             </div>
             <div class="blad_user"><?php
-                if(isset($_SESSION['error'])){
-                    if(!$_SESSION['error']->CheckErrors()){
-                       $_SESSION['error']->ViewErrors();
+                if(isset($_SESSION['validError'])){
+                    if(!$_SESSION['validError']->checkErrors()){
+                       $_SESSION['validError']->viewErrors();
                     }
-                    unset($_SESSION['error']);
+                    unset($_SESSION['validError']);
                 }
+            
             ?></div>
             <input type="submit" class="btn btn--green reset-padding" value="Dalej"/>
         </form>
