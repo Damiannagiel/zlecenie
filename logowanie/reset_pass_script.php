@@ -50,13 +50,15 @@ session_start();
 //}
 
 
-    $input = Input::CreateInput($_POST['user']);
-    ValidInput::checkBlank($input);
+    $input = Input::CreateInput($_POST['user'],new Valid(),new ValidError());
+    $input->valid->checkBlank($input);
     if($input->error->checkErrors()){
-        
+        echo "ok";
     }
     else{
         $_SESSION['validError'] = $input->error;
         header("Location:reset_pass.php");
     }
+    
+    //input
  ?>
