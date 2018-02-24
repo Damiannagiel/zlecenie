@@ -50,10 +50,11 @@ session_start();
 //}
 
 
-    $input = Input::CreateInput($_POST['user'],new Valid(),new ValidError());
-    $input->valid->checkBlank($input);
+    $input = Input::CreateInput($_POST['identity'],"identity",new Valid(),new ValidError());
+    $input->checkBlank();
     if($input->error->checkErrors()){
         echo "ok";
+        //dalsze czynności
     }
     else{
         $_SESSION['validError'] = $input->error;

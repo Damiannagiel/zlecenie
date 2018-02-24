@@ -25,7 +25,7 @@
         <form class="reset-pass__form" action="reset_pass_script.php" method="post">
             <div class="reset-pass__div reset-padding">
                 <span class="reset-pass__label" for="user">Podaj adres e-mail bądź login:</span>
-                <div class="reset-pass__div-input"><input class="reset-pass__input" placeholder="e-mail lub login" name="user"/></div>
+                <div class="reset-pass__div-input"><input class="reset-pass__input" placeholder="e-mail lub login" name="identity"/></div>
             </div>
             <div class="reset-pass__div reset-padding">
                 <span class="reset-pass__span">Udowodnij że nie jesteś robotem:</span>
