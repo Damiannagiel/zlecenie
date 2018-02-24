@@ -3,7 +3,7 @@
 <head>
 	<?php 
             $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
-            include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classMyError.php');
+            include ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/MyError.php');
             session_start();
             include_once '../szablon/nav_head.php';
          ?>

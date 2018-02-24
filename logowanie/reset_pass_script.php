@@ -3,12 +3,13 @@ $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 //include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classResetPass.php');
 //include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classResetPassException.php');
 
-include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classInput.php');
-include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classValidInput.php');
-include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classMyError.php');
-include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classResetPass.php');
-include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classLogin.php');
-include ($DOCUMENT_ROOT.'/../ini/klasyPHP/classEmail.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/trait/String.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/Input.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/ValidInput.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/MyError.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/ResetPass.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/Login.php');
+include ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/Email.php');
 session_start();
 
 //try{
@@ -50,11 +51,10 @@ session_start();
 //}
 
 
-    $input = Input::CreateInput($_POST['identity'],"identity",new Valid(),new ValidError());
+    $input = Input::CreateInput($_POST['identity'],"identity",new ValidInput(),new ValidError());
     $input->checkBlank();
     if($input->error->checkErrors()){
-        echo "ok";
-        //dalsze czynności
+        $input->validation();
     }
     else{
         $_SESSION['validError'] = $input->error;
