@@ -51,15 +51,8 @@ session_start();
 //}
 
 
-    $input = Input::CreateInput($_POST['identity'],"identity",new ValidInput(),new ValidError());
-    $input->checkBlank();
-    if($input->error->checkErrors()){
-        $input->validation();
-    }
-    else{
-        $_SESSION['validError'] = $input->error;
-        header("Location:reset_pass.php");
-    }
-    
-    //input
+    $input = Input::CreateInput($_POST['identity'],"identity");
+    $validError = new ValidError();
+    $validInput = ValidInput::createValidInput($input,$validError);
+    $validInput->valid();
  ?>
