@@ -32,13 +32,12 @@
                 <div class="reset-pass__recaptcha g-recaptcha" data-sitekey="6LdGKCIUAAAAAPkJ9mZG5OBWabq_OVfuyWzYIiWN"></div>
             </div>
             <div class="blad_user"><?php
+                // jeżeli obiekt przechowujący błedy istnieje w sesji
+                // wyświetl błędy walidacji
                 if(isset($_SESSION['validError'])){
-                    if(!$_SESSION['validError']->checkErrors()){
-                       $_SESSION['validError']->viewErrors();
-                    }
+                    $_SESSION['validError']->viewErrors();
                     unset($_SESSION['validError']);
                 }
-            
             ?></div>
             <input type="submit" class="btn btn--green reset-padding" value="Dalej"/>
         </form>
