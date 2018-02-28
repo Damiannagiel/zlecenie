@@ -37,7 +37,7 @@ if($polaczenie){
             }
             //sprawdź czy użytkownik podał poprawne aktualne hasło
             if($pass_db){
-                $pass_db=pobierz_dane($polaczenie,"pass","uzytkownicy","id",$user_id);//pobierz hasło użytkownika z bazy
+                $pass_db=pobierz_dane($polaczenie,"pass","users","id",$user_id);//pobierz hasło użytkownika z bazy
                 if(!password_verify($current_password, $pass_db['pass'])){
                     $ok=false;
                     $_SESSION['current_password_error']="<p>Aktuale hasło jest błędne!</p>";
@@ -67,7 +67,7 @@ if($polaczenie){
     if($ok){
         //zahaszuj hasło
 	$password_hash = password_hash($new_password, PASSWORD_DEFAULT);
-        $edit=edytuj_dane($polaczenie,"uzytkownicy","pass",$password_hash,"id",$user_id);
+        $edit=edytuj_dane($polaczenie,"users","pass",$password_hash,"id",$user_id);
         if($edit){
             $_SESSION['zapisano']=true;
             header('Location:../user.php');
