@@ -32,7 +32,7 @@ else if(!sprawdz_znaki($delete_pas)){
 }
 else{
     //pobierz z bazy hasło użytkownika i sprawdź jego zgodność z podanym hasłem
-    $pass=pobierz_dane($polaczenie,"pass","uzytkownicy","id",$delete_id);
+    $pass=pobierz_dane($polaczenie,"pass","users","id",$delete_id);
     if (!password_verify($delete_pas, $pass['pass'])){
         $_SESSION['error_pass']='<p>Podaj prawidłowe hasło!</p>';
         $_SESSION['settings_error']=true;
@@ -49,7 +49,7 @@ if(isset($polaczenie)){
                 
         //zmień daty wszystkich ogłoszeń użytkownika na aktualną
         $current_date=date('Y-m-d H:i:s');
-        $delete_announcement=edytuj_dane($polaczenie,"ogloszenia","koniec",$current_date,"uzytkownik_id",$delete_id);
+        $delete_announcement=edytuj_dane($polaczenie,"announcements","end",$current_date,"user",$delete_id);
         if(!$delete_announcement)$del_ok=false;
         
         //usuń avatar uzytkownika
@@ -61,7 +61,7 @@ if(isset($polaczenie)){
         }
         
         //oznacz konto użytkownika jako usunięte
-        $delete_id=edytuj_dane($polaczenie,"uzytkownicy","deleted",1,"id",$delete_id);
+        $delete_id=edytuj_dane($polaczenie,"users","deleted",1,"id",$delete_id);
         if(!$delete_id) $del_ok=false;
         
         if($del_ok==true){

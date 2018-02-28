@@ -10,20 +10,20 @@
 				<div class="ogl_mini_txt">
 				
 						<header>
-							<h5><?php echo $pobierz[$i]['tytul'] ?></h5>
+							<h5><?php echo $pobierz[$i]['title'] ?></h5>
 						</header>
 						
 					<div class="ogl_mini_opis">
-						<p><?php echo $pobierz[$i]['opis'] ?></p>
+						<p><?php echo $pobierz[$i]['description'] ?></p>
 					</div>
 						
 				</div>
 					
 				<div class="ogl_mini_info">
-					<div class="p3"><p>Oferta ważna do: <?php echo $pobierz[$i]['koniec'] ?></p></div>
+					<div class="p3"><p>Oferta ważna do: <?php echo $pobierz[$i]['end'] ?></p></div>
 					<div class="p2"><p><?php echo $cena[$i] ?></p></div>
 					<div class="p11"><p class="zasieg"><?php echo $zasieg[$i] ?></p></div>
-					<div class="p4"><p>wyświetleń: <?php echo $pobierz[$i]['wyswietlen'] ?> kontktów: <?php echo $pobierz[$i]['kontaktow'] ?></p></div>
+					<div class="p4"><p>wyświetleń: <?php echo $pobierz[$i]['display'] ?> kontktów: <?php echo $pobierz[$i]['relations'] ?></p></div>
 				</div>
 			</div>
 		<div style="clear:both">
