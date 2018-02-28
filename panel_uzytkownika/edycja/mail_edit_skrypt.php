@@ -35,7 +35,7 @@ if($polaczenie){
         }
         //sprawdź poprawność hasła
         if($pass_db){
-            $pass_db=pobierz_dane($polaczenie,"pass","uzytkownicy","id",$user_id);//pobierz hasło użytkownika z bazy
+            $pass_db=pobierz_dane($polaczenie,"pass","users","id",$user_id);//pobierz hasło użytkownika z bazy
             if(!password_verify($password, $pass_db['pass'])){
                 $ok=false;
                 $_SESSION['password_error']="<p>Hasło jest błędne!</p>";
@@ -50,7 +50,7 @@ if($polaczenie){
         }
         else{
             //sprawdź czy nowy adres e-mail nie jest zajęty
-            $email_verification=pobierz_dane($polaczenie,"email","uzytkownicy","email",$new_email);
+            $email_verification=pobierz_dane($polaczenie,"email","users","email",$new_email);
             //jeżeli znaleziono taki adres e-mail wbazie
             if($email_verification){
                 $ok=false;
@@ -61,7 +61,7 @@ if($polaczenie){
     }
     //sprawdź czy walidacja przebiegła ok i zmień hasło użytkownika
     if($ok){
-        $edit=edytuj_dane($polaczenie,"uzytkownicy","email",$new_email,"id",$user_id);
+        $edit=edytuj_dane($polaczenie,"users","email",$new_email,"id",$user_id);
         if($edit){
             $_SESSION['zapisano']=true;
             header('Location:../user.php');
