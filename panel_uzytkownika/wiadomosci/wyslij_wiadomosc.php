@@ -23,9 +23,9 @@ try{
 		}
 		if($ok){
 			$data=date('Y-m-d H:i:s');
-			$kolumny='id_ogloszenia,id_nadawcy,id_adresata,tresc,data,odczytana';
+			$kolumny='announcement,sender,recipient,contents,date,displayed';
 			$wartosci='"'.$ogloszenie.'","'.$user.'","'.$adresat.'","'.$tresc.'","'.$data.'","0"';
-			$dodaj=dodaj_do_bazy($polaczenie,'wiadomosci',$kolumny,$wartosci);
+			$dodaj=dodaj_do_bazy($polaczenie,'messages',$kolumny,$wartosci);
 			
 			$polaczenie->close();
 		}

@@ -9,7 +9,7 @@
 			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
 					
 			if(isset($polaczenie)){
-                                $zapytanie='SELECT id FROM wiadomosci WHERE id_adresata = '.$user.' AND odczytana = 0 LIMIT 1';
+                                $zapytanie='SELECT id FROM messages WHERE sender = '.$user.' AND displayed = 0 LIMIT 1';
                                 //sprawdź czy istnieją nieprzeczytane wiadomości dla tego użytkownika
                                 $nieprzeczytane=pobierz_zapytanie($polaczenie,$zapytanie);
                                 if($nieprzeczytane) $istnieja=1;
