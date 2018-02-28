@@ -11,15 +11,15 @@
 
 	if(isset($polaczenie))
 	{
-		$dane=pobierz_dane($polaczenie,"tytul,uzytkownik_id", "ogloszenia","id",$usun_id);
+		$dane=pobierz_dane($polaczenie,"title,user", "announcements","id",$usun_id);
 
-		if((!isset($_SESSION['id']))||($dane['uzytkownik_id']!=$_SESSION['id'])) echo 'id='.$_SESSION['id'].' user_id='.$dane['uzytkownik_id'];
+		if((!isset($_SESSION['id']))||($dane['user']!=$_SESSION['id'])) echo 'id='.$_SESSION['id'].' user_id='.$dane['user'];
 		$polaczenie->close();
 	}
 	else exit;
 ?>
 <div class="usun_ogl">
-	<p>Czy jesteś pewien że chcesz usunać ogłoszenie <b><?php echo $dane['tytul'];?></b> ??</p>
+	<p>Czy jesteś pewien że chcesz usunać ogłoszenie <b><?php echo $dane['title'];?></b> ??</p>
 	<form method="post" action="../ogloszenie_add/usun_ogloszenie_skrypt.php">
 		<input type="hidden" value="<?php echo $usun_id;?>" name="usun_id"/>
 		<div class="button-div">

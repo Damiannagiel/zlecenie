@@ -16,29 +16,29 @@
                     $subtract_90_day=odejmij_dni(182);
 
                     //sprawdź ile jest łącznie zarchiwizowanych ogłoszeń (ogłoszenia arhiwizuje się 3 miesiące)
-                    $zapytanie='SELECT id FROM ogloszenia WHERE (koniec < "'.$current_date.'") AND (koniec > "'.$subtract_90_day.'")';
+                    $zapytanie='SELECT id FROM announcements WHERE (end < "'.$current_date.'") AND (end > "'.$subtract_90_day.'")';
                     $all=pobierz_zapytanie($polaczenie,$zapytanie);
                     $how_much=sizeof($all);
                     $ile_pasuje='('.$how_much.' zarchiwizowanych ogłoszeń łącznie)';
                         
                     //pobierz ogłoszenia zarchiwizowane w ciągu ostatnich 2 dni
-                    $zapytanie='SELECT * FROM ogloszenia WHERE (koniec < "'.$current_date.'") AND (koniec > "'.$subtract_2_day.'") ORDER BY koniec DESC';
+                    $zapytanie='SELECT * FROM announcements WHERE (end < "'.$current_date.'") AND (end > "'.$subtract_2_day.'") ORDER BY end DESC';
                     $pobierz=pobierz_zapytanie($polaczenie,$zapytanie);
                     if($pobierz){
                         $ile=sizeof($pobierz);
                         $overriding=true;//zmienna do sprawdzenia w ogloszenie.php czy dodać folder nadrzędny do zdjęć
                         for($i=0;$i<$ile;$i++)
                         {
-                            $link_beta=usun_ogonki($pobierz[$i]['tytul']).'_'.$pobierz[$i]['id'];
+                            $link_beta=usun_ogonki($pobierz[$i]['title']).'_'.$pobierz[$i]['id'];
                             $link[$i]='../../ogloszenie/'.$link_beta.'.php';
-                            $zasieg[$i]=powiaty_ogloszenie($pobierz[$i]['zasieg'],$pobierz[$i]['miasto'],2,2);
-                            if($pobierz[$i]['cena']!="")
+                            $zasieg[$i]=powiaty_ogloszenie($pobierz[$i]['radius'],$pobierz[$i]['city'],2,2);
+                            if($pobierz[$i]['price']!="")
                             {
-                                    $cena[$i]=$pobierz[$i]['cena'].' zł '.$pobierz[$i]['cena_za'];
+                                    $cena[$i]=$pobierz[$i]['price'].' zł '.$pobierz[$i]['priceFor'];
                             }
                             else
                             {
-                                    $cena[$i]=$pobierz[$i]['cena_za'];
+                                    $cena[$i]=$pobierz[$i]['priceFor'];
                             }
                         }
                     }
