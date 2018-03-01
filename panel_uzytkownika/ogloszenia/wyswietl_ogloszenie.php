@@ -2,7 +2,7 @@
 		<div class="box info_ogloszenie">
 			<div class="tytul_ogloszenie"><?php echo $ogloszenia[$i]['title']; ?></div>
 			<div class="koniec_ogloszenie"><span class="info">Wygasa:</span> <span class="value"><?php echo $ogloszenia[$i]['end']; ?></span></div>
-			<div class="kategoria_ogloszenie"><span class="info">Kategoria:</span> <span class="value"><?php echo $ogloszenia[$i]['categories']; ?></span></div>
+			<div class="kategoria_ogloszenie"><span class="info">Kategoria:</span> <span class="value"><?php echo $ogloszenia[$i]['category']; ?></span></div>
 			<div class="zasieg_ogloszenie"><span class="info">Zasięg:</span> <span class="value"><?php echo $zasieg[$i]; ?></span></div>
 		</div>
 		<div class="button-div"><?php

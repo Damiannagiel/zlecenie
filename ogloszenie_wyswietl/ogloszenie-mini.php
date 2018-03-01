@@ -2,7 +2,7 @@
 	<article class="ad-mini">
 		<div class="img">
 			<?php
-			if($pobierz[$i]['ile_zdjec']==0) echo '<img src="ogloszenie/img/brak_zdjecia.jpg"/>';
+			if($pobierz[$i]['photos']==0) echo '<img src="ogloszenie/img/brak_zdjecia.jpg"/>';
 			else echo '<img src="ogloszenie/img/'.$pobierz[$i]["id"].'/1.jpg"/>';
 			?>
 		</div>		

@@ -1,17 +1,17 @@
         function wyswietl_wiadomosci(wiadomosci,user,adresat_name,ogl_tytul,avatar,ile,wiecej){
 		//sprawdź kto jest adresatem wiadomości
-		if(wiadomosci[0]['id_nadawcy']==user){
-			var adresat = wiadomosci[0]['id_adresata'];
+		if(wiadomosci[0]['sender']==user){
+			var adresat = wiadomosci[0]['recipient'];
 		}
 		else{
-			var adresat = wiadomosci[0]['id_nadawcy'];
+			var adresat = wiadomosci[0]['sender'];
 		}
 		//wyświetl nagłówek
-		var naglowek=wyswietl_naglowek(ogl_tytul,adresat_name,wiadomosci[0]['id_ogloszenia'],adresat);
+		var naglowek=wyswietl_naglowek(ogl_tytul,adresat_name,wiadomosci[0]['announcement'],adresat);
 		var message=document.querySelector("#message");
                 //sprawdź czy jest więcej wiadomości niż pobrano
                 if(wiecej==true){
-                    var wyswietl_wiecej=add_wiecej(user,adresat,wiadomosci[0]['id_ogloszenia'],1);
+                    var wyswietl_wiecej=add_wiecej(user,adresat,wiadomosci[0]['announcement'],1);
                     message.appendChild(wyswietl_wiecej);
                 }
 		document.querySelector(".message_info").appendChild(naglowek);
@@ -20,7 +20,7 @@
 			var wyswietl=wyswietl_wiadomosc(wiadomosci[i],user,avatar);
 			message.appendChild(wyswietl);
 		}
-		wyswietl_wyslij(user,adresat,wiadomosci[0]['id_ogloszenia']);
+		wyswietl_wyslij(user,adresat,wiadomosci[0]['announcement']);
 	}
         	
 	function wyswietl_wyslij(user,adresat,ogloszenie){
@@ -44,14 +44,14 @@
 	}
 	
 	function wyswietl_wiadomosc(wiadomosc,user,avatar_exist){
-		if(wiadomosc['id_nadawcy']==user){
+		if(wiadomosc['sender']==user){
 			var clas="right";
 			var avatar='';
 		}
 		else{
                     var clas="left";
                     if(avatar_exist==1){
-                        var avatar='../../public_profile/avatar/'+wiadomosc['id_nadawcy']+'.jpg';
+                        var avatar='../../public_profile/avatar/'+wiadomosc['sender']+'.jpg';
                     }
                     else{
                         var avatar='../../public_profile/avatar/avatar.png';
@@ -72,16 +72,16 @@
 		var span = document.createElement('span');
                 span.setAttribute("class","date");
 		
-		span_p.appendChild(document.createTextNode(wiadomosc['tresc']));
+		span_p.appendChild(document.createTextNode(wiadomosc['contents']));
                 span_dots.appendChild(document.createTextNode("..."));
                 span_del.appendChild(document.createTextNode("Usuń"));
-		span.appendChild(document.createTextNode(wiadomosc['data']));
+		span.appendChild(document.createTextNode(wiadomosc['date']));
 		
-		if((wiadomosc['odczytana']==0)&&(clas=="right")){
+		if((wiadomosc['displayed']==0)&&(clas=="right")){
 			span_p.classList.add("unread");
 		}
 
-		if(wiadomosc['id_nadawcy']!=user){
+		if(wiadomosc['sender']!=user){
 			var img = document.createElement('img');
 			img.src=avatar;
 			element.appendChild(img);
@@ -229,7 +229,7 @@ function wyswietl_wiecej_wiadomosci(wiadomosci,user,adresat,avatar,ile,wiecej,pe
     var message=document.querySelector(selector);
     //sprawdź czy jest więcej wiadomości niż pobrano
     if(wiecej==true){
-        var wyswietl_wiecej=add_wiecej(user,adresat,wiadomosci[0]['id_ogloszenia'],petla+1);
+        var wyswietl_wiecej=add_wiecej(user,adresat,wiadomosci[0]['announcement'],petla+1);
         message.appendChild(wyswietl_wiecej);
     }
     for(i=ile-1;i>=0;i--){
