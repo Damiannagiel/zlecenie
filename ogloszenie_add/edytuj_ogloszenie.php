@@ -10,7 +10,7 @@
 	?>
 	<link href="../ogloszenie_add/ogloszenie_add.css" type="text/css" rel="stylesheet"/>
 	
-	<title>Edytuj ogłoszenie <?php echo $dane['tytul']; ?></title>
+	<title>Edytuj ogłoszenie <?php echo $dane['title']; ?></title>
 	
 	<meta name="description" content="Opis w Google" />
 	<script src="powiaty/zaznacz_powiat.js" type="text/javascript"></script>
