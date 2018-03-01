@@ -145,10 +145,10 @@
 
     function reversal_valid(reversal){
         if(reversal=="right"){
-            return "nadawca";
+            return "sender";
         }
         else if(reversal=="left"){
-            return "odbiorca";
+            return "recipient";
         }
         else return false;
     }
