@@ -34,9 +34,9 @@
             <div class="blad_user"><?php
                 // jeżeli obiekt przechowujący błedy istnieje w sesji
                 // wyświetl błędy walidacji
-                if(isset($_SESSION['validError'])){
-                    $_SESSION['validError']->viewErrors();
-                    unset($_SESSION['validError']);
+                if(isset($_SESSION['error'])){
+                    MyError::vievAllErrors($_SESSION['error']);
+                    unset($_SESSION['error']);
                 }
             ?></div>
             <input type="submit" class="btn btn--green reset-padding" value="Dalej"/>

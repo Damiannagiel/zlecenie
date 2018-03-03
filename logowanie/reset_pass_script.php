@@ -16,18 +16,27 @@ session_start();
     $validInput = ValidInput::createValidInput($input,$validError);// obiekt przeprowadzający walidację
     $validInput->valid();// wykonaj walidację
     if($validError->checkErrors()){
+        //wykonaj jeżeli nie wykryto błędów walidacji
         require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');// nawiąż połączenie z bazą danych
         if($connection){
-            $dbError = new DataBaseError();
-            $dbSelect = new DataBaseSelect($connection,$dbError);
-            $requirement = $input->getName().' = "'.$input->getValue().'"';
-            $user = $dbSelect->UserDownload("id,login,email,deleted",$requirement);
-            
-            echo $user->lately;
+            $dbError = new DataBaseError();// obiekt błędów bazy danych
+            $dbSelect = new DataBaseSelect($connection,$dbError);// obiekt łączący się z bazą danych
+            $requirement = $input->getName().' = "'.$input->getValue().'"';// warunek dla bazy danych
+            $user = NewUser::createUser($dbSelect,"id,login,email",$requirement);// pobierz dane użytkownika
+            if($dbError->checkErrors()){
+                // wykonaj jeżeli nie wykryto błędów bazy danych
+                
+            }
+            else{
+                // wykryto błędy bazy danych
+                $_SESSION['error'] = [$dbError];
+                header("Location:reset_pass.php");
+            }
         }
     }
     else{
-        $_SESSION['validError'] = $validError;
+        // wykryto błędy walidacji
+        $_SESSION['error'] = [$validError];
         header("Location:reset_pass.php");
     }
  ?>
