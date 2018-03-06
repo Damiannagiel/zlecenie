@@ -1,16 +1,18 @@
 <?php
 $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 
-require ($DOCUMENT_ROOT.'/../ini/klasyPHP/trait/String.php');
-require ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/Input.php');
-require ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/ValidInput.php');
-require ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/MyError.php');
-require ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/ResetPass.php');
-require ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/User.php');
-require ($DOCUMENT_ROOT.'/../ini/klasyPHP/class/DBConnect.php');
+require ($DOCUMENT_ROOT.'/../ini/trait/String.php');
+require ($DOCUMENT_ROOT.'/../ini/class/classInput.php');
+require ($DOCUMENT_ROOT.'/../ini/class/classValidInput.php');
+require ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
+require ($DOCUMENT_ROOT.'/../ini/class/classResetPass.php');
+require ($DOCUMENT_ROOT.'/../ini/class/classUser.php');
+require ($DOCUMENT_ROOT.'/../ini/class/classDBConnect.php');
+require ($DOCUMENT_ROOT.'/../ini/class/classSednEmail.php');
 
 session_start();
 
+try{
     $input = Input::CreateInput($_POST['identity'],"identity");// obiekt z danymi z input
     $validError = new ValidError();// obiekt obsługi błędów
     $validInput = ValidInput::createValidInput($input,$validError);// obiekt przeprowadzający walidację
@@ -24,7 +26,15 @@ session_start();
             $requirement = $input->getName().' = "'.$input->getValue().'"';// warunek dla bazy danych
             $user = NewUser::createUser($dbSelect,"id,login,email",$requirement);// pobierz dane użytkownika
             if($dbError->checkErrors()){
-                // wykonaj jeżeli nie wykryto błędów bazy danych
+                // wykonaj jeżeli udało się pobrać użytkownika
+                $microtime = microtime(true);
+                $micro = explode('.',$microtime);
+                $code = rand(100000,429495).$micro[1];
+                $date = date('Y-m-d');
+                $keys = ["resetPass","resetPassTime"];
+                $value = [$code,$date]; 
+                $dbEdit = new DataBaseEdit($connection,$dbError);
+                $dbEdit->editUser($keys,$value,$user->getId());
                 
             }
             else{
@@ -39,4 +49,9 @@ session_start();
         $_SESSION['error'] = [$validError];
         header("Location:reset_pass.php");
     }
+}
+catch(Exception $e){
+    echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>';
+    echo "priv info/n".$e;
+}
  ?>
