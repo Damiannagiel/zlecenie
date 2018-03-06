@@ -28,6 +28,10 @@ try{
             $user = NewUser::createUser($dbSelect,"id,login,email",$requirement);// pobierz dane użytkownika
             if($dbError->checkErrors()){
                 // wykonaj jeżeli udało się pobrać użytkownika
+                $microtime = microtime(true);
+                $micro = explode('.',$microtime);
+                $code = rand(100000,429495).$micro[1];// utwórz kod resetujący
+                settype($code,"int");// zmień kod resetujący na int
                 $date = date('Y-m-d');// ustal datę 
                 $keys = ["resetPass","resetPassTime"];
                 $value = [$code,$date]; 
