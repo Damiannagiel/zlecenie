@@ -2,6 +2,7 @@
 $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 
 require ($DOCUMENT_ROOT.'/../ini/trait/String.php');
+require ($DOCUMENT_ROOT.'/../ini/trait/Integer.php');
 require ($DOCUMENT_ROOT.'/../ini/class/classInput.php');
 require ($DOCUMENT_ROOT.'/../ini/class/classValidInput.php');
 require ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
@@ -28,23 +29,9 @@ try{
             $user = NewUser::createUser($dbSelect,"id,login,email",$requirement);// pobierz dane użytkownika
             if($dbError->checkErrors()){
                 // wykonaj jeżeli udało się pobrać użytkownika
-                $microtime = microtime(true);
-                $micro = explode('.',$microtime);
-                $code = rand(100000,429495).$micro[1];// utwórz kod resetujący
-                settype($code,"int");// zmień kod resetujący na int
-                $date = date('Y-m-d');// ustal datę 
-                $keys = ["resetPass","resetPassTime"];
-                $value = [$code,$date]; 
-                $dbEdit = new DataBaseEdit($connection,$dbError);
-                $dbEdit->editUser($keys,$value,$user->getId());
-                
-                $sendEmail = new SendResetPassEmail;
-                $sendEmail->addAddress($user->getEmail(),$user->getLogin());
-                $sendEmail->setContents($user,$code);
-                if($sendEmail->sendEmail()){
-                    echo "wszystko ok";
-                }
-                else echo "dupa";
+                $saveResetCode = new ResetPass($user); // obiekt edytujący dane w bazie danych
+                $saveResetCode->saveResetPassCode(new DataBaseEdit($connection,$dbError)); // edytuj dane usera
+                $saveResetCode->sendResetPassEmail(new SendResetPassEmail); // edytuj dane usera
                 
             }
             else{
@@ -62,6 +49,6 @@ try{
 }
 catch(Exception $e){
     echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>';
-    echo "priv info/n".$e;
+    echo "priv info:</br>".$e;
 }
  ?>
