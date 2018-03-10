@@ -3,6 +3,7 @@
 <head>
 	<?php 
             $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+            include ($DOCUMENT_ROOT.'/../ini/class/classFeedback.php');
             include ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
             session_start();
             include_once '../szablon/nav_head.php';
@@ -31,12 +32,12 @@
                 <span class="reset-pass__span">Udowodnij że nie jesteś robotem:</span>
                 <div class="reset-pass__recaptcha g-recaptcha" data-sitekey="6LdGKCIUAAAAAPkJ9mZG5OBWabq_OVfuyWzYIiWN"></div>
             </div>
-            <div class="blad_user"><?php
+            <div class="feedback"><?php
                 // jeżeli obiekt przechowujący błedy istnieje w sesji
                 // wyświetl błędy walidacji
-                if(isset($_SESSION['error'])){
-                    MyError::vievAllErrors($_SESSION['error']);
-                    unset($_SESSION['error']);
+                if(isset($_SESSION['feedback'])){
+                    FeedbackPresent::viewFeedback($_SESSION['feedback']);
+                    unset($_SESSION['feedback']);
                 }
             ?></div>
             <input type="submit" class="btn btn--green reset-padding" value="Dalej"/>

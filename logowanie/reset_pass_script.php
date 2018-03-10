@@ -19,7 +19,7 @@ try{
     $validInput = ValidInput::createValidInput($input,$validError);// obiekt przeprowadzający walidację
     $validInput->valid();// wykonaj walidację
     ValidInput::validRecaptcha($_POST['g-recaptcha-response'],$validError);
-    if($validError->checkErrors()){
+    if($validError->checkFeedback()){
         //wykonaj jeżeli nie wykryto błędów walidacji
         require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');// nawiąż połączenie z bazą danych
         if($connection){
@@ -27,28 +27,32 @@ try{
             $dbSelect = new DataBaseSelect($connection,$dbError);// obiekt łączący się z bazą danych
             $requirement = $input->getName().' = "'.$input->getValue().'"';// warunek dla bazy danych
             $user = NewUser::createUser($dbSelect,"id,login,email",$requirement);// pobierz dane użytkownika
-            if($dbError->checkErrors()){
+            if($dbError->checkFeedback()){
                 // wykonaj jeżeli udało się pobrać użytkownika
                 $saveResetCode = new ResetPass($user); // obiekt edytujący dane w bazie danych
                 $saveResetCode->saveResetPassCode(new DataBaseEdit($connection,$dbError)); // edytuj dane usera
-                $saveResetCode->sendResetPassEmail(new SendResetPassEmail); // edytuj dane usera
-                
+                $saveResetCode->sendResetPassEmail(new SendResetPassEmail); // wyślij email z linkiem resetującym
+                $positiveFeedback = new positiveFeedback(1); // utwórz obiekt z komunikatem o udanej prubie wysłania linka resetującego hasło
+                $_SESSION['feedback'] = $positiveFeedback; // dodaj obiekt z komunikatem do sesji
+                header("Location:reset_pass.php"); // prekieruj spowrotem na stronę
             }
             else{
                 // wykryto błędy bazy danych
-                $_SESSION['error'] = [$dbError];
-                header("Location:reset_pass.php");
+                $_SESSION['feedback'] = $dbError;// dodaj obiekt z komunikatem do sesji
+                header("Location:reset_pass.php");// prekieruj spowrotem na stronę
             }
         }
     }
     else{
         // wykryto błędy walidacji
-        $_SESSION['error'] = [$validError];
-        header("Location:reset_pass.php");
+        $_SESSION['feedback'] = $validError;// dodaj obiekt z komunikatem do sesji
+        header("Location:reset_pass.php");// prekieruj spowrotem na stronę
     }
 }
 catch(Exception $e){
     echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>';
-    echo "priv info:</br>".$e;
+    if($_SESSION["id"]==1){
+        echo "priv info:</br></br>".$e;
+    }
 }
  ?>

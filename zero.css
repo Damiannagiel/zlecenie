@@ -202,3 +202,28 @@ span.nawias{
 	font-weight:bold;
 	font-size:1.3rem;
 }
+
+.feedback p{
+    width:90%;
+    max-width: 575px;
+    margin:5px auto 5px auto;
+    padding:5px;
+    border-radius:10px;
+    font-weight:bold;
+    font-size:1.3rem;
+}
+
+.feedback p.negative{
+    background-color:red;
+    color:#ffffff;
+}
+
+.feedback p.positive{
+    background-color:#99cc99;
+    color:#ffffff;
+}
+
+.feedback p.neutral{
+    background-color:#aaaaaa;
+    color:#000000;
+}
