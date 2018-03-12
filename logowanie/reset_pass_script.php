@@ -1,8 +1,6 @@
 <?php
 $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 
-require ($DOCUMENT_ROOT.'/../ini/trait/String.php');
-require ($DOCUMENT_ROOT.'/../ini/trait/Integer.php');
 require ($DOCUMENT_ROOT.'/../ini/class/classInput.php');
 require ($DOCUMENT_ROOT.'/../ini/class/classValidInput.php');
 require ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
