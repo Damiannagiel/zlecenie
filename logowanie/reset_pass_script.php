@@ -27,7 +27,7 @@ try{
             $user = NewUser::createUser($dbSelect,"id,login,email",$requirement);// pobierz dane użytkownika
             if($dbError->checkFeedback()){
                 // wykonaj jeżeli udało się pobrać użytkownika
-                $saveResetCode = new ResetPass($user); // obiekt edytujący dane w bazie danych
+                $saveResetCode = new SetResetPass($user); // obiekt edytujący dane w bazie danych
                 $saveResetCode->saveResetPassCode(new DataBaseEdit($connection,$dbError)); // edytuj dane usera
                 $saveResetCode->sendResetPassEmail(new SendResetPassEmail); // wyślij email z linkiem resetującym
                 $positiveFeedback = new positiveFeedback(1); // utwórz obiekt z komunikatem o udanej prubie wysłania linka resetującego hasło
