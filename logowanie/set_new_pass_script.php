@@ -37,14 +37,18 @@ try{
             $dbSelect = new DataBaseSelect($connection,$dbError);// obiekt łączący się z bazą danych
             
             $user = NewUser::createUser($dbSelect,"id,resetPass,resetPassTime","id=".$id->getValue());// pobierz dane użytkownika
-            $form = Form::createForm([$id,$verificationCode],"SetResetPass");// utwórz obiekt odwzorowujący formularz
+            $form = Form::createForm([$id,$verificationCode,$pass],"SetResetPass");// utwórz obiekt odwzorowujący formularz
             
             $save = new EditResetPass($user,$form,$dbError);// utwórz obiekt edytujący hasło
             $save->resetPassVerification();// sprawdź kod weryfikacyjny
+            $save->resetPassTimeVerification();// sprawdź ważnośc kodu
             
             if($dbError->checkFeedback()){
                 // jeżeli kod weryfikacyjny się zgadza zapisz hasło do bazy
-                
+                $save->editPass(new DataBaseEdit($connection,$dbError));// utwórz obiekt edytujący bazę danych
+                $positiveFeedback = new positiveFeedback(2); // utwórz obiekt z komunikatem o udanej prubie wysłania linka resetującego hasło
+                $_SESSION['feedback'] = $positiveFeedback; // dodaj obiekt z komunikatem do sesji
+                header("Location:zaloguj.php"); // prekieruj spowrotem na stronę
             }
             else{
                 // wykryto błędy walidacji
@@ -65,8 +69,8 @@ try{
 }
 catch(Exception $e){
     echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>';
-    if($_SESSION["id"]==1){
+
         echo "priv info:</br></br>".$e;
-    }
+
 }
  ?>

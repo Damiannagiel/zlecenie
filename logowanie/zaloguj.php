@@ -1,7 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-	<?php session_start();
+	<?php 
+        $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+        include ($DOCUMENT_ROOT.'/../ini/class/classFeedback.php');
+        include ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
+        session_start();
 				include_once '../szablon/nav_head.php'; ?>
 	
 	<title>Logowanie do igu.com.pl</title>
@@ -28,6 +32,14 @@
 			<?php if(isset($_SESSION['juz_zweryfikowany'])){echo $_SESSION['juz_zweryfikowany']; unset($_SESSION['juz_zweryfikowany']);}
 						if(isset($_SESSION['zweryfikowano'])){echo $_SESSION['zweryfikowano']; unset($_SESSION['zweryfikowano']);}
 						if(isset($_SESSION['udanarejestracja'])&&($_SESSION['udanarejestracja']==true)){echo '<div class="zapisano"><p>Rejestracja przebiegła pomyślnie!<br/>Teraz możesz się zalogować.</p></div>';}?>
+                        <div class="feedback"><?php
+                // jeżeli obiekt przechowujący błedy istnieje w sesji
+                // wyświetl błędy
+                if(isset($_SESSION['feedback'])){
+                    FeedbackPresent::viewFeedback($_SESSION['feedback']);
+                    unset($_SESSION['feedback']);
+                }
+            ?></div>
 								
 			<div class="form-user">
 				<label for="login">Login: </label>
