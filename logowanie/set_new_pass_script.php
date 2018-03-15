@@ -14,30 +14,42 @@ session_start();
 include_once '../szablon/nav_head.php';
 
 try{
-    $id = Input::CreateInput($_POST['id'],"id");// utwórz obiekt przechowujący id
-    $verificationCode = Input::CreateInput($_POST['resetPass'],"verificationCode");// utwórz obiekt przechowujący kod weryfikacyjny
     $validError = new ValidError();// utwórz obiekt przechowujący błędy walidacji
+    
+    $id = Input::CreateInput($_POST['id'],"id");// utwórz obiekt przechowujący id
     $validId = ValidInput::createValidInput($id,$validError);// utwórz obiekt walidujący Id
-    $validVerificationCode = ValidInput::createValidInput($verificationCode,$validError);// utwórz obiekt walidujący kod weryfikujący
     $validId->valid();// waliduj id
+    
+    $verificationCode = Input::CreateInput($_POST['resetPass'],"verificationCode");// utwórz obiekt przechowujący kod weryfikacyjny
+    $validVerificationCode = ValidInput::createValidInput($verificationCode,$validError);// utwórz obiekt walidujący kod weryfikujący
     $validVerificationCode->valid();// waliduj kod weryfikacyjny
+    
+    $pass = Input::CreateInput([$_POST["new_pass"],$_POST["new_pass_repeat"]],"pass");
+    $validPass = ValidInput::createValidInput($pass,$validError);
+    $validPass->valid();
+    
     if($validError->checkFeedback()){
         // wykonaj jeżeli zmienne z $GET przeszły walidację
         require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');// nawiąż połączenie z bazą danych
         if($connection){
+            // wykonaj jeżeli nawiązano połączenie z bazą danych
             $dbError = new DataBaseError();// obiekt błędów bazy danych
             $dbSelect = new DataBaseSelect($connection,$dbError);// obiekt łączący się z bazą danych
+            
             $user = NewUser::createUser($dbSelect,"id,resetPass,resetPassTime","id=".$id->getValue());// pobierz dane użytkownika
-            $form = Form::createForm([$id,$verificationCode],"SetResetPass");
-            $save = new SaveResetPass($user,$form,$dbError);
-            $save->resetPassVerification();
+            $form = Form::createForm([$id,$verificationCode],"SetResetPass");// utwórz obiekt odwzorowujący formularz
+            
+            $save = new EditResetPass($user,$form,$dbError);// utwórz obiekt edytujący hasło
+            $save->resetPassVerification();// sprawdź kod weryfikacyjny
+            
             if($dbError->checkFeedback()){
-                echo "kod się zgadza, zapisujemy!";
+                // jeżeli kod weryfikacyjny się zgadza zapisz hasło do bazy
+                
             }
             else{
                 // wykryto błędy walidacji
                 $_SESSION['feedback'] = $validError;// dodaj obiekt z komunikatem do sesji
-                header("Location:reset_pass.php");// prekieruj spowrotem na stronę resetowania hasła
+                header("Location:set_new_pass.php?id=".$_POST['id']."&resetPass=".$_POST['resetPass']);// prekieruj spowrotem na stronę resetowania hasła
             } 
         }
         else{
@@ -48,7 +60,7 @@ try{
     else{
         // wykryto błędy walidacji
         $_SESSION['feedback'] = $validError;// dodaj obiekt z komunikatem do sesji
-        header("Location:reset_pass.php");// prekieruj spowrotem na stronę resetowania hasła
+        header("Location:set_new_pass.php?id=".$_POST['id']."&resetPass=".$_POST['resetPass']);// prekieruj spowrotem na stronę resetowania hasła
     }
 }
 catch(Exception $e){
