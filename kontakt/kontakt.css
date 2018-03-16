@@ -1,0 +1,64 @@
+.content{
+    margin:10px;
+}
+
+.component{
+    width:90%;
+    margin:15px auto;
+}
+
+.header__p{
+    font-size:2rem;
+    max-width: 600px;
+    margin:10px auto 10px auto;
+}
+
+.label-component{
+    display:none;
+}
+
+.input-component{
+    width:100%;
+    max-width: 600px;
+}
+
+.input-component--textarea{
+    min-height: 200px;
+}
+
+.button-green{
+    width:75%;
+    max-width: 500px;
+    margin:1px auto;
+}
+
+.button-green:hover{
+    margin:0 auto;
+}
+
+@media screen and (min-width: 640px){
+    .label-component{
+        display:block;
+        max-width: 600px;
+        margin:0 auto;
+        text-align: left;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 2px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .label-component{
+        margin:0 2px 0 auto;
+    }
+    
+    .input-component{
+        margin-right: auto;
+    }
+
+    .component{
+        display:flex;
+    }
+}
+
