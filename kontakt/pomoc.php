@@ -2,8 +2,8 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8" />
-    <title>Kontakt - Internetowa Giełda Usług</title>
-    <meta name="description" content="Jeżeli masz jakiekolwiek pytania, sugestie bądź po prostu chcesz skontaktować się z administracją serwisu, jesteś w odpowiednim miejscu. Napisz do nas a postaramy się udzielić ci odpowiedzi najszybciej jak to możliwe!" />
+    <title>Pomoc - Internetowa Giełda Usług</title>
+    <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="kontakt.css">
@@ -12,11 +12,12 @@
 
 <!--<body>--><?php include_once '../szablon/nav_body.php'; ?>
 <div class="content"><article>
-    <form action="contact_script.php?contact=contact" method="post" name="contact">
+    <form action="contact_script.php?contact=support" method="post" name="support">
         <div class="component--header">
-            <header><h2>Skontaktuj się z nami</h2></header>
+            <header><h2>Dział pomocy i wsparcia technicznego</h2></header>
             <section>
-                <p class="header__p">Jeżeli masz jakiekolwiek pytania, sugestie bądź po prostu chcesz skontaktować się z administracją serwisu, jesteś w odpowiednim miejscu. Napisz do nas za pomocą formularza kontaktowego bądź bezpośrednio na <b>kontakt@domena.pl</b> a postaramy się udzielić ci odpowiedzi najszybciej jak to możliwe!</p>
+                <p class="header__p">Oczekiwanie na odpowiedź zwykle trwa od kilku godzin nawet do kilku dni, więc zanim wyślesz wiadomość zapoznaj się z częstonapotykanymi problemami w dziale <a href="faq.php">FAQ</a>.</p> 
+                <p class="header__p">Jeżeli już przeglądałeś FAQ i nie znalazłeś odpowiedzi, skontaktuj się z działem pomocy za pośrednictwem formularza kontaktowego bądź napisz bezpośrednio na adres <b>pomoc@domena.pl</b></p>
             </section>
         </div>
         <div class="component">

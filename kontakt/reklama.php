@@ -2,8 +2,8 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8" />
-    <title>Kontakt - Internetowa Giełda Usług</title>
-    <meta name="description" content="Jeżeli masz jakiekolwiek pytania, sugestie bądź po prostu chcesz skontaktować się z administracją serwisu, jesteś w odpowiednim miejscu. Napisz do nas a postaramy się udzielić ci odpowiedzi najszybciej jak to możliwe!" />
+    <title>Reklama - Internetowa Giełda Usług</title>
+    <meta name="description" content="Skontaktuj się z administracją serwisu w sprawie reklamy na sstronach naszej witrny, bądź innej współpracy komercyjnej." />
     <meta name="keywords" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="kontakt.css">
@@ -12,11 +12,11 @@
 
 <!--<body>--><?php include_once '../szablon/nav_body.php'; ?>
 <div class="content"><article>
-    <form action="contact_script.php?contact=contact" method="post" name="contact">
+    <form action="contact_script.php?contact=advertisement" method="post" name="advertisement">
         <div class="component--header">
-            <header><h2>Skontaktuj się z nami</h2></header>
+            <header><h2>Reklama i współpraca komercyjna</h2></header>
             <section>
-                <p class="header__p">Jeżeli masz jakiekolwiek pytania, sugestie bądź po prostu chcesz skontaktować się z administracją serwisu, jesteś w odpowiednim miejscu. Napisz do nas za pomocą formularza kontaktowego bądź bezpośrednio na <b>kontakt@domena.pl</b> a postaramy się udzielić ci odpowiedzi najszybciej jak to możliwe!</p>
+                <p class="header__p">Skorzystaj z formularza kontaktowego bądź napisz do nas bezpośrednio na <b>reklama@domena.pl</b> w sprawie reklamy na stronach naszej witrny, bądź innej współpracy komercyjnej.</p>
             </section>
         </div>
         <div class="component">

@@ -6,11 +6,11 @@
 			<ul>
 				<li><a href="../regulamin/">Regulamin</a></li>
 				<li><a href="#">Partnerzy</a></li>
-				<li><a href="#">Reklama</a></li>
+				<li><a href="../kontakt/reklama.php">Reklama</a></li>
 				<li><a href="../ogloszenie/archiwum/">Archiwum ogłoszeń</a></li>
-				<li><a href="#">Pomoc</a></li>
-				<li><a href="#">Kontakt</a></li>
-				<li><a href="#" class="last">Mapa Kategorii</a></li>
+				<li><a href="../kontakt/pomoc.php">Pomoc</a></li>
+				<li><a href="../kontakt/index.php">Kontakt</a></li>
+				<li><a href="../kategoria/mapa/mapa_kategorii.php" class="last">Mapa Kategorii</a></li>
 			</ul>
 		</div>
 		<div class="social_copy">
