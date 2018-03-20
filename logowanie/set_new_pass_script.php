@@ -38,7 +38,6 @@ try{
             
             $user = NewUser::createUser($dbSelect,"id,resetPass,resetPassTime","id=".$id->getValue());// pobierz dane użytkownika
             $form = Form::createForm([$id,$verificationCode,$pass],"SetResetPass");// utwórz obiekt odwzorowujący formularz
-            
             $save = new EditResetPass($user,$form,$dbError);// utwórz obiekt edytujący hasło
             $save->resetPassVerification();// sprawdź kod weryfikacyjny
             $save->resetPassTimeVerification();// sprawdź ważnośc kodu

@@ -3,11 +3,12 @@
 }
 
 .component{
-    width:90%;
+    width:100%;
     margin:15px auto;
 }
 
 .header__p{
+    text-align: left;
     font-size:1.8rem;
     max-width: 600px;
     margin:10px auto 30px auto;
@@ -15,6 +16,10 @@
 
 .label-component{
     display:none;
+}
+
+.red-star{
+    color:#fc0000;
 }
 
 .input-component{
@@ -39,7 +44,7 @@
 @media screen and (min-width: 640px){
     .label-component{
         display:block;
-        max-width: 600px;
+        max-width: 200px;
         margin:0 auto;
         text-align: left;
         font-weight: bold;
@@ -49,16 +54,19 @@
 }
 
 @media screen and (min-width: 1024px){
+    .component{
+        display:flex;
+    }
+    
     .label-component{
+        flex:0.25;
         margin:10px 2px 0 auto;
+        text-align: right;
     }
     
     .input-component{
+        flex:0.75;
         margin-right: auto;
-    }
-
-    .component{
-        display:flex;
     }
 }
 

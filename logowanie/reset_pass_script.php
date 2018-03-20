@@ -49,7 +49,7 @@ try{
 }
 catch(Exception $e){
     echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>';
-    if($_SESSION["id"]==1){
+    if(isset($_SESSION["id"]) && $_SESSION["id"]==1){
         echo "priv info:</br></br>".$e;
     }
 }
