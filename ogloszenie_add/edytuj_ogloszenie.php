@@ -231,6 +231,7 @@
 			</div>
 			
 			<div class="button-div">
+                                <input type="hidden" name="ogloszenie" value="<?php echo $ogloszenie; ?>" />
 				<input type="submit" class="sub sub_add button-green" value="Zobacz wersję podglądową"/>
 			</div>
 		</form>
