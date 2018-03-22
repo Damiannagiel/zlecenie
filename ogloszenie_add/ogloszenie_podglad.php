@@ -20,7 +20,7 @@
 	</head>
 	
 	<?php include_once '../szablon/nav_body.php'; include_once '../szablon/nav_category.php';?>
-	
+        <h2>Tak będzie wyglądać twoje ogłoszenie po dodaniu</h2>
 		<h5 class="przyklad">Wyniki wyszukiwania</h5>
 		<p class="nawias">(Tak będzie wyglądać twoje ogłoszenie w wynikach wyszukiwania)</p>
 		
@@ -115,7 +115,7 @@
 			</article>
 		</article>
 		
-		<h5>Czy jesteś usatysfakcjonowany?</h5>
+		<h4>Czy jesteś usatysfakcjonowany?</h4>
 		<div class="button-div"><a href="<?php if((isset($_SESSION['edit_add']))&&($_SESSION['edit_add']==true))echo "edytuj_ogloszenie.php?ogloszenie=".$_SESSION['fr_id'];
 				else echo "ogloszenie_add.php";?>"><button class="button-green">Wróć do edycji</button></a><a href="<?php if((isset($_SESSION['edit_add']))&&($_SESSION['edit_add']==true))echo "zapisz_edytowane_ogloszenie.php";
 				else echo "zapisz_ogloszenie.php";?>"><button class="button-red"><?php if((isset($_SESSION['edit_add']))&&($_SESSION['edit_add']==true))echo "Zapisz zmiany";

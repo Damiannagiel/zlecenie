@@ -9,7 +9,7 @@
 			require_once ($DOCUMENT_ROOT.'/../ini/skryptyPHP/ogloszenie_skrypt.php');
 			
 			?>
-			<title><?php if(isset($no_add)&&$no_add==true) echo "Internetowa giełda usług"; else echo $tytul ?></title>
+			<title><?php if(isset($no_add)&&$no_add==true) echo "Internetowa giełda usług"; else echo $tytul." - igu.com.pl" ?></title>
 	
 			<meta name="description" content="<?php echo $opis ?>" />
 			<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
@@ -36,14 +36,14 @@
 				</header>
 			</div>
 			<div class="popular2">
-			<div class="popular">
+			</div>
+			<div class="top">
+				<section class="ogl_zdjecia">
+                                    			<div class="popular">
 				<span>(Wyśiwetleń: <b><?php echo $wyswietlen ?></b>)</span>
 				<span class="spacer"></span>
 				<span>(Kontaktów: <b><?php echo $kontaktow ?></b>)</span>
 			</div>
-			</div>
-			<div class="top">
-				<section class="ogl_zdjecia">
 					<div id="img_med">
 						<img class="img_med" src="<?php if($ile_zdjec==0) echo '../ogloszenie/img/brak_zdjecia.jpg'; else echo '../ogloszenie/img/'.$ogloszenie.'/1.jpg';?>"/>
 					</div>

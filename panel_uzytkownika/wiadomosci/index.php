@@ -55,6 +55,9 @@
                             //wyświetl listę użytkowników wraz onclickami do wyświetlnia wiadomości
                             $uzytkownicy=wyswiet_uzytkownikow($polaczenie,$ile_wiadomosci,$_SESSION['id'],$href);
                         }
+                        else if($href){
+                            $uzytkownicy=wyswiet_uzytkownikow($polaczenie,$ile_wiadomosci,$_SESSION['id'],$href);
+                        }
                         else $brak_wiadomosci="<h3>Nie posiadasz wiadomości do wyświetlenia.</h3>";
 
 			$polaczenie->close();

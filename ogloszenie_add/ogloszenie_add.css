@@ -265,6 +265,11 @@ i.icon-cancel:hover{cursor:pointer;}
 	fill:red;
 }
 
+#dolnośląskie_opis,#kujawsko-pomorskie_opis,#lubelskie_opis,#lubuskie_opis,#łódzkie_opis,#małopolskie_opis,#mazowieckie_opis,#opolskie_opis,#podkarpackie_opis#podlaskie_opis,#pomorskie_opis,#śląskie_opis,#świętokrzyskie_opis,#warmińsko-mazurskie_opis,#wielkopolskie_opis,#zachodniopomorskie_opis{
+    font-weight: bold;
+    padding: 10px;
+}
+
 @media screen and (min-width: 400px){
 	.img_edit img{height:160px;}
 }
@@ -402,9 +407,18 @@ i.icon-cancel:hover{cursor:pointer;}
 	
 	.duze{width:100%;}
 
-	.srednie{width:50%;}
+	.srednie{
+            width:47%;
+            margin: 1.5%;
+            max-height: 160px;
 
-	.male{width:33%;}
+        }
+
+	.male{
+            width:31%;
+            margin: 1%;
+            max-height: 100px;
+        }
 	
 	.ogl_add_input label.description, #miasto_div label.description{
 		display:block;

@@ -94,6 +94,7 @@
         //lista opcji usuwqna jest bezpośrednio po wyświetleniu nagłówka
         $(".options").hide();//ukryj opcje
         $(".delete").hide();//ukryj przycisk usuń
+        $(".message_info .options__ul").hide();//ukryj pasek opcji
 
         
         $("#message .message").hover(
