@@ -62,15 +62,13 @@
 					<h4><?php echo $_SESSION['tmp_tytul']; ?></h4>
 				</header>
 			</div>
-			<div class="popular2">
-			<div class="popular">
+			<div class="top">
+				<section class="ogl_zdjecia">
+                                        <div class="popular">
 				<span>(Wyśiwetleń: <b> - </b>)</span>
 				<span class="spacer"></span>
 				<span>(Kontaktów: <b> - </b>)</span>
 			</div>
-			</div>
-			<div class="top">
-				<section class="ogl_zdjecia">
 					<div id="img_med"><img class="img_med" src="<?php echo 'podglad/'.$_SESSION['img0'].'.jpg' ?>"/></div>
 					<div class="zdj_nav">
 							<?php wyswietl_zdjecia($_SESSION['tmp_ile_zdjec']);?>
