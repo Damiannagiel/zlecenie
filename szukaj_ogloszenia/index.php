@@ -29,7 +29,7 @@
 		include_once '../szablon/nav_body.php';
 		include_once '../szablon/nav_category.php';
 	?>
-	<form id="serch" action="wynik.php" method="post">
+	<form id="serch" action="szukaj_skrypt.php" method="post">
 	
 		<div class="background-container">
 			<div class="blad_user">
