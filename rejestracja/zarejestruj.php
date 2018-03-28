@@ -116,7 +116,6 @@
 									</select>
 								</div>
 							</div>
-						
 
 					<!--Regulamin-->	
 						<div class="rejdiv_inp">
