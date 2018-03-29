@@ -18,7 +18,7 @@
 	include_once '../szablon/nav_body.php';
 	include_once '../szablon/nav_category.php';
 	?>
-
+    <article>
 	<div id="regulations">
 	<h2>Regulamin korzystania z serwisu Internetowa Giełda Usług</h2>
 	<h6>Postanowienia wstępne</h6>
@@ -39,6 +39,7 @@
 			<li class="nr"><span>1.2</span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed sodales augue. Maecenas sodales mauris eu mi egestas feugiat. Vestibulum vitae leo vitae tortor interdum.</p></li>
 		</ol>
 	</div>
+    </article>
 	
 	
 <?php
