@@ -12,7 +12,7 @@
 			<title><?php if(isset($no_add)&&$no_add==true) echo "Internetowa giełda usług"; else echo $tytul." - igu.com.pl" ?></title>
 	
 			<meta name="description" content="<?php echo $opis ?>" />
-			<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+			<meta name="keywords" content="" />
 			<link href="../ogloszenie_wyswietl/ogloszenie.css" type="text/css" rel="stylesheet"/>
 	</head>
 		<?php include_once '../szablon/nav_body.php'; include_once '../szablon/nav_category.php';?>
