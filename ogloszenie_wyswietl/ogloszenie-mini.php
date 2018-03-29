@@ -1,5 +1,5 @@
 <a class="ad" href="ogloszenie/<?php echo $link[$i]?>.php">
-	<article class="ad-mini">
+        <article class="ad-mini">
 		<div class="img">
 			<?php
 			if($pobierz[$i]['photos']==0) echo '<img src="ogloszenie/img/brak_zdjecia.jpg"/>';

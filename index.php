@@ -2,8 +2,8 @@
 <html lang="pl">
 	<head>
 			<title>Internetowa Giełda Usług</title>
-			<meta name="description" content="Opis w Google" />
-			<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+                        <meta name="description" content="igu.com.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!" />
+			<meta name="keywords" content="" />
 			<link href="zero.css" type="text/css" rel="stylesheet"/>
 			<link href="index.css" type="text/css" rel="stylesheet"/>
 			<link href="ogloszenie_wyswietl/mini.css" type="text/css" rel="stylesheet"/>
@@ -131,7 +131,8 @@
 				</div>
 			</form>
 		</article>
-			<header><h2 class="losowe">Losowe ogłoszenia</h2></header>
+                <article>
+                    <header><h2 class="losowe" >Losowe ogłoszenia</h2></header>
 		<?php
 				if($pobierz)
 				{
@@ -141,6 +142,7 @@
 					}
 				}
 			?>
+                </article>
 	<footer>
 		<div class="popular_content">
 		</div>
