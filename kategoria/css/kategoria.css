@@ -240,7 +240,7 @@ input.inp
 		flex:1;
 	}
 	
-	mine{display:flex;}
+	article.content{display:flex;}
 	
 	.categories p.subcategory {font-size: 2rem;}
 	

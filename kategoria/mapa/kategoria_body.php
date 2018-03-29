@@ -3,7 +3,7 @@
 <?php if(isset($ile_pasuje))echo $ile_pasuje; ?>
 </header>
 
-<mine>
+<article class="content">
 <div class="inline left">
 
 	<div class="categories">
@@ -99,7 +99,7 @@
 
 	</div>
 </div>
-</mine>
+</article>
 
 <div style="clear:both"></div>
 
