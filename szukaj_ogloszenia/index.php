@@ -1,15 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 	<head>
-		<?php
-			session_start();
-			include_once '../szablon/nav_head.php';
-		?>
-		<link href="index.css" type="text/css" rel="stylesheet"/>
-	
-		<title>Szukaj ogłoszenia</title>
-	
-		<meta name="description" content="Opis w Google" />
+		<title>Szukaj ogłoszenia - igu.com.pl</title>
+		<meta name="description" content="igu.com.pl - zaawansowana wyszukiwarka ogłoszeń. Wybierz interesującą cię kategorię, przedział cenowy, lokalizację, a także słowa kluczowe i znajdź interesującą cię usługę." />
+                <link href="index.css" type="text/css" rel="stylesheet"/>
 		
 		<!-- Font license info
 
@@ -21,14 +15,18 @@
 		   License:   SIL ()
 		   Homepage:  http://fortawesome.github.com/Font-Awesome/
 		-->
-
-
+                
+                <?php
+			session_start();
+			include_once '../szablon/nav_head.php';
+		?>
 		
 	</head>
 	<?php
 		include_once '../szablon/nav_body.php';
 		include_once '../szablon/nav_category.php';
 	?>
+    <article>
 	<form id="serch" action="szukaj_skrypt.php" method="post">
 	
 		<div class="background-container">
@@ -178,15 +176,12 @@
 		</div>
 			
 	</form>
-	
-	<?php
-		include_once '../szablon/stopka.php';
-	?>
-	
-	<script src="index.js" type="text/javascript"></script>
-	<script >
+    </article>
+        <script src="index.js" type="text/javascript"></script>
+	<script>
 		var filter="<?php if(isset($_SESSION['wyszukiwanie'])){echo $_SESSION['wyszukiwanie'];unset($_SESSION['wyszukiwanie']);}?>";
 		onload_filter(filter);
 	</script>
-	
-</html>
+	<?php
+		include_once '../szablon/stopka.php';
+	?>
