@@ -1,16 +1,16 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-	<?php session_start();
-
-				include_once '../szablon/nav_head.php';
-				?>
-	
-	<title>Rejestracja w serwisie</title>
+        <title>Rejestracja w igu.com.pl</title>
 	
 	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<meta name="description" content="Opis w Google" />
+	<meta name="description" content="igu.com.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!" />
 	<link href="rejestracja.css" type="text/css" rel="stylesheet"/>
+        
+	<?php 
+            session_start();
+            include_once '../szablon/nav_head.php';
+	?>
 </head>
 
 			    <?php

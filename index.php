@@ -2,7 +2,7 @@
 <html lang="pl">
 	<head>
 			<title>Internetowa Giełda Usług</title>
-                        <meta name="description" content="igu.com.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!" />
+                        <meta name="description" content="igu.com.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!"/>
 			<meta name="keywords" content="" />
 			<link href="zero.css" type="text/css" rel="stylesheet"/>
 			<link href="index.css" type="text/css" rel="stylesheet"/>
