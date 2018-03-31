@@ -76,7 +76,7 @@ function load_pow(content)
 				return;
 			}
 		}
-		document.getElementById("city").innerHTML='<input type="text" placeholder="miejscowość" name="place" class="inp" value="" onChange=\'search_location("place",this.value,"'+kat_js+'")\'/>';
+		document.getElementById("city").innerHTML='<input type="text" placeholder="miejscowość" name="place" class="inp" onChange=\'search_location("place",this.value,"'+kat_js+'")\'/>';
 	}
 	
 	function odczytaj_adres(adres)
@@ -149,9 +149,9 @@ function load_pow(content)
 				else if(parametr[i]=="zasieg") //jeżeli parametr to zasięg
 				{
 					var content=odczytaj_adres(wartosc[i]); //odkoduj polskie znaki
-					if(wartosc[i+1]) //jeżeli wybrano miasto
+					if(parametr[i+1]=="place") //jeżeli wybrano miasto
 					{
-						place=odczytaj_adres(wartosc[i+1]); //odkoduj polskie znaki
+						var place=odczytaj_adres(wartosc[i+1]); //odkoduj polskie znaki
 						load_pow2(content,place);
 					}
 					else
@@ -180,11 +180,13 @@ function load_pow(content)
 		{
 			active=0;
 		}
+                add_filter(location);
 	}
 	
 	function search(wartosc,kategoria)
 	{
-		if(wartosc!=active)
+            var href = "";
+                if(wartosc!=active)
 		{
 			var woj_div=document.getElementById("woj");
 			var woj=woj_div.getElementsByTagName("select")[0].value;
@@ -200,22 +202,22 @@ function load_pow(content)
 					{
 						if(wartosc!=0)
 						{
-							window.location.href = kategoria+'.php?typ='+wartosc+'&zasieg='+woj+'_'+pow+'&place='+place;
+							href = kategoria+'.php?typ='+wartosc+'&zasieg='+woj+'_'+pow+'&place='+place;
 						}
 						else
 						{
-							window.location.href = kategoria+'.php?zasieg='+woj+'_'+pow+'&place='+place;
+							href = kategoria+'.php?zasieg='+woj+'_'+pow+'&place='+place;
 						}
 					}
 					else
 					{
 						if(wartosc!=0)
 						{
-							window.location.href = kategoria+'.php?typ='+wartosc+'&zasieg='+woj+'_'+pow;
+							href = kategoria+'.php?typ='+wartosc+'&zasieg='+woj+'_'+pow;
 						}
 						else
 						{
-							window.location.href = kategoria+'.php?zasieg='+woj+'_'+pow;
+							href = kategoria+'.php?zasieg='+woj+'_'+pow;
 						}
 					}
 				}
@@ -223,11 +225,11 @@ function load_pow(content)
 				{
 					if(wartosc!=0)
 					{
-						window.location.href = kategoria+'.php?typ='+wartosc+'&zasieg='+woj;
+						href = kategoria+'.php?typ='+wartosc+'&zasieg='+woj;
 					}
 					else
 					{
-						window.location.href = kategoria+'.php?zasieg='+woj;
+						href = kategoria+'.php?zasieg='+woj;
 					}
 				}
 			}
@@ -235,20 +237,41 @@ function load_pow(content)
 			{
 				if(wartosc!=0)
 				{
-					window.location.href = kategoria+'.php?typ='+wartosc;
+					href = kategoria+'.php?typ='+wartosc;
 				}
 				else
 				{
-					window.location.href = kategoria+'.php';
+					href = kategoria+'.php';
 				}
 			}
 		}
+                get_href(href);
 	}
+        
+        function get_href(href)
+        {
+                var sort = document.getElementsByName("sort")[0].value;
+                if(href.indexOf('?') >= 0){
+                    href += "&sort="+sort;
+                } else {
+                    href += "?sort="+sort;
+                }
+                window.location.href = href;
+        }
+        
+        function add_filter(href)
+        {
+//            href = href.split("?");
+//            var filter = href[1];
+            var link = $("a.link").attr("href");
+            alert(link);
+        }
 	
 	function search_location(type,val,category)
 	{
 
 		var type_nr=active;
+                var href = "";
 
 		if(type=="woj")
 		{
@@ -256,22 +279,22 @@ function load_pow(content)
 			{
 				if(type_nr!=0)
 				{
-					window.location.href = category+'.php?typ='+type_nr+'&zasieg='+val;
+					href = category+'.php?typ='+type_nr+'&zasieg='+val;
 				}
 				else
 				{
-					window.location.href = category+'.php?zasieg='+val;
+					href = category+'.php?zasieg='+val;
 				}
 			}
 			else
 			{
 				if(type_nr!=0)
 				{
-					window.location.href = category+'.php?typ='+type_nr;
+					href = category+'.php?typ='+type_nr;
 				}
 				else
 				{
-					window.location.href = category+'.php';
+					href = category+'.php';
 				}
 			}
 		}
@@ -284,22 +307,22 @@ function load_pow(content)
 			{
 				if(type_nr!=0)
 				{
-					window.location.href = category+'.php?typ='+type_nr+'&zasieg='+woj_pow;
+					href = category+'.php?typ='+type_nr+'&zasieg='+woj_pow;
 				}
 				else
 				{
-					window.location.href = category+'.php?zasieg='+woj_pow;
+					href = category+'.php?zasieg='+woj_pow;
 				}	
 			}
 			else
 			{
 				if(type_nr!=0)
 				{
-					window.location.href = category+'.php?typ='+type_nr+'&zasieg='+woj;
+					href = category+'.php?typ='+type_nr+'&zasieg='+woj;
 				}
 				else
 				{
-					window.location.href = category+'.php?zasieg='+woj;
+					href = category+'.php?zasieg='+woj;
 				}	
 			}
 		}
@@ -315,25 +338,26 @@ function load_pow(content)
 			{
 				if(type_nr!=0)
 				{
-					window.location.href = category+'.php?typ='+type_nr+'&zasieg='+woj_pow+'&place='+val;
+					href = category+'.php?typ='+type_nr+'&zasieg='+woj_pow+'&place='+val;
 				}
 				else
 				{
-					window.location.href = category+'.php?zasieg='+woj_pow+'&place='+val;
+					href = category+'.php?zasieg='+woj_pow+'&place='+val;
 				}	
 			}
 			else
 			{
 				if(type_nr!=0)
 				{
-					window.location.href = category+'.php?typ='+type_nr+'&zasieg='+woj_pow;
+					href = category+'.php?typ='+type_nr+'&zasieg='+woj_pow;
 				}
 				else
 				{
-					window.location.href = category+'.php?zasieg='+woj_pow;
+					href = category+'.php?zasieg='+woj_pow;
 				}	
 			}
 		}
+                get_href(href);
 	}
         
         function sort(value)
@@ -349,7 +373,7 @@ function load_pow(content)
                     for(var  i=1;i<new_loc.length;i++){
                         loc+="&"+new_loc[i];
                     }
-                    loc+="?sort="+value;
+                    loc+="&sort="+value;
                 } else {
                     if(loc.indexOf('sort') >= 0){
                         var new_loc = loc.split("?");
