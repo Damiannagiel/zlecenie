@@ -117,9 +117,12 @@
 			var val = $(this).attr('value');
 			search(val,kat_js);
 		});
-		
-		var filters = document.querySelector(".filters-button");
-		filters.addEventListener("click",function(){
-		document.querySelector(".left").classList.toggle("active");
-		},false);
+                
+                $(".filters-button").click(function(e)
+		{
+//                    setTimeout(function(){
+//                        $(".left.active").removeClass("active");
+//                    }, 500);
+                    $(".left").slideToggle(500);
+		});
 </script>
