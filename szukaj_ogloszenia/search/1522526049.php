@@ -98,10 +98,10 @@
 				</div>
 					
 				<div class="ogl_mini_info">
-					<div class="p3"><p>Oferta ważna do:2018-03-31 19:41:11</p></div>
+					<div class="p3"><p>Oferta ważna do:2018-04-30 19:41:11</p></div>
 					<div class="p2"><p>50 zł za usługę</p></div>
 					<div class="p11"><p class="zasieg"><p>Toruń<br/>(pow. Toruń woj. kujawsko-pomorskie)</p></p></div>
-					<div class="p4"><p>wyświetleń: 43 kontktów: 0</p></div>
+					<div class="p4"><p>wyświetleń: 44 kontktów: 0</p></div>
 				</div>
 			</div>
 		<div style="clear:both">

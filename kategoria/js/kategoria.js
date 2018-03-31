@@ -180,7 +180,7 @@ function load_pow(content)
 		{
 			active=0;
 		}
-                add_filter(location);
+//                add_filter(location);
 	}
 	
 	function search(wartosc,kategoria)
@@ -261,10 +261,10 @@ function load_pow(content)
         
         function add_filter(href)
         {
-//            href = href.split("?");
-//            var filter = href[1];
-            var link = $("a.link").attr("href");
-            alert(link);
+            href = href.split("?");
+            var filter = href[1];
+            
+            $(".link").attr("href",$("a.link").attr("href")+"?"+href[1]);
         }
 	
 	function search_location(type,val,category)
