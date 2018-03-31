@@ -102,6 +102,12 @@ function load_pow(content)
 		adres = adres.replace(/%20/ig,' ');
 		return adres;
 	}
+        
+        function usun_spacje(value)
+        {
+            value = value.replace(/%20/ig,'');
+            return value;
+        }
 	
 	function wybrane_selected(gdzie,content,ile)
 	{
@@ -151,6 +157,11 @@ function load_pow(content)
 					else
 					load_pow2(content);
 				}
+                                else if (parametr[i]=="sort")
+                                {
+                                        var content=usun_spacje(wartosc[i]); //usuń spacje
+                                        $("#"+content).attr('selected', true);
+                                }
 			}
 			var activ_zero=0;
 			for(i=0;i<get.length;i++)
@@ -324,3 +335,72 @@ function load_pow(content)
 			}
 		}
 	}
+        
+        function sort(value)
+        {
+            var loc=window.location.href;
+//            if(loc.indexOf('sort')){
+//                var new_loc = loc.split("&");
+//                new_loc.splice(new_loc.length-1,1);
+//                loc="";
+//                for(i=0;i<new_loc.length;i++){
+//                    loc+=new_loc[i];
+//                }
+//                alert(loc);
+//                var filter = loc.split("?");
+//                if(filter[1].indexOf('&')){
+//                    var arg = filter[1].split("&");
+//                    alert(arg.length);
+//                    arg.splice(arg.length-1,1);
+//                    alert(arg.length);
+//                    loc="";
+//                    for(var i=0;i<arg.length;i++){
+//                        loc+=arg[i];
+//                    }
+//                } else {
+//                    loc=filter[0];
+//                }
+//            }
+//            if (loc.indexOf('?') > 0) {
+//                loc+="&sort="+value;
+//            } else {
+//                loc+="?sort="+value;
+//            }
+//            if(loc.indexOf('&') < 0){
+//                var new_loc = loc.split("?");
+//                loc = new_loc[0]+"?sort="+value;
+//                alert(0);
+//            } else {
+//                var new_loc = loc.split("&");
+//                new_loc.splice(new_loc.length-1,1);
+//                loc = new_loc[0];
+//                for(var  i=1;i<new_loc.length;i++){
+//                    loc+="&"+new_loc[i];
+//                }
+//                loc+="?sort="+value;
+//            }
+            
+            if(loc.indexOf('?') >= 0){
+                if(loc.indexOf('&') >= 0){
+                    var new_loc = loc.split("&");
+                    if(loc.indexOf('sort') >= 0){
+                        new_loc.splice(new_loc.length-1,1);
+                    }
+                    loc = new_loc[0];
+                    for(var  i=1;i<new_loc.length;i++){
+                        loc+="&"+new_loc[i];
+                    }
+                    loc+="?sort="+value;
+                } else {
+                    if(loc.indexOf('sort') >= 0){
+                        var new_loc = loc.split("?");
+                        loc = new_loc[0]+"?sort="+value;
+                    } else {
+                        loc+="&sort="+value;
+                    }
+                }
+            } else {
+                loc+="?sort="+value;
+            }
+            location.href=loc;
+        }
