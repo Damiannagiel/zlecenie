@@ -87,6 +87,13 @@ $("#type .label").click(function(e)
 	$(".label_active").removeClass("label_active").addClass("label_no_active");
 	$(this).removeClass("label_no_active").addClass("label_active");
 });
+
+//funkcja zmieniająca wygląd przycisków "sortowanie"
+$("#sort .sort").click(function(e)
+{
+	$(".sort_active").removeClass("sort_active").addClass("sort_no_active");
+	$(this).removeClass("sort_no_active").addClass("sort_active");
+});
 		
 //funkcja zmieniająca wygląd przycisków "rodzaj działalności"
 $("#personality .person").click(function(e)
@@ -287,6 +294,16 @@ function onload_filter(categories)
 				document.getElementById("www").classList.add("contact_active");
 				document.getElementsByName(kategoria)[0].checked=true;
 			}
+                        else if(kategoria=="sort"){
+                            var value = wartosc.replace(' ','');
+                            var element0=document.querySelector(".sort_active");//dostaje się do label osobowosc wszystko
+				element0.classList.remove("sort_active");//zabieram klasę active
+				element0.classList.add("sort_no_active");//dodaję klasę no_active
+                            var element=document.getElementById("label_"+value);//dostaje się do label zaznaczonej osobowości
+                                element.classList.remove("sort_no_active");//zabieram klasę no_active
+                                element.classList.add("sort_active");//dodaję klasę active
+                                document.getElementById(value).selected=true;//zaznaczam ukrytego checkboxa
+                        }
 		}
 	}
 }

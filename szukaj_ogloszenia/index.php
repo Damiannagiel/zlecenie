@@ -75,6 +75,26 @@
 				<div class="cat" id="kat3_div"></div>
 			</div>
 		</div>
+                    
+                <div class="inp">
+                    <div class="description" onClick='expand("sort");'>
+                            <i id="icon_sort" class="icon-plus-squared-alt"></i><h5>Sortuj według:</h5>
+                            <div class="blad">
+                                    <?php if(isset($_SESSION['blad_kat'])){echo $_SESSION['blad_kat']; unset($_SESSION['blad_kat']);}?>
+                            </div>
+                    </div>
+                    <div class="content" id="sort">
+                        <div class="dFlex">
+                        <label id="label_displayDESC" class="sort sort_active">Najpopulariejsze<input id="displayDESC" type="radio" name="sort" value="display DESC" checked="checked"/></label>
+                        <label id="label_price" class="sort sort_no_active">Cena rosnąco<input id="price" type="radio" name="sort" value="price"/></label>
+                        <label id="label_priceDESC" class="sort sort_no_active">Cena malejąco<input id="priceDESC" type="radio" name="sort" value="price DESC"/></label>
+                        <label id="label_relationsDESC" class="sort sort_no_active">Najwięcej kontaktów<input id="relationsDESC" type="radio" name="sort" value="relations DESC"/></label>
+                        <label id="label_relations" class="sort sort_no_active">Najmniej kontaktów<input id="relations" type="radio" name="sort" value="relations"/></label>
+                        <label id="label_addedDESC" class="sort sort_no_active">Najnowsze<input id="addedDESC" type="radio" name="sort" value="added DESC"/></label>
+                        <label id="label_added" class="sort sort_no_active">Kończące się<input id="added" type="radio" name="sort" value="added"/></label>
+                        </div>
+                    </div>
+		</div>
 			
 		<div class="inp">
 			<div class="description" onClick='expand("type");'>

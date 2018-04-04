@@ -115,6 +115,8 @@
 	border-top:2px solid #CCCCCC;
 }
 
+.description:hover{cursor:pointer;}
+
 .description i{
 	font-size:2rem;
 }
@@ -140,16 +142,16 @@
 	max-width:300px;
 }
 
-#type input,#personality input, .contact input{display:none;}
+#type input,#personality input, .contact input, #sort input{display:none;}
 
-#type .label,#personality .label{
+#type .label,#personality .label,#sort .sort{
 	width:90%;
 	max-width:300px;
 	margin-left:auto;
 	margin-right:auto;
 }
 
-label.label_no_active, label.person_no_active, label.contact
+label.label_no_active, label.person_no_active, label.contact, .sort.sort_no_active
 {
 	display: block;
 	padding:10px;
@@ -162,7 +164,7 @@ label.label_no_active, label.person_no_active, label.contact
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
-label.label_no_active:hover, label.person_no_active:hover, label.contact:hover
+label.label_no_active:hover, label.person_no_active:hover, label.contact:hover, .sort.sort_no_active:hover
 {
 	cursor:pointer;
 	background-color:#d6ead6;
@@ -171,7 +173,7 @@ label.label_no_active:hover, label.person_no_active:hover, label.contact:hover
 	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
 }
 
-label.label_active, label.person_active, label.contact.contact_active
+label.label_active, label.person_active, label.contact.contact_active,.sort.sort_active
 {
 	display: block;
 	padding:10px;
@@ -229,6 +231,19 @@ p.blad_content{
 	font-size:1.4rem;
 }
 
+.dFlex{
+    margin-top: 10px;
+    min-height: 56px;
+}
+
+#sort .sort{
+    font-size: 1.4rem;
+    padding:5px;
+    margin:5px;
+    width:150px;
+    display:inline-block;
+}
+
 @media screen and (min-width: 487px){
 	.img_box label{
 		position:relative;
@@ -277,10 +292,16 @@ p.blad_content{
 }
 
 @media screen and (min-width: 1024px){
-	.background-container::after{top: 170px;}
-	.content p.brak_wyboru{
-		max-width:60%;
-	}
-	}
+    .background-container::after{top: 170px;}
+    .content p.brak_wyboru{
+            max-width:60%;
+    }
+}
+
+@media screen and (min-width: 1144px){
+    #sort .sort{
+        margin-top:16px;
+    }
+}
 
 @media screen and (min-width: 1310px){.background-container::after{top: 154px;}}
