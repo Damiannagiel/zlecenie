@@ -27,34 +27,44 @@
                     Niniejszy regulamin sporządzony został zgodnie z prawem obowiązującym na terytorium Rzeczpospolitej Polskiej. Zawiera wszelkie zasady funkcionowania i korzystania z serwisu Internetowa Giełda Usług znajdującego się pod adresem <a href="../index.php">www.igu.com.pl</a>
                 </p></li>
             </ul>
-            <h6>I Definicje</h6>
+            <h6>I. Definicje</h6>
             <ol>
-                <li class="def"><span>IGU lub serwis</span><p>internetowy serwis ogłoszeniowy Internetowa Giełda Usług dostępny w domenie internetowej internetowagieldauslug.pl prowadzony przez Administratora.</p></li>
-                <li class="def"><span>Użytkownik</span><p>osoba fizyczna, która ukończyła 18 lat i posiada pełną zdolność do czynności prawnych, osoba prawna lub jednostka organizacyjna nieposiadająca osobowości prawnej, ale mogąca we własnym imieniu nabywać prawa oraz zaciągać zobowiązania, która w trybie przewidzianym w regulaminie korzysta z serwisu.</p></li>
-                <li class="def"><span>Zarejestrowany Użytkownik</span><p>Użytkownik, który dokonał rejestracji i aktywacji konta.</p></li>
-                <li class="def"><span>Ogłoszenie</span><p>strona/przestrzeń serwerowa IGU, udostępniona Użytkownikowi, zawierająca stworzone przez niego ogłoszenie dotyczące chęci wykonania lub zlecenia wykonania usługi.</p></li>
-                <li class="def"><span>Konto</span><p>przydzielone danemu Użytkownikowi, identyfikowane za pomocą loginu i hasła, miejsce w serwisie, za pomocą którego wprowadza on dane i zarządza nimi.</p></li>
-                <li class="def"><span>Kontakt</span><p>przekazanie Użytkownikowi danych kontaktowych do właściciela ogłoszenia.</p></li>
-                <li class="def"><span>Administrator</span><p>Twórca i właściciel serwisu Damin Nagieł</p></li>
-                <li class="def"><span>Regulamin</span><p>Niniejszy regulamin.</p></li>
+                <li><b>IGU lub serwis</b> - internetowy serwis ogłoszeniowy Internetowa Giełda Usług dostępny w domenie internetowej internetowagieldauslug.pl prowadzony przez Administratora.</li>
+                <li><b>Użytkownik</b> - osoba fizyczna, która ukończyła 18 lat i posiada pełną zdolność do czynności prawnych, osoba prawna lub jednostka organizacyjna nieposiadająca osobowości prawnej, ale mogąca we własnym imieniu nabywać prawa oraz zaciągać zobowiązania, która w trybie przewidzianym w regulaminie korzysta z serwisu.</li>
+                <li><b>Zarejestrowany Użytkownik</b> - Użytkownik, który dokonał rejestracji i aktywacji konta.</li>
+                <li><b>Ogłoszenie</b> - strona/przestrzeń serwerowa IGU, udostępniona Użytkownikowi, zawierająca stworzone przez niego ogłoszenie dotyczące chęci wykonania lub zlecenia wykonania usługi.</li>
+                <li><b>Konto</b> - przydzielone danemu Użytkownikowi, identyfikowane za pomocą loginu i hasła, miejsce w serwisie, za pomocą którego wprowadza on dane i zarządza nimi.</li>
+                <li><b>Kontakt</b> - przekazanie Użytkownikowi danych kontaktowych do właściciela ogłoszenia.</li>
+                <li><b>Administrator</b> - Twórca i właściciel serwisu Damin Nagieł.</li>
+                <li><b>Regulamin</b> - Niniejszy regulamin.</li>
             </ol>
             <div style="clear:both;"></div>
             
-            <h6>II Ogólne warunki korzystania z serwisu</h6>
+            <h6>II. Postanowienia wstępne</h6>
             <ol>
-                <li class="nr"><span>1.</span><p>Regulamin określa zasady korzystania z Lento.pl, prawa i obowiązki Użytkownika, a także prawa, obowiązki i zakres odpowiedzialności Administratora.</p></li>
-                <li class="nr"><span>2.</span><p>Każdy Użytkownik z chwilą akceptacji Regulaminu oświadcza, że zapoznał się z jego treścią i wyraża zgodę na jego warunki.</p></li>
-                <li class="nr"><span>3.</span><p>Administrator zastrzega sobie prawo zmiany Regulaminu w każdej chwili. Nowy regulamin zaczyna obowiązywać z chwilą jego opublikowania w serwisie.</p></li>
-                <li class="nr"><span>4.</span><p>Usługi aktywowane przed wejściem w życie zmiany Regulaminu będą wykonane na dotychczasowych zasadach.</p></li>
+                <li>Regulamin określa zasady korzystania z IGU, prawa i obowiązki Użytkownika, a także prawa, obowiązki i zakres odpowiedzialności Administratora.</li>
+                <li>Każdy Użytkownik z chwilą akceptacji Regulaminu oświadcza, że zapoznał się z jego treścią i wyraża zgodę na jego warunki.</li>
+                <li>Administrator zastrzega sobie prawo zmiany Regulaminu w każdej chwili. Nowy regulamin zaczyna obowiązywać z chwilą jego opublikowania w serwisie.</li>
+                <li>Usługi aktywowane przed wejściem w życie zmiany Regulaminu będą wykonane na dotychczasowych zasadach.</li>
             </ol>
             
-            <h6>III Ogólne warunki korzystania z serwisu</h6>
+            <h6>III. Ogólne warunki korzystania z serwisu</h6>
             <ol>
-                <li class="nr"><span>1.</span><p>Lorem ipsum.</p></li>
-                <li class="nr"><span>2.</span><p>Lorem ipsum.</p></li>
+                <li>Z serwisu mogą korzystać wyłącznie osoby pełnoletnie.</li>
+                <li>Warunkiem do korzystania z pełni usług świadczonych w Lento.pl jest skorzystanie z urządzenia komunikującego się z Internetem wyposażonego w przeglądarkę internetową obsługującą poprawnie obsługującą standardy HTML 4, CSS, javascript.</li>
+                <li>Utworzenie konta jest równoznaczne z zawarciem umowy pomiędzy Użytkownikiem a Administratorem w przedmiocie świadczenia usług na warunkach przewidzianych w Regulaminie.</li>
+                <li>Użytkownik za pomocą utworzonego konta w serwisie może aktywować swoje ogłoszenia oraz ma zapewniony dostęp do ich treści w celu ich edycji i usunięcia.</li>
+                <li>Użytkownik jest zobowiązany do podawania tylko prawdziwych i aktualnych danych.</li>
+                <li>Administrator nie pośredniczy w umowach zawieranych przez Użytkowników, a także nie bierze udziału sporach powstałych między nimi.</li>
+                <li>Zawarcie umowy między Użytkownikami, realizacja usługi oraz wszelkie płatności z tego tytułu odbywają się bezpośrednio pomiędzy Użytkownikami.</li>
+                <li>Zabrania się umieszczania w serwisie wszelkich treści o charakterze bezprawnym, wulgaryzmów, treści obraźliwych, naruszających godność człowieka, obrażających uczucia lub poglądy innych osób.</li>
+                <li>Użytkownik jest odpowiedzialny za publikowane treści (w tym zdjęcia) i gwarantuje, że są one zgodne ze stanem faktycznym oraz prawem a ich publikacja nie narusza praw Operatora, Regulaminu oraz praw osób trzecich, w tym praw autorskich.</li>
+                <li>Pobieranie lub wykorzystywanie w jakimkolwiek zakresie dostępnych w ramach serwisu materiałów wymaga każdorazowo zgody Administratora i nie może naruszać postanowień Regulaminu oraz powszechnie obowiązującego prawa. Zabronione jest jakiekolwiek agregowanie, przetwarzanie oraz udostępnianie danych, oraz innych informacji dostępnych w serwisie.</li>
+                <li>Zabronione jest wykorzystywanie oznaczeń serwisu, w tym charakterystycznych elementów grafiki bez zgody Administratora.</li>
+                <li>Działania niezgodne z regulaminem będą traktowane jako działanie na szkodę Administratora.</li>   
             </ol>
             
-            <h6>IV Konto użytkownika</h6>
+            <h6>IV. Konto użytkownika</h6>
             <ol>
                 <li class="nr"><span>0.0</span><p>Lorem ipsum.</p></li>
             </ol>
