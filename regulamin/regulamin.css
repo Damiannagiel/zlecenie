@@ -18,7 +18,7 @@
 }
 
 #regulations ol li{
-	margin:5px 0;
+	margin:5px 0 5px 20px;
 }
 
 #regulations ol li.def{
@@ -50,7 +50,7 @@
 }
 
 #regulations li.nr span{
-	margin-right:10px;
+	margin-right:5px;
 }
 #regulations li.nr p{
 	text-align:left;
