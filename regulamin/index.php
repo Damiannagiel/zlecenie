@@ -66,27 +66,38 @@
             
             <h6>IV. Konto użytkownika</h6>
             <ol>
-                <li class="nr"><span>0.0</span><p>Lorem ipsum.</p></li>
+                <li>Użytkownik Serwisu chcący korzystać z jego pełnej funkcjonalności, musi utworzyć konto poprzez rejestrację w serwisie.</li>
+                <li>Rejestracja w serwisie jest bezpłatna, wymaga jednak wypełnienia i wysłania odpowiedniego formularza.</li>
+                <li>Podczas rejestracji, Użytkownik podaje swój adres e-mail login i hasło, które będą służyć do jego identyfikacji w serwisie.</li>
+                <li>Do tworzenia konta, niedozwolone jest używanie tymczasowych adresów e-mail.</li>
+                <li>Dokonując rejestracji Użytkownik wyraża zgodę na przetwarzanie jego danych osobowych przez Administratora na potrzeby związane z funkcjonowaniem Serwisu</li>
+                <li>Po wypełnieniu i wysłaniu formularza rejestracyjnego, Administrator na podany przez Użytkownika adres e-mail wyśle wiadomość wskazującą sposób aktywacji Konta (link oraz kod aktywacyjny).</li>
+                <li>Utworzenie konta jest równoznaczne z zawarciem umowy pomiędzy Użytkownikiem a Administratorem w przedmiocie świadczenia usług drogą elektroniczną na warunkach przewidzianych w regulaminie.</li>
+                <li>Jedna osoba fizyczna, prawna oraz jednostka organizacyjna nieposiadająca osobowości prawnej może posiadać i korzystać tylko z jednego konta w serwisie.</li>
+                <li>Konta nie wolno odsprzedawać ani udostępniać osobom trzecim.</li>
+                <li>Administrator zastrzega sobie prawo do czasowego zablokowania bądź trwałego usunięcia konta Zarejestrowanego Użytkownika w dowolnej chwili, jeżeli narusza on postanowienia regulaminu lub przepisy prawa.</li>
+                <li>Zarejestrowany Użytkownik może usunąć swoje konto z serwisu. W tym celu należy skorzystać z odpowiedniego odnośnika w serwisie, wysłać odpowiedni wniosek na adres kontakt@internetowagieldauslug.pl lub skorzystać z formularza kontaktowego.</li>
+                <li>W momencie usunięcia konta przez Użytkownika lub Administratora, umowa o której mowa w punkcie 7. zostaje zerwana.</li>
             </ol>
             
             <h6>V Dodawanie i edycja ogłoszeń</h6>
             <ol>
-                <li class="nr"><span>0.0</span><p>Lorem ipsum.</p></li>
+                <li></li>
             </ol>
             
             <h6>VI Pozyskiwanie kontaktów</h6>
             <ol>
-                <li class="nr"><span>0.0</span><p>Lorem ipsum.</p></li>
+                <li></li>
             </ol>
             
             <h6>VII Odpowiedzialność</h6>
             <ol>
-                <li class="nr"><span>0.0</span><p>Lorem ipsum.</p></li>
+                <li></li>
             </ol>
             
             <h6>VIII Reklamacje</h6>
             <ol>
-                <li class="nr"><span>0.0</span><p>Lorem ipsum.</p></li>
+                <li></li>
             </ol>
             
             
