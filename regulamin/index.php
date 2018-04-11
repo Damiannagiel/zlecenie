@@ -82,7 +82,23 @@
             
             <h6>V Dodawanie i edycja ogłoszeń</h6>
             <ol>
-                <li></li>
+                <li>Zamieszczanie ogłoszeń w IGU jest bezpłatne.</li>
+                <li>Ogłoszenia mogą dodawać tylko zarejestrowani Użytkownicy.</li>
+                <li>Aby dodać ogłoszenie, Użytkownik musi wypełnić wszystkie wymagane pola w formularzu dodawania ogłoszeń i przesłać formularz.</li>
+                <li>Użytkownik, publikując Ogłoszenie i zawarte w nim treści (za wyłączeniem danych kontaktowych) podaje je dobrowolnie do wiadomości publicznej i zgadza się na ujawnienie ich innym Użytkownikom. Ogłoszenia również mogą być indeksowane przez wyszukiwarki, czego Użytkownik ma świadomość i na co wyraża zgodę.</li>
+                <li>Dane kontaktowe Użytkownika dodającego ogłoszenie będą widoczne dopiero w momencie pobrania kontaktu do ogłoszenia przez innego użytkownika. Zasady pobierania kontaktów określa punkt VI niniejszego regulaminu.</li>
+                <li>Ogłoszenie ważne jest przez 30 dni od momentu dodania. Po upływie 30 dni ogłoszenie przenoszone jest do archiwum ogłoszeń.</li>
+                <li>Jedno ogłoszenie może dotyczyć tylko jednej konkretnej usługi, a dla jednej usługi może zostać utworzone tylko jedno ogłoszenie, niezależnie od lokalizacji i kategorii ogłoszenia.</li>
+                <li>Jeden Użytkownik może posiadać jednocześnie maksymalnie 2 aktywne ogłoszenia.</li>
+                <li>Ogłoszenie musi być zamieszczone w języku polskim.</li>
+                <li>Użytkownik musi wybrać zasięg wyświetlania dla ogłoszenia, maksymalnie 6 lokalizacji (6 powiatów, 6 województw lub cały kraj. Możliwe są też kombinacje takie jak 3 powiaty i 3 całe województwa).</li>
+                <li>Użytkownik jest zobowiązany do podania dokładnego, niewprowadzającego w błąd opisu poszukiwanej lub oferowanej usługi, umożliwiający innym Użytkownikom przygotowanie właściwej oferty.</li>
+                <li>W treści ogłoszenia, a także jego opisie i zamieszczanych zdjęciach nie wolno umieszczać żadnych danych kontaktowych, w szczególności numerów telefonów, komunikatorów internetowych, adresów e-mail, a także odnośników i adresów stron internetowych. Dane kontaktowe mogą być zamieszczane wyłącznie we wskazanych polach w formularzu dodawania ogłoszeń. Niezastosowanie się do powyższego stanowi naruszenie niniejszego regulaminu i skutkuje usunięciem ogłoszenia.</li>
+                <li>Ogłoszenie musi dotyczyć usługi, nie może jednak dotyczyć fizycznego przedmiotu, chyba że przedmiotem ogłoszenia jest jego wykonanie.</li>
+                <li>Zabronione jest umieszczanie w ogłoszeniu wszelkiego rodzaju reklam.</li>
+                <li>Niedozwolone jest dodawanie ogłoszeń o charakterze towarzyskim.</li>
+                <li>W trakcie wyświetlania ogłoszenia, Użytkownik może modyfikować treść ogłoszenia i jego parametry, dodawać i usuwać zdjęcia, a także usunąć ogłoszenie. Usunięte ogłoszenie zostaje przeniesione do archiwum ogłoszeń.</li>
+                <li>Użytkownik ma możliwość ponownej aktywacji ogłoszenia w ciągu 60 dni od daty zarchiwizowania ogłoszenia.</li>
             </ol>
             
             <h6>VI Pozyskiwanie kontaktów</h6>
