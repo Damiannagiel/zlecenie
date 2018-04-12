@@ -51,8 +51,7 @@
             <h6>III. Ogólne warunki korzystania z serwisu</h6>
             <ol>
                 <li>Z serwisu mogą korzystać wyłącznie osoby pełnoletnie.</li>
-                <li>Warunkiem do korzystania z pełni usług świadczonych w Lento.pl jest skorzystanie z urządzenia komunikującego się z Internetem wyposażonego w przeglądarkę internetową obsługującą poprawnie obsługującą standardy HTML 4, CSS, javascript.</li>
-                <li>Utworzenie konta jest równoznaczne z zawarciem umowy pomiędzy Użytkownikiem a Administratorem w przedmiocie świadczenia usług na warunkach przewidzianych w Regulaminie.</li>
+                <li>Warunkiem do korzystania z pełni usług świadczonych w IGU jest skorzystanie z urządzenia komunikującego się z Internetem wyposażonego w przeglądarkę internetową obsługującą poprawnie obsługującą standardy HTML 4, CSS, javascript.</li>
                 <li>Użytkownik za pomocą utworzonego konta w serwisie może aktywować swoje ogłoszenia oraz ma zapewniony dostęp do ich treści w celu ich edycji i usunięcia.</li>
                 <li>Użytkownik jest zobowiązany do podawania tylko prawdziwych i aktualnych danych.</li>
                 <li>Administrator nie pośredniczy w umowach zawieranych przez Użytkowników, a także nie bierze udziału sporach powstałych między nimi.</li>
@@ -93,6 +92,7 @@
                 <li>Ogłoszenie musi być zamieszczone w języku polskim.</li>
                 <li>Użytkownik musi wybrać zasięg wyświetlania dla ogłoszenia, maksymalnie 6 lokalizacji (6 powiatów, 6 województw lub cały kraj. Możliwe są też kombinacje takie jak 3 powiaty i 3 całe województwa).</li>
                 <li>Użytkownik jest zobowiązany do podania dokładnego, niewprowadzającego w błąd opisu poszukiwanej lub oferowanej usługi, umożliwiający innym Użytkownikom przygotowanie właściwej oferty.</li>
+                <li>Zamieszczenie ogłoszenia powinno odzwierciedlać rzeczywisty zamiar dokonania transakcji, której ogłoszenie dotyczy.</li>
                 <li>W treści ogłoszenia, a także jego opisie i zamieszczanych zdjęciach nie wolno umieszczać żadnych danych kontaktowych, w szczególności numerów telefonów, komunikatorów internetowych, adresów e-mail, a także odnośników i adresów stron internetowych. Dane kontaktowe mogą być zamieszczane wyłącznie we wskazanych polach w formularzu dodawania ogłoszeń. Niezastosowanie się do powyższego stanowi naruszenie niniejszego regulaminu i skutkuje usunięciem ogłoszenia.</li>
                 <li>Ogłoszenie musi dotyczyć usługi, nie może jednak dotyczyć fizycznego przedmiotu, chyba że przedmiotem ogłoszenia jest jego wykonanie.</li>
                 <li>Zabronione jest umieszczanie w ogłoszeniu wszelkiego rodzaju reklam.</li>
@@ -103,7 +103,11 @@
             
             <h6>VI Pozyskiwanie kontaktów</h6>
             <ol>
-                <li></li>
+                <li>Aby pobrać kontakt do ogłoszenia i wyświetlić dane kontaktowe, użytkownik musi wybrać łącze "Pokaż kontakt" w widoku ogłoszenia.</li>
+                <li>W zależności od wyboru opcji dostępności kontaktu podczas dodawania ogłoszenia, kontakt może pobrać każdy Użytkownik IGU lub tylko zarejestrowani Użytkownicy.</li>
+                <li>Zabrania się przekazywania, udostępniania lub odsprzedaży pobranych danych kontaktowych innym podmiotom, lub osobom.</li>
+                <li>Zabronione jest wykorzystywanie pobranych danych kontaktowych w celach innych niż złożenie oferty właścicielowi ogłoszenia.</li>
+                <li>Użytkownik pobierający kontakt do ogłoszenia, zobowiązany jest złożyć ofertę właścicielowi ogłoszenia.</li>
             </ol>
             
             <h6>VII Odpowiedzialność</h6>
