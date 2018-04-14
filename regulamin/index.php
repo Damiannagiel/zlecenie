@@ -57,10 +57,10 @@
                 <li>Administrator nie pośredniczy w umowach zawieranych przez Użytkowników, a także nie bierze udziału sporach powstałych między nimi.</li>
                 <li>Zawarcie umowy między Użytkownikami, realizacja usługi oraz wszelkie płatności z tego tytułu odbywają się bezpośrednio pomiędzy Użytkownikami.</li>
                 <li>Zabrania się umieszczania w serwisie wszelkich treści o charakterze bezprawnym, wulgaryzmów, treści obraźliwych, naruszających godność człowieka, obrażających uczucia lub poglądy innych osób.</li>
-                <li>Użytkownik jest odpowiedzialny za publikowane treści (w tym zdjęcia) i gwarantuje, że są one zgodne ze stanem faktycznym oraz prawem a ich publikacja nie narusza praw Operatora, Regulaminu oraz praw osób trzecich, w tym praw autorskich.</li>
                 <li>Pobieranie lub wykorzystywanie w jakimkolwiek zakresie dostępnych w ramach serwisu materiałów wymaga każdorazowo zgody Administratora i nie może naruszać postanowień Regulaminu oraz powszechnie obowiązującego prawa. Zabronione jest jakiekolwiek agregowanie, przetwarzanie oraz udostępnianie danych, oraz innych informacji dostępnych w serwisie.</li>
                 <li>Zabronione jest wykorzystywanie oznaczeń serwisu, w tym charakterystycznych elementów grafiki bez zgody Administratora.</li>
-                <li>Działania niezgodne z regulaminem będą traktowane jako działanie na szkodę Administratora.</li>   
+                <li>Działania niezgodne z regulaminem będą traktowane jako działanie na szkodę Administratora.</li>
+                <li>Administrator zastrzega sobie prawo do czasowych przerw w działaniu serwisu wynikających z przyczyn technicznych.</li>
             </ol>
             
             <h6>IV. Konto użytkownika</h6>
@@ -79,7 +79,7 @@
                 <li>W momencie usunięcia konta przez Użytkownika lub Administratora, umowa o której mowa w punkcie 7. zostaje zerwana.</li>
             </ol>
             
-            <h6>V Dodawanie i edycja ogłoszeń</h6>
+            <h6>V Ogłoszenia</h6>
             <ol>
                 <li>Zamieszczanie ogłoszeń w IGU jest bezpłatne.</li>
                 <li>Ogłoszenia mogą dodawać tylko zarejestrowani Użytkownicy.</li>
@@ -93,18 +93,20 @@
                 <li>Użytkownik musi wybrać zasięg wyświetlania dla ogłoszenia, maksymalnie 6 lokalizacji (6 powiatów, 6 województw lub cały kraj. Możliwe są też kombinacje takie jak 3 powiaty i 3 całe województwa).</li>
                 <li>Użytkownik jest zobowiązany do podania dokładnego, niewprowadzającego w błąd opisu poszukiwanej lub oferowanej usługi, umożliwiający innym Użytkownikom przygotowanie właściwej oferty.</li>
                 <li>Zamieszczenie ogłoszenia powinno odzwierciedlać rzeczywisty zamiar dokonania transakcji, której ogłoszenie dotyczy.</li>
-                <li>W treści ogłoszenia, a także jego opisie i zamieszczanych zdjęciach nie wolno umieszczać żadnych danych kontaktowych, w szczególności numerów telefonów, komunikatorów internetowych, adresów e-mail, a także odnośników i adresów stron internetowych. Dane kontaktowe mogą być zamieszczane wyłącznie we wskazanych polach w formularzu dodawania ogłoszeń. Niezastosowanie się do powyższego stanowi naruszenie niniejszego regulaminu i skutkuje usunięciem ogłoszenia.</li>
+                <li>W treści ogłoszenia, a także jego opisie i zamieszczanych zdjęciach nie wolno umieszczać żadnych danych kontaktowych, w szczególności numerów telefonów, komunikatorów internetowych, adresów e-mail, a także odnośników i adresów stron internetowych. Dane kontaktowe mogą być zamieszczane wyłącznie we wskazanych polach w formularzu dodawania ogłoszeń.</li>
                 <li>Ogłoszenie musi dotyczyć usługi, nie może jednak dotyczyć fizycznego przedmiotu, chyba że przedmiotem ogłoszenia jest jego wykonanie.</li>
                 <li>Zabronione jest umieszczanie w ogłoszeniu wszelkiego rodzaju reklam.</li>
                 <li>Niedozwolone jest dodawanie ogłoszeń o charakterze towarzyskim.</li>
                 <li>W trakcie wyświetlania ogłoszenia, Użytkownik może modyfikować treść ogłoszenia i jego parametry, dodawać i usuwać zdjęcia, a także usunąć ogłoszenie. Usunięte ogłoszenie zostaje przeniesione do archiwum ogłoszeń.</li>
                 <li>Użytkownik ma możliwość ponownej aktywacji ogłoszenia w ciągu 60 dni od daty zarchiwizowania ogłoszenia.</li>
+                <li>Niezastosowanie się do powyższego stanowi naruszenie niniejszego regulaminu i może skutkować zredagowaniem podanych treści (w tym zdjęć) lub usunięciem ogłoszenia.</li>
             </ol>
             
             <h6>VI Pozyskiwanie kontaktów</h6>
             <ol>
                 <li>Aby pobrać kontakt do ogłoszenia i wyświetlić dane kontaktowe, użytkownik musi wybrać łącze "Pokaż kontakt" w widoku ogłoszenia.</li>
                 <li>W zależności od wyboru opcji dostępności kontaktu podczas dodawania ogłoszenia, kontakt może pobrać każdy Użytkownik IGU lub tylko zarejestrowani Użytkownicy.</li>
+                <li>Po pobraniu kontaktu przez zarejestrowanego Użytkownika właściciel ogłoszenia i Użytkownik pobierający kontakt otrzymują możliwość wysyłania między sobą wiadomości bezpośrednio w serwisie.</li>
                 <li>Zabrania się przekazywania, udostępniania lub odsprzedaży pobranych danych kontaktowych innym podmiotom, lub osobom.</li>
                 <li>Zabronione jest wykorzystywanie pobranych danych kontaktowych w celach innych niż złożenie oferty właścicielowi ogłoszenia.</li>
                 <li>Użytkownik pobierający kontakt do ogłoszenia, zobowiązany jest złożyć ofertę właścicielowi ogłoszenia.</li>
@@ -112,12 +114,23 @@
             
             <h6>VII Odpowiedzialność</h6>
             <ol>
-                <li></li>
+                <li>Na wniosek sądu Administrator zmieni lub usunie z serwisu treści dodane przez Użytkowników, które naruszają prawa osób trzecich.</li>
+                <li>Użytkownik jest odpowiedzialny za publikowane w serwisie treści (w tym zdjęcia) i gwarantuje, że są one zgodne ze stanem faktycznym oraz prawem a ich publikacja nie narusza dobrego imienia Operatora, Regulaminu oraz praw osób trzecich, w tym praw autorskich.</li>
+                <li>Zarejestrowany Użytkownik ponosi odpowiedzialność za wszelkie operacje dokonane za pośrednictwem jego konta.</li>
+                <li>Administrator nie ponosi odpowiedzialności za zachowania i działania podjęte przez Użytkowników w ramach serwisu.</li>
+                <li>Administrator nie ponosi odpowiedzialności za jakość lub legalność oferowanych usług, prawdziwość i rzetelność informacji podawanych przez Użytkownika, a także zdolności Użytkowników do dokonania transakcji.</li>
+                <li>Administrator nie ponosi odpowiedzialności za niewykonanie lub nienależyte wykonanie przez strony umów związanych z ogłoszeniem, a także za szkody powstałe w wyniku takiej umowy.</li>
+                <li>Administrator nie ponosi odpowiedzialności za skutki wynikłe z użycia danych dostarczonych przez serwis.</li>
+                <li>Administrator nie ponosi odpowiedzialności za barak pozyskanych kontaktów oraz za brak zainteresowania ogłoszeniem.</li>
+                <li>Administrator w przypadku powzięcia uzasadnionych obaw co do bezpieczeństwa Konta, dotyczących w szczególności nieuprawnionego przejęcia Konta przez inną osobę, zastrzega sobie prawo do tymczasowego zablokowania konta, do momentu wiarygodnego potwierdzenia przez Użytkownika jego tożsamości.</li>
+                <li>Wszelkie spory związane ze świadczonymi usługami w ramach serwisu Lento.pl będą rozstrzygane przez właściwe polskie Sądy Powszechne. Użytkownik, który podlega ochronie konsumenta ma możliwość skorzystania z pozasądowego sposobu rozpatrywania reklamacji i dochodzenia roszczeń. Informacje o sposobie dostępu do ww. trybu i procedur rozstrzygania sporów, znajdują się pod następującym adresem: www.uokik.gov.pl.</li>
             </ol>
             
             <h6>VIII Reklamacje</h6>
             <ol>
-                <li></li>
+                <li>Reklamacje dotyczące świadczenia usług, o których mowa w niniejszym Regulaminie, można zgłaszać za pomocą poczty elektronicznej na adres kontakt@internetowagieldauslug.pl lub poprzez <a href="../kontakt/">formularz kontaktowy</a>.</li>
+                <li>Zgłoszenie reklamacji powinno zawierać oznaczenie osoby zgłaszającej reklamację (imię i nazwisko lub nazwa, adres, adres e-mail) oraz opis zdarzenia będącego przyczyną reklamacji.</li>
+                <li>Zgłoszenia reklamacyjne będą rozpatrywane w terminie 14 dni od dnia zgłoszenia reklamacji.</li>
             </ol>
             
             
