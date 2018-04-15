@@ -144,6 +144,10 @@
 			?>
                 </article>
 	<footer>
+            <div class="cookies">
+                    <span class="wide">Korzystając ze strony internetowagieldauslug.pl wyrażasz zgodę na użytkowanie mechanizmu plików cookie. Więcej o plikach cookie w internetowagieldauslug.pl możesz dowiedzieć się <a href="regulamin/cookies.php">tutaj</a>.</span>
+                    <span class="narrow">Ta strona korzysta z <a href="regulamin/cookies.php">cookies</a>.</span><button>Zgadzam się</button>
+                </div>
 		<div class="popular_content">
 		</div>
 		<div class="text_link">
@@ -181,6 +185,9 @@
 	<script src="index.js" type="text/javascript"></script>
 	<script src="jquery-3.2.1.min.js"></script>
 	<script>
+            $(".cookies button").click(function(){
+                cookies_ok();
+            });
 		$(document).ready(function() {
 			var NavY = $('.site-header').offset().top;
 

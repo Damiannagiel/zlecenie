@@ -10,6 +10,10 @@ hamburger.addEventListener("click",function(){
 	}
 },false);
 
+function cookies_ok(){
+    alert("cookies OK!");
+}
+
 function szukaj(value)
 {
 		$(".active").removeClass("active");
