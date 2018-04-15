@@ -149,8 +149,8 @@
 		<div class="text_link">
 			<ul>
 				<li><a href="regulamin/">Regulamin</a></li>
+                                <li><a href="regulamin/cookies.php">Polityka cookies</a></li>
 				<li><a href="#">Partnerzy</a></li>
-                                <li><a href="kontakt/reklama.php">Reklama</a></li>
                                 <li><a href="ogloszenie/archiwum/">Archiwum ogłoszeń</a></li>
 				<li><a href="kontakt/pomoc.php">Pomoc</a></li>
                                 <li><a href="kontakt/index.php">Kontakt</a></li>

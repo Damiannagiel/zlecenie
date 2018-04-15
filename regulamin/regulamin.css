@@ -1,5 +1,16 @@
+h4,p{text-align: left;}
+
 h4{
     line-height: 1;
+    padding:0 10px;
+}
+
+li.circle{
+    list-style-type: circle;
+}
+
+li.lower-alpha{
+    list-style-type: lower-alpha;
 }
 
 #regulations{
