@@ -1,5 +1,13 @@
 
 	<footer>
+            <?php
+            if(!isset($_COOKIE['cookie_ok'])){
+                echo '<div class="cookies">
+                        <span class="wide">Korzystając ze strony internetowagieldauslug.pl wyrażasz zgodę na użytkowanie mechanizmu plików cookie. Więcej o plikach cookie w internetowagieldauslug.pl możesz dowiedzieć się <a href="regulamin/cookies.php">tutaj</a>.</span>
+                        <span class="narrow">Ta strona korzysta z <a href="regulamin/cookies.php">cookies</a>.</span><button>Zgadzam się</button>
+                    </div>';
+            }
+            ?>
 		<div class="popular_content">
 		</div>
 		<div class="text_link">
@@ -32,7 +40,11 @@
 		</div>
 	</footer>
 	<script src="../../szablon/nav.js" type="text/javascript"></script>
+        <script src="../../regulamin/cookies.js"></script>
 	<script>
+                $(".cookies button").click(function(){
+                    cookies_ok("../../");
+                });
 		$(document).ready(function() {
 			var NavY = $('.site-header').offset().top;
 
