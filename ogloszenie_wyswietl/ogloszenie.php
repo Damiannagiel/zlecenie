@@ -89,7 +89,7 @@
 					<div class="box"><span class="info">Koniec:</span><span class="value"><?php echo $koniec ?></span></div>
 				</section>
 				
-				<h5>Treść ogłoszenia</h5>
+				<h5>Treść ogłoszenia:</h5>
 				<section class="ogl_tersc">
 						<?php echo $tresc ?>
 				</section>
