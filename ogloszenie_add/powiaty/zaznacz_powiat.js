@@ -537,7 +537,9 @@ function odswiez_powiaty(powiaty_ciag,miasto,ile_img)
                     zmien_opis(woj,pow,"miasto");
                     return;
             }
-            dodaj_miejscowosc();
+            if(pow!=woj){
+                dodaj_miejscowosc();
+            }
             zmien_opis(woj,pow,"powiat");
             if(miasto!="")
             {
@@ -550,8 +552,7 @@ function odswiez_powiaty(powiaty_ciag,miasto,ile_img)
 
 function sprawdz_czy_powiat(pow)
 {
-    var miasta = ["Wrocław","Wałbrzych","Legnica","Bydgoszcz","Toruń","Włocławek","Grudziądz","Lublin","Zamość","Chełm","Biała Podlaska","Zielona Góra","Gorzów Wielkopolski","Łódź","Piotrków Trybunalski","Skierniewice","Kraków","Tarnów","Nowy Sącz","Warszawa","Radom","Płock","Siedlce","Ostrołęka","Opole","Rzeszów","Przemyśl","Tarnobrzeg","Krosno","Białystok","Suwałki","Łomża","Gdańsk","Gdynia","Słupsk","Sopot","Katowice","Częstochowa","Sosnowiec","Gliwice","Zabrze","Bielsko-Biała","Bytom","Ruda Śląska","Rybnik","Tychy","Dąbrowa Górnicza","Chorzów","Jaworzno","Jastrzębie-Zdrój","Mysłowice","Siemianowice Śląskie","Żory","Piekary Śląskie","Świętochłowice","Kielce","Olsztyn","Elbląg","Poznań","Kalisz","Konin","Leszno","Szczecin","Koszalin","Świnoujście","dolnośląskie","kujawsko-pomorskie","lubelskie","lubuskie","łódzkie","małopolskie","mazowieckie","opolskie","podkarpackie","podlaskie","pomorskie","śląskie","świętokrzyskie","warmińsko-mazurskie","wielkopolskie","zachodniopomorskie"];
-
+    var miasta = ["Wrocław","Wałbrzych","Legnica","Bydgoszcz","Toruń","Włocławek","Grudziądz","Lublin","Zamość","Chełm","Biała Podlaska","Zielona Góra","Gorzów Wielkopolski","Łódź","Piotrków Trybunalski","Skierniewice","Kraków","Tarnów","Nowy Sącz","Warszawa","Radom","Płock","Siedlce","Ostrołęka","Opole","Rzeszów","Przemyśl","Tarnobrzeg","Krosno","Białystok","Suwałki","Łomża","Gdańsk","Gdynia","Słupsk","Sopot","Katowice","Częstochowa","Sosnowiec","Gliwice","Zabrze","Bielsko-Biała","Bytom","Ruda Śląska","Rybnik","Tychy","Dąbrowa Górnicza","Chorzów","Jaworzno","Jastrzębie-Zdrój","Mysłowice","Siemianowice Śląskie","Żory","Piekary Śląskie","Świętochłowice","Kielce","Olsztyn","Elbląg","Poznań","Kalisz","Konin","Leszno","Szczecin","Koszalin","Świnoujście"];
     for(i=0;i<miasta.length;i++)
     {
         if(pow==miasta[i])
