@@ -47,9 +47,9 @@
 		else exit;
 	?>
 	
-	<title>igu.com.pl - Archiwum ogłoszeń</title>
+	<title>Archiwum ogłoszeń - igu.com.pl</title>
 	
-	<meta name="description" content="Opis w Google" />
+	<meta name="description" content="Archiwum ogłoszeń Internetowa Giełda Usług. To tutaj trafjają ogłoszenia wygasłe oraz usunięte przez użytkowników."/>
 	<link href="../../kategoria/css/mini.css" type="text/css" rel="stylesheet"/>
 	<link href="../../ogloszenie_wyswietl/mini.css" type="text/css" rel="stylesheet"/>
         <link href="archiwum.css" type="text/css" rel="stylesheet"/>

@@ -1,14 +1,25 @@
-#regulations{
-	font-size:1.5rem;
-	line-height:1.7rem;
-	font-family: Verdana,serif;
-	padding:5%;
-	color:#222222;
+h4,p{
+    text-align: left;
+    padding:0 20px;
 }
 
-#regulations h2{
-	line-height:initial;
-	font-size:169%;
+h4{
+    line-height: 1;
+}
+
+li.circle{
+    list-style-type: circle;
+}
+
+li.lower-alpha{
+    list-style-type: lower-alpha;
+}
+
+#regulations{
+	line-height:1.5rem;
+	font-family: Verdana,serif;
+	padding:1%;
+	color:#222222;
 }
 
 #regulations h6{
@@ -17,52 +28,48 @@
 	line-height:2.4rem;
 }
 
+#regulations ol{
+    font-size: 1.3rem;
+    list-style-type: decimal;
+    text-align: left;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
 #regulations ol li{
-	margin:5px 0;
+    margin-bottom: 5px;
+    margin-right: 4px;
 }
 
-#regulations ol li.def{
-	display:flex;
-}
 
-#regulations ol li.def span{
-	text-align:right;
-	max-width:135px;
-	min-width:95px;
-	font-weight:bold;
-	width:25%;
-}
-
-#regulations ol li.def p{
-	padding-left:10px;
-	flex:1;
-	text-align:left;
-}
-
-#regulations ol li.def span::after{
-	content: '-';
-	position:relative;
-	left:5px;
-}
-
-#regulations li.nr{
-	display:flex;
-}
-
-#regulations li.nr span{
-	margin-right:10px;
-}
-#regulations li.nr p{
-	text-align:left;
-}
 
 @media screen and (min-width: 640px){
-	#regulations{
-		padding:5% 10%;
-		line-height:2.4rem;
-	}
-	
-	#regulations h2{
-		font-size:225%;
-	}
+    
+    #regulations ol{
+        font-size: 1.4rem;
+        line-height:1.6rem;
+    }
+
+    #regulations ol li{
+        margin-bottom: 7px;
+        margin-right:7px;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    #regulations{padding:5% 10%;}
+    
+    #regulations ol{
+        font-size: 1.5rem;
+        line-height:1.7rem;
+    }
+
+    #regulations ol li{
+        margin-bottom: 10px;
+        margin-right:10px;
+    }
 }

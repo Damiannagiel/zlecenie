@@ -2,8 +2,8 @@
 <html lang="pl">
 	<head>
 			<title>Internetowa Giełda Usług</title>
-			<meta name="description" content="Opis w Google" />
-			<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+                        <meta name="description" content="igu.com.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!"/>
+			<meta name="keywords" content="" />
 			<link href="zero.css" type="text/css" rel="stylesheet"/>
 			<link href="index.css" type="text/css" rel="stylesheet"/>
 			<link href="ogloszenie_wyswietl/mini.css" type="text/css" rel="stylesheet"/>
@@ -102,7 +102,7 @@
 				</ul>
 		</nav>
 		<article>
-			<h2 class="name">Internetowa giełda usług</h2>
+			<h1>Example Domain</h1>
 			
 			<form class="search-box" action="szukaj_ogloszenia/szybkie_wyszukiwanie.php" method="post">
 				<div class="search-type">
@@ -131,7 +131,8 @@
 				</div>
 			</form>
 		</article>
-			<header><h2 class="losowe">Losowe ogłoszenia</h2></header>
+                <article>
+                    <header><h2 class="losowe" >Losowe ogłoszenia</h2></header>
 		<?php
 				if($pobierz)
 				{
@@ -141,14 +142,23 @@
 					}
 				}
 			?>
+                </article>
 	<footer>
+            <?php
+            if(!isset($_COOKIE['cookie_ok'])){
+                echo '<div class="cookies">
+                        <span class="wide">Korzystając ze strony internetowagieldauslug.pl wyrażasz zgodę na użytkowanie mechanizmu plików cookie. Więcej o plikach cookie w internetowagieldauslug.pl możesz dowiedzieć się <a href="regulamin/cookies.php">tutaj</a>.</span>
+                        <span class="narrow">Ta strona korzysta z <a href="regulamin/cookies.php">cookies</a>.</span><button>Zgadzam się</button>
+                    </div>';
+            }
+            ?>
 		<div class="popular_content">
 		</div>
 		<div class="text_link">
 			<ul>
 				<li><a href="regulamin/">Regulamin</a></li>
+                                <li><a href="regulamin/cookies.php">Polityka cookies</a></li>
 				<li><a href="#">Partnerzy</a></li>
-                                <li><a href="kontakt/reklama.php">Reklama</a></li>
                                 <li><a href="ogloszenie/archiwum/">Archiwum ogłoszeń</a></li>
 				<li><a href="kontakt/pomoc.php">Pomoc</a></li>
                                 <li><a href="kontakt/index.php">Kontakt</a></li>
@@ -178,7 +188,11 @@
 	</body>
 	<script src="index.js" type="text/javascript"></script>
 	<script src="jquery-3.2.1.min.js"></script>
+        <script src="regulamin/cookies.js"></script>
 	<script>
+            $(".cookies button").click(function(){
+                cookies_ok("");
+            });
 		$(document).ready(function() {
 			var NavY = $('.site-header').offset().top;
 

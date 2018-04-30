@@ -1,15 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-	<?php session_start();
-				$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];	
-				include_once '../../szablon/nav_head2.php';
-				?>
+        <title>Mapa kategorii - igu.com.pl</title>
 	
-	<title>Mapa kategorii</title>
-	
-	<meta name="description" content="Opis w Google" />
+	<meta name="description" content="Mapa kategorii Internetowej Giełdy Usług. Tutaj możesz sprawdzić strukturę i przejść bezpośrednio do każdej kategorii." />
 	<link href="../css/mapa_kategorii.css" type="text/css" rel="stylesheet"/>
+	<?php session_start();
+            $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];	
+            include_once '../../szablon/nav_head2.php';
+        ?>
 </head>
 
 <?php

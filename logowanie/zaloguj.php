@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-	<?php 
-        $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
-        include ($DOCUMENT_ROOT.'/../ini/class/classFeedback.php');
-        include ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
-        session_start();
-				include_once '../szablon/nav_head.php'; ?>
+        <title>Logowanie - igu.com.pl</title>
 	
-	<title>Logowanie do igu.com.pl</title>
-	
-	<meta name="description" content="Opis w Google" />
+	<meta name="description" content="igu.com.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!"/>
 	<link href="logowanie.css" type="text/css" rel="stylesheet"/>
+	<?php 
+            $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+            include ($DOCUMENT_ROOT.'/../ini/class/classFeedback.php');
+            include ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
+            session_start();
+            include_once '../szablon/nav_head.php'; 
+        ?>
 </head>
 
     <?php
@@ -26,7 +26,7 @@
 			<img class="large" src="../img/320x250.jpg"/>
 		</div>
 	</aside>
-	
+            <article>
 		<form class="login" action="skrypt_logowanie.php" method="post">
 			<h2>Logowanie</h2>
 			<?php if(isset($_SESSION['juz_zweryfikowany'])){echo $_SESSION['juz_zweryfikowany']; unset($_SESSION['juz_zweryfikowany']);}
@@ -75,7 +75,9 @@
 			</div>
 					
 		</form>
-		
+            </article>
+            
+            <article>
 		<div class="reg">
 			<h5>Jeszcze nie posiadasz konta w IGU ?</h5>
 			<div class="button-div"><a href="../rejestracja/zarejestruj.php">
@@ -84,15 +86,16 @@
 		</div>
 		
 		<div style="clear:both"></div>
+            </article>
 	
-	<article class="news">
+            <article class="news">
 		<header><h4>Aktualności</h4></header>
 		<ul>
 			<li><span>2017-10-07:</span> <a href="#">Zmiana w kilku podpunktach regulaminu!! prosimy  zapoznanie się!</a></li>
 			<li><span>2017-10-06:</span> <a href="#">Druki Artykuł również przykładowy</a></li>
 			<li><span>2017-10-04:</span> <a href="#">Pierszy przykładowy artykuł</a></li>
 		</ul>
-	</article>
+            </article>
 			<!--Panel logowania-->
 		
 	<?php

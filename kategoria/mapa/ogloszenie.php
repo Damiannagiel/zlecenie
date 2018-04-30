@@ -4,12 +4,12 @@
 			<?php
                         if(isset($overriding)){
                             //zmienna z archiwum/index.php nakazująca dodać do zdjęcia folder nadrzędny
-                            if($pobierz[$i]['photos']==0) echo '<img src="../../ogloszenie/img/brak_zdjecia.jpg"/>';
-                            else echo '<img src="../../ogloszenie/img/'.$pobierz[$i]["id"].'/1.jpg"/>';
+                            if($pobierz[$i]['photos']==0) echo '<img src="../../ogloszenie/img/brak_zdjecia-mini.jpg"/>';
+                            else echo '<img src="../../ogloszenie/img/'.$pobierz[$i]["id"].'/1-mini.jpg"/>';
                         }
                         else{
-                            if($pobierz[$i]['photos']==0) echo '<img src="../ogloszenie/img/brak_zdjecia.jpg"/>';
-                            else echo '<img src="../ogloszenie/img/'.$pobierz[$i]["id"].'/1.jpg"/>';
+                            if($pobierz[$i]['photos']==0) echo '<img src="../ogloszenie/img/brak_zdjecia-mini.jpg"/>';
+                            else echo '<img src="../ogloszenie/img/'.$pobierz[$i]["id"].'/1-mini.jpg"/>';
                         }
 			?>
 		</div>		

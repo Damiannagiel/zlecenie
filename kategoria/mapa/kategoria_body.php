@@ -3,7 +3,7 @@
 <?php if(isset($ile_pasuje))echo $ile_pasuje; ?>
 </header>
 
-<mine>
+<article class="content">
 <div class="inline left">
 
 	<div class="categories">
@@ -65,12 +65,14 @@
 		<div class="filters">
 			<button class="filters-button">filtry</button>
 			<div class="spacer"></div>
-			<select class="sort" name="sort">
-				<option value="wyswietlen">Najpopularniejsze</option>
-				<option value="kontaktow+">Najwięcej kontaktów</option>
-				<option value="kontaktow-">Najmniej kontaktów</option>
-				<option value="dodane">Data dodania:najnowsze</option>
-				<option value="koniec">Data wygaśnięcia:najbliżej</option>
+			<select class="sort" name="sort" onChange='sort(this.value);'>
+				<option id="displayDESC" value="display DESC">Najpopularniejsze</option>
+                                <option id="price" value="price">Cena rosnąco</option>
+                                <option id="priceDESC" value="price DESC">Cena malejąco</option>
+				<option id="relationsDESC" value="relations DESC">Najwięcej kontaktów</option>
+				<option id="relations" value="relations">Najmniej kontaktów</option>
+				<option id="addedDESC" value="added DESC">Data dodania:najnowsze</option>
+				<option id="endDESC" value="end DESC">Data wygaśnięcia:najbliżej</option>
 			</select>
 		</div>
 	</div>
@@ -99,7 +101,7 @@
 
 	</div>
 </div>
-</mine>
+</article>
 
 <div style="clear:both"></div>
 
@@ -117,9 +119,9 @@
 			var val = $(this).attr('value');
 			search(val,kat_js);
 		});
-		
-		var filters = document.querySelector(".filters-button");
-		filters.addEventListener("click",function(){
-		document.querySelector(".left").classList.toggle("active");
-		},false);
+                
+                $(".filters-button").click(function(e)
+		{
+                    $(".left").slideToggle(500);
+		});
 </script>

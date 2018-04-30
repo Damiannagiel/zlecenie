@@ -5,6 +5,9 @@
 		
 	include_once '../szablon/nav_head.php';
 ?>
+        <title><?php echo $kategoria ?> - ogłoszenia w Internetowa Giełda Usług</title>
+        <meta name="description" content="Internetowa Giełda Usług - ogłoszenia w kategorii <?php echo $kategoria ?>. Usługodawcy, wykonawcy, wykonam, zlecę, szukam." />
+        
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link href="css/kategoria.css" type="text/css" rel="stylesheet"/>
 	<link href="css/mini.css" type="text/css" rel="stylesheet"/>

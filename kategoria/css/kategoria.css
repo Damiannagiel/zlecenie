@@ -1,7 +1,5 @@
 a:hover{text-decoration:none;}
 
-.inline.left{display:none;}
-
 header.categories h3{margin-bottom:2px;}
 
 header.categories p{
@@ -105,13 +103,13 @@ header.categories p{
 	font-size: 1.4rem;
 }
 
-.inline.left.active{
+.inline.left{
+        display:none;
 	background-color:#ffffff;
 	position:absolute;
 	width:100%;
-	top:260px;
+	top:242px;
 	left:0px;
-	display:initial;
 	z-index:10;
 	-webkit-box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.75);
@@ -232,6 +230,10 @@ input.inp
 	.inline.left{
 		border-right:1px solid #7f7f7f;
 		margin-bottom:10px;
+                position: static;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
 		}
 	
 	#categories_viev{
@@ -240,7 +242,7 @@ input.inp
 		flex:1;
 	}
 	
-	mine{display:flex;}
+	article.content{display:flex;}
 	
 	.categories p.subcategory {font-size: 2rem;}
 	
