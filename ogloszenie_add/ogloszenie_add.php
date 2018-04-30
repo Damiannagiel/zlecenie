@@ -17,9 +17,9 @@
 	?>
 	<link href="ogloszenie_add.css" type="text/css" rel="stylesheet"/>
 	
-	<title>Dodaj Ogłoszenie</title>
+	<title>Dodaj ogłoszenie do tuUslugi.pl</title>
 	
-	<meta name="description" content="Opis w Google" />
+	<meta name="description" content="Nie czekaj i już teraz dodaj ogłoszenie do tuUslugi.pl. Na twoje zlecenie bądź usługę, w całym kraju czekają kontrahenci z wszytkich branż."/>
 	<script src="powiaty/zaznacz_powiat.js" type="text/javascript"></script>
 	<script src="kategorie/kategorie.js" type="text/javascript"></script>
 	

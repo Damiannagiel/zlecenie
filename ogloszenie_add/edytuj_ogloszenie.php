@@ -12,7 +12,6 @@
 	
 	<title>Edytuj ogłoszenie <?php echo $dane['title']; ?></title>
 	
-	<meta name="description" content="Opis w Google" />
 	<script src="powiaty/zaznacz_powiat.js" type="text/javascript"></script>
 	<script src="kategorie/kategorie.js" type="text/javascript"></script>
 	

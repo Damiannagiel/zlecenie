@@ -20,7 +20,7 @@
 	?>
     <article>
 	<div id="regulations">
-            <h4>Polityka plików cookies serwisu internetowagieldauslug.pl</h4>
+            <h4>Polityka plików cookies serwisu tuUslugi.pl</h4>
             <p class="nawias">(Załącznik nr. 2 do regulaminu)</p>
 
             <ol>
@@ -33,7 +33,7 @@
                         <li class="lower-alpha">do tworzenia anonimowych statystyk z wyłączeniem możliwości identyfikacji użytkownika.</li>
                     </ol>
                 </li>
-                <li>Pliki cookies wykorzystywane przez partnerów Administratora strony internetowej, w tym w szczególności użytkowników strony internetowej, podlegają ich własnej polityce prywatności. </li>
+                <li>Pliki cookies wykorzystywane przez partnerów Administratora strony internetowej, podlegają ich własnej polityce prywatności. </li>
                 <li>W trosce o bezpieczeństwo powierzonych nam danych opracowaliśmy wewnętrzne procedury i zalecenia, które mają zapobiec udostępnieniu danych osobom nieupoważnionym. Kontrolujemy ich wykonywanie i stale sprawdzamy ich zgodność z odpowiednimi aktami prawnymi - ustawą o ochronie danych osobowych, ustawą o świadczeniu usług drogą elektroniczną, a także wszelkiego rodzaju aktach wykonawczych i aktach prawa wspólnotowego.</li>
                 <li>Standardowo oprogramowanie służące do przeglądania stron internetowych domyślnie dopuszcza umieszczanie plików cookies na urządzeniu końcowym Użytkownika. Ustawienia te mogą zostać zmienione przez Użytkownika w taki sposób, aby blokować automatyczną obsługę “cookies” w ustawieniach przeglądarki internetowej bądź informować o ich każdorazowym przesłaniu na urządzenia użytkownika.</li>
                 <li>Użytkownicy Serwisu mogą dokonać w każdym czasie zmiany ustawień dotyczących plików cookies. Szczegółowe informacje o możliwości i sposobach obsługi plików cookies dostępne są w ustawieniach oprogramowania (przeglądarki internetowej).
@@ -46,7 +46,7 @@
                         <li class="circle"><a target="blank" href="https://support.apple.com/pl-pl/HT201265">Safari</a></li>
                     </ol>
                 </li>
-                <li>Operator Serwisu informuje, że zmiany ustawień w przeglądarce internetowej użytkownika mogą uniemożliwić poprawne działanie Stron Internetowych.</li>
+                <li>Administrator Serwisu informuje, że zmiany ustawień w przeglądarce internetowej użytkownika mogą uniemożliwić poprawne działanie Stron Internetowych.</li>
             </ol>      
 	</div>
     </article>

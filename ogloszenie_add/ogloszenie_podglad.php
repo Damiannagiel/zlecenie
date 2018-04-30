@@ -11,10 +11,9 @@
 			include ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wyswietl.php');
 			include ($DOCUMENT_ROOT.'/../ini/skryptyPHP/ogloszenie_podglad.php');
 			?>
-			<title>Podgląd ogłoszenia <?php echo $_SESSION['tmp_tytul']; ?></title>
+            
+			<title>Podgląd ogłoszenia <?php echo $_SESSION['tmp_tytul']; ?> - tuUslugi.pl</title>
 	
-			<meta name="description" content="Opis w Google" />
-			<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
 			<link href="../ogloszenie_wyswietl/ogloszenie.css" type="text/css" rel="stylesheet"/>
 			<link href="../ogloszenie_wyswietl/mini.css" type="text/css" rel="stylesheet"/>
 	</head>

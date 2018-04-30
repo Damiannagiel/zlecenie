@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-        <title>Logowanie - igu.com.pl</title>
+        <title>Logowanie - tuUslugi.pl</title>
 	
-	<meta name="description" content="igu.com.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!"/>
+	<meta name="description" content="Skorzystaj ze swojego konta w serwisie tuUslugi.pl i znajdź kontrachenta w kilka minut!"/>
 	<link href="logowanie.css" type="text/css" rel="stylesheet"/>
 	<?php 
             $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
@@ -79,7 +79,7 @@
             
             <article>
 		<div class="reg">
-			<h5>Jeszcze nie posiadasz konta w IGU ?</h5>
+			<h5>Jeszcze nie posiadasz konta w tuUslugi.pl?</h5>
 			<div class="button-div"><a href="../rejestracja/zarejestruj.php">
 				<button class="button-red">Zarejestruj się</button>
 			</a></div>

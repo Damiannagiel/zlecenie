@@ -9,9 +9,9 @@
 				}
 				include_once '../szablon/nav_head.php';
 			?>
-			<title>Panel użytkownika <?php echo $_SESSION['user']; ?></title>
+			<title>Panel użytkownika <?php echo $_SESSION['user']; ?> - tuUslugi.pl</title>
 	
-			<meta name="description" content="Opis w Google" />
+			<meta name="description" content="W tym miejscu możesz zarządzać swoim kontem w tuUslugi.pl. Edytuj informacjie o sobie, dodawaj edytuj usuwaj ogłoszenia i przeglądaj pobrane kontakty."/>
 			<link href="panel_uzytkownika.css" type="text/css" rel="stylesheet"/>
 	</head>
 	
@@ -46,7 +46,7 @@
 							<li class="nav active" data-content="profil">Informacje</li>
 							<li class="nav" data-content="kontakty">Moje kontakty</li>
 							<li class="nav" data-content="ogloszenia">Moje ogłoszenia</li>
-							<li class="nav" data-content="premium">Premium member</li>
+<!--							<li class="nav" data-content="premium">Premium member</li>-->
 							<li class="nav" data-content="edycja">Edycja profilu</li>
 							<li><a href="../logowanie/logout.php">Wyloguj się</a></li>
 						</ol>

@@ -23,7 +23,7 @@
 		</div>
 		<div class="social_copy">
 			<div class="copy">
-				<p>&copy 2017 Internetowa Giełda Usług</p>
+				<p>&copy 2017 tuUslugi.pl</p>
 				<p class="prawa">wszystkie prawa zastrzeżone</p>
 			</div>
 			<div class="social">

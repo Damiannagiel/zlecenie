@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-        <title>Rejestracja w igu.com.pl</title>
+        <title>Rejestracja w tuUslugi.pl</title>
 	
 	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<meta name="description" content="igu.com.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!" />
+	<meta name="description" content="tuUslugi.pl - dołącz do wykonawców i zleceniodawców serwisu tuUslugi.pl." />
 	<link href="rejestracja.css" type="text/css" rel="stylesheet"/>
         
 	<?php 
@@ -31,7 +31,7 @@
 					<form class="register" action="skrypt_rejestracja.php" method="post">
 					
 					<header>
-						<h2 class="rej">Załóż konto w IGU za darmo!!</h2>
+						<h2 class="rej">Załóż konto w tuUslugi.pl za darmo!!</h2>
 					</header>
 					
 						<!--Podaj e-mail-->
@@ -151,7 +151,7 @@
 					</form>
 					
 					<div class="account">			
-						<h5>Masz już konto w IGU ?</h5>
+						<h5>Masz już konto w tuUslugi?</h5>
 						<div class="button-div"><a href="../logowanie/zaloguj.php">
 							<button class="button-red">Zaloguj się</button>
 						</a></div>

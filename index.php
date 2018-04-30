@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 	<head>
-			<title>Internetowa Giełda Usług</title>
-                        <meta name="description" content="igu.com.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!"/>
+			<title>tuUslugi.pl - ogłoszeia usługowe</title>
+                        <meta name="description" content="tuUslugi.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!"/>
 			<meta name="keywords" content="" />
 			<link href="zero.css" type="text/css" rel="stylesheet"/>
 			<link href="index.css" type="text/css" rel="stylesheet"/>
@@ -70,7 +70,7 @@
 			<div style="clear:both"></div>
 			<nav class="user-nav">
 				<ul>
-					<li><a href="http://localhost/zlecenie/index.php">igu.com.pl</a></li>
+					<li><a href="http://localhost/zlecenie/index.php">tuUslugi.pl</a></li>
 					<li class="spacer" aria-hidden="true"></li>
 					<li><a href="szukaj_ogloszenia/">Szukaj<br/>ogłoszenia</a></li>
 					<li><a href="ogloszenie_add/ogloszenie_add.php">Dodaj<br/>ogłoszenie</a></li>
@@ -102,7 +102,7 @@
 				</ul>
 		</nav>
 		<article>
-			<h1>Example Domain</h1>
+			<h1>tuUslugi.pl</h1>
 			
 			<form class="search-box" action="szukaj_ogloszenia/szybkie_wyszukiwanie.php" method="post">
 				<div class="search-type">
@@ -167,7 +167,7 @@
 		</div>
 		<div class="social_copy">
 			<div class="copy">
-				<p>&copy 2017 Internetowa Giełda Usług</p>
+				<p>&copy 2017 tuUslugi.pl</p>
 				<p class="prawa">wszystkie prawa zastrzeżone</p>
 			</div>
 			<div class="social">

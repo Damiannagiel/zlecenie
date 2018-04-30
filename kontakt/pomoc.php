@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8" />
-    <title>Pomoc - Internetowa Giełda Usług</title>
+    <title>Pomoc - tuUslugi.pl</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -22,7 +22,7 @@
             <header><h2>Dział pomocy i wsparcia technicznego</h2></header>
             <section>
                 <p class="header__p">Oczekiwanie na odpowiedź zwykle trwa od kilku godzin nawet do kilku dni, więc zanim wyślesz wiadomość zapoznaj się z częstonapotykanymi problemami w dziale <b><a href="faq.php">FAQ</a></b>.</p> 
-                <p class="header__p">Jeżeli już przeglądałeś <b><a href="faq.php">FAQ</a></b> i nie znalazłeś odpowiedzi, skontaktuj się z działem pomocy za pośrednictwem formularza kontaktowego bądź napisz bezpośrednio na adres <b>pomoc@domena.pl</b></p>
+                <p class="header__p">Jeżeli już przeglądałeś <b><a href="faq.php">FAQ</a></b> i nie znalazłeś odpowiedzi, skontaktuj się z działem pomocy za pośrednictwem formularza kontaktowego bądź napisz bezpośrednio na adres <b>pomoc@tuUslugi.pl</b></p>
             </section>
         </div>
         <div class="component">

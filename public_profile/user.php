@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 	<head>
-			<title>Informacje o użytkowniku Jacapno</title>
+			<title>Informacje o użytkowniku Jacapno - tuUslugi.pl</title>
 			<?php 
 				@session_start();
 				include_once '../szablon/nav_head.php'; 
@@ -12,7 +12,7 @@
 			
 			?>
 	
-			<meta name="description" content="Opis w Google" />
+			<meta name="description" content="Sprawdź czego możesz dowiedzieć się o użytkowniku tuUslugi.pl. Sprawdź dodane ogłoszenia, otrzymane oceny i komentarze, a także opis użytkownika."/>
 			<link href="user.css" type="text/css" rel="stylesheet"/>
 	</head>
 	

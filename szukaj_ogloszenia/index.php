@@ -2,7 +2,7 @@
 <html lang="pl">
 	<head>
 		<title>Szukaj ogłoszenia - igu.com.pl</title>
-		<meta name="description" content="igu.com.pl - zaawansowana wyszukiwarka ogłoszeń. Wybierz interesującą cię kategorię, przedział cenowy, lokalizację, a także słowa kluczowe i znajdź interesującą cię usługę." />
+		<meta name="description" content="Szukaj ogłoszeń w tuUslugi.pl. Tutaj znajdziesz zarówno wykonawców dla swojego zlecania, jak i zleceniodawców chcących skorzystać z twoich usług."/>
                 <link href="index.css" type="text/css" rel="stylesheet"/>
 		
 		<!-- Font license info

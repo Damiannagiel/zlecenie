@@ -68,9 +68,8 @@
 		echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy sprubować ponownie za chwilę.</span>';
 	}
 			?>
-			<title>Wiadomości - igu.com.pl</title>
+			<title>Wiadomości - tuUslugi.pl</title>
 	
-			<meta name="description" content="Opis w Google" />
 			<link href="wiadomosci.css" type="text/css" rel="stylesheet"/>
 			<script>
 				function wczytaj(ogloszenie,adresat,user,ogl_tytul,adresat_name)

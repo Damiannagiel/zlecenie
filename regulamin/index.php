@@ -24,13 +24,13 @@
 
             <h6>I. Definicje</h6>
             <ol>
-                <li><b>IGU lub serwis</b> - internetowy serwis ogłoszeniowy Internetowa Giełda Usług dostępny w domenie internetowej <a href="../index.php">internetowagieldauslug.pl</a> prowadzony przez Administratora.</li>
+                <li><b>IGU lub serwis</b> - internetowy serwis ogłoszeniowy Internetowa Giełda Usług dostępny w domenie internetowej <a href="../index.php">tuUslugi.pl</a> prowadzony przez Administratora.</li>
                 <li><b>Użytkownik</b> - osoba fizyczna, która ukończyła 18 lat i posiada pełną zdolność do czynności prawnych, osoba prawna lub jednostka organizacyjna nieposiadająca osobowości prawnej, ale mogąca we własnym imieniu nabywać prawa oraz zaciągać zobowiązania, która w trybie przewidzianym w regulaminie korzysta z serwisu.</li>
                 <li><b>Zarejestrowany Użytkownik</b> - Użytkownik, który dokonał rejestracji i aktywacji konta.</li>
                 <li><b>Ogłoszenie</b> - strona/przestrzeń serwerowa IGU, udostępniona Użytkownikowi, zawierająca stworzone przez niego ogłoszenie dotyczące chęci wykonania lub zlecenia wykonania usługi.</li>
                 <li><b>Konto</b> - przydzielone danemu Użytkownikowi, identyfikowane za pomocą loginu i hasła, miejsce w serwisie, za pomocą którego wprowadza on dane i zarządza nimi.</li>
                 <li><b>Kontakt</b> - przekazanie Użytkownikowi danych kontaktowych do właściciela ogłoszenia.</li>
-                <li><b>Administrator</b> - zespół internetowagieldauslug.pl.</li>
+                <li><b>Administrator</b> - zespół tuUslugi.pl.</li>
                 <li><b>Regulamin</b> - Niniejszy regulamin.</li>
             </ol>
             <div style="clear:both;"></div>
@@ -70,7 +70,7 @@
                 <li>Jedna osoba fizyczna, prawna oraz jednostka organizacyjna nieposiadająca osobowości prawnej może posiadać i korzystać tylko z jednego konta w serwisie.</li>
                 <li>Konta nie wolno odsprzedawać ani udostępniać osobom trzecim.</li>
                 <li>Administrator zastrzega sobie prawo do czasowego zablokowania bądź trwałego usunięcia konta Zarejestrowanego Użytkownika w dowolnej chwili, jeżeli narusza on postanowienia regulaminu lub przepisy prawa.</li>
-                <li>Zarejestrowany Użytkownik może usunąć swoje konto z serwisu. W tym celu należy skorzystać z odpowiedniego odnośnika w serwisie, wysłać odpowiedni wniosek na adres kontakt@internetowagieldauslug.pl lub skorzystać z formularza kontaktowego.</li>
+                <li>Zarejestrowany Użytkownik może usunąć swoje konto z serwisu. W tym celu należy skorzystać z odpowiedniego odnośnika w serwisie, wysłać odpowiedni wniosek na adres kontakt@tuUslugi.pl lub skorzystać z formularza kontaktowego.</li>
                 <li>W momencie usunięcia konta przez Użytkownika lub Administratora, umowa o której mowa w punkcie 7. zostaje zerwana.</li>
             </ol>
             
@@ -123,7 +123,7 @@
             
             <h6>VIII. Reklamacje</h6>
             <ol>
-                <li>Reklamacje dotyczące świadczenia usług, o których mowa w niniejszym Regulaminie, można zgłaszać za pomocą poczty elektronicznej na adres kontakt@internetowagieldauslug.pl lub poprzez <a href="../kontakt/">formularz kontaktowy</a>.</li>
+                <li>Reklamacje dotyczące świadczenia usług, o których mowa w niniejszym Regulaminie, można zgłaszać za pomocą poczty elektronicznej na adres kontakt@tuUslugi.pl lub poprzez <a href="../kontakt/">formularz kontaktowy</a>.</li>
                 <li>Zgłoszenie reklamacji powinno zawierać oznaczenie osoby zgłaszającej reklamację (imię i nazwisko lub nazwa, adres, adres e-mail) oraz opis zdarzenia będącego przyczyną reklamacji.</li>
                 <li>Zgłoszenia reklamacyjne będą rozpatrywane w terminie 14 dni od dnia zgłoszenia reklamacji.</li>
                 <li>Wszelkie spory związane ze świadczonymi usługami w ramach serwisu będą rozstrzygane przez właściwe polskie Sądy Powszechne. Użytkownik, który podlega ochronie konsumenta ma możliwość skorzystania z pozasądowego sposobu rozpatrywania reklamacji i dochodzenia roszczeń. Informacje o sposobie dostępu do ww. trybu i procedur rozstrzygania sporów, znajdują się pod następującym adresem: www.uokik.gov.pl.</li>

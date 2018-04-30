@@ -13,7 +13,7 @@
     include_once '../szablon/nav_head.php';
  ?>
 	
-	<title>Resetowanie hasła w igu.com.pl</title>
+	<title>Resetowanie hasła w tuUslugi.pl</title>
 	
 	<meta name="description" content="Opis w Google" />
         <link href="reset_pass.css" type="text/css" rel="stylesheet"/>

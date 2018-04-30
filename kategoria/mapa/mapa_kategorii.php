@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-        <title>Mapa kategorii - igu.com.pl</title>
+        <title>Mapa kategorii - tuUslugi.pl</title>
 	
 	<meta name="description" content="Mapa kategorii Internetowej Giełdy Usług. Tutaj możesz sprawdzić strukturę i przejść bezpośrednio do każdej kategorii." />
 	<link href="../css/mapa_kategorii.css" type="text/css" rel="stylesheet"/>
@@ -16,7 +16,7 @@
 ?>
 	<article>
 		<header>
-			<h2>Mapa kategorii Internetowej Giełdy Usług</h2>	
+			<h2>Mapa kategorii witryny tuUslugi.pl</h2>
 		</header>
 		<div class="category_viev">
 				<ul>

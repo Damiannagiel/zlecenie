@@ -9,7 +9,7 @@
 			<div style="clear:both"></div>
 			<nav class="user-nav">
 				<ul>
-					<li><a href="../../index.php">igu.com.pl</a></li>
+					<li><a href="../../index.php">tuUslugi.pl</a></li>
 					<li class="spacer" aria-hidden="true"></li>
 					<li><a href="../../szukaj_ogloszenia/">Szukaj<br/>ogłoszenia</a></li>
 					<li><a href="../../ogloszenie_add/ogloszenie_add.php">Dodaj<br/>ogłoszenie</a></li>

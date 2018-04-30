@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8" />
-    <title>Kontakt - Internetowa Giełda Usług</title>
+    <title>Kontakt - tuUslugi.pl</title>
     <meta name="description" content="Jeżeli masz jakiekolwiek pytania, sugestie bądź po prostu chcesz skontaktować się z administracją serwisu, jesteś w odpowiednim miejscu. Napisz do nas a postaramy się udzielić ci odpowiedzi najszybciej jak to możliwe!" />
     <meta name="keywords" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -22,7 +22,7 @@
             <header><h2>Skontaktuj się z nami</h2></header>
             <section>
                 <p class="header__p">Jeżeli masz jakiekolwiek pytania, sugestie bądź po prostu chcesz skontaktować się z administracją serwisu, jesteś w odpowiednim miejscu.</p>
-                <p class="header__p">Napisz do nas za pomocą formularza kontaktowego bądź bezpośrednio na <b>kontakt@domena.pl</b> a postaramy się udzielić ci odpowiedzi najszybciej jak to możliwe!</p>
+                <p class="header__p">Napisz do nas za pomocą formularza kontaktowego bądź bezpośrednio na <b>kontakt@tuUslugi.pl</b> a postaramy się udzielić ci odpowiedzi najszybciej jak to możliwe!</p>
             </section>
         </div>
         <div class="component">
