@@ -102,7 +102,7 @@
 				</ul>
 		</nav>
 		<article>
-			<h2 class="name">Internetowa giełda usług</h2>
+			<h1>Example Domain</h1>
 			
 			<form class="search-box" action="szukaj_ogloszenia/szybkie_wyszukiwanie.php" method="post">
 				<div class="search-type">
