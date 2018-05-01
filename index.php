@@ -102,7 +102,7 @@
 				</ul>
 		</nav>
 		<article>
-			<h1>tuUslugi.pl</h1>
+			<h2 class="name">tuUslugi.pl</h2>
 			
 			<form class="search-box" action="szukaj_ogloszenia/szybkie_wyszukiwanie.php" method="post">
 				<div class="search-type">
