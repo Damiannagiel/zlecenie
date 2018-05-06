@@ -27,7 +27,7 @@
 		include_once '../szablon/nav_category.php';
 	?>
     <article>
-	<form id="serch" action="szukaj_skrypt.php" method="post">
+	<form id="serch" action="szukaj_skrypt.php" method="get">
 	
 		<div class="background-container">
 			<div class="blad_user">

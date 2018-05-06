@@ -25,7 +25,7 @@
 	</header>
         <section>
 	<div class="kat">
-		<div class="filter"><div><span class="type">Tylko ze zdjęciami: </span> <p>TAK</p></div><div><span class="type">Sortuj według: </span><p>Najpopularniejsze</p></div></div>
+		<div class="filter"><div><span class="type">Cena:</span><p> </p></div></div>
 		<div class="change">
 			<p><a href="../index.php">zmień kryteria wyszukiwania</a></p>
 		</div>
@@ -292,7 +292,7 @@
 		<div style="clear:both">
 			
 	</article>
-</a><div class="site_list"> <ol class="num-site"><li class="li-spacer"></li><li class="site active" data-content="1">1</li><li class="site" data-content="2">2</li><li class="site" data-content="3">3</li><li class="z">z</li><li class="site">3</li><li class="li-spacer"></li></ol></div></article>
+</a><div class="site_list"> <ol class="num-site"><li class="li-spacer"></li><li class="site active">1</li><a href="../szukaj_skrypt.php?site=2"><li class="site">2</li></a><a href="../szukaj_skrypt.php?site=3"><li class="site">3</li></a><li class="z">z 3</li><li class="li-spacer"></li></ol></div></article>
 <?php
 	include_once "../../szablon/stopka2.php";
 ?>
