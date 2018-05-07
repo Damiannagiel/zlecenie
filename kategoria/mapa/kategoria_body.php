@@ -82,10 +82,27 @@
 			<?php
 				if((isset($pobierz))&&($pobierz!=false))
 				{
-					for($i=0;$i<$ile;$i++)
+					for($i=$record;$i<$end_record;$i++)
 					{
 						include 'mapa/ogloszenie.php';
 					}
+                                        
+                                        //stronicowanie ogłoszeń
+                                        echo'<div class="site_list"> <ol class="num-site"><li class="li-spacer"></li>';
+                                        for($i=1;$i<=$ile_stron;$i++){
+                                            $strona=$i;
+                                            if($i==$site){
+                                                echo'<li class="site active">'. $strona .'</li>';
+                                            }
+                                            else{
+                                                if(strpos($_SERVER['REQUEST_URI'],".php?")){
+                                                    echo'<a href="../..'.$_SERVER['REQUEST_URI'].'&site='.$strona.'"><li class="site">'. $strona .'</li></a>';
+                                                } else {
+                                                    echo'<a href="../..'.$_SERVER['REQUEST_URI'].'?site='.$strona.'"><li class="site">'. $strona .'</li></a>';
+                                                }
+                                            }
+                                        }
+                                        echo'<li class="z">z '.$ile_stron.'</li><li class="li-spacer"></li></ol></div>';
 				}
 				else
 				{

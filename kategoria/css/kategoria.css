@@ -210,6 +210,40 @@ input.inp
 
 .error p{margin:5px 0;}
 
+/*stylizacja stronicowania*/
+.site_list{
+    margin: 20px 2.5% 20px 2.5%;
+}
+li.site.active{
+    border:3px #007d1c solid;
+    margin:4px 2px 0 2px;
+}
+.z{
+    margin:6px 4px 2px 4px;
+    padding:3px;
+}
+.num-site{
+    display:flex;
+    text-align: center;
+}
+li.li-spacer{
+    flex:1;
+}
+li.site{
+    margin:6px 4px 2px 4px;
+    padding:3px;
+    border:1px #3f3f3f solid;
+    border-radius:2px;
+    -webkit-box-shadow: 1px -1px 5px 0px rgba(63,63,63,1);
+    -moz-box-shadow: 1px -1px 5px 0px rgba(63,63,63,1);
+    box-shadow: 1px -1px 5px 0px rgba(63,63,63,1);
+}
+li.site:hover{
+    cursor:pointer;
+    -webkit-box-shadow: 2px -2px 5px 0px rgba(63,63,63,1);
+    -moz-box-shadow: 2px -2px 5px 0px rgba(63,63,63,1);
+    box-shadow: 2px -2px 5px 0px rgba(63,63,63,1);
+}
 
 
 @media screen and (min-width: 1024px){
