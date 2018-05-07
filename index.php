@@ -104,7 +104,7 @@
 		<article>
 			<h2 class="name">tuUslugi.pl</h2>
 			
-			<form class="search-box" action="szukaj_ogloszenia/szybkie_wyszukiwanie.php" method="post">
+			<form class="search-box" action="szukaj_ogloszenia/szybkie_wyszukiwanie.php" method="get">
 				<div class="search-type">
 					<ul>
 						<li><label onclick="szukaj(2);">Szukaj wykonawcy<input type="radio" name="type" value="2"/></label></li>
