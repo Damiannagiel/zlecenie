@@ -92,12 +92,20 @@
                                         for($i=1;$i<=$ile_stron;$i++){
                                             $strona=$i;
                                             if($i==$site){
+                                                // wykonaj jeżeli numer strony jest aktualnie wyśiwtlany
                                                 echo'<li class="site active">'. $strona .'</li>';
-                                            }
-                                            else{
+                                            } else {
+                                                // wykonaj dla innych numerów srony niż aktualnie wyświetlana
                                                 if(strpos($_SERVER['REQUEST_URI'],".php?")){
-                                                    echo'<a href="../..'.$_SERVER['REQUEST_URI'].'&site='.$strona.'"><li class="site">'. $strona .'</li></a>';
+                                                    // wykonaj jeżeli istnieją już parametry GET
+                                                    $getsite=strpos($_SERVER['REQUEST_URI'],"site=");// sprawdź czy występuje parametr site
+                                                    if($getsite){
+                                                        echo'<a href="../..'.substr($_SERVER['REQUEST_URI'], 0, $getsite).'site='.$strona.'"><li class="site">'. $strona .'</li></a>';
+                                                    } else {
+                                                        echo'<a href="../..'.$_SERVER['REQUEST_URI'].'&site='.$strona.'"><li class="site">'. $strona .'</li></a>';
+                                                    }
                                                 } else {
+                                                    // wykonaj jeżeli nie istnieją parametry GET
                                                     echo'<a href="../..'.$_SERVER['REQUEST_URI'].'?site='.$strona.'"><li class="site">'. $strona .'</li></a>';
                                                 }
                                             }
