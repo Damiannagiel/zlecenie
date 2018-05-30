@@ -17,7 +17,7 @@
 	</head>
 	
 			<?php include_once '../szablon/nav_body.php'; ?>
-			
+        <article class="user_profile">
 			<div class="user">
                             <div class="user_img">
                                 <img src="<?php if(file_exists("avatar/".$user_id.".jpg")){
@@ -32,8 +32,7 @@
                             <div class="user_name">
 				<h2><?php echo $user ?></h2>
                             </div>
-			</div>
-			
+                        </div>		
 			<div class="page_content">
                             <?php if(isset($_SESSION['user_deleted'])&&$_SESSION['user_deleted']==1){
                                 echo '<div class="user_deleted"><h3>Konto tego użytkownika zostało usunięte</h3></div>';
@@ -46,6 +45,7 @@
                             ?>
 				
 			</div>
+        </article>
 			<script>
 				$(".page_content .user_nav .cat1").click(function(e)
 				{

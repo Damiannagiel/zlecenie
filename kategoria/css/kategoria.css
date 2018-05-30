@@ -247,6 +247,11 @@ li.site:hover{
 
 
 @media screen and (min-width: 1024px){
+    article{
+        max-width: 1366px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 	header.categories h3{font-size:225%;;}
 	
 	.filters button.filters-button,.filters div.spacer{display:none;}

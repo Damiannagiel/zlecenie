@@ -5,12 +5,11 @@
 	
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<meta name="description" content="tuUslugi.pl - dołącz do wykonawców i zleceniodawców serwisu tuUslugi.pl." />
-	<link href="rejestracja.css" type="text/css" rel="stylesheet"/>
-        
 	<?php 
             session_start();
             include_once '../szablon/nav_head.php';
 	?>
+        <link href="rejestracja.css" type="text/css" rel="stylesheet"/>
 </head>
 
 			    <?php

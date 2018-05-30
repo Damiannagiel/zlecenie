@@ -3,12 +3,21 @@
 <head>
 	<?php
 		session_start(); 
-		if((!isset($_SESSION['zalogowany']))&&($_SESSION['zalogowany'] != true)) //sprawdzam czy użytkownik jest zalogowany
+		if((!isset($_SESSION['zalogowany'])) || ($_SESSION['zalogowany'] != true)) //sprawdzam czy użytkownik jest zalogowany
 		{
-			$_SESSION['blad'] = "Zaloguj się aby dodać ogłoszenie";
-			$_SESSION['logowanie_ogloszenie']=true;
-			header('Location:../logowanie/zaloguj.php');
+                    //użytkownik jest niezalogowany
+                    $_SESSION['blad'] = "Zaloguj się aby dodać ogłoszenie";
+                    $_SESSION['logowanie_ogloszenie']=true;
+                    header('Location:../logowanie/zaloguj.php');
+                    exit;
 		}
+                else if((!isset($_SESSION['zweryfikowany'])) || ($_SESSION['zweryfikowany'] != true)) //sprawdzam czy użytkownik jest zalogowany
+                {
+                    //użytkownik jest niezalogowany
+                    $_SESSION['weryfikacja_ogloszenie'] = "Zweryfikuj adres e-mail aby dodać ogłoszenie";
+                    header('Location:../panel_uzytkownika/user.php');
+                    exit;
+                }
 		$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 		include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_ogloszenie_add.php');
 		wroc_i_usun();

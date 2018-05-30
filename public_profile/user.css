@@ -1,5 +1,15 @@
+body{
+    height: 100%;
+}
+
 .page_content{
 	margin:5px;
+}
+
+.user_profile{
+    min-height:-webkit-calc(100% - 192px);
+    min-height:-moz-calc(100% - 192px);
+    min-height:calc(100% - 192px);
 }
 
 .user.deleted img{

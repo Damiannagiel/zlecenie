@@ -3,6 +3,12 @@ body{min-width:360px;}
 	aside img.low{margin-top:15px;}
 	aside img.medium{display:none;}
 	aside img.large{display:none;}
+        
+        article{
+            max-width: 1366px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
 form.register{
 	margin:25px auto 10px auto;

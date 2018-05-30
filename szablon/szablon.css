@@ -4,7 +4,6 @@ html{
 }
 body{
 	font-family:"Open Sands";
-	max-width:1366px;
 	min-width:320px;
 	width:100%;
 	min-height:100%;
@@ -354,6 +353,19 @@ footer {
 }
 
 @media screen and (min-width: 1024px){
+        .max_width{
+            max-width: 1366px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .category-nav{
+            background-color:#C5C5C5;
+        }
+        
+        .category-nav ul li i:before{
+            width: 70px;
+        }
 	/* Nawigacja ------------------------------------------------------------------------------------------- */
         .site-header{ border-bottom: 2px solid #7ba47b;}
         

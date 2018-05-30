@@ -17,7 +17,7 @@
 	
 			<?php include_once '../szablon/nav_body.php';
                             include_once '../szablon/nav_category.php'; ?>
-			
+			<div class="content">
 			<div id="pu_nav">
 				<div class="pu_img_user">
                                         <img onclick='loadContent("ustawienia");' src="<?php 
@@ -59,6 +59,7 @@
 				</div>
 			
 			<div style="clear:both"></div>
+                        </div>
 			
 			<script type="text/javascript">
         var first_page="<?php if(isset($_SESSION['settings_error'])){echo "ustawienia";unset($_SESSION['settings_error']);}else echo "profil";?>";

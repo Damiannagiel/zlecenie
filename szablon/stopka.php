@@ -8,6 +8,7 @@
                     </div>';
             }
             ?>
+            <div class="max_width">
 		<div class="popular_content">
 		</div>
 		<div class="text_link">
@@ -38,6 +39,7 @@
 				</div>
 			</div>
 		</div>
+            </div>
 	</footer>
 	<script src="../szablon/nav.js" type="text/javascript"></script>
         <script src="../regulamin/cookies.js"></script>

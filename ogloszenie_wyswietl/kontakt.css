@@ -1,3 +1,6 @@
+body{
+    height:100%;
+}
 .kontakt{margin:10px 4% 25px 4%;}
 
 .kontakt.archives{opacity: 0.5;}
@@ -42,8 +45,11 @@ img.kontakt_img{
 @media screen and (min-width: 640px){
 	.kontakt{
 		max-width:700px;
-		margin:5% auto 12.5% auto;
+		margin:50px auto 125px auto;
 		font-size:1.8rem;
+                min-height:-webkit-calc(100% - 355px);
+                min-height:-moz-calc(100% - 355px);
+                min-height:calc(100% - 355px);
 	}
 	
 	img.kontakt_img{

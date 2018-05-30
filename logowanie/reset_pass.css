@@ -1,6 +1,15 @@
+body{
+    height:100%;
+}
+
+article{
+    height:-webkit-calc(100% - 182px);
+    height:-moz-calc(100% - 182px);
+    height:calc(100% - 182px);
+}
+
 .reset-pass{
     padding:10px;
-    min-height: 390px;
 }
 
 .reset-padding{
@@ -64,10 +73,6 @@
 
 
 @media screen and (min-width: 640px){
-    .reset-pass{
-        min-height: 457px;
-    }
-    
     .reset-pass__div{
         display:flex;
     }
@@ -95,11 +100,4 @@
         margin-top: 30px;
     }
 
-}
-
- 
-@media screen and (min-width: 1024px){
-    .reset-pass{
-        min-height: 455px;
-    }
 }

@@ -32,7 +32,7 @@
 			<p><a href="index.php">Wyszukiwarka zaawansowana</a></p>
 		</div>
 	</header>
-	<main>
+    <article>
         <?php
             if($pobierz)
             {
@@ -66,7 +66,7 @@
                 echo'<li class="z">z '.$ile_stron.'</li><li class="li-spacer"></li></ol></div>';
             }
         ?>
-	</main>
+	</article>
 <?php
 	include_once '../szablon/stopka.php';
 ?>

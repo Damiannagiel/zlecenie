@@ -1,4 +1,5 @@
 <nav class="category-nav">
+    <div class="max_width">
 	<ul>
 		<li><a href="../../kategoria/AGD_RTV_i_komputery.php"><i class="icon-monitor"></i> <span>AGD RTV i komputery</span></a></li>
 		<li><a href="../../kategoria/Edukacja_i_finanse.php"><i class="icon-book"></i> <span>Edukacja i finanse</span></a></li>
@@ -9,4 +10,5 @@
 		<li><a href="../../kategoria/Motoryzacja.php"><i class="icon-cab"></i> <span>Motoryzacja</span></a></li>
 		<li><a href="../../kategoria/Inne.php"><i class="icon-folder"></i> <span>Pozostałe</span></a></li>
 				</ul>
+    </div>
 </nav>

@@ -1,6 +1,11 @@
-main{
-	clear:both;
-	min-height:300px;
+body{height:100%;}
+article{
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height:-webkit-calc(100% - 328px);
+    min-height:-moz-calc(100% - 328px);
+    min-height:calc(100% - 328px);
 }
 header h2, header h4{
 	margin-left:5%;
@@ -66,6 +71,11 @@ li.site:hover{
     box-shadow: 2px -2px 5px 0px rgba(63,63,63,1);
 }
 @media screen and (min-width: 640px){
+        article{
+            min-height:-webkit-calc(100% - 230px);
+            min-height:-moz-calc(100% - 230px);
+            min-height:calc(100% - 230px);
+        }
 	.filter{
 		display:initial;
 	}
@@ -90,4 +100,12 @@ li.site:hover{
 	.change a{
 		display:initial;
 	}
+}
+
+@media screen and (min-width: 1024px){
+    article{
+        min-height:-webkit-calc(100% - 328px);
+        min-height:-moz-calc(100% - 328px);
+        min-height:calc(100% - 328px);
+    }
 }

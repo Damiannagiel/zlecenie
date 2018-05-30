@@ -14,7 +14,7 @@
 			<?php 
 				// włącz sesje i załącz funkcje
 				session_start();
-				$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];	
+				$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 				require_once ($DOCUMENT_ROOT.'/../ini/skryptyPHP/index_skrypt.php');
 			?>
 			
@@ -62,6 +62,7 @@
 	<body>
 		<div id="spacer1"></div>
 		<header class="site-header">
+                    <div class="max_width">
 			<a class="logo" href="http://localhost/zlecenie/index.php" target="_blank">tuUslugi.pl</a>
 			<button class="hamburger" type="button" title="Otwórz menu">
 							<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
@@ -88,8 +89,10 @@
 					</a></li>
 				<ul>
 			</nav>
+                    </div>
 		</header>
 		<nav class="category-nav">
+                    <div class="max_width">
 				<ul>
 					<li><a href="kategoria/AGD_RTV_i_komputery.php"><i class="icon-monitor"></i> <span>AGD RTV i komputery</span></a></li>
 					<li><a href="kategoria/Edukacja_i_finanse.php"><i class="icon-book"></i> <span>Edukacja i finanse</span></a></li>
@@ -100,8 +103,10 @@
 					<li><a href="kategoria/Motoryzacja.php"><i class="icon-cab"></i> <span>Motoryzacja</span></a></li>
 					<li><a href="kategoria/Inne.php"><i class="icon-folder"></i> <span>Pozostałe</span></a></li>
 				</ul>
+                    </div>
 		</nav>
 		<article>
+                    <div class="max_width">
 			<h2 class="name">tuUslugi.pl</h2>
 			
 			<form class="search-box" action="szukaj_ogloszenia/szybkie_wyszukiwanie.php" method="get">
@@ -130,9 +135,11 @@
 					<div class="button-div"><input class="button-green" type="submit" value="Szukaj"/></div>
 				</div>
 			</form>
+                    </div>
 		</article>
                 <article>
                     <header><h2 class="losowe" >Najnowsze ogłoszenia</h2></header>
+                    <div class="max_width">
 		<?php
 				if($pobierz)
 				{
@@ -142,6 +149,7 @@
 					}
 				}
 			?>
+                    </div>
                 </article>
 	<footer>
             <?php
@@ -152,6 +160,7 @@
                     </div>';
             }
             ?>
+            <div class="max_width">
 		<div class="popular_content">
 		</div>
 		<div class="text_link">
@@ -182,6 +191,7 @@
 				</div>
 			</div>
 		</div>
+            </div>
 	</footer>
 		
 		
