@@ -279,6 +279,17 @@ i.icon-cancel:hover{cursor:pointer;}
     border-radius: 5px;
 }
 
+.accessibility_div{
+    margin:5px;
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.accessibility_div label{
+    padding:6px 0;
+}
+
 @media screen and (min-width: 400px){
 	.img_edit img{height:160px;}
 }
@@ -292,6 +303,9 @@ i.icon-cancel:hover{cursor:pointer;}
 }
 
 @media screen and (min-width: 640px){
+        .accessibility_div label{
+            padding:3px 0;
+        }
 	
 	.img_edit figure{
 		text-align:left;
@@ -333,6 +347,14 @@ i.icon-cancel:hover{cursor:pointer;}
 }
 
 @media screen and (min-width: 800px){
+        .accessibility_div{
+            text-align: center;
+            flex-direction: row;
+        }
+        
+        .accessibility_div label{
+            padding:3px 10px 3px 0;
+        }
 	
 	.ogl_add_zasieg .wojewodztwo label.description, .ogl_add_zasieg .wojewodztwo p.nawias{margin-left:8%;}
 	

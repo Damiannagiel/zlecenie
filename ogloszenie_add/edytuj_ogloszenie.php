@@ -210,6 +210,10 @@
 									echo @$_SESSION['blad_email'];
 									echo @$_SESSION['blad_www'];
 									unset($_SESSION['blad_telefon'],$_SESSION['blad_email'],$_SESSION['blad_www']);}?>
+                            <div class="accessibility_div">
+                                <label><input id="accessibility_0" type="radio" name="accessibility" value="0" checked="true">Kontakt dostępny dla wszystkich.</label>
+                                <label><input id="accessibility_1" type="radio" name="accessibility" value="1">Kontakt dostępny tylko dla zalogowanych użytkowników.</label>
+                            </div>
 					<p class="nawias">(Wprowadone tutaj dane kontaktowe będą wyświetlane będą tylko w tym ogłoszeniu. Dane w twoim profilu i pozostałych ogłoszeniach nie ulegną zmianie.)</p>
 				</div>
 				<div style="clear:both"></div>
@@ -302,6 +306,9 @@
 		
 	cena_za("<?php if(isset($_SESSION['fr_cena_za'])) echo $_SESSION['fr_cena_za'];?>");
 		<?php if(isset($_SESSION['fr_cena_za'])) unset($_SESSION['fr_cena_za']);?>
+                    
+        dostepnosc("<?php if(isset($_SESSION['fr_accessibility'])) echo $_SESSION['fr_accessibility'];?>");
+                    <?php if(isset($_SESSION['fr_accessibility'])) unset($_SESSION['fr_accessibility']);?>
 	</script>
 
 	<?php

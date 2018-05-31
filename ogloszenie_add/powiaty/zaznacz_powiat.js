@@ -756,3 +756,9 @@ function usun_next(ile_fig,nr_img)
     }
     document.getElementById("ile_zdjec").innerHTML='<input type="hidden" name="ile_zdjec" value="'+img+'"/>';
 }
+
+function dostepnosc(accessibility){
+    if(accessibility==1){
+        document.getElementById("accessibility_1").setAttribute("checked","true");
+    }
+}
