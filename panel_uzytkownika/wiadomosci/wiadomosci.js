@@ -220,6 +220,32 @@ function wyswietl_starsze(user,adresat,ogloszenie,petla){
     data: {ogloszenie:ogloszenie , adresat:adresat , user:user , limit:limit , petla:petla},
     success: function(response){
       $("#more"+petla).html(response);
+      $(".options").hide();
+      $(".delete").hide();
+      
+      $("#message .message").hover(
+            function(){//funkcja do wykonania po najechaniu myszą na element
+                $(this).children(".options").show();//pokaż element opcje
+                $(this).children(".options").click(function(){//jeżeli zostanie kliknięty element options
+                    $(this).siblings(".delete").show();//pokż element delete
+                });
+            },
+            function(){//funkcja do wykonania po opuszczeniu myszą elementu
+                $(this).children(".options").hide();//ukryj element options
+                $(this).children(".delete").hide();//ukryj element delete
+            }
+        );//koniec funkcji hover
+
+        $(".delete").click(function(){
+            var obiect=$(this);//pobierz obiekt wywołujący zdarzenie
+            var id = obiect.attr("data-content");//pobieramy id ogłoszenia
+            var _class = obiect.parent().attr("class");//pobieramy klasę ogłoszenia
+            var reversal = _class.split(" ");//rozdziel klasę
+            reversal = reversal_valid(reversal[1]);//ustal czy użytkownik jest nadawcą czy odbiorcą
+            if(reversal!==false){
+                deleted_valid(id, reversal, obiect);//jeżelu udało się ustalić stronę użytkownika przekż dane do PHP
+            }
+        });
     }
   });
 }
