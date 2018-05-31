@@ -30,12 +30,12 @@
                                 ?>"/>
                             </div>
                             <div class="user_name">
-				<h2><?php echo $user ?></h2>
+				<h2><?php echo @$user ?></h2>
                             </div>
                         </div>		
 			<div class="page_content">
                             <?php if(isset($_SESSION['user_deleted'])&&$_SESSION['user_deleted']==1){
-                                echo '<div class="user_deleted"><h3>Konto tego użytkownika zostało usunięte</h3></div>';
+                                echo '<div class="user_deleted"><h3>Szukany użytkownik nie istnieje lub jego konto zostało usunięte.</h3></div>';
                                 echo '<script>$(".user").addClass("deleted");</script>';
                                 unset($_SESSION['user_deleted']);
                             }
