@@ -35,9 +35,14 @@
 				</div>
 			</div>
 			<div class="bottom">
-				<p class="nr"><b>Telefon: </b><?php echo $telefon ?></p>
-				<p class="nr"><b>E-mail: </b><?php echo $email ?></p>
-				<p class="nr"><b>WWW: </b><?php if($www!='--'){echo '<a class="link" target="blank" href="'.$http.$www.'">'.$www.'</a></p>';}else echo '--';?>
+                            <?php
+                                if(!isset($no_permission)){
+                                    echo '<p class="nr"><b>Telefon: </b>'.$telefon.'</p><p class="nr"><b>E-mail: </b>'.$email.'</p><p class="nr"><b>WWW: </b>';
+                                    if($www!='--'){echo '<a class="link" target="blank" href="'.$http.$www.'">'.$www.'</a></p>';}else echo '--</p>';
+                                    
+                                }
+                                else echo $no_permission;
+                            ?>
 			</div>
 		</div>
 

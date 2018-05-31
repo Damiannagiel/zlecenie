@@ -40,7 +40,11 @@ img.kontakt_img{
 .bottom p{
 	padding:5px 0;
 }
-.button-div{padding: 10px;}
+
+div.button-div{
+    padding: 10px;
+    height:60px;
+}
 
 @media screen and (min-width: 640px){
 	.kontakt{
