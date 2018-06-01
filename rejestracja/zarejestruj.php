@@ -136,7 +136,7 @@
 								
 					<!--Recaptcha-->		
 						<div class="rejdiv_inp">
-							<div class="g-recaptcha" data-sitekey="6LdGKCIUAAAAAPkJ9mZG5OBWabq_OVfuyWzYIiWN"></div>
+							<div class="g-recaptcha" data-sitekey="6LddxlwUAAAAANttb8xuhDH6lXtfWHuDchwNz4jl"></div>
 						</div>
 						<?php
 									if(isset($_SESSION['e_bot']))

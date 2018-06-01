@@ -30,7 +30,7 @@
             </div>
             <div class="reset-pass__div reset-padding">
                 <span class="reset-pass__span">Udowodnij że nie jesteś robotem:</span>
-                <div class="reset-pass__recaptcha g-recaptcha" data-sitekey="6LdGKCIUAAAAAPkJ9mZG5OBWabq_OVfuyWzYIiWN"></div>
+                <div class="reset-pass__recaptcha g-recaptcha" data-sitekey="6LddxlwUAAAAANttb8xuhDH6lXtfWHuDchwNz4jl"></div>
             </div>
             <div class="feedback"><?php
                 // jeżeli obiekt przechowujący błedy istnieje w sesji

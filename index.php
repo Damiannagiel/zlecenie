@@ -3,7 +3,6 @@
 	<head>
 			<title>tuUslugi.pl - ogłoszeia usługowe</title>
                         <meta name="description" content="tuUslugi.pl - to platforma ogłoszeniowa dla usługodawców i zleceniodawców. Tutaj znajdziesz wykonawcę swojej usługi w każdej branży, a także klientów szukających kogoś takiego jak ty!"/>
-			<meta name="keywords" content="" />
 			<link href="zero.css" type="text/css" rel="stylesheet"/>
 			<link href="index.css" type="text/css" rel="stylesheet"/>
 			<link href="ogloszenie_wyswietl/mini.css" type="text/css" rel="stylesheet"/>
@@ -197,7 +196,7 @@
 		
 	</body>
 	<script src="index.js" type="text/javascript"></script>
-	<script src="jquery-3.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="regulamin/cookies.js"></script>
 	<script>
             $(".cookies button").click(function(){
