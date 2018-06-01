@@ -6,9 +6,9 @@
 			include_once '../szablon/nav_head.php';
 			
 			$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
-			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
-			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
-			include ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wyswietl.php');
+			require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/polacz_z_baza.php');
+			require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/connect.php');
+			include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_wyswietl.php');
 			include ($DOCUMENT_ROOT.'/../ini/skryptyPHP/ogloszenie_podglad.php');
 			?>
             

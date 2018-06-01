@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
+        <?php 
+            session_start();
+            include_once '../szablon/nav_head.php';
+	?>
         <title>Rejestracja w tuUslugi.pl</title>
 	
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<meta name="description" content="tuUslugi.pl - dołącz do wykonawców i zleceniodawców serwisu tuUslugi.pl." />
-	<?php 
-            session_start();
-            include_once '../szablon/nav_head.php';
-	?>
         <link href="rejestracja.css" type="text/css" rel="stylesheet"/>
 </head>
 

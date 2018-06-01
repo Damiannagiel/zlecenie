@@ -3,7 +3,7 @@
 	$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
 	$user=$_POST['user'];
 	if($_SESSION['id']==$user){
-                require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
+                require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_wiadomosci.php');
 		$ok=true;
                 if(is_numeric($_POST['adresat'])&&$_POST['adresat']>0){
                     $adresat=$_POST['adresat'];
@@ -23,8 +23,8 @@
                 else $ok=false;
 			
 		if($ok){try{
-			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
-			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
+			require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/polacz_z_baza.php');
+			require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/connect.php');
 					
 			if(isset($polaczenie)){
                             $wiadomosci= pobierz_wiadomosci($polaczenie,$ogloszenie,$adresat,$user,$limit);

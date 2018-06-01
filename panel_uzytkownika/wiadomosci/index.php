@@ -13,7 +13,7 @@
                 
                 //utwórz zmienne z linków z innych części serwisu
                 if((isset($_GET['ogl_id']))&&(isset($_GET['user_id']))&&(isset($_GET['tytul']))&&(isset($_GET['user_name']))){
-                    require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_walidacja.php');
+                    require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_walidacja.php');
                     //wykonaj walizację zmiennych i zapisz je do prostszej postaci
                     $href=true;
                     if((is_numeric($_GET['ogl_id']))&&($_GET['ogl_id']>0)){
@@ -43,10 +43,10 @@
                 else $href=false;
 
 	try{
-		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
-		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
-		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
-                require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_data_time.php');
+		require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/polacz_z_baza.php');
+		require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/connect.php');
+		require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_wiadomosci.php');
+                require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_data_time.php');
 				
 		if(isset($polaczenie)){
                         //pobierz id wszystkich użytkowników z którymi korespondował user

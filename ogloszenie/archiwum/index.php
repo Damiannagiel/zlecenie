@@ -6,10 +6,10 @@
 		$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
                 
                 //łączę się z bazą
-		require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
+		require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/polacz_z_baza.php');
 		include($DOCUMENT_ROOT.'/../ini/funkcjePHP/connect.php');
-                include($DOCUMENT_ROOT.'/../ini/FunkcjePHP/formatuj_ciag.php');
-                include ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_data_time.php');
+                include($DOCUMENT_ROOT.'/../ini/funkcjePHP/formatuj_ciag.php');
+                include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_data_time.php');
 		if(isset($polaczenie)){
                     $current_date=date('Y-m-d H:i:s');
                     $subtract_2_day=odejmij_dni(90);

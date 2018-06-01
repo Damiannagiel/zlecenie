@@ -1,18 +1,18 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <meta charset="utf-8" />
-    <title>Kontakt - tuUslugi.pl</title>
-    <meta name="description" content="Jeżeli masz jakiekolwiek pytania, sugestie bądź po prostu chcesz skontaktować się z administracją serwisu, jesteś w odpowiednim miejscu. Napisz do nas a postaramy się udzielić ci odpowiedzi najszybciej jak to możliwe!" />
-    <meta name="keywords" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="kontakt.css">
     <?php 
         $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
         include ($DOCUMENT_ROOT.'/../ini/class/classFeedback.php');
         include ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
         include_once '../szablon/nav_head.php'; 
     ?> 
+    <meta charset="utf-8" />
+    <title>Kontakt - tuUslugi.pl</title>
+    <meta name="description" content="Jeżeli masz jakiekolwiek pytania, sugestie bądź po prostu chcesz skontaktować się z administracją serwisu, jesteś w odpowiednim miejscu. Napisz do nas a postaramy się udzielić ci odpowiedzi najszybciej jak to możliwe!" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="kontakt.css">
 </head>
 
 <!--<body>-->   <?php include_once '../szablon/nav_body.php'; ?>

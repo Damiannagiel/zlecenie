@@ -1,10 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-        <title>Logowanie - tuUslugi.pl</title>
-	
-	<meta name="description" content="Skorzystaj ze swojego konta w serwisie tuUslugi.pl i znajdź kontrachenta w kilka minut!"/>
-	<?php
+    	<?php
             session_start();
             if(isset($_SESSION['zalogowany']) && $_SESSION['zalogowany']==true){
                 header('Location:../panel_uzytkownika/user.php');
@@ -15,6 +12,9 @@
             include ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
             include_once '../szablon/nav_head.php'; 
         ?>
+        <title>Logowanie - tuUslugi.pl</title>
+	
+	<meta name="description" content="Skorzystaj ze swojego konta w serwisie tuUslugi.pl i znajdź kontrachenta w kilka minut!"/>
         <link href="logowanie.css" type="text/css" rel="stylesheet"/>
 </head>
 

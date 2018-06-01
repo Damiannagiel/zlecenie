@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
+    <?php 
+        include_once '../szablon/nav_head.php'; 
+    ?> 
     <meta charset="utf-8" />
     <title>FAQ - tuUslugi.pl</title>
     <meta name="description" content="Zbiór rozwiązań na najczęściej spotykane problemy i zadawane pytania w serwisie tuUslugi.pl"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="kontakt.css">
-    <?php 
-        include_once '../szablon/nav_head.php'; 
-    ?> 
 </head>
 
 <!--<body>--><?php include_once '../szablon/nav_body.php'; ?>

@@ -4,9 +4,9 @@
 	$user=$_POST['user'];
 	if($_SESSION['id']==$user){
 		try{
-			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
-			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
-			require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
+			require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/polacz_z_baza.php');
+			require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/connect.php');
+			require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_wiadomosci.php');
 					
 			if(isset($polaczenie)){
                                 $zapytanie='SELECT id FROM messages WHERE recipient = '.$user.' AND displayed = 0 LIMIT 1';

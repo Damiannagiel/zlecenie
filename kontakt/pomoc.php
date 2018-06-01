@@ -1,18 +1,18 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
+    <?php 
+        $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+        include ($DOCUMENT_ROOT.'/../ini/class/classFeedback.php');
+        include ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
+        include_once '../szablon/nav_head.php'; 
+    ?>
     <meta charset="utf-8" />
     <title>Pomoc - tuUslugi.pl</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="kontakt.css">
-    <?php 
-        $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
-        include ($DOCUMENT_ROOT.'/../ini/class/classFeedback.php');
-        include ($DOCUMENT_ROOT.'/../ini/class/classMyError.php');
-        include_once '../szablon/nav_head.php'; 
-    ?> 
 </head>
 
 <!--<body>--><?php include_once '../szablon/nav_body.php'; ?>

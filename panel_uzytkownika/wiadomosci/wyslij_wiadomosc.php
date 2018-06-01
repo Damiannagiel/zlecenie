@@ -3,10 +3,10 @@ try{
 	//uruchamiam sesje i załączam funkcje
 	session_start();
 	$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
-	require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
-	require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
-	require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_wiadomosci.php');
-	require_once ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_walidacja.php');
+	require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/polacz_z_baza.php');
+	require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/connect.php');
+	require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_wiadomosci.php');
+	require_once ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_walidacja.php');
 	//pobietam dane z POST
 	$user=$_POST['user'];
 	$adresat=$_POST['adresat'];

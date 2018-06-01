@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <meta charset="utf-8" />
-    <title>Wydanie pierwszej wersji beta serwisu tuUslugi.pl 2018-06-01 - tuUslugi.pl</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <?php 
         include_once '../szablon/nav_head.php';
     ?>
+    <meta charset="utf-8" />
+    <title>Wydanie pierwszej wersji beta serwisu tuUslugi.pl 2018-06-01 - tuUslugi.pl</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="aktulnosci.css">
 </head>
 

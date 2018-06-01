@@ -2,9 +2,9 @@
 //uruchom sesję i utwór zmienne
 session_start();
 $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
-include ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/funkcje_walidacja.php');
-include ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');
-include ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');
+include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_walidacja.php');
+include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/connect.php');
+include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/polacz_z_baza.php');
 
 $delete_pas=$_POST['delete_pas'];
 $delete_id=$_SESSION['id'];

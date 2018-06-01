@@ -6,8 +6,8 @@
 	$usun_id=$_SESSION['usun'];
 
 	$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
-	include ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/polacz_z_baza.php');//nawiązywanie polaczenia z bazą danych
-	include ($DOCUMENT_ROOT.'/../ini/FunkcjePHP/connect.php');//ładowanie funkcji łączących się z bazą danych
+	include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/polacz_z_baza.php');//nawiązywanie polaczenia z bazą danych
+	include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/connect.php');//ładowanie funkcji łączących się z bazą danych
 
 	if(isset($polaczenie))
 	{

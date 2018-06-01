@@ -1,5 +1,15 @@
 <?php @session_start(); ?>
-	<link href="../zero.css" type="text/css" rel="stylesheet"/>
+                        <!-- Global site tag (gtag.js) - Google Analytics -->
+                        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120203026-1"></script>
+                        <script>
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){dataLayer.push(arguments);}
+                          gtag('js', new Date());
+
+                          gtag('config', 'UA-120203026-1');
+                        </script>
+
+                        <link href="../zero.css" type="text/css" rel="stylesheet"/>
 			<link href="../szablon/szablon.css" type="text/css" rel="stylesheet"/>
 			<link href="../css/monitor.css" type="text/css" rel="stylesheet"/>
 			<link href="../fonts/Lobster-Regular.ttf" rel="stylesheet">
