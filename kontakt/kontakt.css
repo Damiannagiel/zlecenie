@@ -1,6 +1,17 @@
+body{
+    height: 100%;
+}
+
 .content{
     margin:10px;
     position: relative;
+    min-height:-webkit-calc(100% - 245px);
+    min-height:-moz-calc(100% - 245px);
+    min-height:calc(100% - 245px);
+}
+
+.faq h4{
+    margin:100px auto 5px auto;
 }
 
 .component{

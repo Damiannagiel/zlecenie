@@ -1,0 +1,33 @@
+body{height: 100%;}
+
+header h2{
+    margin:30px 10px 5px 10px;
+}
+
+.content{
+    min-height: calc(100% - 210px);
+}
+
+.text{
+    padding:10px;
+}
+
+.text p{
+    text-align: left;
+    margin:15px 0 15px 5px;
+}
+
+header p{
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1024px){
+    .content{
+        min-height: calc(100% - 308px);
+    }
+    
+    .text p{
+        margin:10px 0 10px 10px;
+    }
+}

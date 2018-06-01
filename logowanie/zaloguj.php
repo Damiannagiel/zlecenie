@@ -95,7 +95,7 @@
             <article class="news">
 		<header><h4>Aktualności</h4></header>
 		<ul>
-			<li><span>2017-10-07:</span> <a href="#">Zmiana w kilku podpunktach regulaminu!! prosimy  zapoznanie się!</a></li>
+                    <li><span>2018-06-01:</span> <a href="../aktualnosci/2018-06-01.php">Wydanie pierwszej wersji beta serwisu tuUslugi.pl</a></li>
 			<li><span>2017-10-06:</span> <a href="#">Druki Artykuł również przykładowy</a></li>
 			<li><span>2017-10-04:</span> <a href="#">Pierszy przykładowy artykuł</a></li>
 		</ul>
