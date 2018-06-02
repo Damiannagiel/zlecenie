@@ -87,8 +87,8 @@
 		
 	function loadContent(content,id)
 	{
-                if(content=="avatar_edit"){
-                    $(".active").removeClass("active");
+                if(content=="ustawienia"){
+                    $(".active").removeClass("active").addClass("inactive");
                 }
 		$.ajax
 				({
