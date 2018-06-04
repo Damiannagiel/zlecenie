@@ -1,7 +1,7 @@
 <?php 
 	session_start();	
-		
-	include_once '../../../ini/skryptyPHP/kategoria_head.php';
+	$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+	include_once $DOCUMENT_ROOT.'/../ini/skryptyPHP/kategoria_head.php';
 		
 	include_once '../szablon/nav_head.php';
 ?>
