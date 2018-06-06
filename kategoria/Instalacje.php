@@ -4,7 +4,7 @@
 	<?php 
 		$przodek=["Budowlanka"];
 		$kategoria="Instalacje";
-		$potomek=["Dymne i wentylacyjne","Elektryczne","Hydrauliczne"];
+		$potomek=["Dymne i wentylacyjne","Elektryczne","Hydrauliczne","Inne"];
 		
 		include_once 'mapa/ini_top.php';
 	?>

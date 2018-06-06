@@ -4,7 +4,7 @@
 	<?php 
 		$przodek=["Dom i ogród"];
 		$kategoria="Opieka";
-		$potomek=["Dzieci","Osoby starsze","Zwierzęta"];
+		$potomek=["Dzieci","Osoby starsze","Zwierzęta","Inne"];
 		
 		include_once 'mapa/ini_top.php';
 	?>	

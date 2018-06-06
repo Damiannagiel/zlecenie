@@ -3,7 +3,7 @@
 <head>
 	<?php 
 		$kategoria="Edukacja i finanse";
-		$potomek=["Korepetycje","Księgowość i rachunkowość","Kursy i szkolenia"];
+		$potomek=["Korepetycje","Księgowość i rachunkowość","Kursy i szkolenia","Inne"];
 		
 		include_once 'mapa/ini_top.php';
 	?>

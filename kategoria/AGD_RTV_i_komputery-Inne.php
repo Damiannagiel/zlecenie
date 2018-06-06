@@ -2,8 +2,8 @@
 <html lang="pl">
 <head>
 	<?php 
-		$kategoria="Budowlanka";
-		$potomek=["Budowa","Instalacje","Posesja","Wykończenie","Inne"];
+                $przodek=["AGD RTV i komputery"];
+		$kategoria="Inne";
 		
 		include_once 'mapa/ini_top.php';
 	?>

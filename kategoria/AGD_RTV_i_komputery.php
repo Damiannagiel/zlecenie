@@ -3,7 +3,7 @@
 <head>
 	<?php
 		$kategoria="AGD RTV i komputery";
-		$potomek=["Naprawa i montaż","Informatyka","Programowanie","WWW"];
+		$potomek=["Naprawa i montaż","Informatyka","Programowanie","WWW","Inne"];
 		
 		include_once 'mapa/ini_top.php';
 	?>

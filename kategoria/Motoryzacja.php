@@ -3,7 +3,7 @@
 <head>
 	<?php 
 		$kategoria="Motoryzacja";
-		$potomek=["Naprawy","Transport","Wynajem sprzętu"];
+		$potomek=["Naprawy","Transport","Wynajem sprzętu","Inne"];
 		
 		include_once 'mapa/ini_top.php';
 	?>

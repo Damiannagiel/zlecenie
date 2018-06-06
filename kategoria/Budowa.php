@@ -4,7 +4,7 @@
 	<?php 
 		$przodek=["Budowlanka"];
 		$kategoria="Budowa";
-		$potomek=["Ciesielstwo","Dekarstwo","Murarka","Tynki","Zbrojarstwo"];
+		$potomek=["Ciesielstwo","Dekarstwo","Murarka","Tynki","Zbrojarstwo","Inne"];
 		
 		include_once 'mapa/ini_top.php';
 	?>

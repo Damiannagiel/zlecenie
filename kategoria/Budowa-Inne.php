@@ -2,9 +2,8 @@
 <html lang="pl">
 <head>
 	<?php 
-		$przodek=["Motoryzacja"];
-		$kategoria="Naprawy";
-		$potomek=["Elektromechanika","Lakiernictwo i blacharstwo","Mechanika","Inne"];
+		$przodek=["Budowlanka","Budowa"];
+		$kategoria="Inne";
 		
 		include_once 'mapa/ini_top.php';
 	?>

@@ -3,7 +3,7 @@
 <head>
 	<?php 
 		$kategoria="Dom i ogród";
-		$potomek=["Ogród i posesja","Opieka","Sprzątanie","Złota rączka"];
+		$potomek=["Ogród i posesja","Opieka","Sprzątanie","Złota rączka","Inne"];
 		
 		include_once 'mapa/ini_top.php';
 	?>
