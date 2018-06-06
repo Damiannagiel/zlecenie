@@ -3,7 +3,7 @@
 <head>
 	<?php 
 		$kategoria="Moda zdrowie i uroda";
-		$potomek=["Fryzjerstwo i kosmetyka","Krawiectwo","Stylizacja","Trening i dieta"];
+		$potomek=["Fryzjerstwo i kosmetyka","Krawiectwo","Stylizacja","Trening i dieta","Inne"];
 		
 		include_once 'mapa/ini_top.php';
 	?>

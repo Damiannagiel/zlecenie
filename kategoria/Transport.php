@@ -4,7 +4,7 @@
 	<?php 
 		$przodek=["Motoryzacja"];
 		$kategoria="Transport";
-		$potomek=["Osobowy","Towarowy"];
+		$potomek=["Osobowy","Towarowy","Inne"];
 		
 		include_once 'mapa/ini_top.php';
 	?>

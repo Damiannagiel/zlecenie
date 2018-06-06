@@ -5,8 +5,16 @@
 		
 	include_once '../szablon/nav_head.php';
 ?>
-        <title><?php echo $kategoria ?> - ogłoszenia w tuUslugi.pl</title>
-        <meta name="description" content="Internetowa Giełda Usług - ogłoszenia w kategorii <?php echo $kategoria ?>. Usługodawcy, wykonawcy, wykonam, zlecę, szukam." />
+        <title><?php if($kategoria=="Inne"){
+            if(isset($przodek1)){
+                echo $przodek1." - inne";
+            }
+        }else echo $kategoria; ?> - ogłoszenia w tuUslugi.pl</title>
+        <meta name="description" content="Internetowa Giełda Usług - ogłoszenia w kategorii <?php if($kategoria=="Inne"){
+            if(isset($przodek1)){
+                echo $przodek1." - inne";
+            }
+        }else echo $kategoria; ?>. Usługodawcy, wykonawcy, wykonam, zlecę, szukam." />
         
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link href="css/kategoria.css" type="text/css" rel="stylesheet"/>
