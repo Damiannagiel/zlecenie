@@ -147,12 +147,13 @@ function zmien_wielkosc() //funkcja zmieniająca klasę herbów w zależności i
 function dodaj_obrazek(woj,id) //funkcja dodająca herb wybranego powiatu
 {
     var herb = document.createElement('img');
-    herb.setAttribute('src', '../img/powiaty/'+id+'.png');
     herb.setAttribute('id','herb_'+id);
     herb.setAttribute('name','herby');
     herb.setAttribute('class','duze');
     herb.setAttribute('alt',id);
     herb.setAttribute('title',id);
+    id = usun_polskie_znaki_i_spacje(id);
+    herb.setAttribute('src', '../img/powiaty/'+id+'.png');
     var kontener = document.getElementById(woj+'_herb');
     kontener.appendChild(herb);
 }
@@ -562,6 +563,31 @@ function sprawdz_czy_powiat(pow)
     }
     return "powiat";
 }
+
+function usun_polskie_znaki_i_spacje(adres)
+	{
+		adres = adres.replace(/ą/ig,'a');
+		adres = adres.replace(/ć/ig,'c');
+		adres = adres.replace(/ę/ig,'e');
+		adres = adres.replace(/ł/ig,'l');
+		adres = adres.replace(/ń/ig,'n');
+		adres = adres.replace(/ó/ig,'o');
+		adres = adres.replace(/ś/ig,'s');
+		adres = adres.replace(/ź/ig,'z');
+		adres = adres.replace(/ż/ig,'z');
+		adres = adres.replace(/Ą/ig,'A');
+		adres = adres.replace(/Ć/ig,'C');
+		adres = adres.replace(/Ę/ig,'E');
+		adres = adres.replace(/Ł/ig,'L');
+		adres = adres.replace(/Ń/ig,'N');
+		adres = adres.replace(/Ó/ig,'O');
+		adres = adres.replace(/Ś/ig,'S');
+		adres = adres.replace(/Ź/ig,'Z');
+		adres = adres.replace(/Ż/ig,'Z');
+		adres = adres.replace(/ /ig,'_');
+		return adres;
+	}
+
 //funkcja zaznaczająca typ ogłoszenia po wyrzuceniu błędu przez serwer
 function zaznacz_typ(typ)
 {

@@ -271,14 +271,6 @@ i.icon-cancel:hover{cursor:pointer;}
 	fill:red;
 }
 
-#dolnośląskie_opis,#kujawsko-pomorskie_opis,#lubelskie_opis,#lubuskie_opis,#łódzkie_opis,#małopolskie_opis,#mazowieckie_opis,#opolskie_opis,#podkarpackie_opis#podlaskie_opis,#pomorskie_opis,#śląskie_opis,#świętokrzyskie_opis,#warmińsko-mazurskie_opis,#wielkopolskie_opis,#zachodniopomorskie_opis{
-    font-weight: bold;
-    padding: 5px;
-    margin:5px;
-    background-color: #99cc99;
-    border-radius: 5px;
-}
-
 .accessibility_div{
     margin:5px;
     display:flex;
@@ -397,6 +389,13 @@ i.icon-cancel:hover{cursor:pointer;}
 }
 
 @media screen and (min-width: 1024px){
+        #dolnośląskie_opis,#kujawsko-pomorskie_opis,#lubelskie_opis,#lubuskie_opis,#łódzkie_opis,#małopolskie_opis,#mazowieckie_opis,#opolskie_opis,#podkarpackie_opis,#podlaskie_opis,#pomorskie_opis,#śląskie_opis,#świętokrzyskie_opis,#warmińsko-mazurskie_opis,#wielkopolskie_opis,#zachodniopomorskie_opis{
+            font-weight: bold;
+            padding: 5px;
+            margin:5px;
+            background-color: #99cc99;
+            border-radius: 5px;
+        }
 	
 	.ogl_add_input,.ogl_add_zasieg{
 		margin-bottom:25px;
