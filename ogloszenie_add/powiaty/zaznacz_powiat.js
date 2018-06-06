@@ -85,19 +85,16 @@ function usun_opis_woj(woj) //funkcja usuwająca opis wojweództwa w przypadku g
 {
     if(document.getElementById(woj).checked==false)
     {
-        var zmien;
-        zmien = ' ';
-        document.getElementById(woj+'_opis').innerHTML=zmien;
+        document.getElementById(woj+'_opis').remove();
     }
 }
 
 function usun_opis(woj,el) //funkcja usuwająca opis województwa w przypadku gdy w danym województwie liczba zaznaczonych powiatów wynosi "0"
 {
-    var zmien;
     if(ile_pow[el]==0)
     {
-        zmien = ' ';
-        document.getElementById(woj+'_opis').innerHTML=zmien;
+        document.getElementById(woj+'_opis').remove();
+        document.getElementById(woj+'_herb').remove();
     }
 }
 

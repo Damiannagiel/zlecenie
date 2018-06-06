@@ -282,6 +282,10 @@ i.icon-cancel:hover{cursor:pointer;}
     padding:6px 0;
 }
 
+.nawias.inne{
+    padding: 10px;
+}
+
 @media screen and (min-width: 400px){
 	.img_edit img{height:160px;}
 }
