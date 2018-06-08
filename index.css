@@ -30,7 +30,7 @@ body{
 #spacer1.active{padding-top:76px;}
 
 .site-header{ 
-	font-family: 'Lobster', cursive; 
+	font-family: Georgia; 
 	transition-property: all;
 	transition-duration: 0.3s;
 }
