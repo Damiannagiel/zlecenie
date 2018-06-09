@@ -50,10 +50,13 @@
 		}
 		else{
                     var clas="left";
-                    if(avatar_exist==1){
+                    if(avatar_exist==".png"){
+                        var avatar='../../public_profile/avatar/'+wiadomosc['sender']+'.png';
+                    }
+                    else if(avatar_exist==".jpg"){
                         var avatar='../../public_profile/avatar/'+wiadomosc['sender']+'.jpg';
                     }
-                    else{
+                    else {
                         var avatar='../../public_profile/avatar/avatar.png';
                     }
 		}
