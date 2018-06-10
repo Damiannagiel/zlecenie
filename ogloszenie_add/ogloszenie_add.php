@@ -2,24 +2,13 @@
 <html lang="pl">
 <head>
 	<?php
-		session_start(); 
-		if((!isset($_SESSION['zalogowany'])) || ($_SESSION['zalogowany'] != true)) //sprawdzam czy użytkownik jest zalogowany
-		{
-                    //użytkownik jest niezalogowany
-                    $_SESSION['blad'] = "Zaloguj się aby dodać ogłoszenie";
-                    $_SESSION['logowanie_ogloszenie']=true;
-                    header('Location:../logowanie/zaloguj.php');
-                    exit;
-		}
-                else if((!isset($_SESSION['zweryfikowany'])) || ($_SESSION['zweryfikowany'] != true)) //sprawdzam czy użytkownik jest zalogowany
-                {
-                    //użytkownik jest niezalogowany
-                    $_SESSION['weryfikacja_ogloszenie'] = "Zweryfikuj adres e-mail aby dodać ogłoszenie";
-                    header('Location:../panel_uzytkownika/user.php');
-                    exit;
-                }
-		$DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+		session_start();
+                $DOCUMENT_ROOT=$_SERVER['DOCUMENT_ROOT'];
+                include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/polacz_z_baza.php');
 		include ($DOCUMENT_ROOT.'/../ini/funkcjePHP/funkcje_ogloszenie_add.php');
+		sprawdz_czy_zalogowany();//sprawdzam czy użytkownik jest zalogowany
+                sprawdz_czy_zweryfikowany();//sprawdzam czy użytkownik zweryfikował adres e-mail
+                sprawdz_ile_ogloszen($polaczenie);
 		wroc_i_usun();
 		include_once '../szablon/nav_head.php';
 		unset($_SESSION['edit_add']);

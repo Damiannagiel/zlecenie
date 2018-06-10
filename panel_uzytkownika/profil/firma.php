@@ -18,8 +18,16 @@
 				echo '<div class="zapisano"><p>'.$_SESSION['usunieto'].'</p></div>';
 				unset($_SESSION['usunieto']);
 			}
+                        if(isset($_SESSION['max_ogloszen'])){
+                            echo '<div class="blad_div" style="margin-bottom:5px;"><p>'.$_SESSION['max_ogloszen'].'</p></div>';
+                            unset($_SESSION['max_ogloszen']);
+                        }
 			if(isset($_SESSION['autoryzuj']))
 			{
+                            if(isset($_SESSION['weryfikacja_ogloszenie'])){
+                                    echo '<div class="blad_div" style="margin-bottom:5px;"><p>'.$_SESSION['weryfikacja_ogloszenie'].'</p></div>';
+                                    unset($_SESSION['weryfikacja_ogloszenie']);
+                            }
 				echo '<div class="blad_div">
 				<p>Adres e-mail <b>'.$_SESSION['email'].'</b> nie został zweryfikowany!<br/> Aby w pełni cieszyć się możliwościami serwisu wpisz kod weryfikacyjny w poniższe pole bądź kliknij link aktywacyjny dołączony do wiadomości powitalnej.</p>
 				<form action="../rejestracja/potwierdz_email.php" method="get">
