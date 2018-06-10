@@ -18,6 +18,10 @@
 				echo '<div class="zapisano"><p>'.$_SESSION['usunieto'].'</p></div>';
 				unset($_SESSION['usunieto']);
 			}
+                         if(isset($_SESSION['max_ogloszen'])){
+                            echo '<div class="blad_div" style="margin-bottom:5px;"><p>'.$_SESSION['max_ogloszen'].'</p></div>';
+                            unset($_SESSION['max_ogloszen']);
+                        }
 			if(isset($_SESSION['autoryzuj']))
 			{
                             if(isset($_SESSION['weryfikacja_ogloszenie'])){

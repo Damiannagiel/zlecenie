@@ -25,7 +25,7 @@
 		
 	<article class="ad-mini">
 		<div class="img">			
-			<img src="<?php echo 'podglad/'.$_SESSION['img0'].'.jpg' ?>"/>
+			<img src="<?php if(isset($_SESSION['img0']))echo 'podglad/'.$_SESSION['img0'].'.jpg'; else echo '../ogloszenie/img/brak_zdjecia-mini.jpg'; ?>"/>
 		</div>		
 			<div class="info">
 				<div class="ogl_mini_txt">
@@ -68,7 +68,7 @@
 				<span class="spacer"></span>
 				<span>(Kontaktów: <b> - </b>)</span>
 			</div>
-					<div id="img_med"><img class="img_med" src="<?php echo 'podglad/'.$_SESSION['img0'].'.jpg' ?>"/></div>
+					<div id="img_med"><img class="img_med" src="<?php if(isset($_SESSION['img0']))echo 'podglad/'.$_SESSION['img0'].'.jpg'; else echo '../ogloszenie/img/brak_zdjecia.jpg'; ?>"/></div>
 					<div class="zdj_nav">
 							<?php wyswietl_zdjecia($_SESSION['tmp_ile_zdjec']);?>
 					</div>
