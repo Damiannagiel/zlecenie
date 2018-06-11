@@ -72,7 +72,7 @@
 				<option id="relationsDESC" value="relations DESC">Najwięcej kontaktów</option>
 				<option id="relations" value="relations">Najmniej kontaktów</option>
 				<option id="addedDESC" value="added DESC">Data dodania:najnowsze</option>
-				<option id="endDESC" value="end DESC">Data wygaśnięcia:najbliżej</option>
+				<option id="end" value="end">Data wygaśnięcia:najbliżej</option>
 			</select>
 		</div>
 	</div>
