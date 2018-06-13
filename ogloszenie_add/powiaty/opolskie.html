@@ -38,7 +38,7 @@
 		
 	//funkcja zmieniająca wygląd checkboxów
 	$(function() {
-    $(':checkbox, :radio').each(function() {
+    $('#powiaty :checkbox').each(function() {
         $(this).wrap('<span class="input-styled '+(($(this).is(':radio'))?'radio':'')+'"></span>');
         $(this).after('<span><i class="icon-ok"></i></span>');
     })
