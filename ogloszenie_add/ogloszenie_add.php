@@ -115,9 +115,10 @@
 				}
 				?>
 				<div class="wojewodztwo">
-					<div class="lab_p">
+					<div class="lab_p lab_p1">
 						<label class="zasieg description">Wybierz województwo</label>
 						<p class="nawias">(Klikjąc w mapę, w zależności od potrzeb, możesz wybać jedno lub wiele województw)</p>
+                                                <label class="all" for="all">CAŁY KRAJ</label><input class="pow" id="all" data-content="all" type="checkbox" name="powiat_all" value="all"/>
 					</div>
 					<?php
 					include_once 'powiaty/caly_kraj.html';
@@ -280,6 +281,13 @@
 			$(".ogl_add_input.typ .prawa label.active_type").removeClass("active_type").addClass("no-active");
 			$(this).addClass("active_type");
 		});
+                
+                //funkcja obsługująca przycisk cały kraj
+                $("label.all").click(function(){
+                    var label=$(this);
+                    var checkbox=document.getElementById("all");
+                    caly_kraj(label,checkbox);
+                });
 		
 	function load_woj(content)
 	{

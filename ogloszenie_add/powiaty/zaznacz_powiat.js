@@ -785,3 +785,22 @@ function dostepnosc(accessibility){
         document.getElementById("accessibility_1").setAttribute("checked","true");
     }
 }
+
+function caly_kraj(label,checkbox){
+    $(document).ready(function(){
+        if(checkbox.checked){
+            label.addClass("active");
+            $("#svg2 .woj").removeClass("woj").addClass("active");
+            $("#powiaty").remove();
+            $("#miejscowosc").empty();
+            $('input:hidden:not(#all, #wykonawca_inp, #klient_inp)').remove();
+            $('#miasto_div').empty();
+            ile_powiatow = 0;
+            ile_pow = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1];
+            
+        } else {
+            label.removeClass("active");
+            $("#svg2 .active").removeClass("active").addClass("woj");
+        }
+    });
+}
